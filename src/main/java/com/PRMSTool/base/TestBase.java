@@ -10,9 +10,12 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -74,6 +77,23 @@ public class TestBase {
 	public static void scrollToElement(WebElement Element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", Element);
+	}
+	
+	public static void staleElementClick(int loopCount, WebElement element, int time) {
+
+		new WebDriverWait(driver, time).ignoring(StaleElementReferenceException.class)
+				.until(ExpectedConditions.visibilityOf(element));
+		highLightElement(driver, element);
+
+		for (int i = 0; i <= loopCount; i++) {
+			try {
+				element.click();
+				break;
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}
+
 	}
 
 }

@@ -3,6 +3,7 @@
  */
 package com.PRMSTool.Pages;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -10,11 +11,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import com.PRMSTool.base.TestBase;
@@ -31,7 +34,13 @@ public class ClientScreenPage extends TestBase {
 	//@FindBy(xpath="//div[@class='search']")
 	@FindBy(xpath="//input[@placeholder='Search for a client']")
 	WebElement searchBox;
-
+	
+	@FindBy(xpath="//mat-cell[@role='gridcell']")
+	List<WebElement> searchBoxValues;
+	
+	@FindBy(xpath="//div[contains(text(),' Edit Client ')]")
+	WebElement editClient;
+		
 	@FindBy(xpath="//button[@class='add-client-button fuse-white mt-24 mt-md-0 mat-raised-button']")
 	WebElement addNew;
 
@@ -182,7 +191,8 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//p[contains(text(),' Active')]")
 	WebElement statusDataRow;
 	
-	@FindBy(xpath = "//button[@class='iconbutton mat-icon-button ng-tns-c34-17 mat-primary ng-star-inserted']")
+	//@FindBy(xpath = "//button[@class='iconbutton mat-icon-button ng-tns-c34-17 mat-primary ng-star-inserted']")
+	@FindBy(xpath = "//mat-icon[contains(text(),'edit')]")
 	WebElement editButton;
 	
 	@FindBy(xpath = "//button[@class='iconbutton mat-icon-button ng-tns-c34-17 mat-warn ng-star-inserted']")
@@ -212,6 +222,68 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Dipali Vaidya (DS1167) ')]")
 	WebElement delMgr;
 	
+	@FindBy(id = "mat-input-18")
+	WebElement agreementByClient;
+	
+	@FindBy(id = "mat-input-19")
+	WebElement agreementByDF;
+	
+	@FindBy(id = "mat-input-20")
+	WebElement agreementDuration;
+	
+	@FindBy(id = "mat-input-21")
+	WebElement agreementValue;
+			
+	@FindBy(id = "mat-select-12")
+	WebElement salesPerson;
+	
+	@FindBy(id = "mat-select-13")
+	WebElement currency;
+	
+	@FindBy(id = "mat-select-14")
+	WebElement BDE;
+	
+	@FindBy(id = "mat-select-15")
+	WebElement paymentMethod;
+	
+	@FindBy(id = "mat-select-16")
+	WebElement paymentCycle;
+	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' INR ')]")
+	WebElement currencyINR;
+	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Bank Fund Transfer ')]")
+	WebElement pMethod;
+	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Monthly ')]")
+	WebElement pCycle;
+	
+	@FindBy(id = "mat-input-22")
+	WebElement stakeholderName;
+	
+	@FindBy(id = "mat-input-23")
+	WebElement stakeholderDesig;
+	
+	@FindBy(id = "mat-input-24")
+	WebElement stakeholderNumber;
+	
+	@FindBy(id = "mat-input-25")
+	WebElement stakeholderEmail;
+	
+	@FindBy(id = "mat-input-26")
+	WebElement stakeholderAddress;
+	
+	//@FindBy(xpath = "(//button[@class='save-client-button mat-raised-button ng-tns-c42-59 ng-star-inserted'])[2]")
+	@FindBy(xpath = "(//div[@class='mat-button-ripple mat-ripple'])[3]")
+	WebElement stakeholderAdd;
+	
+	@FindBy(xpath = "//button[@class='save-client-button mat-raised-button']")
+	WebElement stakeholderDiscard;
+	
+	@FindBy(xpath = "//input[@alt='Export']")
+	WebElement downloadFile;
+	
+	
 	public ClientScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -221,29 +293,47 @@ public class ClientScreenPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
 		highLightElement(driver, searchBox);
-		searchBox.sendKeys("Appointlink Portal Solutions");
+		//searchBox.click();
+		//staleElementClick(5, searchBox, 60);
+		searchBox.sendKeys("Appointlink Portal");
+		
+	//	List<WebElement> lookupList = webDriver.findElements(By.cssSelector(".lookup__list li a"));
+
+		for (WebElement item : searchBoxValues) {
+
+		if (item.getText().equals("Appointlink")) {
+
+		//item.click();
+		editButton.click();	
+		Thread.sleep(3000);
+		
+		}
+		Thread.sleep(5000);
+	}
+		softAssert.assertEquals(editClient.isDisplayed(), true);
 		
 		Thread.sleep(3000);
-		wait.until(ExpectedConditions.visibilityOf(table));
-		Thread.sleep(5000);
-		
-		softAssert.assertEquals(srNo.isDisplayed(), true);
-		softAssert.assertEquals(clientNameHeader.isDisplayed(), true);
-		softAssert.assertEquals(BUnitHeader.isDisplayed(), true);
-		softAssert.assertEquals(ASignedDateHeader.isDisplayed(), true);
-		softAssert.assertEquals(statusHeader.isDisplayed(), true);
-		softAssert.assertEquals(actionsHeader.isDisplayed(), true);
-
-		System.out.println("Client Info verified");
-		softAssert.assertEquals(srNoDataRow.isDisplayed(), true);
-		softAssert.assertEquals(clientNameDataRow.isDisplayed(), true);
-		softAssert.assertEquals(BUnitDataRow.isDisplayed(), true);
-		softAssert.assertEquals(ASignedDateDataRow.isDisplayed(), true);
-		softAssert.assertEquals(statusDataRow.isDisplayed(), true);
-		softAssert.assertEquals(editButton.isDisplayed(), true);
-		softAssert.assertEquals(deleteButton.isDisplayed(), true);		
-		
-		searchBox.clear();
+		/*
+		 * wait.until(ExpectedConditions.visibilityOf(table)); Thread.sleep(5000);
+		 * 
+		 * softAssert.assertEquals(srNo.isDisplayed(), true);
+		 * softAssert.assertEquals(clientNameHeader.isDisplayed(), true);
+		 * softAssert.assertEquals(BUnitHeader.isDisplayed(), true);
+		 * softAssert.assertEquals(ASignedDateHeader.isDisplayed(), true);
+		 * softAssert.assertEquals(statusHeader.isDisplayed(), true);
+		 * softAssert.assertEquals(actionsHeader.isDisplayed(), true);
+		 * 
+		 * System.out.println("Client Info verified");
+		 * softAssert.assertEquals(srNoDataRow.isDisplayed(), true);
+		 * softAssert.assertEquals(clientNameDataRow.isDisplayed(), true);
+		 * softAssert.assertEquals(BUnitDataRow.isDisplayed(), true);
+		 * softAssert.assertEquals(ASignedDateDataRow.isDisplayed(), true);
+		 * softAssert.assertEquals(statusDataRow.isDisplayed(), true);
+		 * softAssert.assertEquals(editButton.isDisplayed(), true);
+		 * softAssert.assertEquals(deleteButton.isDisplayed(), true);
+		 * 
+		 * searchBox.clear();
+		 */
 	}
 
 	public void clickOnAddNew() throws InterruptedException {
@@ -262,13 +352,14 @@ public class ClientScreenPage extends TestBase {
 		softAssert.assertEquals(agreementDetails.isDisplayed(), true);
 		softAssert.assertEquals(stakeholder.isDisplayed(), true);
 
-		clientName.sendKeys("test3");
-		companyUrl.sendKeys("test1234");
+		clientName.sendKeys("test123");
+		companyUrl.sendKeys("test");
 		softAssert.assertEquals(clientCode.isDisplayed(), true);
 		System.out.println(clientCode.getText());
-		refClientCode.sendKeys("test1234");
-		description.sendKeys("test1234");
-		address.sendKeys("test1234");
+		refClientCode.sendKeys("test");
+		description.sendKeys("test");
+		scrollToElement(address);
+		address.sendKeys("test");
 		
 		scrollToElement(countryDropdown);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -293,9 +384,9 @@ public class ClientScreenPage extends TestBase {
 		contactNumber.sendKeys("9876543210");
 		emailId.sendKeys("test123@gmail.com");
 		approxRevenue.clear();
-		approxRevenue.sendKeys("124567");
+		approxRevenue.sendKeys("1234567");
 		approxPeople.clear();
-		approxPeople.sendKeys("4");
+		approxPeople.sendKeys("5");
 		
 	//	domainDropdown.click();
 		js.executeScript("arguments[0].click()", domainDropdown);
@@ -313,6 +404,7 @@ public class ClientScreenPage extends TestBase {
 		js.executeScript("arguments[0].click()", statusActive);
 		
 		companyFounded.sendKeys("2012");
+		scrollToElement(yearsInBusiness);
 		yearsInBusiness.clear();
 		yearsInBusiness.sendKeys("8");
 		
@@ -333,7 +425,7 @@ public class ClientScreenPage extends TestBase {
 		
 		scrollToElement(dManagerDropdown);
 		js.executeScript("arguments[0].click()", dManagerDropdown);
-		js.executeScript("arguments[0].click()", delMgr);
+		js.executeScript("arguments[0].click()", mgr1);
 		// dManagerDropdown.click();
 		
 		remarks.sendKeys("test");
@@ -355,7 +447,7 @@ public class ClientScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("15")) {
+			if (date.equalsIgnoreCase("16")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -367,15 +459,19 @@ public class ClientScreenPage extends TestBase {
 	
 	public void selectApproxStartDate() throws InterruptedException
 	{
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", appSDateButton);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(appSDateButton));
+		appSDateButton.click();
+		
+	//	JavascriptExecutor js = (JavascriptExecutor) driver;
+	//	js.executeScript("arguments[0].click()", appSDateButton);
 		Thread.sleep(2000);
 			
 		int total_nodes = allDates.size();
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("10")) {
+			if (date.equalsIgnoreCase("19")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -384,10 +480,79 @@ public class ClientScreenPage extends TestBase {
 		System.out.println("Start date selected");
 		Thread.sleep(5000);
 	}
+	
+	public void addAgreementDetails()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(agreementByClient));
+		
+		agreementByClient.sendKeys("test");
+		agreementByDF.sendKeys("test");
+		
+		//add sales person and BDE:
+		
+		agreementDuration.sendKeys("12");
+		wait.until(ExpectedConditions.visibilityOf(currency));
+		currency.click();		
+		currencyINR.click();
+		agreementValue.clear();
+		agreementValue.sendKeys("100000");
+		
+		scrollToElement(paymentMethod);
+		wait.until(ExpectedConditions.visibilityOf(paymentMethod));
+		paymentMethod.click();
+		pMethod.click();
+		paymentCycle.click();
+		pCycle.click();
+		
+		System.out.println("Agreement details added successfully");
+		
+	}
+	
+	public void clickOnStakeholderDetails()
+	{
+		scrollToElement(stakeholder);
+		stakeholder.click();
+	}
+	
+	public void addStakeholderDetails() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(stakeholderName));
+		
+		stakeholderName.sendKeys("dipali");
+		stakeholderDesig.sendKeys("test");
+		stakeholderNumber.sendKeys("1234567890");
+		stakeholderEmail.sendKeys("test@gmail.com");
+		stakeholderAddress.sendKeys("test");
+				
+		//wait.until(ExpectedConditions.visibilityOf(stakeholderAdd));
+		//stakeholderAdd.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", stakeholderAdd);
+		Thread.sleep(5000);
+	}
+	
+	public void downloadFile() throws InterruptedException
+	{
+		String downloadFilePath= "C:\\Users\\Dipali.vaidya\\Downloads";
+		HashMap<String, Object> chromePref= new HashMap<String, Object>();
+		chromePref.put("profile.default_content_settings.popups", 0);
+		chromePref.put("download.default_directory", downloadFilePath);
+		
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("prefs", chromePref);
+		
+		downloadFile.click();
+		Thread.sleep(5000);
+		System.out.println("File downloaded successfully");
+	}
 
 	public void clickOnAdd() {
 		// addButton.click();
 		scrollToElement(addButton);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(addButton));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", addButton);		
 	}
