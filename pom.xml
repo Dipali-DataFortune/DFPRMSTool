@@ -45,7 +45,7 @@
                 <version>3.0.0-M4</version>
                 <configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>AllInternalToolFiles.xml</suiteXmlFile>
+						<suiteXmlFile>AllPRMSToolFiles.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
