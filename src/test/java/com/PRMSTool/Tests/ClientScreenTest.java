@@ -27,7 +27,7 @@ public class ClientScreenTest extends TestBase{
 		lp.login(prop.getProperty("email1"),prop.getProperty("password1"));
 	}
 	
-	@Test(priority = 1, enabled=true)
+	@Test(priority = 1, enabled=false)
 	public void verifysearchClient()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.searchClient();

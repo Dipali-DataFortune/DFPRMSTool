@@ -68,4 +68,22 @@ public class ProjectScreenTest extends TestBase{
 		ProjectScreenPage cp = PageFactory.initElements(driver, ProjectScreenPage.class);
 		cp.selectActualEndDate();
 	}
+	
+	@Test(priority = 9, enabled=true)
+	public void verifyaddProjectDetails1()throws InterruptedException {
+		ProjectScreenPage cp = PageFactory.initElements(driver, ProjectScreenPage.class);
+		cp.addProjectDetails1();
+	}
+	
+	@Test(priority = 10, enabled=true)
+	public void verifyaddBillingDetails()throws InterruptedException {
+		ProjectScreenPage cp = PageFactory.initElements(driver, ProjectScreenPage.class);
+		cp.addBillingDetails();
+	}
+	
+	@Test(priority = 11, enabled=true)
+	public void verifyclickOnAdd()throws InterruptedException {
+		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
+		cp.clickOnAdd();
+	}
 }

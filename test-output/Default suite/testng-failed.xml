@@ -6,7 +6,9 @@
       <class name="com.PRMSTool.Tests.ProjectScreenTest">
         <methods>
           <include name="finish"/>
-          <include name="verifyaddProjectDetails"/>
+          <include name="verifyLogin"/>
+          <include name="verifysearchClient"/>
+          <include name="verifyclickOnProject"/>
           <include name="OpenBrowserGrade"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ProjectScreenTest -->
