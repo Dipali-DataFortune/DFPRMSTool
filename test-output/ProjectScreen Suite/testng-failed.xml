@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ProjectScreen Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="ProjectScreen Test(failed)">
+    <classes>
+      <class name="com.PRMSTool.Tests.ProjectScreenTest">
+        <methods>
+          <include name="verifyclickOnAdd"/>
+          <include name="finish"/>
+          <include name="verifyaddProjectDetails1"/>
+          <include name="verifyselectEndDate"/>
+          <include name="verifyclickOnAddNew"/>
+          <include name="verifyselectStartDate"/>
+          <include name="verifyLogin"/>
+          <include name="verifyaddBillingDetails"/>
+          <include name="verifyselectActualEndDate"/>
+          <include name="verifyselectActualStartDate"/>
+          <include name="verifyaddProjectDetails"/>
+          <include name="verifyclickOnProject"/>
+          <include name="OpenBrowserGrade"/>
+        </methods>
+      </class> <!-- com.PRMSTool.Tests.ProjectScreenTest -->
+    </classes>
+  </test> <!-- ProjectScreen Test(failed) -->
+</suite> <!-- Failed suite [ProjectScreen Suite] -->

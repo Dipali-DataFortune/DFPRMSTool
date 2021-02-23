@@ -23,12 +23,12 @@ public class ProjectScreenPage extends TestBase{
 	WebElement addNew;
 	
 	@FindBy(xpath = "//input[@alt='Export']")
-	WebElement downloadFile;
+	List <WebElement> downloadFile;
 	
 	@FindBy(xpath = "(//span[contains(text(),'Project')])[1]")
 	WebElement project;
 	
-	@FindBy(xpath = "//input[@alt='Export' and @mattooltip='Download excel sheet']")
+	@FindBy(xpath = "//input[@alt='Export']")
 	WebElement projectFile;
 	
 	@FindBy(xpath = "//mat-select[@name='ClientId']")
@@ -151,9 +151,9 @@ public class ProjectScreenPage extends TestBase{
 		options.setExperimentalOption("prefs", chromePref);
 		
 		highLightElement(driver, projectFile);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", projectFile);
-		//projectFile.click();
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", projectFile);
+		downloadFile.get(0).click();
 		Thread.sleep(5000);
 		System.out.println("File downloaded successfully");
 	}

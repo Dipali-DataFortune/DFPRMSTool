@@ -12,6 +12,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -281,13 +282,53 @@ public class ClientScreenPage extends TestBase {
 	WebElement stakeholderDiscard;
 	
 	@FindBy(xpath = "//input[@alt='Export']")
-	WebElement downloadFile;
+	//@FindBy(xpath = "//input[@class='ng-tns-c34-124' and @alt='Export']")	
+	List <WebElement> downloadFile;
+	
+	@FindBy(xpath = "(//div[@class='mat-sort-header-stem'])[1]")
+	WebElement sortingArrowClient;
+	
+	@FindBy(xpath = "(//div[@class='mat-sort-header-stem'])[2]")
+	WebElement sortingArrowBUnit;
+	
+	@FindBy(xpath = "(//mat-icon[contains(text(),'edit')])[1]")
+	WebElement editClient1;
 	
 	
 	public ClientScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
+	public void checkSorting() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(sortingArrowClient));
+		
+		highLightElement(driver, sortingArrowClient);
+		sortingArrowClient.click();
+		System.out.println("Sorting done in ascending order");
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
+		
+		wait.until(ExpectedConditions.visibilityOf(sortingArrowBUnit));
+		
+		highLightElement(driver, sortingArrowBUnit);
+		sortingArrowBUnit.click();
+		Thread.sleep(5000);
+		
+		sortingArrowClient.click();
+		System.out.println("Sorting done in descending order");
+	}
+	
+	public void editClient() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(editClient1));
+		
+		editClient1.click();
+		Thread.sleep(5000);
+	}
+	
 	public void searchClient() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
@@ -425,7 +466,7 @@ public class ClientScreenPage extends TestBase {
 		
 		scrollToElement(dManagerDropdown);
 		js.executeScript("arguments[0].click()", dManagerDropdown);
-		js.executeScript("arguments[0].click()", mgr1);
+		js.executeScript("arguments[0].click()", delMgr);
 		// dManagerDropdown.click();
 		
 		remarks.sendKeys("test");
@@ -543,7 +584,8 @@ public class ClientScreenPage extends TestBase {
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", chromePref);
 		
-		downloadFile.click();
+		//downloadFile.click();
+		downloadFile.get(0).click();
 		Thread.sleep(5000);
 		System.out.println("File downloaded successfully");
 	}
