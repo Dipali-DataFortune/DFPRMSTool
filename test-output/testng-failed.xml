@@ -6,7 +6,7 @@
       <class name="com.PRMSTool.Tests.ClientScreenTest">
         <methods>
           <include name="finish"/>
-          <include name="verifyeditClient"/>
+          <include name="verifydeleteClient"/>
           <include name="OpenBrowserGrade"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ClientScreenTest -->
