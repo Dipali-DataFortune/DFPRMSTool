@@ -35,33 +35,33 @@ public class ResourceScreenTest extends TestBase{
 		rs.clickOnAddNew();
 	}
 	
-	@Test(priority = 3, enabled=false)
-	public void verifydownloadFile()throws InterruptedException {
-		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
-		rs.downloadFile();
-	}
-	
-	@Test(priority = 4, enabled=true)
+	@Test(priority = 3, enabled=true)
 	public void verifyaddResourceDetails()throws InterruptedException {
 		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
 		rs.addResourceDetails();
 	}
 	
-	@Test(priority = 5, enabled=true)
+	@Test(priority = 4, enabled=true)
 	public void verifyselectBirthDate()throws InterruptedException {
 		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
 		rs.selectBirthDate();
 	}
 	
-	@Test(priority = 6, enabled=true)
+	@Test(priority = 5, enabled=true)
 	public void verifyselectJoiningDate()throws InterruptedException {
 		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
 		rs.selectJoiningDate();
 	}
 	
-	@Test(priority = 7, enabled=true)
+	@Test(priority = 6, enabled=true)
 	public void verifyclickOnAdd()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.clickOnAdd();
+	}
+	
+	@Test(priority = 7, enabled=true)
+	public void verifydownloadFile()throws InterruptedException {
+		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
+		rs.downloadFile();
 	}
 }

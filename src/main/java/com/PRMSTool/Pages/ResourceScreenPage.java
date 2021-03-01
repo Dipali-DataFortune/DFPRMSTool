@@ -138,7 +138,7 @@ public class ResourceScreenPage extends TestBase {
 	WebElement Strengths;
 	
 	@FindBy(xpath = "//input[@alt='Export']")
-	List <WebElement> downloadFile;
+	WebElement downloadFile;
 	
 	public ResourceScreenPage(WebDriver driver) {
 		this.driver = driver;
@@ -151,21 +151,6 @@ public class ResourceScreenPage extends TestBase {
 		resource.click();
 	}
 	
-	public void downloadFile() throws InterruptedException
-	{
-		String downloadFilePath= "C:\\Users\\Dipali.vaidya\\Downloads";
-		HashMap<String, Object> chromePref= new HashMap<String, Object>();
-		chromePref.put("profile.default_content_settings.popups", 0);
-		chromePref.put("download.default_directory", downloadFilePath);
-		
-		ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("prefs", chromePref);
-		
-		downloadFile.get(0).click();
-		Thread.sleep(5000);
-		System.out.println("File downloaded successfully");
-	}
-
 	public void clickOnAddNew() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -180,11 +165,16 @@ public class ResourceScreenPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(resourceName));
 
+		resourceName.clear();
 		resourceName.sendKeys("Test1");
+		
+		employeeID.clear();
 		employeeID.sendKeys("DS123");
 		Thread.sleep(5000);
 		
+		address.clear();
 		address.sendKeys("Hadapsar");
+		
 		scrollToElement(country);
 		wait.until(ExpectedConditions.visibilityOf(country));
 		country.click();
@@ -201,9 +191,16 @@ public class ResourceScreenPage extends TestBase {
 		city1.click();
 		Thread.sleep(3000);
 		
+		zip.clear();
 		zip.sendKeys("411028");
+		
+		contactNumber.clear();
 		contactNumber.sendKeys("9876543210");
+		
+		alternateContactNumber.clear();
 		alternateContactNumber.sendKeys("1234567890");
+		
+		emailID.clear();
 		emailID.sendKeys("test@gmail.com");
 		
 		wait.until(ExpectedConditions.visibilityOf(yearBucket));
@@ -246,12 +243,15 @@ public class ResourceScreenPage extends TestBase {
 		totalYears.sendKeys("6");
 		
 		wait.until(ExpectedConditions.visibilityOf(PriSkill));
+		PriSkill.clear();
 		PriSkill.sendKeys("Automation Testing");
 		
 		wait.until(ExpectedConditions.visibilityOf(SecSkill));
+		SecSkill.clear();
 		SecSkill.sendKeys("Manual Testing");
 		
 		wait.until(ExpectedConditions.visibilityOf(Strengths));
+		Strengths.clear();
 		Strengths.sendKeys("Test");
 	}
 
@@ -334,5 +334,20 @@ public class ResourceScreenPage extends TestBase {
 		System.out.println(DateOfBirth.getText());
 		System.out.println("Joining date selected");
 		Thread.sleep(5000);
+	}
+	
+	public void downloadFile() throws InterruptedException
+	{
+		String downloadFilePath= "C:\\Users\\Dipali.vaidya\\Downloads";
+		HashMap<String, Object> chromePref= new HashMap<String, Object>();
+		chromePref.put("profile.default_content_settings.popups", 0);
+		chromePref.put("download.default_directory", downloadFilePath);
+		
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("prefs", chromePref);
+		Thread.sleep(5000);
+		downloadFile.click();
+		Thread.sleep(5000);
+		System.out.println("Resource file downloaded successfully");
 	}
 }

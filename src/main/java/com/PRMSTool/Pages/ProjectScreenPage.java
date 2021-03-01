@@ -2,12 +2,14 @@ package com.PRMSTool.Pages;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
@@ -23,7 +25,7 @@ public class ProjectScreenPage extends TestBase{
 	WebElement addNew;
 	
 	@FindBy(xpath = "//input[@alt='Export']")
-	List <WebElement> downloadFile;
+	WebElement downloadFile;
 	
 	@FindBy(xpath = "(//span[contains(text(),'Project')])[1]")
 	WebElement project;
@@ -35,7 +37,10 @@ public class ProjectScreenPage extends TestBase{
 	WebElement clientDropdown;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Appointlink Portal Solutions ')]")
-	WebElement appointlink;
+	WebElement client1;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Van Ran Communications Services Inc. ')]")
+	WebElement client2;
 	
 	@FindBy(id = "mat-input-2")
 	WebElement projectName;
@@ -64,13 +69,13 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(id = "mat-select-5")
 	WebElement PM;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Shailendra Pardeshi (DS1129) ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Dipali Vaidya (DS1167) ')]")
 	WebElement PM1;
 	
 	@FindBy(id = "mat-select-6")
 	WebElement PL;
-	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Dipali Vaidya (DS1167) ')]")
+		
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Test1 (DS12) ')]")
 	WebElement PL1;
 	
 	@FindBy(id = "mat-select-7")
@@ -79,23 +84,32 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-option/span[contains(text(),' QA Automation ')]")
 	WebElement projectType1;
 	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' BI ')]")
+	WebElement projectType2;
+	
 	@FindBy(id = "mat-select-8")
 	WebElement projectSubType;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Others ')]")
 	WebElement projectSubType1;
-	
+		
 	@FindBy(id = "mat-select-9")
 	WebElement category;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Fixed ')]")
 	WebElement category1;
 	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Others ')]")
+	WebElement category2;
+	
 	@FindBy(id = "mat-select-10")
 	WebElement PStatus;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Active ')]")
 	WebElement PStatus1;
+	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Inactive ')]")
+	WebElement PStatus2;
 	
 	@FindBy(id = "mat-input-9")
 	WebElement description;
@@ -117,6 +131,9 @@ public class ProjectScreenPage extends TestBase{
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Monthly ')]")
 	WebElement reviewCycle1;
+	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Weekly ')]")
+	WebElement reviewCycle2;
 	
 	@FindBy(id = "mat-input-10")
 	WebElement MBillingRate;
@@ -140,24 +157,6 @@ public class ProjectScreenPage extends TestBase{
 		project.click();
 	}
 		
-	public void downloadFile() throws InterruptedException
-	{
-		String downloadFilePath= "C:\\Users\\Dipali.vaidya\\Downloads";
-		HashMap<String, Object> chromePref= new HashMap<String, Object>();
-		chromePref.put("profile.default_content_settings.popups", 0);
-		chromePref.put("download.default_directory", downloadFilePath);
-		
-		ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("prefs", chromePref);
-		
-		highLightElement(driver, projectFile);
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].click()", projectFile);
-		downloadFile.get(0).click();
-		Thread.sleep(5000);
-		System.out.println("File downloaded successfully");
-	}
-	
 	public void clickOnAddNew() throws InterruptedException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -176,10 +175,11 @@ public class ProjectScreenPage extends TestBase{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropdown);
 		Thread.sleep(5000);
-		js.executeScript("arguments[0].click()", appointlink);
+		js.executeScript("arguments[0].click()", client1);
 		
 		Thread.sleep(5000);
-		projectName.sendKeys("test");	
+		projectName.clear();
+		projectName.sendKeys("test1");	
 	}
 	
 	public void selectStartDate() throws InterruptedException
@@ -287,6 +287,7 @@ public class ProjectScreenPage extends TestBase{
 		resources.clear();
 		resources.sendKeys("4");
 		
+		duration.clear();
 		duration.sendKeys("12");
 		
 		scrollToElement(PM);
@@ -324,7 +325,8 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(3000);
 		
 		scrollToElement(description);
-		wait.until(ExpectedConditions.visibilityOf(description));		
+		wait.until(ExpectedConditions.visibilityOf(description));	
+		description.clear();
 		description.sendKeys("test");		
 	}
 	
@@ -357,5 +359,105 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(5000);
 		
 		System.out.println("Billing details added successfully");
+	}
+	
+	public void downloadFile() throws InterruptedException
+	{
+		String downloadFilePath= "C:\\Users\\Dipali.vaidya\\Downloads";
+		HashMap<String, Object> chromePref= new HashMap<String, Object>();
+		chromePref.put("profile.default_content_settings.popups", 0);
+		chromePref.put("download.default_directory", downloadFilePath);
+		
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("prefs", chromePref);
+		Thread.sleep(5000);
+		highLightElement(driver, projectFile);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", projectFile);
+		Thread.sleep(5000);
+		downloadFile.click();
+		Thread.sleep(5000);
+		System.out.println("Project file downloaded successfully");
+	}
+	
+	public void editProjectInformation() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(clientDropdown));
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
+		clientDropdown.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", clientDropdown);
+		
+		//wait.until(ExpectedConditions.visibilityOf(client2));
+		js.executeScript("arguments[0].click()", client2);
+		
+		wait.until(ExpectedConditions.visibilityOf(projectName));
+		projectName.clear();
+		projectName.sendKeys("Test project");
+		
+		resources.clear();
+		resources.sendKeys("6");
+		
+		duration.clear();
+		duration.sendKeys("15");
+		
+		scrollToElement(PM);
+		wait.until(ExpectedConditions.visibilityOf(PM));
+		JavascriptExecutor js1 = (JavascriptExecutor) driver;
+		js1.executeScript("arguments[0].click()", PM);
+		//PM.click();
+		PM1.click();
+			
+		wait.until(ExpectedConditions.visibilityOf(PL));
+		PL.click();
+		PL1.click();
+				
+		wait.until(ExpectedConditions.visibilityOf(projectType));
+		projectType.click();
+		projectType2.click();
+				
+		wait.until(ExpectedConditions.visibilityOf(projectSubType));
+		projectSubType.click();
+		projectSubType1.click();
+				
+		scrollToElement(category);
+		wait.until(ExpectedConditions.visibilityOf(category));
+		category.click();
+		category2.click();
+				
+		wait.until(ExpectedConditions.visibilityOf(PStatus));
+		PStatus.click();
+		PStatus2.click();
+				
+		scrollToElement(description);
+		wait.until(ExpectedConditions.visibilityOf(description));	
+		description.clear();
+		description.sendKeys("Project information updated");
+		
+		scrollToElement(billing);
+		WebDriverWait wait1=new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.visibilityOf(billing));
+		
+		billing.click();
+		
+		wait1.until(ExpectedConditions.visibilityOf(reviewCycle));
+		reviewCycle.click();
+		reviewCycle2.click();
+						
+		wait1.until(ExpectedConditions.visibilityOf(MBillingRate));
+		MBillingRate.clear();
+		MBillingRate.sendKeys("3000");
+		
+		wait1.until(ExpectedConditions.visibilityOf(WBillingRate));
+		WBillingRate.clear();
+		WBillingRate.sendKeys("2000");
+		
+		wait1.until(ExpectedConditions.visibilityOf(HBillingRate));
+		HBillingRate.clear();
+		HBillingRate.sendKeys("1000");
+		
+		System.out.println("Project information updated successfully");
 	}
 }

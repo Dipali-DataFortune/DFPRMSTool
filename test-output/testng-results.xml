@@ -1,33 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="17" total="20" passed="3" failed="0" skipped="0">
+<testng-results ignored="9" total="17" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-25T18:46:02 IST" name="Default suite" finished-at="2021-02-25T18:46:59 IST" duration-ms="57381">
+  <suite started-at="2021-03-01T11:16:45 IST" name="Default suite" finished-at="2021-03-01T11:18:16 IST" duration-ms="90744">
     <groups>
     </groups>
-    <test started-at="2021-02-25T18:46:02 IST" name="Default test" finished-at="2021-02-25T18:46:59 IST" duration-ms="57381">
-      <class name="com.PRMSTool.Tests.ClientScreenTest">
-        <test-method is-config="true" signature="OpenBrowserGrade()[pri:0, instance:com.PRMSTool.Tests.ClientScreenTest@1ba9117e]" started-at="2021-02-25T18:45:56 IST" name="OpenBrowserGrade" finished-at="2021-02-25T18:46:02 IST" duration-ms="6005" status="PASS">
+    <test started-at="2021-03-01T11:16:45 IST" name="Default test" finished-at="2021-03-01T11:18:16 IST" duration-ms="90744">
+      <class name="com.PRMSTool.Tests.ProjectScreenTest">
+        <test-method is-config="true" signature="OpenBrowserGrade()[pri:0, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:16:41 IST" name="OpenBrowserGrade" finished-at="2021-03-01T11:16:45 IST" duration-ms="4364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowserGrade -->
-        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ClientScreenTest@1ba9117e]" started-at="2021-02-25T18:46:02 IST" name="verifyLogin" finished-at="2021-02-25T18:46:22 IST" duration-ms="20243" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:16:46 IST" name="verifyLogin" finished-at="2021-03-01T11:16:58 IST" duration-ms="12263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifysearchClientName()[pri:3, instance:com.PRMSTool.Tests.ClientScreenTest@1ba9117e]" started-at="2021-02-25T18:46:22 IST" name="verifysearchClientName" finished-at="2021-02-25T18:46:40 IST" duration-ms="17885" status="PASS">
+        <test-method signature="verifyclickOnProject()[pri:1, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:16:58 IST" name="verifyclickOnProject" finished-at="2021-03-01T11:16:59 IST" duration-ms="1026" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifysearchClientName -->
-        <test-method signature="verifydeleteClient()[pri:19, instance:com.PRMSTool.Tests.ClientScreenTest@1ba9117e]" started-at="2021-02-25T18:46:40 IST" name="verifydeleteClient" finished-at="2021-02-25T18:46:59 IST" duration-ms="19139" status="PASS">
+        </test-method> <!-- verifyclickOnProject -->
+        <test-method signature="verifysearch()[pri:2, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:16:59 IST" name="verifysearch" finished-at="2021-03-01T11:17:09 IST" duration-ms="10658" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifydeleteClient -->
-        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ClientScreenTest@1ba9117e]" started-at="2021-02-25T18:46:59 IST" name="finish" finished-at="2021-02-25T18:47:00 IST" duration-ms="759" status="PASS">
+        </test-method> <!-- verifysearch -->
+        <test-method signature="verifyclickOnEditButton()[pri:3, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:17:09 IST" name="verifyclickOnEditButton" finished-at="2021-03-01T11:17:10 IST" duration-ms="726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnEditButton -->
+        <test-method signature="verifyeditProjectInformation()[pri:4, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:17:10 IST" name="verifyeditProjectInformation" finished-at="2021-03-01T11:17:22 IST" duration-ms="11874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditProjectInformation -->
+        <test-method signature="verifyclickOnUpdateButton()[pri:5, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:17:22 IST" name="verifyclickOnUpdateButton" finished-at="2021-03-01T11:17:22 IST" duration-ms="359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnUpdateButton -->
+        <test-method signature="verifydelete()[pri:6, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:17:22 IST" name="verifydelete" finished-at="2021-03-01T11:18:08 IST" duration-ms="45211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydelete -->
+        <test-method signature="verifydownloadFile()[pri:7, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:18:08 IST" name="verifydownloadFile" finished-at="2021-03-01T11:18:16 IST" duration-ms="8492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydownloadFile -->
+        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ProjectScreenTest@4944252c]" started-at="2021-03-01T11:18:16 IST" name="finish" finished-at="2021-03-01T11:18:17 IST" duration-ms="910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finish -->
-      </class> <!-- com.PRMSTool.Tests.ClientScreenTest -->
+      </class> <!-- com.PRMSTool.Tests.ProjectScreenTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

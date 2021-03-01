@@ -32,40 +32,40 @@ public class ProjectResourceScreenTest extends TestBase{
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
 		prs.clickOnAddNew();
 	}
-	
-	@Test(priority = 3, enabled=false)
-	public void verifydownloadFile()throws InterruptedException {
-		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
-		prs.downloadFile();
-	}
-	
-	@Test(priority = 4, enabled=true)
+		
+	@Test(priority = 3, enabled=true)
 	public void verifyselectPercentageAllocation()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
 		prs.selectPercentageAllocation();
 	}
 	
-	@Test(priority = 5, enabled=true)
+	@Test(priority = 4, enabled=true)
 	public void verifyaddProjectResourceDetails()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
 		prs.addProjectResourceDetails();
 	}	
 	
-	@Test(priority = 6, enabled=true)
+	@Test(priority = 5, enabled=true)
 	public void verifyselectStartDate()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
 		prs.selectStartDate();
 	}
 	
-	@Test(priority = 7, enabled=true)
+	@Test(priority = 6, enabled=true)
 	public void verifyselectEndDate()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
 		prs.selectEndDate();
 	}
 	
-	@Test(priority = 8, enabled=true)
+	@Test(priority = 7, enabled=true)
 	public void verifyclickOnAdd()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.clickOnAdd();
+	}
+	
+	@Test(priority = 8, enabled=true)
+	public void verifydownloadFile()throws InterruptedException {
+		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
+		prs.downloadFile();
 	}
 }

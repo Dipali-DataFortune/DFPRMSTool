@@ -95,7 +95,7 @@ public class ProjectResourceScreenPage extends TestBase{
 	WebElement remark;
 	
 	@FindBy(xpath = "//input[@alt='Export']")
-	List <WebElement> downloadFile;
+	WebElement downloadFile;
 	
 	public ProjectResourceScreenPage(WebDriver driver) {
 		this.driver = driver;
@@ -106,29 +106,9 @@ public class ProjectResourceScreenPage extends TestBase{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(projectResource));
 
-		projectResource.click();
-		
-		/*
-		 * Alert alert=driver.switchTo().alert(); alert.dismiss();
-		 * System.out.println(alert.getText());
-		 */
+		projectResource.click();		
 	}
-	
-	public void downloadFile() throws InterruptedException
-	{
-		String downloadFilePath= "C:\\Users\\Dipali.vaidya\\Downloads";
-		HashMap<String, Object> chromePref= new HashMap<String, Object>();
-		chromePref.put("profile.default_content_settings.popups", 0);
-		chromePref.put("download.default_directory", downloadFilePath);
-		
-		ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("prefs", chromePref);
-		
-		downloadFile.get(0).click();
-		Thread.sleep(5000);
-		System.out.println("File downloaded successfully");
-	}
-	
+			
 	public void clickOnAddNew() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -165,6 +145,7 @@ public class ProjectResourceScreenPage extends TestBase{
 		resource1.click();
 		
 		wait.until(ExpectedConditions.visibilityOf(role));
+		role.clear();
 		role.sendKeys("QA Automation");
 		
 		wait.until(ExpectedConditions.visibilityOf(radioButton1));
@@ -185,11 +166,12 @@ public class ProjectResourceScreenPage extends TestBase{
 		Thread.sleep(5000);
 		
 		wait.until(ExpectedConditions.visibilityOf(rate));
-		rate.click();
+		rate.clear();
 		rate.sendKeys("5");
 		
 		scrollToElement(remark);
 		wait.until(ExpectedConditions.visibilityOf(remark));
+		remark.clear();
 		remark.sendKeys("test resource");
 	}
 
@@ -254,5 +236,20 @@ public class ProjectResourceScreenPage extends TestBase{
 		objAct.dragAndDropBy(percentageAllocation, -12, 75).perform();
 		
 		System.out.println("Percentage allocation is: " +sliderValue.getText());
+	}
+	
+	public void downloadFile() throws InterruptedException
+	{
+		String downloadFilePath= "C:\\Users\\Dipali.vaidya\\Downloads";
+		HashMap<String, Object> chromePref= new HashMap<String, Object>();
+		chromePref.put("profile.default_content_settings.popups", 0);
+		chromePref.put("download.default_directory", downloadFilePath);
+		
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("prefs", chromePref);
+		Thread.sleep(5000);
+		downloadFile.click();
+		Thread.sleep(5000);
+		System.out.println("File downloaded successfully");
 	}
 }
