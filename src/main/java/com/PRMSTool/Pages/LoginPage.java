@@ -55,7 +55,8 @@ public class LoginPage extends TestBase {
 		email.sendKeys(uname);
 		password.sendKeys(pwd);
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
+		wait.until(ExpectedConditions.visibilityOf(loginButton));
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", loginButton);

@@ -25,6 +25,9 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "(//span[contains(text(),'Project-Resource')])[1]")
 	WebElement projectResource;
 	
+	@FindBy(xpath = "//input[@placeholder='Search for a project resource']")
+	WebElement searchBox;
+	
 	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
 	WebElement addNew;
 	
@@ -34,11 +37,17 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Appointlink Portal Solutions ')]")
 	WebElement client1;
 	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' ABC ')]")
+	WebElement client2;
+	
 	@FindBy(xpath = "//mat-select[@placeholder='Project']")
 	WebElement projectDropDown;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' SeatGen QA Automation ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' test1 ')]")
 	WebElement project1;
+	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
+	WebElement project2;
 	
 	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")
 	WebElement statusDropDown;
@@ -67,11 +76,17 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Monthly ')]")
 	WebElement BillingCycle;
 	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Weekly ')]")
+	WebElement BillingCycle1;
+	
 	@FindBy(xpath = "//mat-select[@name='CurrencyId']")
 	WebElement currencyDropDown;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' INR ')]")
 	WebElement Currency;
+	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' USD ')]")
+	WebElement Currency1;
 	
 	@FindBy(xpath = "//input[@placeholder='Rate']")
 	WebElement rate;
@@ -93,6 +108,12 @@ public class ProjectResourceScreenPage extends TestBase{
 		
 	@FindBy(xpath = "//textarea[@placeholder='Remark']")
 	WebElement remark;
+	
+	@FindBy(xpath = "//mat-icon[contains(text(),'delete')]")
+	WebElement deleteButton;
+
+	@FindBy(xpath = "//button[@class='mat-raised-button mat-primary']")
+	WebElement yesButton;
 	
 	@FindBy(xpath = "//input[@alt='Export']")
 	WebElement downloadFile;
@@ -121,17 +142,16 @@ public class ProjectResourceScreenPage extends TestBase{
 	
 	public void addProjectResourceDetails() throws InterruptedException
 	{
+		Thread.sleep(5000);
 		scrollToElement(clientDropDown);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(clientDropDown));
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-			
-		Thread.sleep(5000);
-		
 		js.executeScript("arguments[0].click()", clientDropDown);
 		//clientDropDown.click();
-		client1.click();
+		js.executeScript("arguments[0].click()", client1);
+		//client1.click();
 				
 		Thread.sleep(5000);
 		
@@ -168,6 +188,19 @@ public class ProjectResourceScreenPage extends TestBase{
 		wait.until(ExpectedConditions.visibilityOf(rate));
 		rate.clear();
 		rate.sendKeys("5");
+		
+		Thread.sleep(5000);
+		scrollToElement(percentageAllocation);
+		wait.until(ExpectedConditions.visibilityOf(percentageAllocation));
+		highLightElement(driver, percentageAllocation);
+		Thread.sleep(5000);
+		
+		Actions objAct = new Actions(driver);
+		objAct.dragAndDropBy(percentageAllocation, -12, 75).perform();
+		
+		Thread.sleep(5000);
+		
+		System.out.println("Percentage allocation is: " +sliderValue.getText());
 		
 		scrollToElement(remark);
 		wait.until(ExpectedConditions.visibilityOf(remark));
@@ -226,16 +259,107 @@ public class ProjectResourceScreenPage extends TestBase{
 		System.out.println("End date selected");
 		//Thread.sleep(5000);
 	}
+			
+	public void searchProjectResource(String name) throws InterruptedException {
+		
+		Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(searchBox));
+
+		highLightElement(driver, searchBox);
+		Thread.sleep(5000);
+		searchBox.clear();
+		searchBox.sendKeys(name);
+
+		Thread.sleep(5000);
+	}
 	
-	public void selectPercentageAllocation() throws InterruptedException
+	public void deleteProjectResource(String name) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(searchBox));
+
+		Thread.sleep(5000);
+		searchBox.clear();
+		searchBox.sendKeys(name);
+
+		deleteButton.click();
+		/*
+		 * Alert objalert=driver.switchTo().alert();
+		 * System.out.println(objalert.getText()); objalert.accept();
+		 */
+		//yesButton.click();
+		wait.until(ExpectedConditions.visibilityOf(yesButton));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", yesButton);
+		
+		System.out.println("Client deleted successfully");
+	}
+	
+	public void editProjectResourceInformation() throws InterruptedException
 	{
+		//scrollToElement(clientDropDown);
+		Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(clientDropDown));
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", clientDropDown);
+		//clientDropDown.click();
+		client2.click();
+				
+		Thread.sleep(5000);
+		
+		/*
+		 * wait.until(ExpectedConditions.visibilityOf(projectDropDown));
+		 * 
+		 * projectDropDown.click(); project2.click();
+		 * 
+		 * wait.until(ExpectedConditions.visibilityOf(resourceDropDown));
+		 * resourceDropDown.click(); resource2.click();
+		 */
+		
+		wait.until(ExpectedConditions.visibilityOf(role));
+		role.clear();
+		role.sendKeys("Software engineer");
+		
+		wait.until(ExpectedConditions.visibilityOf(radioButton1));
+		//radioButton1.click();
+		
+		js.executeScript("arguments[0].click()", radioButton1);
+		
+		wait.until(ExpectedConditions.visibilityOf(BillingCycleDropDown));
+		BillingCycleDropDown.click();
+		//BillingCycle.click();
+		js.executeScript("arguments[0].click()", BillingCycle1);
+		Thread.sleep(5000);
+		
+		wait.until(ExpectedConditions.visibilityOf(currencyDropDown));
+		currencyDropDown.click();
+		//Currency.click();
+		js.executeScript("arguments[0].click()", Currency1);
+		Thread.sleep(5000);
+		
+		wait.until(ExpectedConditions.visibilityOf(rate));
+		rate.clear();
+		rate.sendKeys("2");
+
+		Thread.sleep(5000);
 		scrollToElement(percentageAllocation);
+		wait.until(ExpectedConditions.visibilityOf(percentageAllocation));
 		highLightElement(driver, percentageAllocation);
+		Thread.sleep(5000);
 		
 		Actions objAct = new Actions(driver);
-		objAct.dragAndDropBy(percentageAllocation, -12, 75).perform();
+		objAct.dragAndDropBy(percentageAllocation, -12, 70).perform();
+		
+		Thread.sleep(5000);
 		
 		System.out.println("Percentage allocation is: " +sliderValue.getText());
+		
+		scrollToElement(remark);
+		wait.until(ExpectedConditions.visibilityOf(remark));
+		remark.clear();
+		remark.sendKeys("Edit project resource");
 	}
 	
 	public void downloadFile() throws InterruptedException

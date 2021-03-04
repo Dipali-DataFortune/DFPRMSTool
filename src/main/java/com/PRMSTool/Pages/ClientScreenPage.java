@@ -163,9 +163,6 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "(//button[@class='mat-icon-button'])[2]")
 	WebElement appSDateButton;
 
-	@FindBy(xpath = "//span[contains(text(),'ADD')]")
-	WebElement addButton;
-
 	@FindBy(xpath = "//mat-header-cell[contains(text(),'Sr.No')]")
 	WebElement srNo;
 
@@ -820,16 +817,7 @@ public class ClientScreenPage extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", stakeholderAdd);
 		Thread.sleep(5000);
-	}
-
-	public void clickOnAdd() {
-		// addButton.click();
-		scrollToElement(addButton);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(addButton));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", addButton);
-	}
+	}	
 
 	public void downloadFile() throws InterruptedException {
 		String downloadFilePath = "C:\\Users\\Dipali.vaidya\\Downloads";

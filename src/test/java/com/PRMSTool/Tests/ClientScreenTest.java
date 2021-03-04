@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.PRMSTool.Pages.ClientScreenPage;
 import com.PRMSTool.Pages.LoginPage;
 import com.PRMSTool.base.TestBase;
+import com.PRMSTool.util.UtilityClass;
 
 /**
  * @author dipali.vaidya
@@ -127,13 +128,13 @@ public class ClientScreenTest extends TestBase{
 	
 	@Test(priority = 17, enabled=true)
 	public void verifyclickOnAdd()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.clickOnAdd();
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.clickOnAdd();
 	}
 	
 	@Test(priority = 18, enabled=true)
 	public void verifydownloadFile()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.downloadFile();
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.downloadFile();
 	}
 }

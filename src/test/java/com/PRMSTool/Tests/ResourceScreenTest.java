@@ -9,6 +9,7 @@ import com.PRMSTool.Pages.ProjectResourceScreenPage;
 import com.PRMSTool.Pages.ProjectScreenPage;
 import com.PRMSTool.Pages.ResourceScreenPage;
 import com.PRMSTool.base.TestBase;
+import com.PRMSTool.util.UtilityClass;
 
 public class ResourceScreenTest extends TestBase{
 
@@ -55,13 +56,43 @@ public class ResourceScreenTest extends TestBase{
 	
 	@Test(priority = 6, enabled=true)
 	public void verifyclickOnAdd()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.clickOnAdd();
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.clickOnAdd();
+	}
+		
+	@Test(priority = 7, enabled=true)
+	public void verifysearch()throws InterruptedException {
+		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
+		rs.searchResource("TestDelete");
 	}
 	
-	@Test(priority = 7, enabled=true)
-	public void verifydownloadFile()throws InterruptedException {
+	@Test(priority = 8, enabled=true)
+	public void verifyclickOnEditButton()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.clickOnEditButton();
+	}
+	
+	@Test(priority = 9, enabled=true)
+	public void verifyeditResourceInformation()throws InterruptedException {
 		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
-		rs.downloadFile();
+		rs.editResourceInformation();
+	}
+	
+	@Test(priority = 10, enabled=true)
+	public void verifyclickOnUpdateButton()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.clickOnUpdateButton();
+	}
+	
+	@Test(priority = 11, enabled=true)
+	public void verifydelete()throws InterruptedException {
+		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
+		rs.deleteResource("TestEdit");
+	}
+	
+	@Test(priority = 12, enabled=true)
+	public void verifydownloadFile()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.downloadFile();
 	}
 }

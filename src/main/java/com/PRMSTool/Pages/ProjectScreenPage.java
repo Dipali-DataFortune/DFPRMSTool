@@ -144,6 +144,12 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(id = "mat-input-12")
 	WebElement HBillingRate;
 	
+	@FindBy(xpath = "//mat-icon[contains(text(),'delete')]")
+	WebElement deleteButton;
+
+	@FindBy(xpath = "//button[@class='mat-raised-button mat-primary']")
+	WebElement yesButton;
+	
 	public ProjectScreenPage(WebDriver driver)
 	{
 		this.driver=driver;
@@ -361,25 +367,39 @@ public class ProjectScreenPage extends TestBase{
 		System.out.println("Billing details added successfully");
 	}
 	
-	public void downloadFile() throws InterruptedException
-	{
-		String downloadFilePath= "C:\\Users\\Dipali.vaidya\\Downloads";
-		HashMap<String, Object> chromePref= new HashMap<String, Object>();
-		chromePref.put("profile.default_content_settings.popups", 0);
-		chromePref.put("download.default_directory", downloadFilePath);
+	public void searchProject(String name) throws InterruptedException {
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("prefs", chromePref);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(searchBox));
+
+		highLightElement(driver, searchBox);
 		Thread.sleep(5000);
-		highLightElement(driver, projectFile);
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].click()", projectFile);
+		searchBox.clear();
+		searchBox.sendKeys(name);
+
 		Thread.sleep(5000);
-		downloadFile.click();
-		Thread.sleep(5000);
-		System.out.println("Project file downloaded successfully");
 	}
 	
+	public void deleteProject(String name) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(searchBox));
+
+		Thread.sleep(5000);
+		searchBox.clear();
+		searchBox.sendKeys(name);
+
+		deleteButton.click();
+		Thread.sleep(3000);
+		/*
+		 * Alert objalert=driver.switchTo().alert();
+		 * System.out.println(objalert.getText()); objalert.accept();
+		 */
+		yesButton.click();
+
+		System.out.println("Client deleted successfully");
+	}
+		
 	public void editProjectInformation() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);

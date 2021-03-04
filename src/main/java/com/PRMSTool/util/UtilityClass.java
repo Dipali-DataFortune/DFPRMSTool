@@ -1,7 +1,9 @@
 package com.PRMSTool.util;
 
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,9 +19,12 @@ public class UtilityClass extends TestBase{
 	WebDriver driver;
 	SoftAssert softAssert = new SoftAssert();
 	
+	@FindBy(xpath = "//span[contains(text(),'ADD')]")
+	WebElement addButton;
+	
 	@FindBy(xpath = "//input[@placeholder='Search for a project']")
 	WebElement searchBox;
-	
+		
 	@FindBy(xpath = "//input[@alt='Export']")
 	WebElement downloadFile;
 	
@@ -29,48 +34,21 @@ public class UtilityClass extends TestBase{
 	@FindBy(xpath = "//mat-icon[contains(text(),'edit')]")
 	WebElement editButton;
 
-	@FindBy(xpath = "//mat-icon[contains(text(),'delete')]")
-	WebElement deleteButton;
-
-	@FindBy(xpath = "//button[@class='mat-raised-button mat-primary']")
-	WebElement yesButton;
-
 	@FindBy(xpath = "//button[@class='mat-raised-button']")
 	WebElement NoButton;
 	
 	public UtilityClass(WebDriver driver) {
 		this.driver = driver;
-	}
-
-	public void search(String name) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(searchBox));
-
-		highLightElement(driver, searchBox);
-		Thread.sleep(5000);
-		searchBox.clear();
-		searchBox.sendKeys(name);
-
-		Thread.sleep(5000);
-	}
+	}	
 	
-	public void delete(String name) throws InterruptedException {
+	public void clickOnAdd() {
+		// addButton.click();
+		scrollToElement(addButton);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(searchBox));
-
-		Thread.sleep(5000);
-		searchBox.clear();
-		searchBox.sendKeys(name);
-
-		deleteButton.click();
-		Thread.sleep(3000);
-		/*
-		 * Alert objalert=driver.switchTo().alert();
-		 * System.out.println(objalert.getText()); objalert.accept();
-		 */
-		yesButton.click();
-
-		System.out.println("Client deleted successfully");
+		wait.until(ExpectedConditions.visibilityOf(addButton));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", addButton);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 	public void clickOnEditButton() {
@@ -85,7 +63,9 @@ public class UtilityClass extends TestBase{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(updateButton));
 
-		updateButton.click();
+		//updateButton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", updateButton);
 	}
 	
 	public void downloadFile() throws InterruptedException {
@@ -103,6 +83,6 @@ public class UtilityClass extends TestBase{
 		downloadFile.click();
 		Thread.sleep(3000);
 
-		System.out.println("Client file downloaded successfully");
+		System.out.println("File downloaded successfully");
 	}
 }

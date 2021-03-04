@@ -73,38 +73,38 @@ public class ProjectScreenTest extends TestBase{
 	
 	@Test(priority = 10, enabled=true)
 	public void verifyclickOnAdd()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.clickOnAdd();
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.clickOnAdd();
 	}
-	
+		
 	@Test(priority = 11, enabled=true)
 	public void verifysearch()throws InterruptedException {
-		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
-		util.search("test1");
+		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
+		ps.searchProject("test1");
 	}
 	
 	@Test(priority = 12, enabled=true)
-	public void verifydelete()throws InterruptedException {
-		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
-		util.delete("test");
-	}
-	
-	@Test(priority = 13, enabled=true)
 	public void verifyclickOnEditButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnEditButton();
 	}
 	
-	@Test(priority = 14, enabled=true)
+	@Test(priority = 13, enabled=true)
 	public void verifyeditProjectInformation()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.editProjectInformation();
 	}
 	
-	@Test(priority = 15, enabled=true)
+	@Test(priority = 14, enabled=true)
 	public void verifyclickOnUpdateButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnUpdateButton();
+	}
+	
+	@Test(priority = 15, enabled=true)
+	public void verifydelete()throws InterruptedException {
+		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
+		ps.deleteProject("test");
 	}
 	
 	@Test(priority = 16, enabled=true)
