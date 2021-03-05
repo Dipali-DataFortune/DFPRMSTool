@@ -33,103 +33,103 @@ public class ClientScreenTest extends TestBase{
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.checkSorting();
 	}
-		
+			
 	@Test(priority = 2, enabled=true)
-	public void verifysearchClient()throws InterruptedException {
+	public void verifyclickOnAddNew()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.searchClient();
+		cp.clickOnAddNew();
+	}
+	
+	@Test(priority = 3, enabled=true)
+	public void verifyaddNewClientInformation()throws InterruptedException {
+		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
+		cp.addNewClientInformation();
+	}
+	
+	@Test(priority = 4, enabled=true)
+	public void verifyclickOnAgreementDetails()throws InterruptedException {
+		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
+		cp.clickOnAgreementDetails();
+	}
+	
+	@Test(priority = 5, enabled=true)
+	public void verifyselectAgreementSignedDate()throws InterruptedException {
+		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
+		cp.selectAgreementSignedDate();
 	}
 		
-	@Test(priority = 3, enabled=true)
+	@Test(priority = 6, enabled=true)
+	public void verifyselectApproxStartDate()throws InterruptedException {
+		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
+		cp.selectApproxStartDate();
+	}
+	
+	@Test(priority = 7, enabled=true)
+	public void verifyaddAgreementDetails()throws InterruptedException {
+		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
+		cp.addAgreementDetails();
+	}
+	
+	@Test(priority = 8, enabled=true)
+	public void verifyclickOnStakeholderDetails()throws InterruptedException {
+		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
+		cp.clickOnStakeholderDetails();
+	}
+	
+	@Test(priority = 9, enabled=true)
+	public void verifyaddStakeholderDetails()throws InterruptedException {
+		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
+		cp.addStakeholderDetails();
+	}
+	
+	@Test(priority = 10, enabled=true)
+	public void verifyclickOnAdd()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.clickOnAdd();
+	}
+	
+	@Test(priority = 11, enabled=true)
+	public void verifysearchClient()throws InterruptedException {
+		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
+		cp.searchClient("testUpdate");
+	}
+		
+	@Test(priority = 12, enabled=true)
 	public void verifyeditClient()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.editClient();
 	}
 	
-	@Test(priority = 4, enabled=true)
+	@Test(priority = 13, enabled=true)
 	public void verifyeditClientInformation()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.editClientInformation();
 	}
 	
-	@Test(priority = 5, enabled=true)
+	@Test(priority = 14, enabled=true)
 	public void verifyeditAgreementDetails()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.clickOnAgreementDetails();
 		cp.editAgreementDetails();
 	}
 	
-	@Test(priority = 6, enabled=true)
+	@Test(priority = 15, enabled=true)
 	public void verifyeditStakeholder()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.clickOnStakeholderDetails();
 		cp.editStakeholder();
 	}
 	
-	@Test(priority = 7, enabled=true)
+	@Test(priority = 16, enabled=true)
 	public void verifyclickOnUpdateClient()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.clickOnUpdateClient();
 	}
 	
-	@Test(priority = 8, enabled=false)
+	@Test(priority = 17, enabled=true)
 	public void verifydeleteClient()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.deleteClient();
-	}
-		
-	@Test(priority = 9, enabled=true)
-	public void verifyclickOnAddNew()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.clickOnAddNew();
-	}
-	
-	@Test(priority = 10, enabled=true)
-	public void verifyaddNewClientInformation()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.addNewClientInformation();
-	}
-	
-	@Test(priority = 11, enabled=true)
-	public void verifyclickOnAgreementDetails()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.clickOnAgreementDetails();
-	}
-	
-	@Test(priority = 12, enabled=true)
-	public void verifyselectAgreementSignedDate()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.selectAgreementSignedDate();
-	}
-		
-	@Test(priority = 13, enabled=true)
-	public void verifyselectApproxStartDate()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.selectApproxStartDate();
-	}
-	
-	@Test(priority = 14, enabled=true)
-	public void verifyaddAgreementDetails()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.addAgreementDetails();
-	}
-	
-	@Test(priority = 15, enabled=true)
-	public void verifyclickOnStakeholderDetails()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.clickOnStakeholderDetails();
-	}
-	
-	@Test(priority = 16, enabled=true)
-	public void verifyaddStakeholderDetails()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.addStakeholderDetails();
-	}
-	
-	@Test(priority = 17, enabled=true)
-	public void verifyclickOnAdd()throws InterruptedException {
-		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
-		util.clickOnAdd();
 	}
 	
 	@Test(priority = 18, enabled=true)

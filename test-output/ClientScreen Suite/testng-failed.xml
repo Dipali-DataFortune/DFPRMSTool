@@ -7,9 +7,9 @@
         <methods>
           <include name="finish"/>
           <include name="verifyaddStakeholderDetails"/>
-          <include name="verifydownloadFile"/>
           <include name="verifyaddAgreementDetails"/>
           <include name="verifyaddNewClientInformation"/>
+          <include name="verifyclickOnStakeholderDetails"/>
           <include name="OpenBrowserGrade"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ClientScreenTest -->

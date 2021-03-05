@@ -46,25 +46,25 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//button[@class='add-client-button fuse-white mt-24 mt-md-0 mat-raised-button']")
 	WebElement addNew;
 
-	@FindBy(id = "mat-input-2")
+	@FindBy(xpath = "//input[@placeholder='Client Name']")
 	WebElement clientName;
 
-	@FindBy(id = "mat-input-3")
+	@FindBy(xpath = "//input[@placeholder='Company URL']")
 	WebElement companyUrl;
 
-	@FindBy(id = "mat-input-4")
+	@FindBy(xpath = "//input[@placeholder='auto generated']")
 	WebElement clientCode;
 
-	@FindBy(id = "mat-input-5")
+	@FindBy(xpath = "//input[@placeholder='Reference Client Code']")
 	WebElement refClientCode;
 
-	@FindBy(id = "mat-input-6")
+	@FindBy(xpath = "//textarea[@placeholder='Description']")
 	WebElement description;
 
-	@FindBy(id = "mat-input-7")
+	@FindBy(xpath = "//textarea[@placeholder='Address']")
 	WebElement address;
 
-	@FindBy(id = "mat-select-2")
+	@FindBy(xpath = "//mat-select[@placeholder='Country']")
 	WebElement countryDropdown;
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),'India')]")
@@ -73,7 +73,7 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),'USA')]")
 	WebElement CountryUSA;
 
-	@FindBy(id = "mat-select-3")
+	@FindBy(xpath = "//mat-select[@placeholder='State']")
 	WebElement stateDropdown;
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),'Maharashtra')]")
@@ -82,7 +82,7 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),'California')]")
 	WebElement stateCalifornia;
 
-	@FindBy(id = "mat-select-4")
+	@FindBy(xpath = "//mat-select[@placeholder='City']")
 	WebElement cityDropdown;
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),'Pune')]")
@@ -94,52 +94,52 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' San Fransisco ')]")
 	WebElement citySanFransisco;
 
-	@FindBy(id = "mat-input-8")
+	@FindBy(xpath = "//input[@placeholder='Zip']")
 	WebElement zip;
 
-	@FindBy(id = "mat-input-9")
+	@FindBy(xpath = "//input[@placeholder='Contact Number']")
 	WebElement contactNumber;
 
-	@FindBy(id = "mat-input-10")
+	@FindBy(xpath = "//input[@placeholder='Email Id']")
 	WebElement emailId;
 
-	@FindBy(id = "mat-input-11")
+	@FindBy(xpath = "//input[@placeholder='Approx Revenue']")
 	WebElement approxRevenue;
 
-	@FindBy(id = "mat-input-12")
+	@FindBy(xpath = "//input[@placeholder='Approx No Of People']")
 	WebElement approxPeople;
 
-	@FindBy(id = "mat-select-5")
+	@FindBy(xpath = "//mat-select[@name='DomainId']")
 	WebElement domainDropdown;
 
-	@FindBy(id = "mat-select-6")
+	@FindBy(xpath = "//mat-select[@name='CompanyTypeId']")
 	WebElement companyTypeDropdown;
 
-	@FindBy(id = "mat-select-7")
+	@FindBy(xpath = "//mat-select[@name='StatusId']")
 	WebElement statusDropdown;
 
-	@FindBy(id = "mat-select-8")
+	@FindBy(xpath = "//mat-select[@name='BusinessUnitId']")
 	WebElement bUnitDropdown;
 
-	@FindBy(id = "mat-select-9")
+	@FindBy(xpath = "//mat-select[@name='PracticeId']")
 	WebElement practiceDropdown;
 
-	@FindBy(id = "mat-select-10")
+	@FindBy(xpath = "//mat-select[@name='PrimaryTechnologyId']")
 	WebElement pTechDropdown;
 
-	@FindBy(id = "mat-select-11")
+	@FindBy(xpath = "//mat-select[@name='DeliveryManagerId']")
 	WebElement dManagerDropdown;
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),'Amey Kulkarni')]")
 	WebElement mgr1;
 
-	@FindBy(id = "mat-input-13")
+	@FindBy(xpath = "//input[@name='CompanyFoundedIn']")
 	WebElement companyFounded;
 
-	@FindBy(id = "mat-input-14")
+	@FindBy(xpath = "//input[@name='NoOfYearsInBusiness']")
 	WebElement yearsInBusiness;
 
-	@FindBy(id = "mat-input-15")
+	@FindBy(xpath = "//input[@placeholder='Remarks']")
 	WebElement remarks;
 
 	@FindBy(xpath = "(//div[@class='mat-tab-label-content'])[1]")
@@ -253,31 +253,31 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Amey Kulkarni (DS1020) ')]")
 	WebElement delManager2;
 
-	@FindBy(id = "mat-input-18")
+	@FindBy(xpath = "//input[@placeholder='Agreement Signed By Client']")
 	WebElement agreementByClient;
 
-	@FindBy(id = "mat-input-19")
+	@FindBy(xpath = "//input[@placeholder='Agreement Signed By DF']")
 	WebElement agreementByDF;
 
-	@FindBy(id = "mat-input-20")
+	@FindBy(xpath = "//input[@placeholder='Agreement Duration']")
 	WebElement agreementDuration;
 
-	@FindBy(id = "mat-input-21")
+	@FindBy(xpath = "//input[@placeholder='Agreement Value']")
 	WebElement agreementValue;
 
-	@FindBy(id = "mat-select-12")
+	@FindBy(xpath = "//mat-select[@name='SalesPersonId']")
 	WebElement salesPerson;
 
-	@FindBy(id = "mat-select-13")
+	@FindBy(xpath = "//mat-select[@name='CurrencyId']")
 	WebElement currency;
 
-	@FindBy(id = "mat-select-14")
+	@FindBy(xpath = "//mat-select[@name='BDEId']")
 	WebElement BDE;
 
-	@FindBy(id = "mat-select-15")
+	@FindBy(xpath = "//mat-select[@name='PaymentMethodId']")
 	WebElement paymentMethodDropdown;
 
-	@FindBy(id = "mat-select-16")
+	@FindBy(xpath = "//mat-select[@name='PaymentCycleId']")
 	WebElement paymentCycleDropdown;
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),' INR ')]")
@@ -298,19 +298,19 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Weekly ')]")
 	WebElement paymentCycle2;
 
-	@FindBy(id = "mat-input-22")
+	@FindBy(xpath = "//input[@placeholder='Stakeholder Name']")
 	WebElement stakeholderName;
 
-	@FindBy(id = "mat-input-23")
+	@FindBy(xpath = "//input[@placeholder='Designation']")
 	WebElement stakeholderDesig;
 
-	@FindBy(id = "mat-input-24")
+	@FindBy(xpath = "//input[@placeholder='Contact Number']")
 	WebElement stakeholderNumber;
 
-	@FindBy(id = "mat-input-25")
+	@FindBy(xpath = "//input[@placeholder='Email Id']")
 	WebElement stakeholderEmail;
 
-	@FindBy(id = "mat-input-26")
+	@FindBy(xpath = "//input[@placeholder='Address']")
 	WebElement stakeholderAddress;
 
 	@FindBy(xpath = "(//div[@class='mat-button-ripple mat-ripple'])[3]")
@@ -396,25 +396,19 @@ public class ClientScreenPage extends TestBase {
 		 */
 	}
 
-	public void searchClient() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(searchBox));
+	public void searchClient(String name) throws InterruptedException {
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			wait.until(ExpectedConditions.visibilityOf(searchBox));
 
-		Thread.sleep(5000);
-		searchBox.clear();
-		searchBox.sendKeys("testUpdate");
+			highLightElement(driver, searchBox);
+			Thread.sleep(5000);
+			searchBox.clear();
+			searchBox.sendKeys(name);
 
-		Thread.sleep(5000);
-
-		softAssert.assertEquals(srNo.isDisplayed(), true);
-		softAssert.assertEquals(clientNameHeader.isDisplayed(), true);
-		softAssert.assertEquals(BUnitHeader.isDisplayed(), true);
-		softAssert.assertEquals(ASignedDateHeader.isDisplayed(), true);
-		softAssert.assertEquals(statusHeader.isDisplayed(), true);
-		softAssert.assertEquals(actionsHeader.isDisplayed(), true);
-
-		Thread.sleep(5000);
-	}
+			Thread.sleep(5000);
+		}
 
 	public void deleteClient() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -422,15 +416,18 @@ public class ClientScreenPage extends TestBase {
 
 		Thread.sleep(5000);
 		searchBox.clear();
-		searchBox.sendKeys("testDelete");
+		searchBox.sendKeys("test");
 
 		deleteButton.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		/*
 		 * Alert objalert=driver.switchTo().alert();
 		 * System.out.println(objalert.getText()); objalert.accept();
 		 */
-		yesButton.click();
+		wait.until(ExpectedConditions.visibilityOf(yesButton));
+		//yesButton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", yesButton);
 
 		System.out.println("Client deleted successfully");
 	}
@@ -522,7 +519,8 @@ public class ClientScreenPage extends TestBase {
 		remarks.sendKeys("Client information updated successfully");
 	}
 
-	public void editAgreementDetails() {
+	public void editAgreementDetails() throws InterruptedException {
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(agreementByClient));
 
@@ -555,7 +553,8 @@ public class ClientScreenPage extends TestBase {
 		System.out.println("Agreement details updated successfully");
 	}
 
-	public void editStakeholder() {
+	public void editStakeholder() throws InterruptedException {
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(stakeholderName));
 
