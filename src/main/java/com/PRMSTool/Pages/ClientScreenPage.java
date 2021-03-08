@@ -142,13 +142,13 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//input[@placeholder='Remarks']")
 	WebElement remarks;
 
-	@FindBy(xpath = "(//div[@class='mat-tab-label-content'])[1]")
+	@FindBy(xpath = "(//div[@role='tab'])[1]")
 	WebElement clientInfo;
 
-	@FindBy(xpath = "(//div[@class='mat-tab-label-content'])[2]")
+	@FindBy(xpath = "(//div[@role='tab'])[2]")
 	WebElement agreementDetails;
 
-	@FindBy(xpath = "(//div[@class='mat-tab-label-content'])[3]")
+	@FindBy(xpath = "(//div[@role='tab'])[3]")
 	WebElement stakeholder;
 
 	@FindBy(id = "mat-input-23")
@@ -424,7 +424,7 @@ public class ClientScreenPage extends TestBase {
 		 * Alert objalert=driver.switchTo().alert();
 		 * System.out.println(objalert.getText()); objalert.accept();
 		 */
-		wait.until(ExpectedConditions.visibilityOf(yesButton));
+		//wait.until(ExpectedConditions.visibilityOf(yesButton));
 		//yesButton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", yesButton);

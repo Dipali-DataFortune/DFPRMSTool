@@ -91,13 +91,13 @@ public class ClientScreenTest extends TestBase{
 	@Test(priority = 11, enabled=true)
 	public void verifysearchClient()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.searchClient("testUpdate");
+		cp.searchClient("test");
 	}
 		
 	@Test(priority = 12, enabled=true)
 	public void verifyeditClient()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.editClient();
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.clickOnEditButton();
 	}
 	
 	@Test(priority = 13, enabled=true)
@@ -122,8 +122,8 @@ public class ClientScreenTest extends TestBase{
 	
 	@Test(priority = 16, enabled=true)
 	public void verifyclickOnUpdateClient()throws InterruptedException {
-		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.clickOnUpdateClient();
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.clickOnUpdateButton();
 	}
 	
 	@Test(priority = 17, enabled=true)

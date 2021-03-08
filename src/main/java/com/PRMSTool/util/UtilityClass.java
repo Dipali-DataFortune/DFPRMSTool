@@ -28,10 +28,10 @@ public class UtilityClass extends TestBase{
 	@FindBy(xpath = "//input[@alt='Export']")
 	WebElement downloadFile;
 	
-	@FindBy(xpath = "//span[contains(text(),'Update')]")
+	@FindBy(xpath = "//span[@class='mat-button-wrapper']//span[contains(text(),'Update')]")
 	WebElement updateButton;
 	
-	@FindBy(xpath = "//mat-icon[contains(text(),'edit')]")
+	@FindBy(xpath = "(//mat-icon[contains(text(),'edit')])[1]")
 	WebElement editButton;
 
 	@FindBy(xpath = "//button[@class='mat-raised-button']")

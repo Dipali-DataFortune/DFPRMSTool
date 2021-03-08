@@ -21,7 +21,7 @@ public class ProjectScreenPage extends TestBase{
 	WebDriver driver;
 	SoftAssert softAssert = new SoftAssert();
 	
-	@FindBy(xpath = "//span[contains(text(),'ADD NEW ')]")
+	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
 	WebElement addNew;
 	
 	@FindBy(xpath = "//input[@alt='Export']")
@@ -33,16 +33,16 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//input[@alt='Export']")
 	WebElement projectFile;
 	
-	@FindBy(xpath = "//mat-select[@name='ClientId']")
+	@FindBy(xpath = "//mat-select[@placeholder='Client']")
 	WebElement clientDropdown;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Appointlink Portal Solutions ')]")
+	@FindBy(xpath = "//mat-option//span[contains(text(),' ABC ')]")
 	WebElement client1;
 	
 	@FindBy(xpath = "//mat-option//span[contains(text(),' Van Ran Communications Services Inc. ')]")
 	WebElement client2;
 	
-	@FindBy(id = "mat-input-2")
+	@FindBy(xpath = "//input[@placeholder='Project Name']")
 	WebElement projectName;
 	
 	@FindBy(xpath = "(//button[@class='mat-icon-button' and @type='button'])[1]")
@@ -52,33 +52,33 @@ public class ProjectScreenPage extends TestBase{
 	WebElement endDate;
 	
 	@FindBy(xpath = "(//button[@class='mat-icon-button' and @type='button'])[3]")
-	WebElement AStartDate;
+	WebElement ApproxStartDate;
 	
 	@FindBy(xpath = "(//button[@class='mat-icon-button' and @type='button'])[4]")
-	WebElement AEndDate;
+	WebElement ApproxEndDate;
 
 	@FindBy(xpath = "//table[@class='mat-calendar-table']//td")
 	List<WebElement> allDates;
 	
-	@FindBy(id = "mat-input-7")
+	@FindBy(xpath = "//input[@placeholder='Number Of Resorces']")
 	WebElement resources;
 	
-	@FindBy(id = "mat-input-8")
+	@FindBy(xpath = "//input[@placeholder='Duration']")
 	WebElement duration;
 	
-	@FindBy(id = "mat-select-5")
-	WebElement PM;
+	@FindBy(xpath = "//mat-select[@placeholder='Project Manager']")
+	WebElement ProjectManager;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Dipali Vaidya (DS1167) ')]")
-	WebElement PM1;
+	WebElement ProjectManager1;
 	
-	@FindBy(id = "mat-select-6")
-	WebElement PL;
+	@FindBy(xpath = "//mat-select[@placeholder='Project Lead']")
+	WebElement ProjectLead;
 		
-	@FindBy(xpath = "//mat-option//span[contains(text(),' Test1 (DS12) ')]")
-	WebElement PL1;
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Shailendra Pardeshi (DS1129) ')]")
+	WebElement ProjectLead1;
 	
-	@FindBy(id = "mat-select-7")
+	@FindBy(xpath = "//mat-select[@placeholder='Project Type']")
 	WebElement projectType;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' QA Automation ')]")
@@ -87,13 +87,13 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-option/span[contains(text(),' BI ')]")
 	WebElement projectType2;
 	
-	@FindBy(id = "mat-select-8")
+	@FindBy(xpath = "//mat-select[@placeholder='Project Sub Type']")
 	WebElement projectSubType;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Others ')]")
 	WebElement projectSubType1;
 		
-	@FindBy(id = "mat-select-9")
+	@FindBy(xpath = "//mat-select[@placeholder='Category']")
 	WebElement category;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Fixed ')]")
@@ -102,16 +102,16 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Others ')]")
 	WebElement category2;
 	
-	@FindBy(id = "mat-select-10")
-	WebElement PStatus;
+	@FindBy(xpath = "//mat-select[@placeholder='Project Status']")
+	WebElement ProjectStatus;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Active ')]")
-	WebElement PStatus1;
+	WebElement ProjectStatus1;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Inactive ')]")
-	WebElement PStatus2;
+	WebElement ProjectStatus2;
 	
-	@FindBy(id = "mat-input-9")
+	@FindBy(xpath = "//textarea[@placeholder='Description']")
 	WebElement description;
 	
 	@FindBy(xpath = "//input[@placeholder='Search for a project']")
@@ -123,10 +123,10 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//button[@class='iconbutton mat-icon-button ng-tns-c41-157 mat-primary ng-star-inserted']")
 	WebElement editButton;
 	
-	@FindBy(xpath = "(//div[@class='mat-tab-label-content'])[2]")
+	@FindBy(xpath = "(//div[@role='tab'])[2]")
 	WebElement billing;
 	
-	@FindBy(id = "mat-select-11")
+	@FindBy(xpath = "//mat-select[@name='ReviewCycleId']")
 	WebElement reviewCycle;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Monthly ')]")
@@ -135,19 +135,19 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Weekly ')]")
 	WebElement reviewCycle2;
 	
-	@FindBy(id = "mat-input-10")
-	WebElement MBillingRate;
+	@FindBy(xpath = "//input[@placeholder='Monthly Billing Rate']")
+	WebElement MonthlyBillingRate;
 	
-	@FindBy(id = "mat-input-11")
-	WebElement WBillingRate;
+	@FindBy(xpath = "//input[@placeholder='Weekly Billing Rate']")
+	WebElement WeeklyBillingRate;
 	
-	@FindBy(id = "mat-input-12")
-	WebElement HBillingRate;
+	@FindBy(xpath = "//input[@placeholder='Hourly Billing Rate']")
+	WebElement HourlyBillingRate;
 	
 	@FindBy(xpath = "//mat-icon[contains(text(),'delete')]")
 	WebElement deleteButton;
 
-	@FindBy(xpath = "//button[@class='mat-raised-button mat-primary']")
+	@FindBy(xpath = "//span[contains(text(),'Yes')]")
 	WebElement yesButton;
 	
 	public ProjectScreenPage(WebDriver driver)
@@ -180,7 +180,7 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(3000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropdown);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		js.executeScript("arguments[0].click()", client1);
 		
 		Thread.sleep(5000);
@@ -241,11 +241,11 @@ public class ProjectScreenPage extends TestBase{
 	public void selectActualStartDate() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(AStartDate));
-		highLightElement(driver, AStartDate);
+		wait.until(ExpectedConditions.visibilityOf(ApproxStartDate));
+		highLightElement(driver, ApproxStartDate);
 		//AStartDate.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", AStartDate);
+		js.executeScript("arguments[0].click()", ApproxStartDate);
 		Thread.sleep(2000);
 			
 		int total_nodes = allDates.size();
@@ -264,11 +264,11 @@ public class ProjectScreenPage extends TestBase{
 	public void selectActualEndDate() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(AEndDate));
-		highLightElement(driver, AEndDate);
+		wait.until(ExpectedConditions.visibilityOf(ApproxEndDate));
+		highLightElement(driver, ApproxEndDate);
 		//AEndDate.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", AEndDate);
+		js.executeScript("arguments[0].click()", ApproxEndDate);
 		
 		Thread.sleep(2000);
 			
@@ -296,17 +296,17 @@ public class ProjectScreenPage extends TestBase{
 		duration.clear();
 		duration.sendKeys("12");
 		
-		scrollToElement(PM);
-		wait.until(ExpectedConditions.visibilityOf(PM));
+		scrollToElement(ProjectManager);
+		wait.until(ExpectedConditions.visibilityOf(ProjectManager));
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		//js.executeScript("arguments[0].click()", PM);
-		PM.click();
-		PM1.click();
+		ProjectManager.click();
+		ProjectManager1.click();
 		Thread.sleep(3000);
 	
-		wait.until(ExpectedConditions.visibilityOf(PL));
-		PL.click();
-		PL1.click();
+		wait.until(ExpectedConditions.visibilityOf(ProjectLead));
+		ProjectLead.click();
+		ProjectLead1.click();
 		Thread.sleep(3000);
 		
 		wait.until(ExpectedConditions.visibilityOf(projectType));
@@ -316,6 +316,7 @@ public class ProjectScreenPage extends TestBase{
 		
 		wait.until(ExpectedConditions.visibilityOf(projectSubType));
 		projectSubType.click();
+		Thread.sleep(3000);
 		projectSubType1.click();
 		Thread.sleep(3000);
 		
@@ -325,9 +326,9 @@ public class ProjectScreenPage extends TestBase{
 		category1.click();
 		Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(PStatus));
-		PStatus.click();
-		PStatus1.click();
+		wait.until(ExpectedConditions.visibilityOf(ProjectStatus));
+		ProjectStatus.click();
+		ProjectStatus1.click();
 		Thread.sleep(3000);
 		
 		scrollToElement(description);
@@ -350,17 +351,17 @@ public class ProjectScreenPage extends TestBase{
 		
 		Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(MBillingRate));
-		MBillingRate.clear();
-		MBillingRate.sendKeys("5000");
+		wait.until(ExpectedConditions.visibilityOf(MonthlyBillingRate));
+		MonthlyBillingRate.clear();
+		MonthlyBillingRate.sendKeys("5000");
 		
-		wait.until(ExpectedConditions.visibilityOf(WBillingRate));
-		WBillingRate.clear();
-		WBillingRate.sendKeys("3000");
+		wait.until(ExpectedConditions.visibilityOf(WeeklyBillingRate));
+		WeeklyBillingRate.clear();
+		WeeklyBillingRate.sendKeys("3000");
 		
-		wait.until(ExpectedConditions.visibilityOf(HBillingRate));
-		HBillingRate.clear();
-		HBillingRate.sendKeys("2000");
+		wait.until(ExpectedConditions.visibilityOf(HourlyBillingRate));
+		HourlyBillingRate.clear();
+		HourlyBillingRate.sendKeys("2000");
 		
 		Thread.sleep(5000);
 		
@@ -395,7 +396,9 @@ public class ProjectScreenPage extends TestBase{
 		 * Alert objalert=driver.switchTo().alert();
 		 * System.out.println(objalert.getText()); objalert.accept();
 		 */
-		yesButton.click();
+		//yesButton.click();
+		JavascriptExecutor js1 = (JavascriptExecutor) driver;
+		js1.executeScript("arguments[0].click()", yesButton);
 
 		System.out.println("Client deleted successfully");
 	}
@@ -404,13 +407,14 @@ public class ProjectScreenPage extends TestBase{
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(clientDropdown));
+		
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
-		clientDropdown.click();
+		//clientDropdown.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].click()", clientDropdown);
+		js.executeScript("arguments[0].click()", clientDropdown);
 		
-		//wait.until(ExpectedConditions.visibilityOf(client2));
+		wait.until(ExpectedConditions.visibilityOf(client2));
 		js.executeScript("arguments[0].click()", client2);
 		
 		wait.until(ExpectedConditions.visibilityOf(projectName));
@@ -423,16 +427,16 @@ public class ProjectScreenPage extends TestBase{
 		duration.clear();
 		duration.sendKeys("15");
 		
-		scrollToElement(PM);
-		wait.until(ExpectedConditions.visibilityOf(PM));
+		scrollToElement(ProjectManager);
+		wait.until(ExpectedConditions.visibilityOf(ProjectManager));
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
-		js1.executeScript("arguments[0].click()", PM);
+		js1.executeScript("arguments[0].click()", ProjectManager);
 		//PM.click();
-		PM1.click();
+		ProjectManager1.click();
 			
-		wait.until(ExpectedConditions.visibilityOf(PL));
-		PL.click();
-		PL1.click();
+		wait.until(ExpectedConditions.visibilityOf(ProjectLead));
+		ProjectLead.click();
+		ProjectLead1.click();
 				
 		wait.until(ExpectedConditions.visibilityOf(projectType));
 		projectType.click();
@@ -440,16 +444,18 @@ public class ProjectScreenPage extends TestBase{
 				
 		wait.until(ExpectedConditions.visibilityOf(projectSubType));
 		projectSubType.click();
-		projectSubType1.click();
+		//projectSubType1.click();
+		staleElementClick(5, projectSubType1, 60);
 				
 		scrollToElement(category);
 		wait.until(ExpectedConditions.visibilityOf(category));
 		category.click();
-		category2.click();
+		//category2.click();
+		staleElementClick(5, projectSubType1, 60);
 				
-		wait.until(ExpectedConditions.visibilityOf(PStatus));
-		PStatus.click();
-		PStatus2.click();
+		wait.until(ExpectedConditions.visibilityOf(ProjectStatus));
+		ProjectStatus.click();
+		ProjectStatus2.click();
 				
 		scrollToElement(description);
 		wait.until(ExpectedConditions.visibilityOf(description));	
@@ -466,17 +472,17 @@ public class ProjectScreenPage extends TestBase{
 		reviewCycle.click();
 		reviewCycle2.click();
 						
-		wait1.until(ExpectedConditions.visibilityOf(MBillingRate));
-		MBillingRate.clear();
-		MBillingRate.sendKeys("3000");
+		wait1.until(ExpectedConditions.visibilityOf(MonthlyBillingRate));
+		MonthlyBillingRate.clear();
+		MonthlyBillingRate.sendKeys("3000");
 		
-		wait1.until(ExpectedConditions.visibilityOf(WBillingRate));
-		WBillingRate.clear();
-		WBillingRate.sendKeys("2000");
+		wait1.until(ExpectedConditions.visibilityOf(WeeklyBillingRate));
+		WeeklyBillingRate.clear();
+		WeeklyBillingRate.sendKeys("2000");
 		
-		wait1.until(ExpectedConditions.visibilityOf(HBillingRate));
-		HBillingRate.clear();
-		HBillingRate.sendKeys("1000");
+		wait1.until(ExpectedConditions.visibilityOf(HourlyBillingRate));
+		HourlyBillingRate.clear();
+		HourlyBillingRate.sendKeys("1000");
 		
 		System.out.println("Project information updated successfully");
 	}
