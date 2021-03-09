@@ -60,7 +60,7 @@ public class ProjectResourceScreenTest extends TestBase{
 	@Test(priority = 7, enabled=true)
 	public void verifysearch()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
-		prs.searchProjectResource("Dipali Vaidya");
+		prs.searchProjectResource("Test");
 	}
 	
 	@Test(priority = 8, enabled=true)

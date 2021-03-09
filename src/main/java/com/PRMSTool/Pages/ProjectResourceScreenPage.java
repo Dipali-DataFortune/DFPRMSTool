@@ -58,10 +58,10 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-select[@name='ResourceId']")
 	WebElement resourceDropDown;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Dipali Vaidya (DS1167) ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Test (DS123) ')]")
 	WebElement resource1;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Shailendra Pardeshi (DS1129) ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Test1 (DS12) ')]")
 	WebElement resource2;
 	
 	@FindBy(xpath = "//input[@placeholder='Role']")
@@ -150,7 +150,7 @@ public class ProjectResourceScreenPage extends TestBase{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropDown);
 		//clientDropDown.click();
-		js.executeScript("arguments[0].click()", client1);
+		js.executeScript("arguments[0].click()", client2);
 		//client1.click();
 				
 		Thread.sleep(5000);
@@ -309,14 +309,17 @@ public class ProjectResourceScreenPage extends TestBase{
 				
 		Thread.sleep(5000);
 		
-		/*
-		 * wait.until(ExpectedConditions.visibilityOf(projectDropDown));
-		 * 
-		 * projectDropDown.click(); project2.click();
-		 * 
-		 * wait.until(ExpectedConditions.visibilityOf(resourceDropDown));
-		 * resourceDropDown.click(); resource2.click();
-		 */
+		
+		  wait.until(ExpectedConditions.visibilityOf(projectDropDown));
+		  
+		  projectDropDown.click(); 
+		  project2.click();
+		  
+			/*
+			 * wait.until(ExpectedConditions.visibilityOf(resourceDropDown));
+			 * resourceDropDown.click(); resource2.click();
+			 */
+		 
 		
 		wait.until(ExpectedConditions.visibilityOf(role));
 		role.clear();
@@ -350,7 +353,7 @@ public class ProjectResourceScreenPage extends TestBase{
 		Thread.sleep(5000);
 		
 		Actions objAct = new Actions(driver);
-		objAct.dragAndDropBy(percentageAllocation, -12, 70).perform();
+		objAct.dragAndDropBy(percentageAllocation, -12, 75).perform();
 		
 		Thread.sleep(5000);
 		

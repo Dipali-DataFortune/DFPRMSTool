@@ -44,13 +44,13 @@ public class ResourceScreenPage extends TestBase {
 	WebElement joiningDate;
 
 	@FindBy(xpath = "//div[@class='mat-calendar-controls']")
-	WebElement birthDateMonths;
+	WebElement DateMonths;
 
 	@FindBy(xpath = "//table[@class='mat-calendar-table']//td")
 	List<WebElement> allDates;
 
 	@FindBy(xpath = "//button[@class='mat-calendar-next-button mat-icon-button' and @type='button']")
-	WebElement birthDateNavButton;
+	WebElement DateNavButton;
 	
 	@FindBy(xpath = "//input[@name='DateOfBirth']")
 	WebElement DateOfBirth;
@@ -204,7 +204,7 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.sendKeys("TestDelete");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS40");
+		employeeID.sendKeys("DS400");
 		Thread.sleep(5000);
 		
 		address.clear();
@@ -302,10 +302,10 @@ public class ResourceScreenPage extends TestBase {
 		
 		Thread.sleep(2000);
 				
-		while(!birthDateMonths.getText().contains("MAY 2021"))
+		while(!DateMonths.getText().contains("MAY 2021"))
 		{
 			//birthDateNavButton.click();			
-			js.executeScript("arguments[0].click()", birthDateNavButton);
+			js.executeScript("arguments[0].click()", DateNavButton);
 		}
 
 		int total_nodes = allDates.size();
@@ -333,49 +333,26 @@ public class ResourceScreenPage extends TestBase {
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("arguments[0].click()", joiningDate);
 		 
-		
-		Thread.sleep(2000);
-				
-		//Months.click();
-		
-		  js.executeScript("arguments[0].click()", Months);
-		  
-		  int total_nodes = allDates.size(); 
-		  for (int i = 0; i < total_nodes; i++) 
-		  {
-		  String month=allDates.get(i).getText();
-		  
-		  if(month.equalsIgnoreCase("2022")) 
-		  { 
-			  allDates.get(i).click(); 
-			  break; 
-		  } 
-		 } 
-		  Thread.sleep(3000);
-		  int total_nodes1 = allMonths.size(); 
-		  for (int i = 0; i < total_nodes1; i++) {
-		  String monthName=allMonths.get(i).getText();
-		  
-		  if(monthName.equalsIgnoreCase("APR")) 
-		  { 
-			  allMonths.get(i).click();			  
-			  break; 
-		  } 
-		 }
-		  Thread.sleep(3000);
-		  int total_nodes2 = allDates.size(); 
-		  for (int i = 0; i < total_nodes2; i++) 
-		  { 
-			  String date = allDates.get(i).getText(); 
-			  if(date.equalsIgnoreCase("8")) 
-			  { 
-				  allDates.get(i).click(); 
-				  break; 
-			  } 
-		  }
+		  Thread.sleep(2000);
+			
+			while(!DateMonths.getText().contains("APR 2021"))
+			{
+				//birthDateNavButton.click();			
+				js.executeScript("arguments[0].click()", DateNavButton);
+			}
+
+			int total_nodes = allDates.size();
+
+			for (int i = 0; i < total_nodes; i++) {
+				String date = allDates.get(i).getText();
+				if (date.equalsIgnoreCase("21")) {
+					allDates.get(i).click();
+					break;
+				}
+			}
 		  		
 		System.out.println("Joining date selected");
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 	
 	public void searchResource(String name) throws InterruptedException {
