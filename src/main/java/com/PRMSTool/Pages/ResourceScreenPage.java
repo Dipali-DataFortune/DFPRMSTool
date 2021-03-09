@@ -121,7 +121,7 @@ public class ResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' 5 to 10 ')]")
 	WebElement YBucket;
 	
-	@FindBy(xpath = "//mat-option//span[contains(text(),' QA ')]")
+	@FindBy(xpath = "//mat-option//span[contains(text(),' QA Automation')]")
 	WebElement TCategory;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Dipali Vaidya (DS1167) ')]")
@@ -204,7 +204,7 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.sendKeys("TestDelete");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS400");
+		employeeID.sendKeys("DS411");
 		Thread.sleep(5000);
 		
 		address.clear();
@@ -397,8 +397,8 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.clear();
 		resourceName.sendKeys("Test2");
 		
-		employeeID.clear();
-		employeeID.sendKeys("DS8");
+		//employeeID.clear();
+		//employeeID.sendKeys("DS8");
 				
 		address.clear();
 		address.sendKeys("Pune");

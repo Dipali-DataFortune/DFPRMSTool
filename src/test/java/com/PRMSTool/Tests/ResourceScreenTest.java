@@ -87,7 +87,7 @@ public class ResourceScreenTest extends TestBase{
 	@Test(priority = 11, enabled=true)
 	public void verifydelete()throws InterruptedException {
 		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
-		rs.deleteResource("TestEdit");
+		rs.deleteResource("TestDelete");
 	}
 	
 	@Test(priority = 12, enabled=true)

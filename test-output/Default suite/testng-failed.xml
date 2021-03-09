@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PRMSTool.Tests.ProjectScreenTest">
+      <class name="com.PRMSTool.Tests.ProjectResourceScreenTest">
         <methods>
           <include name="finish"/>
-          <include name="verifydownloadFile"/>
-          <include name="verifydelete"/>
+          <include name="verifyaddProjectResourceDetails"/>
           <include name="OpenBrowserGrade"/>
         </methods>
-      </class> <!-- com.PRMSTool.Tests.ProjectScreenTest -->
+      </class> <!-- com.PRMSTool.Tests.ProjectResourceScreenTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

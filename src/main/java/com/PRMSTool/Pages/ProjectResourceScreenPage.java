@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -103,6 +104,9 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "//div[@class='mat-slider-thumb']")
 	WebElement percentageAllocation;
 	
+	@FindBy(xpath = "//div[@class='mat-slider-focus-ring']")
+	WebElement percentageAllocationmarker;
+		
 	@FindBy(xpath = "//span[@class='mat-slider-thumb-label-text']")
 	WebElement sliderValue;
 		
@@ -190,17 +194,25 @@ public class ProjectResourceScreenPage extends TestBase{
 		rate.sendKeys("5");
 		
 		Thread.sleep(5000);
+		
 		scrollToElement(percentageAllocation);
+		
 		wait.until(ExpectedConditions.visibilityOf(percentageAllocation));
+		
 		highLightElement(driver, percentageAllocation);
+		//percentageAllocation.click();
+		//js.executeScript("arguments[0].click()", percentageAllocation);
+		
+		Actions actions = new Actions(driver);
+		actions.clickAndHold(percentageAllocation);
+		actions.moveByOffset(-12, -50);
+		actions.build().perform();
+		
 		Thread.sleep(5000);
-		
-		Actions objAct = new Actions(driver);
-		objAct.dragAndDropBy(percentageAllocation, -12, 75).perform();
-		
-		Thread.sleep(5000);
-		
+								
 		System.out.println("Percentage allocation is: " +sliderValue.getText());
+		
+		Thread.sleep(3000);
 		
 		scrollToElement(remark);
 		wait.until(ExpectedConditions.visibilityOf(remark));

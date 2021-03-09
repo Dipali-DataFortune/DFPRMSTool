@@ -436,7 +436,8 @@ public class ProjectScreenPage extends TestBase{
 			
 		wait.until(ExpectedConditions.visibilityOf(ProjectLead));
 		ProjectLead.click();
-		ProjectLead1.click();
+		//ProjectLead1.click();
+		staleElementClick(5, ProjectLead1, 60);
 				
 		wait.until(ExpectedConditions.visibilityOf(projectType));
 		projectType.click();
