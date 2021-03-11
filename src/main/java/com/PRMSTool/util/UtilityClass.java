@@ -37,6 +37,18 @@ public class UtilityClass extends TestBase{
 	@FindBy(xpath = "//button[@class='mat-raised-button']")
 	WebElement NoButton;
 	
+	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")
+	WebElement status;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' All ')]")
+	WebElement status1;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Inactive ')]")
+	WebElement status2;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Active ')]")
+	WebElement status3;
+	
 	public UtilityClass(WebDriver driver) {
 		this.driver = driver;
 	}	
@@ -84,5 +96,62 @@ public class UtilityClass extends TestBase{
 		Thread.sleep(3000);
 
 		System.out.println("File downloaded successfully");
+	}
+	
+	public void displayAllStatusList() throws InterruptedException 
+	{
+		Thread.sleep(5000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOf(status));
+				
+		highLightElement(driver, status);
+		status.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(status1));
+			
+		//status1.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", status1);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("All the active and inactive client list displayed");		
+	}
+	
+	public void displayInactiveStatusList() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOf(status));
+				
+		highLightElement(driver, status);
+		status.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(status2));
+				
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", status2);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("All the inactive client list displayed");		
+	}
+	
+	public void displayActiveStatusList() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOf(status));
+				
+		highLightElement(driver, status);
+		status.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(status3));
+				
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", status3);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("All the active client list displayed");		
 	}
 }

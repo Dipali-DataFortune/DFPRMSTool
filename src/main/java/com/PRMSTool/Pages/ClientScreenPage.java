@@ -346,8 +346,7 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//span[contains(text(),'Update')]")
 	WebElement updateButton;
 
-	// mat-table[@class='clients-table mat-table ps']
-
+	
 	public ClientScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -830,5 +829,5 @@ public class ClientScreenPage extends TestBase {
 		Thread.sleep(3000);
 
 		System.out.println("Client file downloaded successfully");
-	}
+	}	
 }

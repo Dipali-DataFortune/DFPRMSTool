@@ -28,7 +28,7 @@ public class ClientScreenTest extends TestBase{
 		lp.login(prop.getProperty("email1"),prop.getProperty("password1"));
 	}
 		
-	@Test(priority = 1, enabled=false)
+	@Test(priority = 1, enabled=true)
 	public void verifycheckSorting()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
 		cp.checkSorting();
@@ -136,5 +136,23 @@ public class ClientScreenTest extends TestBase{
 	public void verifydownloadFile()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.downloadFile();
+	}
+	
+	@Test(priority = 19, enabled=true)
+	public void verifydisplayAllStatusList()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayAllStatusList();
+	}
+	
+	@Test(priority = 20, enabled=true)
+	public void verifydisplayInactiveStatusList()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayInactiveStatusList();
+	}
+	
+	@Test(priority = 21, enabled=true)
+	public void verifydisplayActiveStatusList()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayActiveStatusList();
 	}
 }

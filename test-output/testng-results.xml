@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="13" passed="4" failed="0" skipped="0">
+<testng-results ignored="11" total="16" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-10T19:03:34 IST" name="Default suite" finished-at="2021-03-10T19:04:22 IST" duration-ms="48135">
+  <suite started-at="2021-03-11T15:54:54 IST" name="Default suite" finished-at="2021-03-11T15:55:19 IST" duration-ms="24689">
     <groups>
     </groups>
-    <test started-at="2021-03-10T19:03:34 IST" name="Default test" finished-at="2021-03-10T19:04:22 IST" duration-ms="48135">
+    <test started-at="2021-03-11T15:54:54 IST" name="Default test" finished-at="2021-03-11T15:55:19 IST" duration-ms="24689">
       <class name="com.PRMSTool.Tests.ProjectResourceScreenTest">
-        <test-method is-config="true" signature="OpenBrowserGrade()[pri:0, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@2f8dad04]" started-at="2021-03-10T19:03:29 IST" name="OpenBrowserGrade" finished-at="2021-03-10T19:03:34 IST" duration-ms="4573" status="PASS">
+        <test-method is-config="true" signature="OpenBrowserGrade()[pri:0, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@be35cd9]" started-at="2021-03-11T15:54:50 IST" name="OpenBrowserGrade" finished-at="2021-03-11T15:54:54 IST" duration-ms="3737" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowserGrade -->
-        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@2f8dad04]" started-at="2021-03-10T19:03:34 IST" name="verifyLogin" finished-at="2021-03-10T19:03:42 IST" duration-ms="8122" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@be35cd9]" started-at="2021-03-11T15:54:54 IST" name="verifyLogin" finished-at="2021-03-11T15:54:57 IST" duration-ms="3156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifyclickOnProjectResource()[pri:1, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@2f8dad04]" started-at="2021-03-10T19:03:42 IST" name="verifyclickOnProjectResource" finished-at="2021-03-10T19:03:43 IST" duration-ms="1540" status="PASS">
+        <test-method signature="verifyclickOnProjectResource()[pri:1, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@be35cd9]" started-at="2021-03-11T15:54:57 IST" name="verifyclickOnProjectResource" finished-at="2021-03-11T15:54:58 IST" duration-ms="977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyclickOnProjectResource -->
-        <test-method signature="verifyclickOnAddNew()[pri:2, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@2f8dad04]" started-at="2021-03-10T19:03:44 IST" name="verifyclickOnAddNew" finished-at="2021-03-10T19:03:49 IST" duration-ms="5899" status="PASS">
+        <test-method signature="verifydisplayAllStatusList()[pri:13, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@be35cd9]" started-at="2021-03-11T15:54:58 IST" name="verifydisplayAllStatusList" finished-at="2021-03-11T15:55:08 IST" duration-ms="10217" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyclickOnAddNew -->
-        <test-method signature="verifyaddProjectResourceDetails()[pri:3, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@2f8dad04]" started-at="2021-03-10T19:03:49 IST" name="verifyaddProjectResourceDetails" finished-at="2021-03-10T19:04:22 IST" duration-ms="32474" status="PASS">
+        </test-method> <!-- verifydisplayAllStatusList -->
+        <test-method signature="verifydisplayInactiveStatusList()[pri:14, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@be35cd9]" started-at="2021-03-11T15:55:08 IST" name="verifydisplayInactiveStatusList" finished-at="2021-03-11T15:55:13 IST" duration-ms="5152" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyaddProjectResourceDetails -->
-        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@2f8dad04]" started-at="2021-03-10T19:04:22 IST" name="finish" finished-at="2021-03-10T19:04:23 IST" duration-ms="831" status="PASS">
+        </test-method> <!-- verifydisplayInactiveStatusList -->
+        <test-method signature="verifydisplayActiveStatusList()[pri:15, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@be35cd9]" started-at="2021-03-11T15:55:13 IST" name="verifydisplayActiveStatusList" finished-at="2021-03-11T15:55:19 IST" duration-ms="5155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayActiveStatusList -->
+        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@be35cd9]" started-at="2021-03-11T15:55:19 IST" name="finish" finished-at="2021-03-11T15:55:19 IST" duration-ms="673" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finish -->

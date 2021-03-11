@@ -112,4 +112,22 @@ public class ProjectScreenTest extends TestBase{
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.downloadFile();
 	}
+	
+	@Test(priority = 17, enabled=true)
+	public void verifydisplayAllStatusList()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayAllStatusList();
+	}
+	
+	@Test(priority = 18, enabled=true)
+	public void verifydisplayInactiveStatusList()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayInactiveStatusList();
+	}
+	
+	@Test(priority = 19, enabled=true)
+	public void verifydisplayActiveStatusList()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayActiveStatusList();
+	}
 }
