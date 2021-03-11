@@ -420,10 +420,6 @@ public class ClientScreenPage extends TestBase {
 
 		deleteButton.click();
 		//Thread.sleep(3000);
-		/*
-		 * Alert objalert=driver.switchTo().alert();
-		 * System.out.println(objalert.getText()); objalert.accept();
-		 */
 		//wait.until(ExpectedConditions.visibilityOf(yesButton));
 		//yesButton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;

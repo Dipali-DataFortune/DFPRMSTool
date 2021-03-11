@@ -104,7 +104,8 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "//div[@class='mat-slider-thumb']")
 	WebElement percentageAllocation;
 	
-	@FindBy(xpath = "//div[@class='mat-slider-focus-ring']")
+	//@FindBy(xpath = "//div[@class='mat-slider-track-wrapper']")
+	@FindBy(xpath = "//mat-slider[@role='slider']")	
 	WebElement percentageAllocationmarker;
 		
 	@FindBy(xpath = "//span[@class='mat-slider-thumb-label-text']")
@@ -205,11 +206,11 @@ public class ProjectResourceScreenPage extends TestBase{
 		
 		Actions actions = new Actions(driver);
 		actions.clickAndHold(percentageAllocation);
-		actions.moveByOffset(-12, -50);
-		actions.build().perform();
+		//actions.moveByOffset(-12, -75);
+		actions.dragAndDropBy(percentageAllocationmarker, (int)-12.5, -50);
 		
-		Thread.sleep(5000);
-								
+		actions.build().perform();
+										
 		System.out.println("Percentage allocation is: " +sliderValue.getText());
 		
 		Thread.sleep(3000);
