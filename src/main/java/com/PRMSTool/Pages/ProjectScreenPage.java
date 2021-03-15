@@ -185,7 +185,7 @@ public class ProjectScreenPage extends TestBase{
 		
 		Thread.sleep(5000);
 		projectName.clear();
-		projectName.sendKeys("test1");	
+		projectName.sendKeys("test1");		
 	}
 	
 	public void selectStartDate() throws InterruptedException
