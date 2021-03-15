@@ -445,8 +445,8 @@ public class ProjectScreenPage extends TestBase{
 				
 		wait.until(ExpectedConditions.visibilityOf(projectSubType));
 		projectSubType.click();
-		//projectSubType1.click();
-		staleElementClick(5, projectSubType1, 60);
+		projectSubType1.click();
+		//staleElementClick(5, projectSubType1, 60);
 				
 		scrollToElement(category);
 		wait.until(ExpectedConditions.visibilityOf(category));

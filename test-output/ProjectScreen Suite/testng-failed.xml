@@ -7,7 +7,6 @@
         <methods>
           <include name="finish"/>
           <include name="verifyeditProjectInformation"/>
-          <include name="verifydelete"/>
           <include name="OpenBrowserGrade"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ProjectScreenTest -->
