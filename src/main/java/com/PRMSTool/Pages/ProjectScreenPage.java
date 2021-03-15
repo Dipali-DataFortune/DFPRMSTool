@@ -157,7 +157,7 @@ public class ProjectScreenPage extends TestBase{
 	
 	public void clickOnProject()
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(project));
 		
 		project.click();
@@ -165,7 +165,7 @@ public class ProjectScreenPage extends TestBase{
 		
 	public void clickOnAddNew() throws InterruptedException {
 		
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(addNew));
 		highLightElement(driver, addNew);
 		
@@ -175,7 +175,7 @@ public class ProjectScreenPage extends TestBase{
 	
 	public void addProjectDetails() throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(clientDropdown));
 		Thread.sleep(3000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -183,7 +183,7 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].click()", client1);
 		
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		projectName.clear();
 		projectName.sendKeys("test1");		
 	}

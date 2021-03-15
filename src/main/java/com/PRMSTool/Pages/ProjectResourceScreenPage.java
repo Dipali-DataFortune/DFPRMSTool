@@ -123,6 +123,9 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "//input[@alt='Export']")
 	WebElement downloadFile;
 	
+	@FindBy(xpath = "//mat-select[@placeholder='BusinessUnit']")
+	WebElement businessUnitDropDown;
+	
 	public ProjectResourceScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
