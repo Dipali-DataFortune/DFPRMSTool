@@ -6,7 +6,8 @@
       <class name="com.PRMSTool.Tests.ProjectResourceScreenTest">
         <methods>
           <include name="finish"/>
-          <include name="verifydownloadFile"/>
+          <include name="verifyaddProjectResourceDetails"/>
+          <include name="verifyeditResourceInformation"/>
           <include name="OpenBrowserGrade"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ProjectResourceScreenTest -->

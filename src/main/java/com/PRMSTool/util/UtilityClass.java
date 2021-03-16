@@ -65,7 +65,7 @@ public class UtilityClass extends TestBase{
 	
 	public void clickOnEditButton() {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(editButton));
+		wait.until(ExpectedConditions.elementToBeClickable(editButton));
 
 		editButton.click();
 	}
@@ -73,7 +73,7 @@ public class UtilityClass extends TestBase{
 	public void clickOnUpdateButton() {
 		scrollToElement(updateButton);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(updateButton));
+		wait.until(ExpectedConditions.elementToBeClickable(updateButton));
 
 		//updateButton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -89,68 +89,68 @@ public class UtilityClass extends TestBase{
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", chromePref);
 
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(downloadFile));
+		wait.until(ExpectedConditions.elementToBeClickable(downloadFile));
 		downloadFile.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 
 		System.out.println("File downloaded successfully");
 	}
 	
 	public void displayAllStatusList() throws InterruptedException 
 	{
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(status));
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(status));
 				
 		highLightElement(driver, status);
 		status.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(status1));
+		wait.until(ExpectedConditions.elementToBeClickable(status1));
 			
 		//status1.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", status1);
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		
 		System.out.println("All the active and inactive client list displayed");		
 	}
 	
 	public void displayInactiveStatusList() throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(status));
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(status));
 				
 		highLightElement(driver, status);
 		status.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(status2));
+		wait.until(ExpectedConditions.elementToBeClickable(status2));
 				
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", status2);
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		
 		System.out.println("All the inactive client list displayed");		
 	}
 	
 	public void displayActiveStatusList() throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(status));
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(status));
 				
 		highLightElement(driver, status);
 		status.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(status3));
+		wait.until(ExpectedConditions.elementToBeClickable(status3));
 				
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", status3);
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		
 		System.out.println("All the active client list displayed");		
 	}

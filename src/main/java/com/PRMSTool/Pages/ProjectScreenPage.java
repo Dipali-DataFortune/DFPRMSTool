@@ -21,9 +21,8 @@ public class ProjectScreenPage extends TestBase{
 	WebDriver driver;
 	SoftAssert softAssert = new SoftAssert();
 	
-//	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
-	@FindBy(xpath="//span[contains(text(),'ADD')]")
-	//span[text()='ADD NEW ']
+	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	//@FindBy(xpath="//span[contains(text(),'ADD')]")
 	WebElement addNew;
 	
 	@FindBy(xpath = "//input[@alt='Export']")
@@ -38,7 +37,7 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-select[@placeholder='Client']")
 	WebElement clientDropdown;
 	
-	@FindBy(xpath = "//mat-option//span[contains(text(),' abc ')]")
+	@FindBy(xpath = "//mat-option//span[contains(text(),' ABC ')]")
 	WebElement client1;
 	
 	@FindBy(xpath = "//mat-option//span[contains(text(),' Van Ran Communications Services Inc. ')]")
@@ -183,14 +182,14 @@ public class ProjectScreenPage extends TestBase{
 		//wait.until(ExpectedConditions.visibilityOf(clientDropdown));
 		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
 		Thread.sleep(3000);
-		highLightElement(driver, clientDropdown);
+		//highLightElement(driver, clientDropdown);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropdown);
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(client1));
 		js.executeScript("arguments[0].click()", client1);
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOf(projectName));
 		projectName.clear();
 		projectName.sendKeys("test");		
@@ -199,13 +198,13 @@ public class ProjectScreenPage extends TestBase{
 	public void selectStartDate() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(startDate));
-		highLightElement(driver, startDate);
+		wait.until(ExpectedConditions.elementToBeClickable(startDate));
+		//highLightElement(driver, startDate);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", startDate);
 		//startDate.click();
 		
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 			
 		int total_nodes = allDates.size();
 
@@ -224,13 +223,13 @@ public class ProjectScreenPage extends TestBase{
 	public void selectEndDate() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(endDate));
-		highLightElement(driver, endDate);
+		wait.until(ExpectedConditions.elementToBeClickable(endDate));
+		//highLightElement(driver, endDate);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", endDate);
 		//endDate.click();
 		
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 			
 		int total_nodes = allDates.size();
 
@@ -249,12 +248,12 @@ public class ProjectScreenPage extends TestBase{
 	public void selectActualStartDate() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(ApproxStartDate));
-		highLightElement(driver, ApproxStartDate);
+		wait.until(ExpectedConditions.elementToBeClickable(ApproxStartDate));
+		//highLightElement(driver, ApproxStartDate);
 		//AStartDate.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", ApproxStartDate);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 			
 		int total_nodes = allDates.size();
 
@@ -272,13 +271,13 @@ public class ProjectScreenPage extends TestBase{
 	public void selectActualEndDate() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(ApproxEndDate));
-		highLightElement(driver, ApproxEndDate);
+		wait.until(ExpectedConditions.elementToBeClickable(ApproxEndDate));
+//		highLightElement(driver, ApproxEndDate);
 		//AEndDate.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", ApproxEndDate);
 		
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 			
 		int total_nodes = allDates.size();
 
@@ -305,39 +304,39 @@ public class ProjectScreenPage extends TestBase{
 		duration.sendKeys("12");
 		
 		scrollToElement(ProjectManager);
-		wait.until(ExpectedConditions.visibilityOf(ProjectManager));
+		wait.until(ExpectedConditions.elementToBeClickable(ProjectManager));
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		//js.executeScript("arguments[0].click()", PM);
 		ProjectManager.click();
 		ProjectManager1.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 	
-		wait.until(ExpectedConditions.visibilityOf(ProjectLead));
+		wait.until(ExpectedConditions.elementToBeClickable(ProjectLead));
 		ProjectLead.click();
 		ProjectLead1.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(projectType));
+		wait.until(ExpectedConditions.elementToBeClickable(projectType));
 		projectType.click();
 		projectType1.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(projectSubType));
+		wait.until(ExpectedConditions.elementToBeClickable(projectSubType));
 		projectSubType.click();
 		Thread.sleep(3000);
 		projectSubType1.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
 		scrollToElement(category);
-		wait.until(ExpectedConditions.visibilityOf(category));
+		wait.until(ExpectedConditions.elementToBeClickable(category));
 		category.click();
 		category1.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(ProjectStatus));
+		wait.until(ExpectedConditions.elementToBeClickable(ProjectStatus));
 		ProjectStatus.click();
 		ProjectStatus1.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
 		scrollToElement(description);
 		wait.until(ExpectedConditions.visibilityOf(description));	
@@ -357,7 +356,7 @@ public class ProjectScreenPage extends TestBase{
 		reviewCycle.click();
 		reviewCycle1.click();
 		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
 		wait.until(ExpectedConditions.visibilityOf(MonthlyBillingRate));
 		MonthlyBillingRate.clear();
@@ -382,29 +381,30 @@ public class ProjectScreenPage extends TestBase{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
-		highLightElement(driver, searchBox);
-		Thread.sleep(5000);
+		//highLightElement(driver, searchBox);
+		//Thread.sleep(5000);
 		searchBox.clear();
 		searchBox.sendKeys(name);
 
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 	}
 	
 	public void deleteProject(String name) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		searchBox.clear();
 		searchBox.sendKeys(name);
 
 		deleteButton.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		/*
 		 * Alert objalert=driver.switchTo().alert();
 		 * System.out.println(objalert.getText()); objalert.accept();
 		 */
 		//yesButton.click();
+		wait.until(ExpectedConditions.elementToBeClickable(yesButton));
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("arguments[0].click()", yesButton);
 
@@ -414,7 +414,7 @@ public class ProjectScreenPage extends TestBase{
 	public void editProjectInformation() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(clientDropdown));
+		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
 		
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
@@ -422,7 +422,7 @@ public class ProjectScreenPage extends TestBase{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropdown);
 		
-		wait.until(ExpectedConditions.visibilityOf(client2));
+		wait.until(ExpectedConditions.elementToBeClickable(client2));
 		js.executeScript("arguments[0].click()", client2);
 		
 		wait.until(ExpectedConditions.visibilityOf(projectName));
@@ -436,33 +436,33 @@ public class ProjectScreenPage extends TestBase{
 		duration.sendKeys("15");
 		
 		scrollToElement(ProjectManager);
-		wait.until(ExpectedConditions.visibilityOf(ProjectManager));
+		wait.until(ExpectedConditions.elementToBeClickable(ProjectManager));
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("arguments[0].click()", ProjectManager);
 		//PM.click();
 		ProjectManager1.click();
 			
-		wait.until(ExpectedConditions.visibilityOf(ProjectLead));
+		wait.until(ExpectedConditions.elementToBeClickable(ProjectLead));
 		ProjectLead.click();
 		//ProjectLead1.click();
 		staleElementClick(5, ProjectLead1, 60);
 				
-		wait.until(ExpectedConditions.visibilityOf(projectType));
+		wait.until(ExpectedConditions.elementToBeClickable(projectType));
 		projectType.click();
 		projectType2.click();
 				
-		wait.until(ExpectedConditions.visibilityOf(projectSubType));
+		wait.until(ExpectedConditions.elementToBeClickable(projectSubType));
 		projectSubType.click();
 		projectSubType1.click();
 		//staleElementClick(5, projectSubType1, 60);
 				
 		scrollToElement(category);
-		wait.until(ExpectedConditions.visibilityOf(category));
+		wait.until(ExpectedConditions.elementToBeClickable(category));
 		category.click();
 		//category2.click();
 		staleElementClick(5, projectSubType1, 60);
 				
-		wait.until(ExpectedConditions.visibilityOf(ProjectStatus));
+		wait.until(ExpectedConditions.elementToBeClickable(ProjectStatus));
 		ProjectStatus.click();
 		ProjectStatus2.click();
 				
@@ -473,11 +473,11 @@ public class ProjectScreenPage extends TestBase{
 		
 		scrollToElement(billing);
 		WebDriverWait wait1=new WebDriverWait(driver, 60);
-		wait1.until(ExpectedConditions.visibilityOf(billing));
+		wait1.until(ExpectedConditions.elementToBeClickable(billing));
 		
 		billing.click();
 		
-		wait1.until(ExpectedConditions.visibilityOf(reviewCycle));
+		wait1.until(ExpectedConditions.elementToBeClickable(reviewCycle));
 		reviewCycle.click();
 		reviewCycle2.click();
 						
