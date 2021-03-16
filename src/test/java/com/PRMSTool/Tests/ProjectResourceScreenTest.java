@@ -110,4 +110,40 @@ public class ProjectResourceScreenTest extends TestBase{
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.displayActiveStatusList();
 	}
+	
+	@Test(priority = 17, enabled=true)
+	public void verifyselectBusinessUnitAll()throws InterruptedException {
+		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
+		prs.selectBusinessUnitAll();
+	}
+	
+	@Test(priority = 16, enabled=true)
+	public void verifyselectBusinessUnitVResource()throws InterruptedException {
+		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
+		prs.selectBusinessUnitVResource();
+	}
+	
+	@Test(priority = 18, enabled=true)
+	public void verifyselectBusinessUnitRow()throws InterruptedException {
+		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
+		prs.selectBusinessUnitRow();
+	}
+	
+	@Test(priority = 19, enabled=true)
+	public void verifyselectBusinessUnitPractices()throws InterruptedException {
+		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
+		prs.selectBusinessUnitPractices();
+	}
+	
+	@Test(priority = 20, enabled=true)
+	public void verifyselectBusinessUnitLicence()throws InterruptedException {
+		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
+		prs.selectBusinessUnitLicence();
+	}
+	
+	@Test(priority = 21, enabled=true)
+	public void verifyselectBusinessUnitOthers()throws InterruptedException {
+		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
+		prs.selectBusinessUnitOthers();
+	}
 }

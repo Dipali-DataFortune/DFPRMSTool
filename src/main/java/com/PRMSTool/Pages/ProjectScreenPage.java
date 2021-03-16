@@ -21,7 +21,9 @@ public class ProjectScreenPage extends TestBase{
 	WebDriver driver;
 	SoftAssert softAssert = new SoftAssert();
 	
-	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+//	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	@FindBy(xpath="//span[contains(text(),'ADD')]")
+	//span[text()='ADD NEW ']
 	WebElement addNew;
 	
 	@FindBy(xpath = "//input[@alt='Export']")
@@ -126,7 +128,7 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "(//div[@role='tab'])[2]")
 	WebElement billing;
 	
-	@FindBy(xpath = "//mat-select[@name='ReviewCycleId']")
+	@FindBy(xpath = "//mat-select[@role='listbox' and @name='ReviewCycleId']")
 	WebElement reviewCycle;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Monthly ')]")
@@ -157,33 +159,35 @@ public class ProjectScreenPage extends TestBase{
 	
 	public void clickOnProject()
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(project));
 		
 		project.click();
 	}
 		
 	public void clickOnAddNew() throws InterruptedException {
-		
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(addNew));
-		highLightElement(driver, addNew);
-		
+		//highLightElement(driver, addNew);
+		//staleElementClick(5, addNew, 60);
 		Thread.sleep(5000);
+		
 		addNew.click();
 	}
 	
 	public void addProjectDetails() throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(clientDropdown));
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(clientDropdown));
+		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
 		Thread.sleep(3000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropdown);
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].click()", client1);
 		
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		projectName.clear();
 		projectName.sendKeys("test1");		
 	}

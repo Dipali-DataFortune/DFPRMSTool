@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Dipali.vaidya\AppData\Local\Temp\testng-eclipse--493718836\testng-customsuite.xml</span>
+                    <span>C:\Users\Dipali.vaidya\AppData\Local\Temp\testng-eclipse-479129713\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">21 methods,   21 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ProjectResourceScreenTest" class="method navigator-link" hash-for-method="verifyselectBusinessUnitVResource">verifyselectBusinessUnitVResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,107 +118,37 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyLogin">verifyLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ProjectResourceScreenTest" class="method navigator-link" hash-for-method="verifyLogin">verifyLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyaddAgreementDetails">verifyaddAgreementDetails</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ProjectResourceScreenTest" class="method navigator-link" hash-for-method="verifyclickOnProjectResource">verifyclickOnProjectResource</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyaddNewClientInformation">verifyaddNewClientInformation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ProjectResourceScreenTest" class="method navigator-link" hash-for-method="verifyselectBusinessUnitAll">verifyselectBusinessUnitAll</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyaddStakeholderDetails">verifyaddStakeholderDetails</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ProjectResourceScreenTest" class="method navigator-link" hash-for-method="verifyselectBusinessUnitLicence">verifyselectBusinessUnitLicence</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyclickOnAdd">verifyclickOnAdd</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ProjectResourceScreenTest" class="method navigator-link" hash-for-method="verifyselectBusinessUnitOthers">verifyselectBusinessUnitOthers</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyclickOnAddNew">verifyclickOnAddNew</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ProjectResourceScreenTest" class="method navigator-link" hash-for-method="verifyselectBusinessUnitPractices">verifyselectBusinessUnitPractices</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyclickOnAgreementDetails">verifyclickOnAgreementDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyclickOnStakeholderDetails">verifyclickOnStakeholderDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyclickOnUpdateClient">verifyclickOnUpdateClient</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifydeleteClient">verifydeleteClient</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifydisplayActiveStatusList">verifydisplayActiveStatusList</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifydisplayAllStatusList">verifydisplayAllStatusList</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifydisplayInactiveStatusList">verifydisplayInactiveStatusList</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifydownloadFile">verifydownloadFile</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyeditAgreementDetails">verifyeditAgreementDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyeditClient">verifyeditClient</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyeditClientInformation">verifyeditClientInformation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyeditStakeholder">verifyeditStakeholder</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifysearchClient">verifysearchClient</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyselectAgreementSignedDate">verifyselectAgreementSignedDate</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ClientScreenTest" class="method navigator-link" hash-for-method="verifyselectApproxStartDate">verifyselectApproxStartDate</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.PRMSTool.Tests.ProjectResourceScreenTest" class="method navigator-link" hash-for-method="verifyselectBusinessUnitRow">verifyselectBusinessUnitRow</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -219,10 +163,93 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.PRMSTool.Tests.ProjectResourceScreenTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyselectBusinessUnitVResource">
+                  </a> <!-- verifyselectBusinessUnitVResource -->
+                  <span class="method-name">verifyselectBusinessUnitVResource</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//mat-option//span[contains(text(),&apos; vResourcing &apos;)]&quot;}
+  (Session info: chrome=89.0.4389.90)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DIPALIV-LPT&apos;, ip: &apos;10.81.234.14&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59313}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b161ea2dff7f2c0330a806abadb561af
+*** Element info: {Using=xpath, value=//mat-option//span[contains(text(),&apos; vResourcing &apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
+	at com.PRMSTool.Pages.ProjectResourceScreenPage.selectBusinessUnitVResource(ProjectResourceScreenPage.java:436)
+	at com.PRMSTool.Tests.ProjectResourceScreenTest.verifyselectBusinessUnitVResource(ProjectResourceScreenTest.java:123)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.PRMSTool.Tests.ClientScreenTest</span>
+              <span class="class-name">com.PRMSTool.Tests.ProjectResourceScreenTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -234,142 +261,44 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyaddAgreementDetails">
-                  </a> <!-- verifyaddAgreementDetails -->
-                  <span class="method-name">verifyaddAgreementDetails</span>
+                  <a name="verifyclickOnProjectResource">
+                  </a> <!-- verifyclickOnProjectResource -->
+                  <span class="method-name">verifyclickOnProjectResource</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyaddNewClientInformation">
-                  </a> <!-- verifyaddNewClientInformation -->
-                  <span class="method-name">verifyaddNewClientInformation</span>
+                  <a name="verifyselectBusinessUnitAll">
+                  </a> <!-- verifyselectBusinessUnitAll -->
+                  <span class="method-name">verifyselectBusinessUnitAll</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyaddStakeholderDetails">
-                  </a> <!-- verifyaddStakeholderDetails -->
-                  <span class="method-name">verifyaddStakeholderDetails</span>
+                  <a name="verifyselectBusinessUnitLicence">
+                  </a> <!-- verifyselectBusinessUnitLicence -->
+                  <span class="method-name">verifyselectBusinessUnitLicence</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyclickOnAdd">
-                  </a> <!-- verifyclickOnAdd -->
-                  <span class="method-name">verifyclickOnAdd</span>
+                  <a name="verifyselectBusinessUnitOthers">
+                  </a> <!-- verifyselectBusinessUnitOthers -->
+                  <span class="method-name">verifyselectBusinessUnitOthers</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyclickOnAddNew">
-                  </a> <!-- verifyclickOnAddNew -->
-                  <span class="method-name">verifyclickOnAddNew</span>
+                  <a name="verifyselectBusinessUnitPractices">
+                  </a> <!-- verifyselectBusinessUnitPractices -->
+                  <span class="method-name">verifyselectBusinessUnitPractices</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyclickOnAgreementDetails">
-                  </a> <!-- verifyclickOnAgreementDetails -->
-                  <span class="method-name">verifyclickOnAgreementDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyclickOnStakeholderDetails">
-                  </a> <!-- verifyclickOnStakeholderDetails -->
-                  <span class="method-name">verifyclickOnStakeholderDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyclickOnUpdateClient">
-                  </a> <!-- verifyclickOnUpdateClient -->
-                  <span class="method-name">verifyclickOnUpdateClient</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifydeleteClient">
-                  </a> <!-- verifydeleteClient -->
-                  <span class="method-name">verifydeleteClient</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifydisplayActiveStatusList">
-                  </a> <!-- verifydisplayActiveStatusList -->
-                  <span class="method-name">verifydisplayActiveStatusList</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifydisplayAllStatusList">
-                  </a> <!-- verifydisplayAllStatusList -->
-                  <span class="method-name">verifydisplayAllStatusList</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifydisplayInactiveStatusList">
-                  </a> <!-- verifydisplayInactiveStatusList -->
-                  <span class="method-name">verifydisplayInactiveStatusList</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifydownloadFile">
-                  </a> <!-- verifydownloadFile -->
-                  <span class="method-name">verifydownloadFile</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyeditAgreementDetails">
-                  </a> <!-- verifyeditAgreementDetails -->
-                  <span class="method-name">verifyeditAgreementDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyeditClient">
-                  </a> <!-- verifyeditClient -->
-                  <span class="method-name">verifyeditClient</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyeditClientInformation">
-                  </a> <!-- verifyeditClientInformation -->
-                  <span class="method-name">verifyeditClientInformation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyeditStakeholder">
-                  </a> <!-- verifyeditStakeholder -->
-                  <span class="method-name">verifyeditStakeholder</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifysearchClient">
-                  </a> <!-- verifysearchClient -->
-                  <span class="method-name">verifysearchClient</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyselectAgreementSignedDate">
-                  </a> <!-- verifyselectAgreementSignedDate -->
-                  <span class="method-name">verifyselectAgreementSignedDate</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyselectApproxStartDate">
-                  </a> <!-- verifyselectApproxStartDate -->
-                  <span class="method-name">verifyselectApproxStartDate</span>
+                  <a name="verifyselectBusinessUnitRow">
+                  </a> <!-- verifyselectBusinessUnitRow -->
+                  <span class="method-name">verifyselectBusinessUnitRow</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -377,7 +306,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Dipali.vaidya\AppData\Local\Temp\testng-eclipse--493718836\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Dipali.vaidya\AppData\Local\Temp\testng-eclipse-479129713\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -386,7 +315,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.PRMSTool.Tests.ClientScreenTest&quot;/&gt;
+      &lt;class name=&quot;com.PRMSTool.Tests.ProjectResourceScreenTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -426,96 +355,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(21);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifysearchClient')
-data.setCell(0, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(0, 3, 19330);
+data.setCell(0, 1, 'verifyselectBusinessUnitVResource')
+data.setCell(0, 2, 'com.PRMSTool.Tests.ProjectResourceScreenTest')
+data.setCell(0, 3, 30499);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifydeleteClient')
-data.setCell(1, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(1, 3, 16288);
+data.setCell(1, 1, 'verifyLogin')
+data.setCell(1, 2, 'com.PRMSTool.Tests.ProjectResourceScreenTest')
+data.setCell(1, 3, 5510);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyeditClientInformation')
-data.setCell(2, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(2, 3, 11844);
+data.setCell(2, 1, 'verifyclickOnProjectResource')
+data.setCell(2, 2, 'com.PRMSTool.Tests.ProjectResourceScreenTest')
+data.setCell(2, 3, 1552);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifydisplayAllStatusList')
-data.setCell(3, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(3, 3, 10667);
+data.setCell(3, 1, 'verifyselectBusinessUnitAll')
+data.setCell(3, 2, 'com.PRMSTool.Tests.ProjectResourceScreenTest')
+data.setCell(3, 3, 639);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyselectAgreementSignedDate')
-data.setCell(4, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(4, 3, 10002);
+data.setCell(4, 1, 'verifyselectBusinessUnitPractices')
+data.setCell(4, 2, 'com.PRMSTool.Tests.ProjectResourceScreenTest')
+data.setCell(4, 3, 451);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyselectApproxStartDate')
-data.setCell(5, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(5, 3, 9862);
+data.setCell(5, 1, 'verifyselectBusinessUnitLicence')
+data.setCell(5, 2, 'com.PRMSTool.Tests.ProjectResourceScreenTest')
+data.setCell(5, 3, 441);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyeditAgreementDetails')
-data.setCell(6, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(6, 3, 9124);
+data.setCell(6, 1, 'verifyselectBusinessUnitOthers')
+data.setCell(6, 2, 'com.PRMSTool.Tests.ProjectResourceScreenTest')
+data.setCell(6, 3, 412);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyaddNewClientInformation')
-data.setCell(7, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(7, 3, 8969);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifydownloadFile')
-data.setCell(8, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(8, 3, 8395);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyclickOnAddNew')
-data.setCell(9, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(9, 3, 7889);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyeditStakeholder')
-data.setCell(10, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(10, 3, 7410);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyaddStakeholderDetails')
-data.setCell(11, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(11, 3, 7201);
-data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifyLogin')
-data.setCell(12, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(12, 3, 6895);
-data.setCell(13, 0, 13)
-data.setCell(13, 1, 'verifydisplayInactiveStatusList')
-data.setCell(13, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(13, 3, 5629);
-data.setCell(14, 0, 14)
-data.setCell(14, 1, 'verifydisplayActiveStatusList')
-data.setCell(14, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(14, 3, 5572);
-data.setCell(15, 0, 15)
-data.setCell(15, 1, 'verifyaddAgreementDetails')
-data.setCell(15, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(15, 3, 3573);
-data.setCell(16, 0, 16)
-data.setCell(16, 1, 'verifyeditClient')
-data.setCell(16, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(16, 3, 1457);
-data.setCell(17, 0, 17)
-data.setCell(17, 1, 'verifyclickOnAdd')
-data.setCell(17, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(17, 3, 410);
-data.setCell(18, 0, 18)
-data.setCell(18, 1, 'verifyclickOnAgreementDetails')
-data.setCell(18, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(18, 3, 365);
-data.setCell(19, 0, 19)
-data.setCell(19, 1, 'verifyclickOnStakeholderDetails')
-data.setCell(19, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(19, 3, 302);
-data.setCell(20, 0, 20)
-data.setCell(20, 1, 'verifyclickOnUpdateClient')
-data.setCell(20, 2, 'com.PRMSTool.Tests.ClientScreenTest')
-data.setCell(20, 3, 226);
+data.setCell(7, 1, 'verifyselectBusinessUnitRow')
+data.setCell(7, 2, 'com.PRMSTool.Tests.ProjectResourceScreenTest')
+data.setCell(7, 3, 396);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -530,13 +407,39 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.PRMSTool.Tests.ClientScreenTest</span>
+              <span class="ignored-class-name">com.PRMSTool.Tests.ProjectResourceScreenTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifycheckSorting</span>
+                <span class="ignored-method-name">verifydelete</span>
+                <br/>
+                <span class="ignored-method-name">verifydisplayInactiveStatusList</span>
+                <br/>
+                <span class="ignored-method-name">verifydisplayActiveStatusList</span>
+                <br/>
+                <span class="ignored-method-name">verifydisplayAllStatusList</span>
+                <br/>
+                <span class="ignored-method-name">verifyclickOnEditButton</span>
+                <br/>
+                <span class="ignored-method-name">verifysearch</span>
+                <br/>
+                <span class="ignored-method-name">verifyaddProjectResourceDetails</span>
+                <br/>
+                <span class="ignored-method-name">verifyeditResourceInformation</span>
+                <br/>
+                <span class="ignored-method-name">verifydownloadFile</span>
+                <br/>
+                <span class="ignored-method-name">verifyselectEndDate</span>
+                <br/>
+                <span class="ignored-method-name">verifyclickOnAdd</span>
+                <br/>
+                <span class="ignored-method-name">verifyclickOnUpdateButton</span>
+                <br/>
+                <span class="ignored-method-name">verifyselectStartDate</span>
+                <br/>
+                <span class="ignored-method-name">verifyclickOnAddNew</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -548,98 +451,48 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.PRMSTool.Tests.ClientScreenTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.PRMSTool.Tests.ProjectResourceScreenTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">OpenBrowserGrade</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">verifyLogin</span>
-                <span class="method-start">9068 ms</span>
+                <span class="method-start">3823 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyclickOnAddNew</span>
-                <span class="method-start">15973 ms</span>
+                <span class="method-name">verifyclickOnProjectResource</span>
+                <span class="method-start">9345 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyaddNewClientInformation</span>
-                <span class="method-start">23866 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyselectBusinessUnitVResource</span>
+                <span class="method-start">10900 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyclickOnAgreementDetails</span>
-                <span class="method-start">32838 ms</span>
+                <span class="method-name">verifyselectBusinessUnitAll</span>
+                <span class="method-start">41414 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyselectAgreementSignedDate</span>
-                <span class="method-start">33206 ms</span>
+                <span class="method-name">verifyselectBusinessUnitRow</span>
+                <span class="method-start">42056 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyselectApproxStartDate</span>
-                <span class="method-start">43212 ms</span>
+                <span class="method-name">verifyselectBusinessUnitPractices</span>
+                <span class="method-start">42457 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyaddAgreementDetails</span>
-                <span class="method-start">53078 ms</span>
+                <span class="method-name">verifyselectBusinessUnitLicence</span>
+                <span class="method-start">42911 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyclickOnStakeholderDetails</span>
-                <span class="method-start">56655 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyaddStakeholderDetails</span>
-                <span class="method-start">56959 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyclickOnAdd</span>
-                <span class="method-start">64164 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifysearchClient</span>
-                <span class="method-start">64575 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyeditClient</span>
-                <span class="method-start">83909 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyeditClientInformation</span>
-                <span class="method-start">85369 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyeditAgreementDetails</span>
-                <span class="method-start">97215 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyeditStakeholder</span>
-                <span class="method-start">106341 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyclickOnUpdateClient</span>
-                <span class="method-start">113753 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifydeleteClient</span>
-                <span class="method-start">113981 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifydownloadFile</span>
-                <span class="method-start">130271 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifydisplayAllStatusList</span>
-                <span class="method-start">138670 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifydisplayInactiveStatusList</span>
-                <span class="method-start">149341 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifydisplayActiveStatusList</span>
-                <span class="method-start">154974 ms</span>
+                <span class="method-name">verifyselectBusinessUnitOthers</span>
+                <span class="method-start">43355 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">finish</span>
-                <span class="method-start">160791 ms</span>
+                <span class="method-start">43915 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

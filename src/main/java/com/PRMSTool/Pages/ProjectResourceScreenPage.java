@@ -126,6 +126,24 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-select[@placeholder='BusinessUnit']")
 	WebElement businessUnitDropDown;
 	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' All ')]")
+	WebElement businessUnitAll;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' vResourcing ')]")
+	WebElement businessUnitVRes;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' ROW ')]")
+	WebElement businessUnitRow;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Licence ')]")
+	WebElement businessUnitLicence;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Practices ')]")
+	WebElement businessUnitPractices;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Others ')]")
+	WebElement businessUnitOthers;
+	
 	public ProjectResourceScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -136,6 +154,7 @@ public class ProjectResourceScreenPage extends TestBase{
 		wait.until(ExpectedConditions.visibilityOf(projectResource));
 
 		projectResource.click();		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 			
 	public void clickOnAddNew() throws InterruptedException {
@@ -394,5 +413,67 @@ public class ProjectResourceScreenPage extends TestBase{
 		downloadFile.click();
 		Thread.sleep(5000);
 		System.out.println("File downloaded successfully");
+	}
+	
+	public void selectBusinessUnitAll()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
+		
+		businessUnitDropDown.click();
+		businessUnitAll.click();		
+		System.out.println("Business unit all");
+	}
+	
+	public void selectBusinessUnitVResource()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
+		
+		businessUnitDropDown.click();
+		//businessUnitVRes.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", businessUnitVRes);
+		System.out.println("Business unit VResourcing");
+	}
+	
+	public void selectBusinessUnitRow()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
+		
+		businessUnitDropDown.click();
+		businessUnitRow.click();
+		System.out.println("Business unit row");
+	}
+	
+	public void selectBusinessUnitPractices()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
+		
+		businessUnitDropDown.click();
+		businessUnitPractices.click();
+		System.out.println("Business unit practices");
+	}
+	
+	public void selectBusinessUnitLicence()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
+		
+		businessUnitDropDown.click();
+		businessUnitLicence.click();
+		System.out.println("Business unit licence");
+	}
+	
+	public void selectBusinessUnitOthers()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
+		
+		businessUnitDropDown.click();
+		businessUnitOthers.click();
+		System.out.println("Business unit others");
 	}
 }
