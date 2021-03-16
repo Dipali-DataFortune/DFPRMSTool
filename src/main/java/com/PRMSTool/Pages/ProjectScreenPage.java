@@ -38,7 +38,7 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-select[@placeholder='Client']")
 	WebElement clientDropdown;
 	
-	@FindBy(xpath = "//mat-option//span[contains(text(),' ABC ')]")
+	@FindBy(xpath = "//mat-option//span[contains(text(),' abc ')]")
 	WebElement client1;
 	
 	@FindBy(xpath = "//mat-option//span[contains(text(),' Van Ran Communications Services Inc. ')]")
@@ -160,7 +160,7 @@ public class ProjectScreenPage extends TestBase{
 	public void clickOnProject()
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(project));
+		wait.until(ExpectedConditions.elementToBeClickable(project));
 		
 		project.click();
 	}
@@ -168,7 +168,7 @@ public class ProjectScreenPage extends TestBase{
 	public void clickOnAddNew() throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(addNew));
+		wait.until(ExpectedConditions.elementToBeClickable(addNew));
 		//highLightElement(driver, addNew);
 		//staleElementClick(5, addNew, 60);
 		Thread.sleep(5000);
@@ -178,18 +178,22 @@ public class ProjectScreenPage extends TestBase{
 	
 	public void addProjectDetails() throws InterruptedException
 	{
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(clientDropdown));
 		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
 		Thread.sleep(3000);
+		highLightElement(driver, clientDropdown);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropdown);
 		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(client1));
 		js.executeScript("arguments[0].click()", client1);
 		
 		Thread.sleep(5000);
+		wait.until(ExpectedConditions.visibilityOf(projectName));
 		projectName.clear();
-		projectName.sendKeys("test1");		
+		projectName.sendKeys("test");		
 	}
 	
 	public void selectStartDate() throws InterruptedException
