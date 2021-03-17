@@ -77,55 +77,55 @@ public class ProjectScreenTest extends TestBase{
 		util.clickOnAdd();
 	}
 		
-	@Test(priority = 11, enabled=false)
+	@Test(priority = 11, enabled=true)
 	public void verifysearch()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.searchProject("Edit project");
 	}
 	
-	@Test(priority = 12, enabled=false)
+	@Test(priority = 12, enabled=true)
 	public void verifyclickOnEditButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnEditButton();
 	}
 	
-	@Test(priority = 13, enabled=false)
+	@Test(priority = 13, enabled=true)
 	public void verifyeditProjectInformation()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.editProjectInformation();
 	}
 	
-	@Test(priority = 14, enabled=false)
+	@Test(priority = 14, enabled=true)
 	public void verifyclickOnUpdateButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnUpdateButton();
 	}
 	
-	@Test(priority = 15, enabled=false)
+	@Test(priority = 15, enabled=true)
 	public void verifydelete()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.deleteProject("test");
 	}
 	
-	@Test(priority = 16, enabled=false)
+	@Test(priority = 16, enabled=true)
 	public void verifydownloadFile()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.downloadFile();
 	}
 	
-	@Test(priority = 17, enabled=false)
+	@Test(priority = 17, enabled=true)
 	public void verifydisplayAllStatusList()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.displayAllStatusList();
 	}
 	
-	@Test(priority = 18, enabled=false)
+	@Test(priority = 18, enabled=true)
 	public void verifydisplayInactiveStatusList()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.displayInactiveStatusList();
 	}
 	
-	@Test(priority = 19, enabled=false)
+	@Test(priority = 19, enabled=true)
 	public void verifydisplayActiveStatusList()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.displayActiveStatusList();

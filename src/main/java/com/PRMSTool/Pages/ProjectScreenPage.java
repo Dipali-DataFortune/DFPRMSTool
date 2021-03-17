@@ -158,6 +158,8 @@ public class ProjectScreenPage extends TestBase{
 	
 	public void clickOnProject()
 	{
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(project));
 		
@@ -174,18 +176,18 @@ public class ProjectScreenPage extends TestBase{
 	
 	public void addProjectDetails() throws InterruptedException
 	{	
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(clientDropdown));
 		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 		//highLightElement(driver, clientDropdown);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropdown);
 		//Thread.sleep(3000);
 		//wait.until(ExpectedConditions.elementToBeClickable(client1));
-		wait.until(ExpectedConditions.elementToBeSelected(client1));
+		//wait.until(ExpectedConditions.elementToBeSelected(client1));
 		//js.executeScript("arguments[0].click()", client1);
 		client1.click();
 		
@@ -376,7 +378,7 @@ public class ProjectScreenPage extends TestBase{
 	}
 	
 	public void searchProject(String name) throws InterruptedException {
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
@@ -413,6 +415,8 @@ public class ProjectScreenPage extends TestBase{
 		
 	public void editProjectInformation() throws InterruptedException
 	{
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
 		
