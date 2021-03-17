@@ -21,6 +21,7 @@ public class ResourceScreenPage extends TestBase {
 	SoftAssert softAssert = new SoftAssert();
 
 	@FindBy(xpath = "(//span[contains(text(),'Resource')])[1]")
+	//@FindBy(xpath = "(//fuse-nav-horizontal-item[@class='nav-item ng-star-inserted'])[3]")
 	WebElement resource;
 
 	@FindBy(xpath = "//input[@placeholder='Search for a resource']")
@@ -180,7 +181,8 @@ public class ResourceScreenPage extends TestBase {
 	}
 
 	public void clickOnResource() {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+				
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(resource));
 
 		resource.click();
@@ -188,15 +190,19 @@ public class ResourceScreenPage extends TestBase {
 	
 	public void clickOnAddNew() throws InterruptedException {
 
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		//driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(addNew));
-		highLightElement(driver, addNew);
+		//highLightElement(driver, addNew);
 
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		addNew.click();
 	}
 
 	public void addResourceDetails() throws InterruptedException {
+		//driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(resourceName));
 
@@ -204,27 +210,27 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.sendKeys("TestDelete");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS431");
-		Thread.sleep(5000);
+		employeeID.sendKeys("DS432");
+		//Thread.sleep(5000);
 		
 		address.clear();
 		address.sendKeys("Hadapsar");
 		
 		scrollToElement(country);
-		wait.until(ExpectedConditions.visibilityOf(country));
+		wait.until(ExpectedConditions.elementToBeClickable(country));
 		country.click();
 		country1.click();		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(state));
+		wait.until(ExpectedConditions.elementToBeClickable(state));
 		state.click();
 		state1.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(city));
+		wait.until(ExpectedConditions.elementToBeClickable(city));
 		city.click();
 		city1.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
 		zip.clear();
 		zip.sendKeys("411028");
@@ -241,28 +247,28 @@ public class ResourceScreenPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(yearBucket));
 		yearBucket.click();
 		YBucket.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(techCategory));
+		wait.until(ExpectedConditions.elementToBeClickable(techCategory));
 		techCategory.click();
 		TCategory.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
 		scrollToElement(reportingTo);
-		wait.until(ExpectedConditions.visibilityOf(reportingTo));
+		wait.until(ExpectedConditions.elementToBeClickable(reportingTo));
 		reportingTo.click();
 		Reporting.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(designation));
+		wait.until(ExpectedConditions.elementToBeClickable(designation));
 		designation.click();
 		Desig.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(status));
+		wait.until(ExpectedConditions.elementToBeClickable(status));
 		status.click();
 		StatusActive.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
 		wait.until(ExpectedConditions.visibilityOf(PExp));
 		PExp.clear();
@@ -300,7 +306,7 @@ public class ResourceScreenPage extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", birthDate);
 		
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 				
 		while(!DateMonths.getText().contains("MAY 2021"))
 		{
@@ -320,7 +326,7 @@ public class ResourceScreenPage extends TestBase {
 
 		System.out.println(DateOfBirth.getText());
 		System.out.println("Birth date selected");
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 	}
 	
 	public void selectJoiningDate() throws InterruptedException {
@@ -333,7 +339,7 @@ public class ResourceScreenPage extends TestBase {
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("arguments[0].click()", joiningDate);
 		 
-		  Thread.sleep(2000);
+		  //Thread.sleep(2000);
 			
 			while(!DateMonths.getText().contains("APR 2021"))
 			{
@@ -352,7 +358,7 @@ public class ResourceScreenPage extends TestBase {
 			}
 		  		
 		System.out.println("Joining date selected");
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 	}
 	
 	public void searchResource(String name) throws InterruptedException {
@@ -360,19 +366,19 @@ public class ResourceScreenPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
-		highLightElement(driver, searchBox);
-		Thread.sleep(5000);
+		//highLightElement(driver, searchBox);
+		//Thread.sleep(5000);
 		searchBox.clear();
 		searchBox.sendKeys(name);
 
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 	}
 	
 	public void deleteResource(String name) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		searchBox.clear();
 		searchBox.sendKeys(name);
 
@@ -382,7 +388,7 @@ public class ResourceScreenPage extends TestBase {
 		 * System.out.println(objalert.getText()); objalert.accept();
 		 */
 		//yesButton.click();
-		wait.until(ExpectedConditions.visibilityOf(yesButton));
+		wait.until(ExpectedConditions.elementToBeClickable(yesButton));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", yesButton);
 		
@@ -404,15 +410,15 @@ public class ResourceScreenPage extends TestBase {
 		address.sendKeys("Pune");
 		
 		scrollToElement(country);
-		wait.until(ExpectedConditions.visibilityOf(country));
+		wait.until(ExpectedConditions.elementToBeClickable(country));
 		country.click();
 		country2.click();		
 				
-		wait.until(ExpectedConditions.visibilityOf(state));
+		wait.until(ExpectedConditions.elementToBeClickable(state));
 		state.click();
 		state2.click();
 				
-		wait.until(ExpectedConditions.visibilityOf(city));
+		wait.until(ExpectedConditions.elementToBeClickable(city));
 		city.click();
 		city2.click();
 				
@@ -428,28 +434,28 @@ public class ResourceScreenPage extends TestBase {
 		emailID.clear();
 		emailID.sendKeys("test2@gmail.com");
 		
-		wait.until(ExpectedConditions.visibilityOf(yearBucket));
+		wait.until(ExpectedConditions.elementToBeClickable(yearBucket));
 		yearBucket.click();
 		YBucket.click();
 				
-		wait.until(ExpectedConditions.visibilityOf(techCategory));
+		wait.until(ExpectedConditions.elementToBeClickable(techCategory));
 		techCategory.click();
 		TCategory.click();
 				
 		scrollToElement(reportingTo);
-		wait.until(ExpectedConditions.visibilityOf(reportingTo));
+		wait.until(ExpectedConditions.elementToBeClickable(reportingTo));
 		reportingTo.click();
 		Reporting.click();
 				
-		wait.until(ExpectedConditions.visibilityOf(designation));
+		wait.until(ExpectedConditions.elementToBeClickable(designation));
 		designation.click();
 		Desig.click();
 				
-		wait.until(ExpectedConditions.visibilityOf(status));
+		wait.until(ExpectedConditions.elementToBeClickable(status));
 		status.click();
 		StatusActive.click();
 				
-		wait.until(ExpectedConditions.visibilityOf(PExp));
+		wait.until(ExpectedConditions.elementToBeClickable(PExp));
 		PExp.clear();
 		PExp.sendKeys("50");
 		

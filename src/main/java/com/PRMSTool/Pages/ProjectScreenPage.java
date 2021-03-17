@@ -29,6 +29,7 @@ public class ProjectScreenPage extends TestBase{
 	WebElement downloadFile;
 	
 	@FindBy(xpath = "(//span[contains(text(),'Project')])[1]")
+	//@FindBy(xpath = "(//fuse-nav-horizontal-item[@class='nav-item ng-star-inserted'])[2]")	
 	WebElement project;
 	
 	@FindBy(xpath = "//input[@alt='Export']")

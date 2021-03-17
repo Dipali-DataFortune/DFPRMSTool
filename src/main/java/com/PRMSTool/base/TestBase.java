@@ -43,7 +43,7 @@ public class TestBase {
 
 	@BeforeSuite
 
-	public void OpenBrowserGrade() throws InterruptedException {
+	public void OpenBrowser() throws InterruptedException {
 		String browser = prop.getProperty("browser");
 		if (browser.equals("chrome")) {
 
@@ -60,8 +60,8 @@ public class TestBase {
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-	
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);	
 	}
 
 	@AfterSuite()

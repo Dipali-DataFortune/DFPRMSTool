@@ -3,6 +3,8 @@
  */
 package com.PRMSTool.Pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,7 +62,7 @@ public class LoginPage extends TestBase {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", loginButton);
-		
+						
 		System.out.println(driver.getTitle());
 	}
 }
