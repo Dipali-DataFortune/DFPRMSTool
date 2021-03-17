@@ -37,7 +37,7 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-select[@placeholder='Client']")
 	WebElement clientDropdown;
 	
-	@FindBy(xpath = "//mat-option//span[contains(text(),' ABC ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' ABC ')]")
 	WebElement client1;
 	
 	@FindBy(xpath = "//mat-option//span[contains(text(),' Van Ran Communications Services Inc. ')]")
@@ -165,29 +165,29 @@ public class ProjectScreenPage extends TestBase{
 	}
 		
 	public void clickOnAddNew() throws InterruptedException {
-		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(addNew));
 		//highLightElement(driver, addNew);
-		//staleElementClick(5, addNew, 60);
-		Thread.sleep(5000);
-		
+		//Thread.sleep(5000);
 		addNew.click();
 	}
 	
 	public void addProjectDetails() throws InterruptedException
-	{
+	{	
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(clientDropdown));
 		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		//highLightElement(driver, clientDropdown);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropdown);
-		Thread.sleep(3000);
-		wait.until(ExpectedConditions.elementToBeClickable(client1));
-		js.executeScript("arguments[0].click()", client1);
+		//Thread.sleep(3000);
+		//wait.until(ExpectedConditions.elementToBeClickable(client1));
+		wait.until(ExpectedConditions.elementToBeSelected(client1));
+		//js.executeScript("arguments[0].click()", client1);
+		client1.click();
 		
 		//Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOf(projectName));
@@ -348,11 +348,11 @@ public class ProjectScreenPage extends TestBase{
 	{
 		scrollToElement(billing);
 		WebDriverWait wait=new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(billing));
+		wait.until(ExpectedConditions.elementToBeClickable(billing));
 		
 		billing.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(reviewCycle));
+		wait.until(ExpectedConditions.elementToBeClickable(reviewCycle));
 		reviewCycle.click();
 		reviewCycle1.click();
 		
@@ -370,7 +370,7 @@ public class ProjectScreenPage extends TestBase{
 		HourlyBillingRate.clear();
 		HourlyBillingRate.sendKeys("2000");
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		
 		System.out.println("Billing details added successfully");
 	}

@@ -204,7 +204,7 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.sendKeys("TestDelete");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS419");
+		employeeID.sendKeys("DS431");
 		Thread.sleep(5000);
 		
 		address.clear();
