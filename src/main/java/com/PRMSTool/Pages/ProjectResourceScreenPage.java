@@ -23,7 +23,8 @@ public class ProjectResourceScreenPage extends TestBase{
 	WebDriver driver;
 	SoftAssert softAssert = new SoftAssert();
 
-	@FindBy(xpath = "(//span[contains(text(),'Project-Resource')])[1]")
+	@FindBy(xpath = "(//a[@href='/projectresource'])[1]")
+	//(//a[@href='/project'])[1]
 	WebElement projectResource;
 	
 	@FindBy(xpath = "//input[@placeholder='Search for a project resource']")
@@ -148,13 +149,16 @@ public class ProjectResourceScreenPage extends TestBase{
 		this.driver = driver;
 	}
 	
-	public void clickOnProjectResource()
+	public void clickOnProjectResource() throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(projectResource));
+		Thread.sleep(5000);
+		//WebDriverWait wait = new WebDriverWait(driver, 120);
+		//wait.until(ExpectedConditions.visibilityOf(projectResource));
 
-		projectResource.click();		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//projectResource.click();		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", projectResource);
 	}
 			
 	public void clickOnAddNew() throws InterruptedException {

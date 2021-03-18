@@ -3,7 +3,6 @@ package com.PRMSTool.Tests;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import com.PRMSTool.Pages.ClientScreenPage;
 import com.PRMSTool.Pages.LoginPage;
 import com.PRMSTool.Pages.ProjectScreenPage;
 import com.PRMSTool.base.TestBase;

@@ -20,8 +20,8 @@ public class ResourceScreenPage extends TestBase {
 	WebDriver driver;
 	SoftAssert softAssert = new SoftAssert();
 
-	@FindBy(xpath = "(//span[contains(text(),'Resource')])[1]")
-	//@FindBy(xpath = "(//fuse-nav-horizontal-item[@class='nav-item ng-star-inserted'])[3]")
+	//@FindBy(xpath = "(//span[contains(text(),'Resource')])[1]")
+	@FindBy(xpath = "(//a[@href='/resource'])[1]")
 	WebElement resource;
 
 	@FindBy(xpath = "//input[@placeholder='Search for a resource']")
@@ -32,10 +32,10 @@ public class ResourceScreenPage extends TestBase {
 	//@FindBy(xpath = "//span[contains(text(),'ADD NEW')]")
 	WebElement addNew;
 
-	@FindBy(xpath = "//input[@name='ResourceName']")
+	@FindBy(xpath = "//input[@placeholder='ResourceName']")
 	WebElement resourceName;
 
-	@FindBy(xpath = "//input[@name='EmployeeId']")
+	@FindBy(xpath = "//input[@placeholder='Employee Id']")
 	WebElement employeeID;
 
 	@FindBy(xpath = "(//button[@type='button'])[1]")
@@ -173,61 +173,67 @@ public class ResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-icon[contains(text(),'delete')]")
 	WebElement deleteButton;
 
-	@FindBy(xpath = "//button[@class='mat-raised-button mat-primary']")
+	@FindBy(xpath = "//span[contains(text(),'Yes')]")
 	WebElement yesButton;
 	
 	public ResourceScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	public void clickOnResource() {
-				
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(resource));
+	public void clickOnResource() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//WebDriverWait wait = new WebDriverWait(driver, 30);
+		//wait.until(ExpectedConditions.visibilityOf(resource));
 
-		resource.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", resource);
+		//resource.click();
 	}
 	
 	public void clickOnAddNew() throws InterruptedException {
 
 		//driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(addNew));
-		//highLightElement(driver, addNew);
+		highLightElement(driver, addNew);
 
-		//Thread.sleep(5000);
-		addNew.click();
+		
+		//addNew.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", addNew);
 	}
 
 	public void addResourceDetails() throws InterruptedException {
-		//driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(resourceName));
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(resourceName));
 
 		resourceName.clear();
 		resourceName.sendKeys("TestDelete");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS432");
+		employeeID.sendKeys("DS433");
 		//Thread.sleep(5000);
 		
 		address.clear();
 		address.sendKeys("Hadapsar");
 		
 		scrollToElement(country);
-		wait.until(ExpectedConditions.elementToBeClickable(country));
+		//wait.until(ExpectedConditions.elementToBeClickable(country));
 		country.click();
 		country1.click();		
 		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(state));
+		//wait.until(ExpectedConditions.elementToBeClickable(state));
 		state.click();
 		state1.click();
 		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(city));
+		//wait.until(ExpectedConditions.elementToBeClickable(city));
 		city.click();
 		city1.click();
 		//Thread.sleep(3000);
@@ -244,54 +250,54 @@ public class ResourceScreenPage extends TestBase {
 		emailID.clear();
 		emailID.sendKeys("test@gmail.com");
 		
-		wait.until(ExpectedConditions.visibilityOf(yearBucket));
+		//wait.until(ExpectedConditions.visibilityOf(yearBucket));
 		yearBucket.click();
 		YBucket.click();
 		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(techCategory));
+		//wait.until(ExpectedConditions.elementToBeClickable(techCategory));
 		techCategory.click();
 		TCategory.click();
 		//Thread.sleep(3000);
 		
 		scrollToElement(reportingTo);
-		wait.until(ExpectedConditions.elementToBeClickable(reportingTo));
+		//wait.until(ExpectedConditions.elementToBeClickable(reportingTo));
 		reportingTo.click();
 		Reporting.click();
 		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(designation));
+		//wait.until(ExpectedConditions.elementToBeClickable(designation));
 		designation.click();
 		Desig.click();
 		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(status));
+		//wait.until(ExpectedConditions.elementToBeClickable(status));
 		status.click();
 		StatusActive.click();
 		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(PExp));
+		//wait.until(ExpectedConditions.visibilityOf(PExp));
 		PExp.clear();
 		PExp.sendKeys("70");
 		
 		scrollToElement(tenureInYears);
-		wait.until(ExpectedConditions.visibilityOf(tenureInYears));
+		//wait.until(ExpectedConditions.visibilityOf(tenureInYears));
 		tenureInYears.clear();
 		tenureInYears.sendKeys("5");
 		
-		wait.until(ExpectedConditions.visibilityOf(totalYears));
+		//wait.until(ExpectedConditions.visibilityOf(totalYears));
 		totalYears.clear();
 		totalYears.sendKeys("6");
 		
-		wait.until(ExpectedConditions.visibilityOf(PriSkill));
+		//wait.until(ExpectedConditions.visibilityOf(PriSkill));
 		PriSkill.clear();
 		PriSkill.sendKeys("Automation Testing");
 		
-		wait.until(ExpectedConditions.visibilityOf(SecSkill));
+		//wait.until(ExpectedConditions.visibilityOf(SecSkill));
 		SecSkill.clear();
 		SecSkill.sendKeys("Manual Testing");
 		
-		wait.until(ExpectedConditions.visibilityOf(Strengths));
+		//wait.until(ExpectedConditions.visibilityOf(Strengths));
 		Strengths.clear();
 		Strengths.sendKeys("Test");
 	}
@@ -375,10 +381,11 @@ public class ResourceScreenPage extends TestBase {
 	}
 	
 	public void deleteResource(String name) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(searchBox));
-
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(searchBox));
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
 		searchBox.clear();
 		searchBox.sendKeys(name);
 
@@ -388,6 +395,7 @@ public class ResourceScreenPage extends TestBase {
 		 * System.out.println(objalert.getText()); objalert.accept();
 		 */
 		//yesButton.click();
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(yesButton));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", yesButton);

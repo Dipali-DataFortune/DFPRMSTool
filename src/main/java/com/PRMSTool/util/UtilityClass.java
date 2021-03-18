@@ -28,7 +28,7 @@ public class UtilityClass extends TestBase{
 	@FindBy(xpath = "//input[@alt='Export']")
 	WebElement downloadFile;
 	
-	@FindBy(xpath = "//span[@class='mat-button-wrapper']//span[contains(text(),'Update')]")
+	@FindBy(xpath = "//span[contains(text(),'Update')]")
 	WebElement updateButton;
 	
 	@FindBy(xpath = "(//mat-icon[contains(text(),'edit')])[1]")
@@ -64,17 +64,19 @@ public class UtilityClass extends TestBase{
 	}
 	
 	public void clickOnEditButton() {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(editButton));
-
-		editButton.click();
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(editButton));
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//editButton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", editButton);
 	}
 	
 	public void clickOnUpdateButton() {
 		scrollToElement(updateButton);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(updateButton));
-
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(updateButton));
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		//updateButton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", updateButton);
@@ -90,9 +92,12 @@ public class UtilityClass extends TestBase{
 		options.setExperimentalOption("prefs", chromePref);
 
 		//Thread.sleep(5000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(downloadFile));
-		downloadFile.click();
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(downloadFile));
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//downloadFile.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", downloadFile);
 		//Thread.sleep(3000);
 
 		System.out.println("File downloaded successfully");
@@ -106,12 +111,14 @@ public class UtilityClass extends TestBase{
 		wait.until(ExpectedConditions.elementToBeClickable(status));
 				
 		highLightElement(driver, status);
-		status.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", status);
+		//status.click();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(status1));
 			
 		//status1.click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", status1);
 		
 		//Thread.sleep(5000);
@@ -125,11 +132,13 @@ public class UtilityClass extends TestBase{
 		wait.until(ExpectedConditions.elementToBeClickable(status));
 				
 		highLightElement(driver, status);
-		status.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", status);
+		//status.click();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(status2));
 				
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", status2);
 		
 		//Thread.sleep(5000);
@@ -143,11 +152,13 @@ public class UtilityClass extends TestBase{
 		wait.until(ExpectedConditions.elementToBeClickable(status));
 				
 		highLightElement(driver, status);
-		status.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", status);
+	
+		//status.click();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(status3));
 				
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", status3);
 		
 		//Thread.sleep(5000);
