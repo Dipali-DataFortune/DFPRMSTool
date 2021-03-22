@@ -331,7 +331,7 @@ public class ProjectResourceScreenPage extends TestBase{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", yesButton);
 		
-		System.out.println("Client deleted successfully");
+		System.out.println("Projet resource deleted successfully");
 	}
 	
 	public void editProjectResourceInformation() throws InterruptedException

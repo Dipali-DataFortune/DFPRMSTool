@@ -6,8 +6,8 @@
       <class name="com.PRMSTool.Tests.ResourceScreenTest">
         <methods>
           <include name="finish"/>
+          <include name="verifydisplayInactiveStatusList"/>
           <include name="OpenBrowser"/>
-          <include name="verifyaddResourceDetails"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ResourceScreenTest -->
     </classes>

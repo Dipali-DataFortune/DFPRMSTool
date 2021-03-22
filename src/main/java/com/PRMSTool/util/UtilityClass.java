@@ -74,9 +74,9 @@ public class UtilityClass extends TestBase{
 	
 	public void clickOnUpdateButton() {
 		scrollToElement(updateButton);
-		//WebDriverWait wait = new WebDriverWait(driver, 60);
-		//wait.until(ExpectedConditions.visibilityOf(updateButton));
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(updateButton));
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		//updateButton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", updateButton);
@@ -91,10 +91,10 @@ public class UtilityClass extends TestBase{
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", chromePref);
 
-		//Thread.sleep(5000);
-		//WebDriverWait wait = new WebDriverWait(driver, 60);
-		//wait.until(ExpectedConditions.visibilityOf(downloadFile));
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(downloadFile));
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		//downloadFile.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", downloadFile);
@@ -105,21 +105,21 @@ public class UtilityClass extends TestBase{
 	
 	public void displayAllStatusList() throws InterruptedException 
 	{
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(status));
+		wait.until(ExpectedConditions.visibilityOf(status));
 				
 		highLightElement(driver, status);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", status);
-		//status.click();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(status1));
-			
-		//status1.click();
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", status1);
+		//js.executeScript("arguments[0].click()", status);
+		status.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(status1));
+			
+		status1.click();
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status1);
 		
 		//Thread.sleep(5000);
 		
@@ -128,18 +128,19 @@ public class UtilityClass extends TestBase{
 	
 	public void displayInactiveStatusList() throws InterruptedException
 	{
+		//Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(status));
+		wait.until(ExpectedConditions.visibilityOf(status));
 				
 		highLightElement(driver, status);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", status);
-		//status.click();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(status2));
-				
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", status2);
+		//js.executeScript("arguments[0].click()", status);
+		status.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(status2));
+		status2.click();
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status2);
 		
 		//Thread.sleep(5000);
 		
@@ -149,17 +150,17 @@ public class UtilityClass extends TestBase{
 	public void displayActiveStatusList() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(status));
+		wait.until(ExpectedConditions.visibilityOf(status));
 				
 		highLightElement(driver, status);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", status);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
 	
-		//status.click();
+		status.click();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(status3));
-				
-		js.executeScript("arguments[0].click()", status3);
+		wait.until(ExpectedConditions.visibilityOf(status3));
+		status3.click();
+		//js.executeScript("arguments[0].click()", status3);
 		
 		//Thread.sleep(5000);
 		

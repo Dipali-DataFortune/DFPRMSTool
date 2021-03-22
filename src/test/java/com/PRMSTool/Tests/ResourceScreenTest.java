@@ -63,7 +63,7 @@ public class ResourceScreenTest extends TestBase{
 	@Test(priority = 7, enabled=true)
 	public void verifysearch()throws InterruptedException {
 		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
-		rs.searchResource("TestDelete");
+		rs.searchResource("TestEdit");
 	}
 	
 	@Test(priority = 8, enabled=true)
@@ -101,7 +101,7 @@ public class ResourceScreenTest extends TestBase{
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.displayAllStatusList();
 	}
-	
+		
 	@Test(priority = 14, enabled=true)
 	public void verifydisplayInactiveStatusList()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
@@ -112,5 +112,5 @@ public class ResourceScreenTest extends TestBase{
 	public void verifydisplayActiveStatusList()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.displayActiveStatusList();
-	}
+	}		
 }

@@ -371,21 +371,21 @@ public class ResourceScreenPage extends TestBase {
 				
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
-
-		//highLightElement(driver, searchBox);
-		//Thread.sleep(5000);
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		highLightElement(driver, searchBox);
+		Thread.sleep(5000);
 		searchBox.clear();
 		searchBox.sendKeys(name);
 
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 	}
 	
 	public void deleteResource(String name) throws InterruptedException {
+		//Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(searchBox));
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		Thread.sleep(5000);
-		//WebDriverWait wait = new WebDriverWait(driver, 60);
-		//wait.until(ExpectedConditions.visibilityOf(searchBox));
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		
 		searchBox.clear();
 		searchBox.sendKeys(name);
 
@@ -395,12 +395,13 @@ public class ResourceScreenPage extends TestBase {
 		 * System.out.println(objalert.getText()); objalert.accept();
 		 */
 		//yesButton.click();
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(yesButton));
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.elementToBeClickable(yesButton));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", yesButton);
 		
-		System.out.println("Client deleted successfully");
+		System.out.println("Resource deleted successfully");
+		Thread.sleep(5000);
 	}
 	
 	public void editResourceInformation()
