@@ -618,7 +618,7 @@ public class ClientScreenPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(clientName));
 		clientName.clear();
-		clientName.sendKeys("test123");
+		clientName.sendKeys("test");
 
 		companyUrl.clear();
 		companyUrl.sendKeys("test");
