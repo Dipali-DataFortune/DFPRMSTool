@@ -22,85 +22,85 @@ public class ProjectScreenTest extends TestBase{
 		ps.clickOnProject();
 	}	
 	
-	@Test(priority = 2, enabled=true)
+	@Test(priority = 2, enabled=false)
 	public void verifyclickOnAddNew()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.clickOnAddNew();
 	}
 	
-	@Test(priority = 3, enabled=true)
+	@Test(priority = 3, enabled=false)
 	public void verifyaddProjectDetails()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.addProjectDetails();
 	}
 	
-	@Test(priority = 4, enabled=true)
+	@Test(priority = 4, enabled=false)
 	public void verifyselectStartDate()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.selectStartDate();
 	}
 	
-	@Test(priority = 5, enabled=true)
+	@Test(priority = 5, enabled=false)
 	public void verifyselectEndDate()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.selectEndDate();
 	}
 	
-	@Test(priority = 6, enabled=true)
+	@Test(priority = 6, enabled=false)
 	public void verifyselectActualStartDate()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.selectActualStartDate();
 	}
 
-	@Test(priority = 7, enabled=true)
+	@Test(priority = 7, enabled=false)
 	public void verifyselectActualEndDate()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.selectActualEndDate();
 	}
 	
-	@Test(priority = 8, enabled=true)
+	@Test(priority = 8, enabled=false)
 	public void verifyaddProjectDetails1()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.addProjectDetails1();
 	}
 	
-	@Test(priority = 9, enabled=true)
+	@Test(priority = 9, enabled=false)
 	public void verifyaddBillingDetails()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.addBillingDetails();
 	}
 	
-	@Test(priority = 10, enabled=true)
+	@Test(priority = 10, enabled=false)
 	public void verifyclickOnAdd()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnAdd();
 	}
 		
-	@Test(priority = 11, enabled=true)
+	@Test(priority = 11, enabled=false)
 	public void verifysearch()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.searchProject("Edit project");
 	}
 	
-	@Test(priority = 12, enabled=true)
+	@Test(priority = 12, enabled=false)
 	public void verifyclickOnEditButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnEditButton();
 	}
 	
-	@Test(priority = 13, enabled=true)
+	@Test(priority = 13, enabled=false)
 	public void verifyeditProjectInformation()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.editProjectInformation();
 	}
 	
-	@Test(priority = 14, enabled=true)
+	@Test(priority = 14, enabled=false)
 	public void verifyclickOnUpdateButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnUpdateButton();
 	}
 	
-	@Test(priority = 15, enabled=true)
+	@Test(priority = 15, enabled=false)
 	public void verifydelete()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
 		ps.deleteProject("test");
@@ -128,5 +128,41 @@ public class ProjectScreenTest extends TestBase{
 	public void verifydisplayActiveStatusList()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.displayActiveStatusList();
+	}
+	
+	@Test(priority = 20, enabled=true)
+	public void verifydisplayvResourcingBusinessUnit()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayvResourcingBusinessUnit();
+	}
+	
+	@Test(priority = 21, enabled=true)
+	public void verifydisplayROWBusinessUnit()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayROWBusinessUnit();
+	}
+	
+	@Test(priority = 22, enabled=true)
+	public void verifydisplayLicenceBusinessUnit()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayLicenceBusinessUnit();
+	}
+	
+	@Test(priority = 23, enabled=true)
+	public void verifydisplayPracticesBusinessUnit()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayPracticesBusinessUnit();
+	}
+	
+	@Test(priority = 24, enabled=true)
+	public void verifydisplaySafeGuardBusinessUnit()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displaySafeGuardBusinessUnit();
+	}
+	
+	@Test(priority = 25, enabled=true)
+	public void verifydisplayAllBusinessUnit()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayAllBusinessUnit();
 	}
 }

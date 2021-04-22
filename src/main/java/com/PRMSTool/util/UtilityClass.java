@@ -49,6 +49,27 @@ public class UtilityClass extends TestBase{
 	@FindBy(xpath = "//mat-option//span[contains(text(),' Active ')]")
 	WebElement status3;
 	
+	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='BusinessUnit']")
+	WebElement businessUnit;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' All ')]")
+	WebElement businessUnit1;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' vResourcing ')]")
+	WebElement businessUnit2;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' ROW ')]")
+	WebElement businessUnit3;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Licence ')]")
+	WebElement businessUnit4;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Practices ')]")
+	WebElement businessUnit5;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' SafeGuard ')]")
+	WebElement businessUnit6;	
+	
 	public UtilityClass(WebDriver driver) {
 		this.driver = driver;
 	}	
@@ -121,7 +142,7 @@ public class UtilityClass extends TestBase{
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		//js.executeScript("arguments[0].click()", status1);
 		
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 		System.out.println("All the active and inactive client list displayed");		
 	}
@@ -142,7 +163,7 @@ public class UtilityClass extends TestBase{
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		//js.executeScript("arguments[0].click()", status2);
 		
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 		System.out.println("All the inactive client list displayed");		
 	}
@@ -162,8 +183,128 @@ public class UtilityClass extends TestBase{
 		status3.click();
 		//js.executeScript("arguments[0].click()", status3);
 		
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 		System.out.println("All the active client list displayed");		
+	}
+	
+	public void displayvResourcingBusinessUnit() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(businessUnit));
+				
+		highLightElement(driver, businessUnit);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		businessUnit.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(businessUnit2));
+		businessUnit2.click();
+		//js.executeScript("arguments[0].click()", status3);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("vResourcing business unit list displayed");		
+	}
+	
+	public void displayROWBusinessUnit() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(businessUnit));
+				
+		highLightElement(driver, businessUnit);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		businessUnit.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(businessUnit3));
+		businessUnit3.click();
+		//js.executeScript("arguments[0].click()", status3);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("ROW business unit list displayed");		
+	}
+	
+	public void displayLicenceBusinessUnit() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(businessUnit));
+				
+		highLightElement(driver, businessUnit);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		businessUnit.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(businessUnit4));
+		businessUnit4.click();
+		//js.executeScript("arguments[0].click()", status3);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("Licence business unit list displayed");		
+	}
+	
+	public void displayPracticesBusinessUnit() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(businessUnit));
+				
+		highLightElement(driver, businessUnit);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		businessUnit.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(businessUnit5));
+		businessUnit5.click();
+		//js.executeScript("arguments[0].click()", status3);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("Practices business unit list displayed");		
+	}
+	
+	public void displaySafeGuardBusinessUnit() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(businessUnit));
+				
+		highLightElement(driver, businessUnit);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		businessUnit.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(businessUnit6));
+		businessUnit6.click();
+		//js.executeScript("arguments[0].click()", status3);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("SafeGuard business unit list displayed");		
+	}
+	
+	public void displayAllBusinessUnit() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(businessUnit));
+				
+		highLightElement(driver, businessUnit);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		businessUnit.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(businessUnit1));
+		businessUnit1.click();
+		//js.executeScript("arguments[0].click()", status3);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("All the business units list displayed");		
 	}
 }

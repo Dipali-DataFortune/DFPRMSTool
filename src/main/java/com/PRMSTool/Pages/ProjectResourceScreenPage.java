@@ -427,57 +427,5 @@ public class ProjectResourceScreenPage extends TestBase{
 		businessUnitDropDown.click();
 		businessUnitAll.click();		
 		System.out.println("Business unit all");
-	}
-	
-	public void selectBusinessUnitVResource()
-	{
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
-		
-		businessUnitDropDown.click();
-		//businessUnitVRes.click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", businessUnitVRes);
-		System.out.println("Business unit VResourcing");
-	}
-	
-	public void selectBusinessUnitRow()
-	{
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
-		
-		businessUnitDropDown.click();
-		businessUnitRow.click();
-		System.out.println("Business unit row");
-	}
-	
-	public void selectBusinessUnitPractices()
-	{
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
-		
-		businessUnitDropDown.click();
-		businessUnitPractices.click();
-		System.out.println("Business unit practices");
-	}
-	
-	public void selectBusinessUnitLicence()
-	{
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
-		
-		businessUnitDropDown.click();
-		businessUnitLicence.click();
-		System.out.println("Business unit licence");
-	}
-	
-	public void selectBusinessUnitOthers()
-	{
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(businessUnitDropDown));
-		
-		businessUnitDropDown.click();
-		businessUnitOthers.click();
-		System.out.println("Business unit others");
-	}
+	}	
 }
