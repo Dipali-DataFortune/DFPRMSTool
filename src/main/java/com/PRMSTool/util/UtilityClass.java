@@ -74,14 +74,15 @@ public class UtilityClass extends TestBase{
 		this.driver = driver;
 	}	
 	
-	public void clickOnAdd() {
+	public void clickOnAdd() throws InterruptedException {
 		// addButton.click();
 		scrollToElement(addButton);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(addButton));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", addButton);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//Thread.sleep(5000);
 	}
 	
 	public void clickOnEditButton() {
