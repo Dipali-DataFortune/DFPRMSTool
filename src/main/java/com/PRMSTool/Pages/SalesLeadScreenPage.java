@@ -4,6 +4,7 @@
 package com.PRMSTool.Pages;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -185,6 +186,21 @@ public class SalesLeadScreenPage extends TestBase {
 	@FindBy(xpath = "//input[@placeholder='BDE']")
 	WebElement BDE;
 	
+	@FindBy(xpath = "//button[@type='button']")
+	WebElement lastUpdatedDate;
+
+	@FindBy(xpath = "//button[@class='mat-icon-button' and @type='button']")
+	WebElement FUPDate;
+	
+	@FindBy(xpath = "//div[@class='mat-calendar-controls']")
+	WebElement DateMonths;
+
+	@FindBy(xpath = "//table[@class='mat-calendar-table']//td")
+	List<WebElement> allDates;
+
+	@FindBy(xpath = "//button[@class='mat-calendar-next-button mat-icon-button' and @type='button']")
+	WebElement DateNavButton;
+	
 	public SalesLeadScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -212,7 +228,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 	public void clickOnCloudUpload() {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(addNew));
+		wait.until(ExpectedConditions.visibilityOf(uploadFile));
 
 		uploadFile.click();
 	}
@@ -285,11 +301,13 @@ public class SalesLeadScreenPage extends TestBase {
 	}
 
 	public void addSalesLeadInformation() {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(salesLeadInformation));
+		
 		softAssert.assertEquals(salesLeadInformation.isDisplayed(), true);
 		softAssert.assertEquals(companyDetails.isDisplayed(), true);
 		softAssert.assertEquals(otherDetails.isDisplayed(), true);
 
-		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(salutation));
 
 		salutation.clear();
@@ -308,7 +326,7 @@ public class SalesLeadScreenPage extends TestBase {
 		lastName.sendKeys("Vaidya");
 
 		jobTitle.clear();
-		jobTitle.sendKeys("CTO, Product & Technology");
+		jobTitle.sendKeys("CTO");
 
 		jobFunction.clear();
 		jobFunction.sendKeys("Other");
@@ -316,8 +334,8 @@ public class SalesLeadScreenPage extends TestBase {
 		managementLevel.clear();
 		managementLevel.sendKeys("Other");
 
-		mobile.clear();
-		mobile.sendKeys("911234567890");
+		//mobile.clear();
+		//mobile.sendKeys("911234567890");
 
 		emailID.clear();
 		emailID.sendKeys("dipali.vaidya@datafortune.com");
@@ -355,6 +373,37 @@ public class SalesLeadScreenPage extends TestBase {
 
 		comment.clear();
 		comment.sendKeys("All the sales lead information added successfully");
+	}
+	
+	public void selectLastUpdatedDate() throws InterruptedException {
+		scrollToElement(lastUpdatedDate);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(lastUpdatedDate));
+		
+		highLightElement(driver, lastUpdatedDate);
+		
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("arguments[0].click()", lastUpdatedDate);
+		 
+		  //Thread.sleep(2000);
+			
+			while(!DateMonths.getText().contains("APR 2021"))
+			{
+				js.executeScript("arguments[0].click()", DateNavButton);
+			}
+
+			int total_nodes = allDates.size();
+
+			for (int i = 0; i < total_nodes; i++) {
+				String date = allDates.get(i).getText();
+				if (date.equalsIgnoreCase("30")) {
+					allDates.get(i).click();
+					break;
+				}
+			}
+		  		
+		System.out.println("Last updated date selected");
+		Thread.sleep(3000);
 	}
 	
 	public void clickOnCompanyDetails()
@@ -443,5 +492,37 @@ public class SalesLeadScreenPage extends TestBase {
 		
 		BDE.clear();
 		BDE.sendKeys("Test BDE");
+	}
+	
+	public void selectFUPDate() throws InterruptedException
+	{
+		scrollToElement(FUPDate);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(FUPDate));
+		
+		highLightElement(driver, FUPDate);
+		
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("arguments[0].click()", FUPDate);
+		 
+		  //Thread.sleep(2000);
+			
+			while(!DateMonths.getText().contains("MAY 2021"))
+			{
+				js.executeScript("arguments[0].click()", DateNavButton);
+			}
+
+			int total_nodes = allDates.size();
+
+			for (int i = 0; i < total_nodes; i++) {
+				String date = allDates.get(i).getText();
+				if (date.equalsIgnoreCase("10")) {
+					allDates.get(i).click();
+					break;
+				}
+			}
+		  		
+		System.out.println("FUP date selected");
+		Thread.sleep(3000);
 	}
 }
