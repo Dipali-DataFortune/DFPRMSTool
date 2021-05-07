@@ -3,6 +3,12 @@
  */
 package com.PRMSTool.Pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -39,9 +45,16 @@ public class SalesLeadScreenPage extends TestBase {
 	@FindBy(xpath = "//input[@mattooltip='Cloud Upload']")
 	WebElement uploadFile;
 
-	@FindBy(xpath = "//div[@class='fileupload']")
+	//@FindBy(xpath = "//div[@class='fileupload']")
+	@FindBy(xpath = "//input[@type='file']")
 	WebElement chooseFile;
+	
+	@FindBy(xpath = "//div[@class='fileupload']")
+	WebElement chooseFile1;
 
+	@FindBy(xpath = "//button[@class='save-uploadfile-button mat-raised-button']")
+	WebElement uploadButton;
+	
 	@FindBy(xpath = "//input[@mattooltip='Download Sample Template']")
 	WebElement downloadFile;
 
@@ -280,15 +293,16 @@ public class SalesLeadScreenPage extends TestBase {
 	}
 
 	public void deleteSalesLead(String name) throws InterruptedException {
+		Thread.sleep(5000);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
 		// driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		Thread.sleep(2000);
-
+		
 		searchBox.clear();
 		searchBox.sendKeys(name);
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 
 		deleteButton.click();
 
@@ -387,7 +401,7 @@ public class SalesLeadScreenPage extends TestBase {
 		 
 		  //Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("APR 2021"))
+			while(!DateMonths.getText().contains("MAY 2021"))
 			{
 				js.executeScript("arguments[0].click()", DateNavButton);
 			}
@@ -396,7 +410,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("30")) {
+				if (date.equalsIgnoreCase("28")) {
 					allDates.get(i).click();
 					break;
 				}
@@ -456,6 +470,8 @@ public class SalesLeadScreenPage extends TestBase {
 		
 		secIndustryCategory.clear();
 		secIndustryCategory.sendKeys("Test Sec Category");
+		
+		System.out.println("Company details added successfully");
 	}
 	
 	public void clickOnOtherDetails()
@@ -507,7 +523,214 @@ public class SalesLeadScreenPage extends TestBase {
 		 
 		  //Thread.sleep(2000);
 			
+			while(!DateMonths.getText().contains("JUN 2021"))
+			{
+				js.executeScript("arguments[0].click()", DateNavButton);
+			}
+
+			int total_nodes = allDates.size();
+
+			for (int i = 0; i < total_nodes; i++) {
+				String date = allDates.get(i).getText();
+				if (date.equalsIgnoreCase("22")) {
+					allDates.get(i).click();
+					break;
+				}
+			}
+		  		
+		System.out.println("FUP date selected");
+		Thread.sleep(3000);
+	}
+	
+	public void editSalesLeadInformation()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(salutation));
+
+		salutation.clear();
+		salutation.sendKeys("Mr");
+
+		suffix.clear();
+		suffix.sendKeys("testEdit");
+
+		firstName.clear();
+		firstName.sendKeys("testEdit");
+
+		middleName.clear();
+		middleName.sendKeys("testEdit");
+
+		lastName.clear();
+		lastName.sendKeys("testEdit");
+
+		jobTitle.clear();
+		jobTitle.sendKeys("testEdit");
+
+		jobFunction.clear();
+		jobFunction.sendKeys("testEdit");
+
+		managementLevel.clear();
+		managementLevel.sendKeys("testEdit");
+
+		//mobile.clear();
+		//mobile.sendKeys("911234567890");
+
+		emailID.clear();
+		emailID.sendKeys("testEdit@gmail.com");
+
+		street.clear();
+		street.sendKeys("testEdit");
+
+		scrollToElement(country);
+		country.clear();
+		country.sendKeys("testEdit");
+
+		state.clear();
+		state.sendKeys("testEdit");
+
+		city.clear();
+		city.sendKeys("testEdit");
+
+		zip.clear();
+		zip.sendKeys("91436");
+
+		revenue.clear();
+		revenue.sendKeys("testEdit");
+
+		revenueRange.clear();
+		revenueRange.sendKeys("20 - 30 Million");
+
+		employees.clear();
+		employees.sendKeys("500");
+
+		employeesRange.clear();
+		employeesRange.sendKeys("500-800");
+
+		emailOrPhone.clear();
+		emailOrPhone.sendKeys("9876543210, dipalitest123@gmail.com");
+
+		comment.clear();
+		comment.sendKeys("All the sales lead information updated successfully");
+	}
+	
+	public void editLastUpdatedDate() throws InterruptedException {
+		scrollToElement(lastUpdatedDate);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(lastUpdatedDate));
+		
+		highLightElement(driver, lastUpdatedDate);
+		
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("arguments[0].click()", lastUpdatedDate);
+		 
+		  //Thread.sleep(2000);
+			
 			while(!DateMonths.getText().contains("MAY 2021"))
+			{
+				js.executeScript("arguments[0].click()", DateNavButton);
+			}
+
+			int total_nodes = allDates.size();
+
+			for (int i = 0; i < total_nodes; i++) {
+				String date = allDates.get(i).getText();
+				if (date.equalsIgnoreCase("26")) {
+					allDates.get(i).click();
+					break;
+				}
+			}
+		  		
+		System.out.println("Last updated date updated successfully");
+		Thread.sleep(3000);
+	}
+	
+	public void editCompanyDetails()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(companyName));
+		
+		companyName.clear();
+		companyName.sendKeys("testEdit");
+		
+		companyDomainName.clear();
+		companyDomainName.sendKeys("testEdit.com");
+		
+		companyPhoneNumber.clear();
+		companyPhoneNumber.sendKeys("1234567890");
+		
+		companyStreet.clear();
+		companyStreet.sendKeys("testEdit");
+		
+		companyCountry.clear();
+		companyCountry.sendKeys("testEdit");
+		
+		companyState.clear();
+		companyState.sendKeys("testEdit");
+		
+		companyCity.clear();
+		companyCity.sendKeys("testEdit");
+		
+		companyZip.clear();
+		companyZip.sendKeys("91436");
+		
+		scrollToElement(industryLabel);
+		industryLabel.clear();
+		industryLabel.sendKeys("testEdit");
+		
+		secIndustryLabel.clear();
+		secIndustryLabel.sendKeys("testEdit");
+		
+		industryCategory.clear();
+		industryCategory.sendKeys("testEdit");
+		
+		secIndustryCategory.clear();
+		secIndustryCategory.sendKeys("testEdit");
+		
+		System.out.println("Company details updated successfully");
+	}
+	
+	public void editOtherDetails()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(SIC1));
+		
+		SIC1.clear();
+		SIC1.sendKeys("testEdit");
+		
+		SIC2.clear();
+		SIC2.sendKeys("testEdit");
+		
+		NAICS1.clear();
+		NAICS1.sendKeys("testEdit");
+		
+		NAICS2.clear();
+		NAICS2.sendKeys("testEdit");
+		
+		attempt1.clear();
+		attempt1.sendKeys("testEdit");
+		
+		attempt2.clear();
+		attempt2.sendKeys("testEdit");
+		
+		BDE.clear();
+		BDE.sendKeys("testEdit");
+		
+		System.out.println("Other details updated successfully");
+	}
+		
+	public void editFUPDate() throws InterruptedException
+	{
+		scrollToElement(FUPDate);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(FUPDate));
+		
+		highLightElement(driver, FUPDate);
+		
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("arguments[0].click()", FUPDate);
+		 
+		  //Thread.sleep(2000);
+			
+			while(!DateMonths.getText().contains("JUN 2021"))
 			{
 				js.executeScript("arguments[0].click()", DateNavButton);
 			}
@@ -522,7 +745,66 @@ public class SalesLeadScreenPage extends TestBase {
 				}
 			}
 		  		
-		System.out.println("FUP date selected");
+		System.out.println("FUP date updated successfully");
 		Thread.sleep(3000);
+	}
+	
+	public void uploadFile() throws InterruptedException, AWTException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(uploadFile));
+
+		uploadFile.click();
+		Thread.sleep(3000);
+		chooseFile1.click();
+		Thread.sleep(5000);
+		
+		//wait.until(ExpectedConditions.visibilityOf(chooseFile));
+		//chooseFile.sendKeys("C:\\Users\\Dipali.vaidya\\Documents\\SampleTestFile.xlsx");
+		/*
+		 * chooseFile.sendKeys("C:"+File.separator+"Users"+File.separator+
+		 * "Dipali.vaidya"+File.separator+"Documents"+File.separator+
+		 * "SampleTestFile.xlsx"); Thread.sleep(5000);
+		 * 
+		 * uploadButton.click();
+		 * 
+		 * Thread.sleep(5000);
+		 */
+		
+		//put path to your image in a clipboard
+		StringSelection ss = new StringSelection("C://Users//Dipali.vaidya//Documents//SampleTestFile.xlsx");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+		
+		//imitate mouse events like ENTER, CTRL+C, CTRL+V
+		Robot robot = new Robot();
+		robot.delay(250);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.delay(50);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		/*
+		 * Robot rb = new Robot();
+		 * 
+		 * // copying File path to Clipboard StringSelection str = new StringSelection(
+		 * "C:\\Users\\Dipali.vaidya\\Documents\\DF-Internal-Tool\\SampleTestFile.xlsx")
+		 * ; Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
+		 * 
+		 * // press Contol+V for pasting rb.keyPress(KeyEvent.VK_CONTROL);
+		 * rb.keyPress(KeyEvent.VK_V);
+		 * 
+		 * // release Contol+V for pasting rb.keyRelease(KeyEvent.VK_CONTROL);
+		 * rb.keyRelease(KeyEvent.VK_V);
+		 * 
+		 * // for pressing and releasing Enter rb.keyPress(KeyEvent.VK_ENTER);
+		 * rb.keyRelease(KeyEvent.VK_ENTER);
+		 */
+	    
+	    System.out.println("File uploaded successfully");
 	}
 }
