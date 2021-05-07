@@ -1,29 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="21" total="24" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="24" passed="24" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-07T18:20:37 IST" name="Default suite" finished-at="2021-05-07T18:21:02 IST" duration-ms="25223">
+  <suite started-at="2021-05-07T18:39:59 IST" name="Default suite" finished-at="2021-05-07T18:41:56 IST" duration-ms="116440">
     <groups>
     </groups>
-    <test started-at="2021-05-07T18:20:37 IST" name="Default test" finished-at="2021-05-07T18:21:02 IST" duration-ms="25223">
+    <test started-at="2021-05-07T18:39:59 IST" name="Default test" finished-at="2021-05-07T18:41:56 IST" duration-ms="116440">
       <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
-        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:20:33 IST" name="OpenBrowser" finished-at="2021-05-07T18:20:37 IST" duration-ms="3878" status="PASS">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:39:55 IST" name="OpenBrowser" finished-at="2021-05-07T18:39:59 IST" duration-ms="4638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
-        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:20:37 IST" name="verifyLogin" finished-at="2021-05-07T18:20:47 IST" duration-ms="10474" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:39:59 IST" name="verifyLogin" finished-at="2021-05-07T18:40:11 IST" duration-ms="12163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifyclickOnSalesLead()[pri:1, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:20:47 IST" name="verifyclickOnSalesLead" finished-at="2021-05-07T18:20:52 IST" duration-ms="5077" status="PASS">
+        <test-method signature="verifyclickOnSalesLead()[pri:1, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:11 IST" name="verifyclickOnSalesLead" finished-at="2021-05-07T18:40:17 IST" duration-ms="5140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyclickOnSalesLead -->
-        <test-method signature="verifyuploadFile()[pri:23, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:20:52 IST" name="verifyuploadFile" finished-at="2021-05-07T18:21:02 IST" duration-ms="9644" status="PASS">
+        <test-method signature="verifyclickOnAddNew()[pri:2, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:17 IST" name="verifyclickOnAddNew" finished-at="2021-05-07T18:40:23 IST" duration-ms="6384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAddNew -->
+        <test-method signature="verifyaddSalesLeadInformation()[pri:3, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:23 IST" name="verifyaddSalesLeadInformation" finished-at="2021-05-07T18:40:30 IST" duration-ms="7231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddSalesLeadInformation -->
+        <test-method signature="verifyselectLastUpdatedDate()[pri:4, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:30 IST" name="verifyselectLastUpdatedDate" finished-at="2021-05-07T18:40:35 IST" duration-ms="4578" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectLastUpdatedDate -->
+        <test-method signature="verifyclickOnCompanyDetails()[pri:5, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:35 IST" name="verifyclickOnCompanyDetails" finished-at="2021-05-07T18:40:35 IST" duration-ms="439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnCompanyDetails -->
+        <test-method signature="verifyaddCompanyDetails()[pri:6, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:35 IST" name="verifyaddCompanyDetails" finished-at="2021-05-07T18:40:39 IST" duration-ms="4064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddCompanyDetails -->
+        <test-method signature="verifyclickOnOtherDetails()[pri:7, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:39 IST" name="verifyclickOnOtherDetails" finished-at="2021-05-07T18:40:40 IST" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnOtherDetails -->
+        <test-method signature="verifyaddOtherDetails()[pri:8, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:40 IST" name="verifyaddOtherDetails" finished-at="2021-05-07T18:40:42 IST" duration-ms="2119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddOtherDetails -->
+        <test-method signature="verifyselectFUPDate()[pri:9, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:42 IST" name="verifyselectFUPDate" finished-at="2021-05-07T18:40:46 IST" duration-ms="4739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectFUPDate -->
+        <test-method signature="verifyclickOnAdd()[pri:10, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:46 IST" name="verifyclickOnAdd" finished-at="2021-05-07T18:40:47 IST" duration-ms="293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAdd -->
+        <test-method signature="verifyclickOnCloudUpload()[pri:11, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:47 IST" name="verifyclickOnCloudUpload" finished-at="2021-05-07T18:40:48 IST" duration-ms="1183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnCloudUpload -->
+        <test-method signature="verifydownloadFile()[pri:12, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:48 IST" name="verifydownloadFile" finished-at="2021-05-07T18:40:56 IST" duration-ms="8306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydownloadFile -->
+        <test-method signature="verifyclickOnBackButton()[pri:13, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:56 IST" name="verifyclickOnBackButton" finished-at="2021-05-07T18:40:57 IST" duration-ms="462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnBackButton -->
+        <test-method signature="verifysearch()[pri:14, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:40:57 IST" name="verifysearch" finished-at="2021-05-07T18:41:07 IST" duration-ms="10506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifysearch -->
+        <test-method signature="verifyclickOnEditButton()[pri:15, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:07 IST" name="verifyclickOnEditButton" finished-at="2021-05-07T18:41:08 IST" duration-ms="346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnEditButton -->
+        <test-method signature="verifyeditSalesLeadInformation()[pri:16, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:08 IST" name="verifyeditSalesLeadInformation" finished-at="2021-05-07T18:41:14 IST" duration-ms="6865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditSalesLeadInformation -->
+        <test-method signature="verifyeditLastUpdatedDate()[pri:17, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:14 IST" name="verifyeditLastUpdatedDate" finished-at="2021-05-07T18:41:19 IST" duration-ms="4817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditLastUpdatedDate -->
+        <test-method signature="verifyeditCompanyDetails()[pri:18, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:19 IST" name="verifyeditCompanyDetails" finished-at="2021-05-07T18:41:24 IST" duration-ms="4321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditCompanyDetails -->
+        <test-method signature="verifyeditOtherDetails()[pri:19, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:24 IST" name="verifyeditOtherDetails" finished-at="2021-05-07T18:41:26 IST" duration-ms="2407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditOtherDetails -->
+        <test-method signature="verifyeditFUPDate()[pri:20, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:26 IST" name="verifyeditFUPDate" finished-at="2021-05-07T18:41:30 IST" duration-ms="4205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditFUPDate -->
+        <test-method signature="verifyclickOnUpdateButton()[pri:21, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:30 IST" name="verifyclickOnUpdateButton" finished-at="2021-05-07T18:41:30 IST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnUpdateButton -->
+        <test-method signature="verifydeleteSalesLead()[pri:22, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:30 IST" name="verifydeleteSalesLead" finished-at="2021-05-07T18:41:46 IST" duration-ms="15896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydeleteSalesLead -->
+        <test-method signature="verifyuploadFile()[pri:23, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:46 IST" name="verifyuploadFile" finished-at="2021-05-07T18:41:56 IST" duration-ms="9352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyuploadFile -->
-        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:21:02 IST" name="finish" finished-at="2021-05-07T18:21:03 IST" duration-ms="1119" status="PASS">
+        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.SalesLeadScreenTest@120f102b]" started-at="2021-05-07T18:41:56 IST" name="finish" finished-at="2021-05-07T18:41:57 IST" duration-ms="1192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finish -->
