@@ -63,7 +63,7 @@ public class ResourceScreenTest extends TestBase{
 	@Test(priority = 7, enabled=true)
 	public void verifysearch()throws InterruptedException {
 		ResourceScreenPage rs = PageFactory.initElements(driver, ResourceScreenPage.class);
-		rs.searchResource("TestEdit");
+		rs.searchResource("TestDelete");
 	}
 	
 	@Test(priority = 8, enabled=true)

@@ -39,16 +39,16 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Appointlink Portal Solutions ')]")
 	WebElement client1;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' ABC ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' test123 ')]")
 	WebElement client2;
 	
 	@FindBy(xpath = "//mat-select[@placeholder='Project']")
 	WebElement projectDropDown;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' test1 ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' SeatGen QA Automation ')]")
 	WebElement project1;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Test project ')]")
 	WebElement project2;
 	
 	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")
@@ -60,10 +60,10 @@ public class ProjectResourceScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-select[@name='ResourceId']")
 	WebElement resourceDropDown;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Test (DS123) ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Dipali Vaidya (DS1167) ')]")
 	WebElement resource1;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Test1 (DS12) ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Shailendra Pardeshi (DS1129) ')]")
 	WebElement resource2;
 	
 	@FindBy(xpath = "//input[@placeholder='Role']")
@@ -181,7 +181,7 @@ public class ProjectResourceScreenPage extends TestBase{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropDown);
 		//clientDropDown.click();
-		js.executeScript("arguments[0].click()", client2);
+		js.executeScript("arguments[0].click()", client1);
 		//client1.click();
 				
 		Thread.sleep(5000);

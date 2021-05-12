@@ -347,7 +347,7 @@ public class ResourceScreenPage extends TestBase {
 		 
 		  //Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("APR 2021"))
+			while(!DateMonths.getText().contains("JUN 2021"))
 			{
 				//birthDateNavButton.click();			
 				js.executeScript("arguments[0].click()", DateNavButton);
