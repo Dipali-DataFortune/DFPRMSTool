@@ -399,11 +399,12 @@ public class SalesLeadScreenPage extends TestBase {
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("arguments[0].click()", lastUpdatedDate);
 		 
-		  //Thread.sleep(2000);
+		  Thread.sleep(2000);
 			
 			while(!DateMonths.getText().contains("MAY 2021"))
 			{
-				js.executeScript("arguments[0].click()", DateNavButton);
+				//js.executeScript("arguments[0].click()", DateNavButton);
+				staleElementClick(5, DateNavButton, 60);
 			}
 
 			int total_nodes = allDates.size();
@@ -521,11 +522,12 @@ public class SalesLeadScreenPage extends TestBase {
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("arguments[0].click()", FUPDate);
 		 
-		  //Thread.sleep(2000);
+		  Thread.sleep(2000);
 			
 			while(!DateMonths.getText().contains("JUN 2021"))
 			{
-				js.executeScript("arguments[0].click()", DateNavButton);
+				//js.executeScript("arguments[0].click()", DateNavButton);
+				staleElementClick(5, DateNavButton, 60);
 			}
 
 			int total_nodes = allDates.size();
@@ -622,18 +624,19 @@ public class SalesLeadScreenPage extends TestBase {
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("arguments[0].click()", lastUpdatedDate);
 		 
-		  //Thread.sleep(2000);
+		  Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("MAY 2021"))
+			while(!DateMonths.getText().contains("JUN 2021"))
 			{
-				js.executeScript("arguments[0].click()", DateNavButton);
+				//js.executeScript("arguments[0].click()", DateNavButton);
+				staleElementClick(5, DateNavButton, 60);
 			}
 
 			int total_nodes = allDates.size();
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("26")) {
+				if (date.equalsIgnoreCase("25")) {
 					allDates.get(i).click();
 					break;
 				}
@@ -728,11 +731,12 @@ public class SalesLeadScreenPage extends TestBase {
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("arguments[0].click()", FUPDate);
 		 
-		  //Thread.sleep(2000);
+		  Thread.sleep(2000);
 			
 			while(!DateMonths.getText().contains("JUN 2021"))
 			{
-				js.executeScript("arguments[0].click()", DateNavButton);
+				//js.executeScript("arguments[0].click()", DateNavButton);
+				staleElementClick(5, DateNavButton, 60);
 			}
 
 			int total_nodes = allDates.size();
@@ -754,9 +758,12 @@ public class SalesLeadScreenPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(uploadFile));
 
+		
 		/*
-		 * uploadFile.click(); Thread.sleep(3000); chooseFile1.click();
-		 * Thread.sleep(5000);
+		 * uploadFile.click(); Thread.sleep(3000);
+		 * 
+		 * chooseFile1.click(); Thread.sleep(5000);
+		 * 
 		 * //wait.until(ExpectedConditions.visibilityOf(chooseFile));
 		 * //chooseFile.sendKeys(
 		 * "C:\\Users\\Dipali.vaidya\\Documents\\SampleTestFile.xlsx");
@@ -764,37 +771,48 @@ public class SalesLeadScreenPage extends TestBase {
 		 * 
 		 * chooseFile.sendKeys("C:"+File.separator+"Users"+File.separator+
 		 * "Dipali.vaidya"+File.separator+"Documents"+File.separator+
-		 * "SampleTestFile.xlsx"); Thread.sleep(5000);
+		 * "SampleTestFile1.xlsx");
+		 * 
+		 * Thread.sleep(5000);
 		 * 
 		 * uploadButton.click();
 		 * 
 		 * Thread.sleep(5000);
 		 */
+		 
 		 		
-		uploadFile.click();
-		Thread.sleep(3000);
-		chooseFile1.click();
-		Thread.sleep(5000);
 		
-		//put path to your image in a clipboard
-		StringSelection ss = new StringSelection("C:\\Users\\Dipali.vaidya\\Documents\\SampleTestFile.xlsx");
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+		  uploadFile.click(); Thread.sleep(3000);
+		  
+		  chooseFile1.click(); Thread.sleep(5000);
+		 
+		  
+		  		  
+		  //put path to your image in a clipboard 
+			
+			  StringSelection ss = new
+			  StringSelection("C:\\Users\\Dipali.vaidya\\Documents\\SampleTestFile1.xlsx");
+			  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+			 
+		  
+		  //imitate mouse events like ENTER, CTRL+C, CTRL+V 
+		  
+			
+			  Robot robot = new Robot();
+			  
+			  robot.delay(250); robot.keyPress(KeyEvent.VK_ENTER);
+			  robot.keyRelease(KeyEvent.VK_ENTER); robot.keyPress(KeyEvent.VK_CONTROL);
+			  robot.keyPress(KeyEvent.VK_V); robot.keyRelease(KeyEvent.VK_V);
+			  robot.keyRelease(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_ENTER);
+			  robot.delay(50); robot.keyRelease(KeyEvent.VK_ENTER);
+			  
+			  Thread.sleep(5000);
+			  
+			  uploadButton.click();
+			  
+			  Thread.sleep(5000);
+			 
 		
-		//imitate mouse events like ENTER, CTRL+C, CTRL+V
-		Robot robot = new Robot();
-		robot.delay(250);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.delay(50);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		Thread.sleep(5000);
-					    
 	    System.out.println("File uploaded successfully");
 	}
 }

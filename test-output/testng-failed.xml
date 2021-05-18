@@ -5,9 +5,9 @@
     <classes>
       <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
         <methods>
-          <include name="verifyuploadFile"/>
           <include name="finish"/>
           <include name="OpenBrowser"/>
+          <include name="verifyeditFUPDate"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.SalesLeadScreenTest -->
     </classes>
