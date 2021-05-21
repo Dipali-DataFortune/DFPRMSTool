@@ -317,9 +317,12 @@ public class ProjectResourceScreenPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
 		Thread.sleep(5000);
+		
 		searchBox.clear();
 		searchBox.sendKeys(name);
 
+		Thread.sleep(3000);
+		
 		deleteButton.click();
 		/*
 		 * Alert objalert=driver.switchTo().alert();
@@ -331,6 +334,9 @@ public class ProjectResourceScreenPage extends TestBase {
 		js.executeScript("arguments[0].click()", yesButton);
 
 		System.out.println("Projet resource deleted successfully");
+		
+		searchBox.clear();
+		Thread.sleep(5000);
 	}
 
 	public void editProjectResourceInformation() throws InterruptedException {

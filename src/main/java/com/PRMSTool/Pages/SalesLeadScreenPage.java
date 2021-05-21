@@ -293,25 +293,26 @@ public class SalesLeadScreenPage extends TestBase {
 	}
 
 	public void deleteSalesLead(String name) throws InterruptedException {
-		Thread.sleep(5000);
-		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
 		// driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		
 		searchBox.clear();
 		searchBox.sendKeys(name);
-		Thread.sleep(5000);
+		
+		Thread.sleep(3000);
 
 		deleteButton.click();
 
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("arguments[0].click()", yesButton);
 
-		Thread.sleep(5000);
-
 		System.out.println("SalesLead deleted successfully");
+		
+		searchBox.clear();
+		Thread.sleep(5000);
 	}
 
 	public void addSalesLeadInformation() {

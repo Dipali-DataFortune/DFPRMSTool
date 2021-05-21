@@ -39,7 +39,7 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-select[@placeholder='Client']")
 	WebElement clientDropdown;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' ABC ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' test123 ')]")
 	WebElement client1;
 	
 	@FindBy(xpath = "//mat-option//span[contains(text(),' Van Ran Communications Services Inc. ')]")
@@ -177,6 +177,7 @@ public class ProjectScreenPage extends TestBase{
 	}
 		
 	public void clickOnAddNew() throws InterruptedException {
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(addNew));
 		//highLightElement(driver, addNew);
@@ -188,7 +189,7 @@ public class ProjectScreenPage extends TestBase{
 	
 	public void addProjectDetails() throws InterruptedException
 	{	
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(clientDropdown));
 		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
@@ -405,16 +406,17 @@ public class ProjectScreenPage extends TestBase{
 	}
 	
 	public void deleteProject(String name) throws InterruptedException {
-		//WebDriverWait wait = new WebDriverWait(driver, 60);
-		//wait.until(ExpectedConditions.visibilityOf(searchBox));
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		//Thread.sleep(5000);
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		searchBox.clear();
 		searchBox.sendKeys(name);
-
+		
+		Thread.sleep(3000);
+		
 		deleteButton.click();
-		//Thread.sleep(3000);
 		/*
 		 * Alert objalert=driver.switchTo().alert();
 		 * System.out.println(objalert.getText()); objalert.accept();
@@ -425,6 +427,9 @@ public class ProjectScreenPage extends TestBase{
 		js1.executeScript("arguments[0].click()", yesButton);
 
 		System.out.println("Project deleted successfully");
+		
+		searchBox.clear();
+		Thread.sleep(5000);
 	}
 		
 	public void editProjectInformation() throws InterruptedException

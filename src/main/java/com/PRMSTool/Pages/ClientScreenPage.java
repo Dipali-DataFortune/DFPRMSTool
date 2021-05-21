@@ -91,7 +91,7 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),'Mumbai')]")
 	WebElement cityMumbai;
 
-	@FindBy(xpath = "//mat-option/span[contains(text(),' San Fransisco ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),'San Fransisco')]")
 	WebElement citySanFransisco;
 
 	@FindBy(xpath = "//input[@placeholder='Zip']")
@@ -415,16 +415,20 @@ public class ClientScreenPage extends TestBase {
 
 		Thread.sleep(5000);
 		searchBox.clear();
-		searchBox.sendKeys("test");
+		searchBox.sendKeys("testEdit");
 
+		Thread.sleep(3000);
 		deleteButton.click();
-		//Thread.sleep(3000);
+
 		//wait.until(ExpectedConditions.visibilityOf(yesButton));
 		//yesButton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", yesButton);
 
 		System.out.println("Client deleted successfully");
+		
+		searchBox.clear();
+		Thread.sleep(5000);
 	}
 
 	public void editClient() {
@@ -439,7 +443,7 @@ public class ClientScreenPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(clientName));
 
 		clientName.clear();
-		clientName.sendKeys("Test Client");
+		clientName.sendKeys("testEdit");
 
 		companyUrl.clear();
 		companyUrl.sendKeys("https://www.test.com");
@@ -451,7 +455,7 @@ public class ClientScreenPage extends TestBase {
 		description.sendKeys("Test");
 
 		address.clear();
-		address.sendKeys("Pune");
+		address.sendKeys("Test");
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", countryDropdown);

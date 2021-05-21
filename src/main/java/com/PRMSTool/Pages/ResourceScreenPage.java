@@ -381,14 +381,17 @@ public class ResourceScreenPage extends TestBase {
 	}
 	
 	public void deleteResource(String name) throws InterruptedException {
-		//Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
 		Thread.sleep(5000);
+		
 		searchBox.clear();
 		searchBox.sendKeys(name);
 
+		Thread.sleep(3000);
+		
 		deleteButton.click();
 		/*
 		 * Alert objalert=driver.switchTo().alert();
@@ -401,6 +404,7 @@ public class ResourceScreenPage extends TestBase {
 		js.executeScript("arguments[0].click()", yesButton);
 		
 		System.out.println("Resource deleted successfully");
+		searchBox.clear();
 		Thread.sleep(5000);
 	}
 	
