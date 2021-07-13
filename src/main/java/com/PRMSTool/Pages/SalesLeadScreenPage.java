@@ -39,7 +39,8 @@ public class SalesLeadScreenPage extends TestBase {
 	@FindBy(xpath = "//input[@placeholder='Search for a Sales Lead']")
 	WebElement searchBox;
 
-	@FindBy(xpath = "//button[@class='add-saleslead-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	//@FindBy(xpath = "//button[@class='add-saleslead-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	@FindBy(xpath = "//button[@class='add-saleslead-button fuse-white mt-md-0 mat-raised-button']")
 	WebElement addNew;
 
 	@FindBy(xpath = "//input[@mattooltip='Cloud Upload']")
@@ -349,8 +350,8 @@ public class SalesLeadScreenPage extends TestBase {
 		managementLevel.clear();
 		managementLevel.sendKeys("Other");
 
-		//mobile.clear();
-		//mobile.sendKeys("911234567890");
+		mobile.clear();
+		mobile.sendKeys("908765432112");
 
 		emailID.clear();
 		emailID.sendKeys("dipali.vaidya@datafortune.com");
@@ -402,7 +403,7 @@ public class SalesLeadScreenPage extends TestBase {
 		 
 		  Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("MAY 2021"))
+			while(!DateMonths.getText().contains("AUG 2021"))
 			{
 				//js.executeScript("arguments[0].click()", DateNavButton);
 				staleElementClick(5, DateNavButton, 60);
@@ -412,7 +413,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("28")) {
+				if (date.equalsIgnoreCase("22")) {
 					allDates.get(i).click();
 					break;
 				}
@@ -525,7 +526,7 @@ public class SalesLeadScreenPage extends TestBase {
 		 
 		  Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("JUN 2021"))
+			while(!DateMonths.getText().contains("AUG 2021"))
 			{
 				//js.executeScript("arguments[0].click()", DateNavButton);
 				staleElementClick(5, DateNavButton, 60);
@@ -535,7 +536,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("22")) {
+				if (date.equalsIgnoreCase("27")) {
 					allDates.get(i).click();
 					break;
 				}
@@ -574,8 +575,8 @@ public class SalesLeadScreenPage extends TestBase {
 		managementLevel.clear();
 		managementLevel.sendKeys("testEdit");
 
-		//mobile.clear();
-		//mobile.sendKeys("911234567890");
+		mobile.clear();
+		mobile.sendKeys("987096543212");
 
 		emailID.clear();
 		emailID.sendKeys("testEdit@gmail.com");
@@ -597,7 +598,7 @@ public class SalesLeadScreenPage extends TestBase {
 		zip.sendKeys("91436");
 
 		revenue.clear();
-		revenue.sendKeys("testEdit");
+		revenue.sendKeys("1000000");
 
 		revenueRange.clear();
 		revenueRange.sendKeys("20 - 30 Million");
@@ -627,17 +628,17 @@ public class SalesLeadScreenPage extends TestBase {
 		 
 		  Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("JUN 2021"))
+			while(!DateMonths.getText().contains("SEP 2021"))
 			{
-				//js.executeScript("arguments[0].click()", DateNavButton);
-				staleElementClick(5, DateNavButton, 60);
+				js.executeScript("arguments[0].click()", DateNavButton);
+				//staleElementClick(5, DateNavButton, 60);
 			}
 
 			int total_nodes = allDates.size();
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("25")) {
+				if (date.equalsIgnoreCase("24")) {
 					allDates.get(i).click();
 					break;
 				}
@@ -656,10 +657,10 @@ public class SalesLeadScreenPage extends TestBase {
 		companyName.sendKeys("testEdit");
 		
 		companyDomainName.clear();
-		companyDomainName.sendKeys("testEdit.com");
+		companyDomainName.sendKeys("https://www.testEdit.com");
 		
 		companyPhoneNumber.clear();
-		companyPhoneNumber.sendKeys("1234567890");
+		companyPhoneNumber.sendKeys("9876543210");
 		
 		companyStreet.clear();
 		companyStreet.sendKeys("testEdit");
@@ -734,24 +735,24 @@ public class SalesLeadScreenPage extends TestBase {
 		 
 		  Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("JUN 2021"))
+			while(!DateMonths.getText().contains("OCT 2021"))
 			{
-				//js.executeScript("arguments[0].click()", DateNavButton);
-				staleElementClick(5, DateNavButton, 60);
+				js.executeScript("arguments[0].click()", DateNavButton);
+				//staleElementClick(5, DateNavButton, 60);
 			}
 
 			int total_nodes = allDates.size();
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("10")) {
+				if (date.equalsIgnoreCase("15")) {
 					allDates.get(i).click();
 					break;
 				}
 			}
 		  		
 		System.out.println("FUP date updated successfully");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 	}
 	
 	public void uploadFile() throws InterruptedException, AWTException

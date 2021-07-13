@@ -43,7 +43,8 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//div[contains(text(),' Edit Client ')]")
 	WebElement editClient;
 
-	@FindBy(xpath = "//button[@class='add-client-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	//@FindBy(xpath = "//button[@class='add-client-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	@FindBy(xpath = "//button[@class='add-client-button fuse-white mt-md-0 mat-raised-button']")
 	WebElement addNew;
 
 	@FindBy(xpath = "//input[@placeholder='Client Name']")
@@ -70,17 +71,25 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),'India')]")
 	WebElement countryIndia;
 
-	@FindBy(xpath = "//mat-option/span[contains(text(),'USA')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' USA ')]")
 	WebElement CountryUSA;
 
+
+	@FindBy(xpath = "//mat-option/span[contains(text(),' China ')]")
+	WebElement CountryChina;
+
+	
 	@FindBy(xpath = "//mat-select[@placeholder='State']")
 	WebElement stateDropdown;
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),'Maharashtra')]")
 	WebElement stateMaharashtra;
 
-	@FindBy(xpath = "//mat-option/span[contains(text(),'California')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' California ')]")
 	WebElement stateCalifornia;
+	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Beijing ')]")
+	WebElement stateBeijing;
 
 	@FindBy(xpath = "//mat-select[@placeholder='City']")
 	WebElement cityDropdown;
@@ -90,8 +99,12 @@ public class ClientScreenPage extends TestBase {
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),'Mumbai')]")
 	WebElement cityMumbai;
+	
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Changping ')]")
+	WebElement cityChangping;
 
-	@FindBy(xpath = "//mat-option/span[contains(text(),'San Fransisco')]")
+	//@FindBy(xpath = "//mat-option/span[contains(text(),' San Francisco ')]")
+	@FindBy(xpath = "(//mat-option/span[contains(text(),' San Francisco ')])[1]")
 	WebElement citySanFransisco;
 
 	@FindBy(xpath = "//input[@placeholder='Zip']")
@@ -415,7 +428,7 @@ public class ClientScreenPage extends TestBase {
 
 		Thread.sleep(5000);
 		searchBox.clear();
-		searchBox.sendKeys("testEdit");
+		searchBox.sendKeys("testNewClient");
 
 		Thread.sleep(3000);
 		deleteButton.click();
@@ -438,7 +451,7 @@ public class ClientScreenPage extends TestBase {
 		editButton.click();
 	}
 
-	public void editClientInformation() {
+	public void editClientInformation() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(clientName));
 
@@ -446,10 +459,10 @@ public class ClientScreenPage extends TestBase {
 		clientName.sendKeys("testEdit");
 
 		companyUrl.clear();
-		companyUrl.sendKeys("https://www.test.com");
+		companyUrl.sendKeys("https://www.testone.com");
 
-		refClientCode.clear();
-		refClientCode.sendKeys("DF-4043");
+		//refClientCode.clear();
+		//refClientCode.sendKeys("DF-4043");
 
 		description.clear();
 		description.sendKeys("Test");
@@ -459,16 +472,26 @@ public class ClientScreenPage extends TestBase {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", countryDropdown);
+		Thread.sleep(2000);
 		js.executeScript("arguments[0].click()", CountryUSA);
-
+		//countryDropdown.click();
+		//CountryChina.click();
+		
 		wait.until(ExpectedConditions.visibilityOf(stateDropdown));
 
 		js.executeScript("arguments[0].click()", stateDropdown);
+		Thread.sleep(2000);
 		js.executeScript("arguments[0].click()", stateCalifornia);
+		//stateDropdown.click();
+		//stateBeijing.click();
+		
 
 		scrollToElement(cityDropdown);
 		js.executeScript("arguments[0].click()", cityDropdown);
+		Thread.sleep(2000);
 		js.executeScript("arguments[0].click()", citySanFransisco);
+		//cityDropdown.click();
+		//cityChangping.click();
 
 		zip.clear();
 		zip.sendKeys("411013");
@@ -622,10 +645,10 @@ public class ClientScreenPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(clientName));
 		clientName.clear();
-		clientName.sendKeys("test");
+		clientName.sendKeys("testNewClient");
 
 		companyUrl.clear();
-		companyUrl.sendKeys("test");
+		companyUrl.sendKeys("https://www.test.com");
 
 		softAssert.assertEquals(clientCode.isDisplayed(), true);
 		System.out.println(clientCode.getText());

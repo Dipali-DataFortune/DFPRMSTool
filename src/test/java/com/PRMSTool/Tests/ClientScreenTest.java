@@ -85,7 +85,7 @@ public class ClientScreenTest extends TestBase{
 	@Test(priority = 10, enabled=true)
 	public void verifysearchClient()throws InterruptedException {
 		ClientScreenPage cp = PageFactory.initElements(driver, ClientScreenPage.class);
-		cp.searchClient("testEdit");
+		cp.searchClient("testNewClient");
 	}
 		
 	@Test(priority = 11, enabled=true)

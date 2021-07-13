@@ -85,51 +85,51 @@ public class SalesLeadScreenTest extends TestBase{
 		util.clickOnAdd();
 	}
 			
-	@Test(priority = 11, enabled=true)
+	@Test(priority = 11, enabled=false)
 	public void verifysearch()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.searchSalesLead("Dipali");
 	}
 	
-	@Test(priority = 12, enabled=true)
+	@Test(priority = 12, enabled=false)
 	public void verifyclickOnEditButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnEditButton();		
 	}
 	
-	@Test(priority = 13, enabled=true)
+	@Test(priority = 13, enabled=false)
 	public void verifyeditSalesLeadInformation()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.editSalesLeadInformation();		
 	}
 	
-	@Test(priority = 14, enabled=true)
+	@Test(priority = 14, enabled=false)
 	public void verifyeditLastUpdatedDate()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.editLastUpdatedDate();		
 	}
 	
-	@Test(priority = 15, enabled=true)
+	@Test(priority = 15, enabled=false)
 	public void verifyeditCompanyDetails()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		verifyclickOnCompanyDetails();
 		sl.editCompanyDetails();		
 	}
 	
-	@Test(priority = 16, enabled=true)
+	@Test(priority = 16, enabled=false)
 	public void verifyeditOtherDetails()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		verifyclickOnOtherDetails();
 		sl.editOtherDetails();		
 	}
 	
-	@Test(priority = 17, enabled=true)
+	@Test(priority = 17, enabled=false)
 	public void verifyeditFUPDate()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.editFUPDate();		
 	}
 	
-	@Test(priority = 18, enabled=true)
+	@Test(priority = 18, enabled=false)
 	public void verifyclickOnUpdateButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnUpdateButton();		

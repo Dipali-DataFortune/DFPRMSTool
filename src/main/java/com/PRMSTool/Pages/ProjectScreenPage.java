@@ -21,7 +21,8 @@ public class ProjectScreenPage extends TestBase{
 	WebDriver driver;
 	SoftAssert softAssert = new SoftAssert();
 	
-	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	//@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-md-0 mat-raised-button']")
 	//@FindBy(xpath="//span[contains(text(),'ADD')]")
 	WebElement addNew;
 	
@@ -39,7 +40,8 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//mat-select[@placeholder='Client']")
 	WebElement clientDropdown;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' test123 ')]")
+	//@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
+	@FindBy(xpath = "(//mat-option/span[contains(text(),' test ')])[1]")
 	WebElement client1;
 	
 	@FindBy(xpath = "//mat-option//span[contains(text(),' Van Ran Communications Services Inc. ')]")
@@ -189,22 +191,22 @@ public class ProjectScreenPage extends TestBase{
 	
 	public void addProjectDetails() throws InterruptedException
 	{	
-		//Thread.sleep(5000);
+		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(clientDropdown));
 		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
 				
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clientDropdown);
-		//Thread.sleep(3000);
-		wait.until(ExpectedConditions.elementToBeClickable(client1));
+		Thread.sleep(2000);
+		//wait.until(ExpectedConditions.elementToBeClickable(client1));
 		js.executeScript("arguments[0].click()", client1);
 		//client1.click();
 		
 		//Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOf(projectName));
 		projectName.clear();
-		projectName.sendKeys("test");		
+		projectName.sendKeys("testProject");		
 	}
 	
 	public void selectStartDate() throws InterruptedException
@@ -476,8 +478,8 @@ public class ProjectScreenPage extends TestBase{
 				
 		wait.until(ExpectedConditions.elementToBeClickable(projectSubType));
 		projectSubType.click();
-		projectSubType1.click();
-		//staleElementClick(5, projectSubType1, 60);
+		//projectSubType1.click();
+		staleElementClick(5, projectSubType1, 60);
 				
 		scrollToElement(category);
 		wait.until(ExpectedConditions.elementToBeClickable(category));

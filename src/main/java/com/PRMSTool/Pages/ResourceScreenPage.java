@@ -2,6 +2,7 @@ package com.PRMSTool.Pages;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -28,7 +29,8 @@ public class ResourceScreenPage extends TestBase {
 	//@FindBy(xpath = "//div[@class='search']")	
 	WebElement searchBox;
 	
-	@FindBy(xpath = "//button[@class='add-resource-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	//@FindBy(xpath = "//button[@class='add-resource-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	@FindBy(xpath = "//button[@class='add-resource-button fuse-white mt-md-0 mat-raised-button']")
 	//@FindBy(xpath = "//span[contains(text(),'ADD NEW')]")
 	WebElement addNew;
 
@@ -52,6 +54,9 @@ public class ResourceScreenPage extends TestBase {
 
 	@FindBy(xpath = "//button[@class='mat-calendar-next-button mat-icon-button' and @type='button']")
 	WebElement DateNavButton;
+	
+	@FindBy(xpath = "//button[@class='mat-calendar-previous-button mat-icon-button' and @type='button']")
+	WebElement DateNavPrevButton;
 	
 	@FindBy(xpath = "//input[@name='DateOfBirth']")
 	WebElement DateOfBirth;
@@ -213,11 +218,17 @@ public class ResourceScreenPage extends TestBase {
 		//wait.until(ExpectedConditions.visibilityOf(resourceName));
 
 		resourceName.clear();
-		resourceName.sendKeys("TestDelete");
+		resourceName.sendKeys("TestResource");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS433");
+		//employeeID.sendKeys("DS437");
 		//Thread.sleep(5000);
+		
+		System.out.println("Employee ID: ");
+		Scanner scan1 = new Scanner(System.in);
+		String input1 = scan1.nextLine();
+		System.out.println(input1);
+		employeeID.sendKeys(input1);
 		
 		address.clear();
 		address.sendKeys("Hadapsar");
@@ -257,8 +268,9 @@ public class ResourceScreenPage extends TestBase {
 		
 		//wait.until(ExpectedConditions.elementToBeClickable(techCategory));
 		techCategory.click();
+		Thread.sleep(3000);
 		TCategory.click();
-		//Thread.sleep(3000);
+		
 		
 		scrollToElement(reportingTo);
 		//wait.until(ExpectedConditions.elementToBeClickable(reportingTo));
@@ -314,10 +326,10 @@ public class ResourceScreenPage extends TestBase {
 		
 		//Thread.sleep(2000);
 				
-		while(!DateMonths.getText().contains("MAY 2021"))
+		while(!DateMonths.getText().contains("MAY 1990"))
 		{
 			//birthDateNavButton.click();			
-			js.executeScript("arguments[0].click()", DateNavButton);
+			js.executeScript("arguments[0].click()", DateNavPrevButton);
 		}
 
 		int total_nodes = allDates.size();
@@ -347,7 +359,7 @@ public class ResourceScreenPage extends TestBase {
 		 
 		  //Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("JUN 2021"))
+			while(!DateMonths.getText().contains("AUG 2021"))
 			{
 				//birthDateNavButton.click();			
 				js.executeScript("arguments[0].click()", DateNavButton);

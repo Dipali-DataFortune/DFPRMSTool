@@ -79,7 +79,7 @@ public class ProjectScreenTest extends TestBase{
 	@Test(priority = 11, enabled=true)
 	public void verifysearch()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
-		ps.searchProject("Edit project");
+		ps.searchProject("testProject");
 	}
 	
 	@Test(priority = 12, enabled=true)
@@ -103,7 +103,7 @@ public class ProjectScreenTest extends TestBase{
 	@Test(priority = 15, enabled=true)
 	public void verifydelete()throws InterruptedException {
 		ProjectScreenPage ps = PageFactory.initElements(driver, ProjectScreenPage.class);
-		ps.deleteProject("test");
+		ps.deleteProject("testProject");
 	}
 	
 	@Test(priority = 16, enabled=true)

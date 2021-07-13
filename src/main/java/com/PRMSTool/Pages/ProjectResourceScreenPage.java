@@ -30,7 +30,8 @@ public class ProjectResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//input[@placeholder='Search for a project resource']")
 	WebElement searchBox;
 
-	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	//@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-md-0 mat-raised-button']")	
 	WebElement addNew;
 
 	@FindBy(xpath = "//mat-select[@name='ClientId']")
@@ -45,7 +46,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-select[@placeholder='Project']")
 	WebElement projectDropDown;
 
-	@FindBy(xpath = "//mat-option/span[contains(text(),' SeatGen QA Automation ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
 	WebElement project1;
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Test project ')]")
@@ -263,7 +264,7 @@ public class ProjectResourceScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("24")) {
+			if (date.equalsIgnoreCase("23")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -274,7 +275,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	}
 
 	public void selectEndDate() throws InterruptedException {
-		scrollToElement(endDate);
+		//scrollToElement(endDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(endDate));
 		highLightElement(driver, endDate);
@@ -343,19 +344,19 @@ public class ProjectResourceScreenPage extends TestBase {
 		// scrollToElement(clientDropDown);
 		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(clientDropDown));
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", clientDropDown);
-		// clientDropDown.click();
-		client1.click();
-
-		Thread.sleep(5000);
-
-		wait.until(ExpectedConditions.visibilityOf(projectDropDown));
-
-		projectDropDown.click();
-		project1.click();
+		/*
+		 * wait.until(ExpectedConditions.visibilityOf(clientDropDown));
+		 * 
+		 * JavascriptExecutor js = (JavascriptExecutor) driver;
+		 * js.executeScript("arguments[0].click()", clientDropDown); //
+		 * clientDropDown.click(); client1.click();
+		 * 
+		 * Thread.sleep(5000);
+		 * 
+		 * wait.until(ExpectedConditions.visibilityOf(projectDropDown));
+		 * 
+		 * projectDropDown.click(); project1.click();
+		 */
 
 		//wait.until(ExpectedConditions.visibilityOf(resourceDropDown));
 		//resourceDropDown.click();
@@ -368,6 +369,7 @@ public class ProjectResourceScreenPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(radioButton1));
 		// radioButton1.click();
 
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", radioButton1);
 
 		wait.until(ExpectedConditions.visibilityOf(BillingCycleDropDown));
