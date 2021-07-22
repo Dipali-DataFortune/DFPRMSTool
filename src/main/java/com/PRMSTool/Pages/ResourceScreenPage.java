@@ -221,14 +221,14 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.sendKeys("TestResource");
 		
 		employeeID.clear();
-		//employeeID.sendKeys("DS437");
+		employeeID.sendKeys("DS439");
 		//Thread.sleep(5000);
 		
-		System.out.println("Employee ID: ");
-		Scanner scan1 = new Scanner(System.in);
-		String input1 = scan1.nextLine();
-		System.out.println(input1);
-		employeeID.sendKeys(input1);
+		/*
+		 * System.out.println("Employee ID: "); Scanner scan1 = new Scanner(System.in);
+		 * String input1 = scan1.nextLine(); System.out.println(input1);
+		 * employeeID.sendKeys(input1);
+		 */
 		
 		address.clear();
 		address.sendKeys("Hadapsar");

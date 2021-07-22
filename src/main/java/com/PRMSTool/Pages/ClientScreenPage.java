@@ -473,25 +473,27 @@ public class ClientScreenPage extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", countryDropdown);
 		Thread.sleep(2000);
-		js.executeScript("arguments[0].click()", CountryUSA);
+		//js.executeScript("arguments[0].click()", CountryUSA);
 		//countryDropdown.click();
-		//CountryChina.click();
+		CountryChina.click();
 		
 		wait.until(ExpectedConditions.visibilityOf(stateDropdown));
 
 		js.executeScript("arguments[0].click()", stateDropdown);
 		Thread.sleep(2000);
-		js.executeScript("arguments[0].click()", stateCalifornia);
+		//js.executeScript("arguments[0].click()", stateCalifornia);
 		//stateDropdown.click();
-		//stateBeijing.click();
+		//stateCalifornia.click();
+		stateBeijing.click();
 		
 
 		scrollToElement(cityDropdown);
-		js.executeScript("arguments[0].click()", cityDropdown);
-		Thread.sleep(2000);
-		js.executeScript("arguments[0].click()", citySanFransisco);
-		//cityDropdown.click();
-		//cityChangping.click();
+		//js.executeScript("arguments[0].click()", cityDropdown);
+		//Thread.sleep(2000);
+		//js.executeScript("arguments[0].click()", citySanFransisco);
+		cityDropdown.click();
+		//citySanFransisco.click();
+		cityChangping.click();
 
 		zip.clear();
 		zip.sendKeys("411013");

@@ -80,86 +80,92 @@ public class SalesLeadScreenTest extends TestBase{
 	}
 	
 	@Test(priority = 10, enabled=true)
+	public void verifyselectCalledDate()throws InterruptedException {
+		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
+		sl.selectCalledDate();
+	}
+	
+	@Test(priority = 11, enabled=true)
 	public void verifyclickOnAdd()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnAdd();
 	}
 			
-	@Test(priority = 11, enabled=false)
+	@Test(priority = 12, enabled=false)
 	public void verifysearch()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.searchSalesLead("Dipali");
 	}
 	
-	@Test(priority = 12, enabled=false)
+	@Test(priority = 13, enabled=false)
 	public void verifyclickOnEditButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnEditButton();		
 	}
 	
-	@Test(priority = 13, enabled=false)
+	@Test(priority = 14, enabled=false)
 	public void verifyeditSalesLeadInformation()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.editSalesLeadInformation();		
 	}
 	
-	@Test(priority = 14, enabled=false)
+	@Test(priority = 15, enabled=false)
 	public void verifyeditLastUpdatedDate()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.editLastUpdatedDate();		
 	}
 	
-	@Test(priority = 15, enabled=false)
+	@Test(priority = 16, enabled=false)
 	public void verifyeditCompanyDetails()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		verifyclickOnCompanyDetails();
 		sl.editCompanyDetails();		
 	}
 	
-	@Test(priority = 16, enabled=false)
+	@Test(priority = 17, enabled=false)
 	public void verifyeditOtherDetails()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		verifyclickOnOtherDetails();
 		sl.editOtherDetails();		
 	}
 	
-	@Test(priority = 17, enabled=false)
+	@Test(priority = 18, enabled=false)
 	public void verifyeditFUPDate()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.editFUPDate();		
 	}
 	
-	@Test(priority = 18, enabled=false)
+	@Test(priority = 19, enabled=false)
 	public void verifyclickOnUpdateButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnUpdateButton();		
 	}
 	
-	@Test(priority = 19, enabled=true)
+	@Test(priority = 20, enabled=false)
 	public void verifydeleteSalesLead()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.deleteSalesLead("Dipali");
 	}
 	
-	@Test(priority = 20, enabled=true)
+	@Test(priority = 21, enabled=false)
 	public void verifyclickOnCloudUpload()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.clickOnCloudUpload();
 	}
 	
-	@Test(priority = 21, enabled=true)
+	@Test(priority = 22, enabled=false)
 	public void verifydownloadFile()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.downloadFile();		
 	}
 	
-	@Test(priority = 22, enabled=true)
+	@Test(priority = 23, enabled=false)
 	public void verifyclickOnBackButton()throws InterruptedException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.clickOnBackButton();
 	}
 	
-	@Test(priority = 23, enabled=true)
+	@Test(priority = 24, enabled=false)
 	public void verifyuploadFile()throws InterruptedException, AWTException {
 		SalesLeadScreenPage sl = PageFactory.initElements(driver, SalesLeadScreenPage.class);
 		sl.uploadFile();

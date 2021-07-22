@@ -6,9 +6,9 @@
 
 <!-- <suite-file path="PRMSXML\\LoginTest.xml"></suite-file>-->
 
-<!-- <suite-file path="PRMSXML\\ClientScreenTest.xml"></suite-file>  -->
+<suite-file path="PRMSXML\\ClientScreenTest.xml"></suite-file> 
 
-<!-- <suite-file path="PRMSXML\\ProjectScreenTest.xml"></suite-file> -->
+<suite-file path="PRMSXML\\ProjectScreenTest.xml"></suite-file>
 
 <suite-file path="PRMSXML\\ResourceScreenTest.xml"></suite-file>
 

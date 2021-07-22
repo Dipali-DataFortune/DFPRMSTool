@@ -297,7 +297,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("24")) {
+			if (date.equalsIgnoreCase("23")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -328,7 +328,8 @@ public class ProjectScreenPage extends TestBase{
 	
 		wait.until(ExpectedConditions.elementToBeClickable(ProjectLead));
 		ProjectLead.click();
-		ProjectLead1.click();
+		//ProjectLead1.click();
+		staleElementClick(5, ProjectLead1, 60);
 		//Thread.sleep(3000);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(projectType));
@@ -362,15 +363,15 @@ public class ProjectScreenPage extends TestBase{
 	public void addBillingDetails() throws InterruptedException
 	{
 		scrollToElement(billing);
-		//WebDriverWait wait=new WebDriverWait(driver, 60);
-		//wait.until(ExpectedConditions.elementToBeClickable(billing));
+		WebDriverWait wait=new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(billing));
 		
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		billing.click();
 		
-		WebDriverWait wait=new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(reviewCycle));
+		WebDriverWait wait1=new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.elementToBeClickable(reviewCycle));
 		reviewCycle.click();
 		reviewCycle1.click();
 		
@@ -394,17 +395,14 @@ public class ProjectScreenPage extends TestBase{
 	}
 	
 	public void searchProject(String name) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		
+		Thread.sleep(5000);		
 		//WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(searchBox));
 
 		highLightElement(driver, searchBox);
-		//Thread.sleep(5000);
-		searchBox.clear();
+		//searchBox.clear();
 		searchBox.sendKeys(name);
-
-		//Thread.sleep(5000);
+		Thread.sleep(2000);
 	}
 	
 	public void deleteProject(String name) throws InterruptedException {

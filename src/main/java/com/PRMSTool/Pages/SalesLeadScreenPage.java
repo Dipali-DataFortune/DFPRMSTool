@@ -215,16 +215,30 @@ public class SalesLeadScreenPage extends TestBase {
 	@FindBy(xpath = "//button[@class='mat-calendar-next-button mat-icon-button' and @type='button']")
 	WebElement DateNavButton;
 	
+	@FindBy(xpath = "//input[@name='Status']")
+	WebElement status;
+	
+	@FindBy(xpath = "(//button[@class='mat-icon-button' and @type='button'])[2]")
+	WebElement dateCalled;
+	
+	@FindBy(xpath = "//button[@class='mat-calendar-period-button mat-button']")
+	WebElement dateCalledSelectYears;
+	
+	@FindBy(xpath = "//div[@class='mat-calendar-content']")
+	WebElement dateCalledAllDates;
+
+	@FindBy(xpath = "//button[@class='mat-calendar-next-button mat-icon-button cdk-focused cdk-mouse-focused']")
+	WebElement DateCalledNavButton;
+		
+	
 	public SalesLeadScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	public void clickOnSalesLead() throws InterruptedException {
 		Thread.sleep(5000);
-		// WebDriverWait wait = new WebDriverWait(driver, 120);
-		// wait.until(ExpectedConditions.visibilityOf(projectResource));
-
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		// projectResource.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", saleslead);
@@ -413,7 +427,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("22")) {
+				if (date.equalsIgnoreCase("23")) {
 					allDates.get(i).click();
 					break;
 				}
@@ -511,6 +525,9 @@ public class SalesLeadScreenPage extends TestBase {
 		
 		BDE.clear();
 		BDE.sendKeys("Test BDE");
+		
+		status.clear();
+		status.sendKeys("Appointment");
 	}
 	
 	public void selectFUPDate() throws InterruptedException
@@ -543,6 +560,45 @@ public class SalesLeadScreenPage extends TestBase {
 			}
 		  		
 		System.out.println("FUP date selected");
+		Thread.sleep(3000);
+	}
+	
+	public void selectCalledDate() throws InterruptedException
+	{
+		scrollToElement(dateCalled);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateCalled));
+		
+		highLightElement(driver, dateCalled);
+		
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("arguments[0].click()", dateCalled);
+		 
+		  Thread.sleep(2000);
+			
+			while(!dateCalledSelectYears.getText().contains("2021"))
+			{
+				js.executeScript("arguments[0].click()", dateCalledAllDates);
+				//staleElementClick(5, DateNavButton, 60);
+			}
+
+			while(!dateCalledAllDates.getText().contains("AUG 2021"))
+			{
+				//js.executeScript("arguments[0].click()", dateCalledAllDates);
+				staleElementClick(5, DateCalledNavButton, 60);
+			}
+			
+			int total_nodes = allDates.size();
+
+			for (int i = 0; i < total_nodes; i++) {
+				String date = allDates.get(i).getText();
+				if (date.equalsIgnoreCase("27")) {
+					allDates.get(i).click();
+					break;
+				}
+			}
+		  		
+		System.out.println("Called date selected");
 		Thread.sleep(3000);
 	}
 	
@@ -793,7 +849,7 @@ public class SalesLeadScreenPage extends TestBase {
 		  //put path to your image in a clipboard 
 			
 			  StringSelection ss = new
-			  StringSelection("C:\\Users\\Dipali.vaidya\\Documents\\SampleTestFile1.xlsx");
+			  StringSelection("C:\\Users\\Dipali.vaidya\\Documents\\SampleTemplate_Test.xlsx");
 			  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 			 
 		  
