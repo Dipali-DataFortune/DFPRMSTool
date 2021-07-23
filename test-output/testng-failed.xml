@@ -6,7 +6,7 @@
       <class name="com.PRMSTool.Tests.ClientReviewTest">
         <methods>
           <include name="finish"/>
-          <include name="verifyaddNewClientReview"/>
+          <include name="verifydisplayYearAll"/>
           <include name="OpenBrowser"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ClientReviewTest -->

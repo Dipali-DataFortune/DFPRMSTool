@@ -33,6 +33,111 @@ public class ClientReviewPage extends TestBase{
 	@FindBy(xpath = "//button[@class='add-project-button fuse-white mt-md-0 mat-raised-button']")
 	WebElement addNew;
 	
+	@FindBy(xpath="//mat-select[@placeholder='DateMaster']")
+	WebElement dateMasterDropDown;
+	
+	@FindBy(xpath="//mat-select[@placeholder='YearMaster']")
+	WebElement yearMasterDropDown;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' All ')]")
+	WebElement dateMasterAll;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 January ')]")
+	WebElement dateMasterJanuary1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 January ')]")
+	WebElement dateMasterJanuary2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 February ')]")
+	WebElement dateMasterFebruary1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-28 February ')]")
+	WebElement dateMasterFebruary2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 March ')]")
+	WebElement dateMasterMarch1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 March ')]")
+	WebElement dateMasterMarch2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 April ')]")
+	WebElement dateMasterApril1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 April ')]")
+	WebElement dateMasterApril2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 May ')]")
+	WebElement dateMasterMay1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 May ')]")
+	WebElement dateMasterMay2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 June ')]")
+	WebElement dateMasterJune1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 June ')]")
+	WebElement dateMasterJune2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 July ')]")
+	WebElement dateMasterJuly1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 July ')]")
+	WebElement dateMasterJuly2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 August ')]")
+	WebElement dateMasterAugust1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 August ')]")
+	WebElement dateMasterAugust2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 September ')]")
+	WebElement dateMasterSeptember1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 September ')]")
+	WebElement dateMasterSeptember2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 October ')]")
+	WebElement dateMasterOctober1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 October ')]")
+	WebElement dateMasterOctober2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 November ')]")
+	WebElement dateMasterNovember1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 November ')]")
+	WebElement dateMasterNovember2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 December ')]")
+	WebElement dateMasterDecember1;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 December ')]")
+	WebElement dateMasterDecember2;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' All ')]")
+	WebElement yearMasterAll;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 2019 ')]")
+	WebElement yearMaster2019;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 2020 ')]")
+	WebElement yearMaster2020;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 2021 ')]")
+	WebElement yearMaster2021;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 2022 ')]")
+	WebElement yearMaster2022;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 2023 ')]")
+	WebElement yearMaster2023;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 2024 ')]")
+	WebElement yearMaster2024;
+	
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 2025 ')]")
+	WebElement yearMaster2025;
+	
 	@FindBy(xpath = "(//mat-icon[contains(text(),'arrow_back')])[2]")
 	WebElement NewClientReviewArrow;
 	
@@ -175,7 +280,7 @@ public class ClientReviewPage extends TestBase{
 		// driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 		Thread.sleep(5000);
-
+	
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
@@ -300,19 +405,17 @@ public class ClientReviewPage extends TestBase{
 		Thread.sleep(2000);
 		
 		JavascriptExecutor js=(JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", ClientDropDown);
-		Thread.sleep(2000);
-		//ClientDropDown.click();
-		js.executeScript("arguments[0].click()", clientAbc);
-		//clientTest.click();
-		
-		Thread.sleep(2000);
-		//ProjectDropDown.click();
-		//projectTestProject.click();
-		js.executeScript("arguments[0].click()", ProjectDropDown);
-		js.executeScript("arguments[0].click()", projectAbc);
-		
-		Thread.sleep(2000);
+		/*
+		 * js.executeScript("arguments[0].click()", ClientDropDown); Thread.sleep(2000);
+		 * //ClientDropDown.click(); js.executeScript("arguments[0].click()",
+		 * clientAbc); //clientTest.click();
+		 * 
+		 * Thread.sleep(2000); //ProjectDropDown.click(); //projectTestProject.click();
+		 * js.executeScript("arguments[0].click()", ProjectDropDown);
+		 * js.executeScript("arguments[0].click()", projectAbc);
+		 * 
+		 * Thread.sleep(2000);
+		 */
 		//dateDropDown.click();
 		//date.click();
 		js.executeScript("arguments[0].click()", dateDropDown);
@@ -395,11 +498,16 @@ public class ClientReviewPage extends TestBase{
 	}
 	
 	public void deleteClientReview(String name) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(searchBox));
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(searchBox));
 		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
+		
+		yearMasterDropDown.click();
+		yearMasterAll.click();
+		
+		Thread.sleep(5000);
 		
 		searchBox.clear();
 		searchBox.sendKeys(name);
@@ -415,4 +523,416 @@ public class ClientReviewPage extends TestBase{
 		searchBox.clear();
 		Thread.sleep(5000);
 	}	
+	
+	public void displayDateJanuary() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterJanuary1));
+		dateMasterJanuary1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 January");	
+	}
+	
+	public void displayDateJanuary1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+				
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		//Thread.sleep(3000);
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterJanuary2));
+		dateMasterJanuary2.click();
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", dateMasterJanuary2);
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-30 January");		
+	}
+	
+	public void displayDateFebruary() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterFebruary1));
+		dateMasterFebruary1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 February");	
+				
+	}
+	
+	public void displayDateFebruary1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		//Thread.sleep(3000);
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterFebruary2));
+		dateMasterFebruary2.click();
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", dateMasterFebruary2);
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-28 February");		
+	}
+	
+	public void displayDateMarch() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterMarch1));
+		dateMasterMarch1.click();		
+		
+		System.out.println("Displayed all the client reviews added in the month of 1-15 March");
+	}
+	
+	public void displayDateMarch1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterMarch2));
+		dateMasterMarch2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-31 March");		
+	}
+	
+	public void displayDateApril() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterApril1));
+		dateMasterApril1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 April");				
+	}
+	
+	public void displayDateApril1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterApril2));
+		dateMasterApril2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-30 April");		
+	}
+	
+	public void displayDateMay() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterMay1));
+		dateMasterMay1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 May");		
+	}
+	
+	public void displayDateMay1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterMay2));
+		dateMasterMay2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-31 May");		
+	}
+	
+	public void displayDateJune() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterJune1));
+		dateMasterJune1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 June");	
+	}
+	
+	public void displayDateJune1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterJune2));
+		dateMasterJune2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-30 June");		
+	}
+	
+	public void displayDateJuly() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterJuly1));
+		dateMasterJuly1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 July");		
+	}
+	
+	public void displayDateJuly1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterJuly2));
+		dateMasterJuly2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-31 July");		
+	}
+	
+	public void displayDateAugust() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterAugust1));
+		dateMasterAugust1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 August");	
+		
+	}
+	
+	public void displayDateAugust1() throws InterruptedException
+	{	
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterAugust2));
+		dateMasterAugust2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-31 August");		
+	}
+	
+	public void displayDateSeptember() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterSeptember1));
+		dateMasterSeptember1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 September");			
+	}
+	
+	public void displayDateSeptember1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterSeptember2));
+		dateMasterSeptember2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-30 September");		
+	}
+	
+	public void displayDateOctober() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterOctober1));
+		dateMasterOctober1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 October");		
+	}
+	
+	public void displayDateOctober1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterOctober2));
+		dateMasterOctober2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-31 October");		
+	}
+	
+	public void displayDateNovember() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterNovember1));
+		dateMasterNovember1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 November");		
+	}
+	
+	public void displayDateNovember1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterNovember2));
+		dateMasterNovember2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-30 November");		
+	}
+	
+	public void displayDateDecember() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+				
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDecember1));
+		dateMasterDecember1.click();
+				
+		System.out.println("Displayed all the client reviews added in the month of 1-15 December");		
+	}
+	
+	public void displayDateDecember1() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		
+		dateMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(dateMasterDecember2));
+		dateMasterDecember2.click();
+		
+		System.out.println("Displayed all the client reviews added in the month of 15-31 December");		
+	}
+	
+	public void displayYearAll()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(yearMasterDropDown));
+		
+		yearMasterDropDown.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(yearMasterAll));
+		//yearMasterAll.click();
+		staleElementClick(5, yearMasterAll, 60);
+				
+		System.out.println("Displayed all the years");
+	}
 }
