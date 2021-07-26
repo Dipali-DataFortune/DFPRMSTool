@@ -264,7 +264,7 @@ public class ProjectResourceScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("23")) {
+			if (date.equalsIgnoreCase("26")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -289,7 +289,7 @@ public class ProjectResourceScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("26")) {
+			if (date.equalsIgnoreCase("27")) {
 				allDates.get(i).click();
 				break;
 			}

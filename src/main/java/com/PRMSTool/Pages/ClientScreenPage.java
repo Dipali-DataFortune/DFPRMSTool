@@ -88,7 +88,7 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' California ')]")
 	WebElement stateCalifornia;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Beijing ')]")
+	@FindBy(xpath = "(//mat-option/span[contains(text(),' Beijing ')])[1]")
 	WebElement stateBeijing;
 
 	@FindBy(xpath = "//mat-select[@placeholder='City']")
@@ -484,7 +484,8 @@ public class ClientScreenPage extends TestBase {
 		//js.executeScript("arguments[0].click()", stateCalifornia);
 		//stateDropdown.click();
 		//stateCalifornia.click();
-		stateBeijing.click();
+		//stateBeijing.click();
+		js.executeScript("arguments[0].click()", stateBeijing);
 		
 
 		scrollToElement(cityDropdown);
@@ -747,7 +748,7 @@ public class ClientScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("25")) {
+			if (date.equalsIgnoreCase("26")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -768,7 +769,51 @@ public class ClientScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("26")) {
+			if (date.equalsIgnoreCase("27")) {
+				allDates.get(i).click();
+				break;
+			}
+		}
+
+		System.out.println("Start date selected");
+		Thread.sleep(5000);
+	}
+	
+	public void editAgreementSignedDate() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(allDatesButton));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", allDatesButton);
+		Thread.sleep(2000);
+		// agreementDate.sendKeys("02/01/2021");
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("29")) {
+				allDates.get(i).click();
+				break;
+			}
+		}
+
+		System.out.println("Date selected");
+		Thread.sleep(5000);
+	}
+
+	public void editApproxStartDate() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(appSDateButton));
+		appSDateButton.click();
+
+		Thread.sleep(2000);
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("30")) {
 				allDates.get(i).click();
 				break;
 			}

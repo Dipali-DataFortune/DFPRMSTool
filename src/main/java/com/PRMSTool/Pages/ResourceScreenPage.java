@@ -369,7 +369,7 @@ public class ResourceScreenPage extends TestBase {
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("21")) {
+				if (date.equalsIgnoreCase("24")) {
 					allDates.get(i).click();
 					break;
 				}

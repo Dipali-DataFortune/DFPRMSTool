@@ -39,23 +39,24 @@ public class SalesLeadScreenPage extends TestBase {
 	@FindBy(xpath = "//input[@placeholder='Search for a Sales Lead']")
 	WebElement searchBox;
 
-	//@FindBy(xpath = "//button[@class='add-saleslead-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	// @FindBy(xpath = "//button[@class='add-saleslead-button fuse-white mt-24
+	// mt-md-0 mat-raised-button']")
 	@FindBy(xpath = "//button[@class='add-saleslead-button fuse-white mt-md-0 mat-raised-button']")
 	WebElement addNew;
 
 	@FindBy(xpath = "//input[@mattooltip='Cloud Upload']")
 	WebElement uploadFile;
 
-	//@FindBy(xpath = "//div[@class='fileupload']")
+	// @FindBy(xpath = "//div[@class='fileupload']")
 	@FindBy(xpath = "//input[@type='file']")
 	WebElement chooseFile;
-	
+
 	@FindBy(xpath = "//div[@class='fileupload']")
 	WebElement chooseFile1;
 
 	@FindBy(xpath = "//button[@class='save-uploadfile-button mat-raised-button']")
 	WebElement uploadButton;
-	
+
 	@FindBy(xpath = "//input[@mattooltip='Download Sample Template']")
 	WebElement downloadFile;
 
@@ -142,70 +143,70 @@ public class SalesLeadScreenPage extends TestBase {
 
 	@FindBy(xpath = "(//div[@class='mat-tab-label-content'])[3]")
 	WebElement otherDetails;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Company Name']")
 	WebElement companyName;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Company Domain Name']")
 	WebElement companyDomainName;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Company Phone Number']")
 	WebElement companyPhoneNumber;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Company Street Address']")
 	WebElement companyStreet;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Company Country']")
 	WebElement companyCountry;
-	
+
 	@FindBy(xpath = "//input[@placeholder='State']")
 	WebElement companyState;
-	
+
 	@FindBy(xpath = "//input[@placeholder='City']")
 	WebElement companyCity;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Zip']")
 	WebElement companyZip;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Industry Label']")
 	WebElement industryLabel;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Secondary Industry Label']")
 	WebElement secIndustryLabel;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Industry Hierarchical Category']")
 	WebElement industryCategory;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Secondary Industry Hierarchical Category']")
 	WebElement secIndustryCategory;
-	
+
 	@FindBy(xpath = "//input[@placeholder='SIC1']")
 	WebElement SIC1;
-	
+
 	@FindBy(xpath = "//input[@placeholder='SIC2']")
 	WebElement SIC2;
-	
+
 	@FindBy(xpath = "//input[@placeholder='NAICS1']")
 	WebElement NAICS1;
-	
+
 	@FindBy(xpath = "//input[@placeholder='NAICS2']")
 	WebElement NAICS2;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Attempt1']")
 	WebElement attempt1;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Attempt2']")
 	WebElement attempt2;
-	
+
 	@FindBy(xpath = "//input[@placeholder='BDE']")
 	WebElement BDE;
-	
+
 	@FindBy(xpath = "//button[@type='button']")
 	WebElement lastUpdatedDate;
 
 	@FindBy(xpath = "//button[@class='mat-icon-button' and @type='button']")
 	WebElement FUPDate;
-	
+
 	@FindBy(xpath = "//div[@class='mat-calendar-controls']")
 	WebElement DateMonths;
 
@@ -214,31 +215,30 @@ public class SalesLeadScreenPage extends TestBase {
 
 	@FindBy(xpath = "//button[@class='mat-calendar-next-button mat-icon-button' and @type='button']")
 	WebElement DateNavButton;
-	
+
 	@FindBy(xpath = "//input[@name='Status']")
 	WebElement status;
-	
+
 	@FindBy(xpath = "(//button[@class='mat-icon-button' and @type='button'])[2]")
 	WebElement dateCalled;
-	
+
 	@FindBy(xpath = "//button[@class='mat-calendar-period-button mat-button']")
 	WebElement dateCalledSelectYears;
-	
+
 	@FindBy(xpath = "//div[@class='mat-calendar-content']")
 	WebElement dateCalledAllDates;
 
 	@FindBy(xpath = "//button[@class='mat-calendar-next-button mat-icon-button cdk-focused cdk-mouse-focused']")
 	WebElement DateCalledNavButton;
-		
-	
+
 	public SalesLeadScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	public void clickOnSalesLead() throws InterruptedException {
 		Thread.sleep(5000);
-		
-		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+		// driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		// projectResource.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", saleslead);
@@ -313,10 +313,10 @@ public class SalesLeadScreenPage extends TestBase {
 
 		// driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		Thread.sleep(5000);
-		
+
 		searchBox.clear();
 		searchBox.sendKeys(name);
-		
+
 		Thread.sleep(3000);
 
 		deleteButton.click();
@@ -325,7 +325,7 @@ public class SalesLeadScreenPage extends TestBase {
 		js1.executeScript("arguments[0].click()", yesButton);
 
 		System.out.println("SalesLead deleted successfully");
-		
+
 		searchBox.clear();
 		Thread.sleep(5000);
 	}
@@ -333,7 +333,7 @@ public class SalesLeadScreenPage extends TestBase {
 	public void addSalesLeadInformation() {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(salesLeadInformation));
-		
+
 		softAssert.assertEquals(salesLeadInformation.isDisplayed(), true);
 		softAssert.assertEquals(companyDetails.isDisplayed(), true);
 		softAssert.assertEquals(otherDetails.isDisplayed(), true);
@@ -375,16 +375,16 @@ public class SalesLeadScreenPage extends TestBase {
 
 		scrollToElement(country);
 		country.clear();
-		country.sendKeys("USA");
+		country.sendKeys("India");
 
 		state.clear();
-		state.sendKeys("CA");
+		state.sendKeys("Maharashtra");
 
 		city.clear();
-		city.sendKeys("Los Angeles");
+		city.sendKeys("Pune");
 
 		zip.clear();
-		zip.sendKeys("91436");
+		zip.sendKeys("411028");
 
 		revenue.clear();
 		revenue.sendKeys("12 million");
@@ -404,206 +404,190 @@ public class SalesLeadScreenPage extends TestBase {
 		comment.clear();
 		comment.sendKeys("All the sales lead information added successfully");
 	}
-	
+
 	public void selectLastUpdatedDate() throws InterruptedException {
 		scrollToElement(lastUpdatedDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(lastUpdatedDate));
-		
+
 		highLightElement(driver, lastUpdatedDate);
-		
-		  JavascriptExecutor js = (JavascriptExecutor) driver;
-		  js.executeScript("arguments[0].click()", lastUpdatedDate);
-		 
-		  Thread.sleep(2000);
-			
-			while(!DateMonths.getText().contains("AUG 2021"))
-			{
-				//js.executeScript("arguments[0].click()", DateNavButton);
-				staleElementClick(5, DateNavButton, 60);
-			}
 
-			int total_nodes = allDates.size();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", lastUpdatedDate);
 
-			for (int i = 0; i < total_nodes; i++) {
-				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("23")) {
-					allDates.get(i).click();
-					break;
-				}
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("AUG 2021")) {
+			// js.executeScript("arguments[0].click()", DateNavButton);
+			staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("23")) {
+				allDates.get(i).click();
+				break;
 			}
-		  		
+		}
+
 		System.out.println("Last updated date selected");
 		Thread.sleep(3000);
 	}
-	
-	public void clickOnCompanyDetails()
-	{
+
+	public void clickOnCompanyDetails() {
 		scrollToElement(companyDetails);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(companyDetails));
-		
+
 		companyDetails.click();
 	}
-	
-	public void addCompanyDetails()
-	{
+
+	public void addCompanyDetails() {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(companyName));
-		
+
 		companyName.clear();
 		companyName.sendKeys("mpulsemobile test");
-		
+
 		companyDomainName.clear();
 		companyDomainName.sendKeys("mpulsemobiletest.com");
-		
+
 		companyPhoneNumber.clear();
 		companyPhoneNumber.sendKeys("1234567890");
-		
+
 		companyStreet.clear();
 		companyStreet.sendKeys("16530 Ventura Blvd");
-		
+
 		companyCountry.clear();
-		companyCountry.sendKeys("USA");
-		
+		companyCountry.sendKeys("India");
+
 		companyState.clear();
-		companyState.sendKeys("CA");
-		
+		companyState.sendKeys("Maharashtra");
+
 		companyCity.clear();
-		companyCity.sendKeys("Los Angeles");
-		
+		companyCity.sendKeys("Mumbai");
+
 		companyZip.clear();
 		companyZip.sendKeys("91436");
-		
+
 		scrollToElement(industryLabel);
 		industryLabel.clear();
 		industryLabel.sendKeys("Hospitals/Clinics");
-		
+
 		secIndustryLabel.clear();
 		secIndustryLabel.sendKeys("Test Sec Label");
-		
+
 		industryCategory.clear();
 		industryCategory.sendKeys("Test Category");
-		
+
 		secIndustryCategory.clear();
 		secIndustryCategory.sendKeys("Test Sec Category");
-		
+
 		System.out.println("Company details added successfully");
 	}
-	
-	public void clickOnOtherDetails()
-	{
+
+	public void clickOnOtherDetails() {
 		scrollToElement(otherDetails);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(otherDetails));
-		
+
 		otherDetails.click();
 	}
-	
-	public void addOtherDetails()
-	{
+
+	public void addOtherDetails() {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(SIC1));
-		
+
 		SIC1.clear();
 		SIC1.sendKeys("Test SIC1");
-		
+
 		SIC2.clear();
 		SIC2.sendKeys("Test SIC2");
-		
+
 		NAICS1.clear();
 		NAICS1.sendKeys("Test NAICS1");
-		
+
 		NAICS2.clear();
 		NAICS2.sendKeys("Test NAICS2");
-		
+
 		attempt1.clear();
 		attempt1.sendKeys("Closed");
-		
+
 		attempt2.clear();
 		attempt2.sendKeys("Test attempt 2");
-		
+
 		BDE.clear();
 		BDE.sendKeys("Test BDE");
-		
+
 		status.clear();
 		status.sendKeys("Appointment");
 	}
-	
-	public void selectFUPDate() throws InterruptedException
-	{
+
+	public void selectFUPDate() throws InterruptedException {
 		scrollToElement(FUPDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(FUPDate));
-		
+
 		highLightElement(driver, FUPDate);
-		
-		  JavascriptExecutor js = (JavascriptExecutor) driver;
-		  js.executeScript("arguments[0].click()", FUPDate);
-		 
-		  Thread.sleep(2000);
-			
-			while(!DateMonths.getText().contains("AUG 2021"))
-			{
-				//js.executeScript("arguments[0].click()", DateNavButton);
-				staleElementClick(5, DateNavButton, 60);
-			}
 
-			int total_nodes = allDates.size();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", FUPDate);
 
-			for (int i = 0; i < total_nodes; i++) {
-				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("27")) {
-					allDates.get(i).click();
-					break;
-				}
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("AUG 2021")) {
+			// js.executeScript("arguments[0].click()", DateNavButton);
+			staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("27")) {
+				allDates.get(i).click();
+				break;
 			}
-		  		
+		}
+
 		System.out.println("FUP date selected");
 		Thread.sleep(3000);
 	}
-	
-	public void selectCalledDate() throws InterruptedException
-	{
+
+	public void selectCalledDate() throws InterruptedException {
 		scrollToElement(dateCalled);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(dateCalled));
-		
+
 		highLightElement(driver, dateCalled);
-		
-		  JavascriptExecutor js = (JavascriptExecutor) driver;
-		  js.executeScript("arguments[0].click()", dateCalled);
-		 
-		  Thread.sleep(2000);
-			
-			while(!dateCalledSelectYears.getText().contains("2021"))
-			{
-				js.executeScript("arguments[0].click()", dateCalledAllDates);
-				//staleElementClick(5, DateNavButton, 60);
-			}
 
-			while(!dateCalledAllDates.getText().contains("AUG 2021"))
-			{
-				//js.executeScript("arguments[0].click()", dateCalledAllDates);
-				staleElementClick(5, DateCalledNavButton, 60);
-			}
-			
-			int total_nodes = allDates.size();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", dateCalled);
 
-			for (int i = 0; i < total_nodes; i++) {
-				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("27")) {
-					allDates.get(i).click();
-					break;
-				}
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("AUG 2021")) {
+			// js.executeScript("arguments[0].click()", DateNavButton);
+			staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("27")) {
+				allDates.get(i).click();
+				break;
 			}
-		  		
+		}
+
 		System.out.println("Called date selected");
 		Thread.sleep(3000);
 	}
-	
-	public void editSalesLeadInformation()
-	{
+
+	public void editSalesLeadInformation() {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(salutation));
 
@@ -671,152 +655,145 @@ public class SalesLeadScreenPage extends TestBase {
 		comment.clear();
 		comment.sendKeys("All the sales lead information updated successfully");
 	}
-	
+
 	public void editLastUpdatedDate() throws InterruptedException {
 		scrollToElement(lastUpdatedDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(lastUpdatedDate));
-		
+
 		highLightElement(driver, lastUpdatedDate);
-		
-		  JavascriptExecutor js = (JavascriptExecutor) driver;
-		  js.executeScript("arguments[0].click()", lastUpdatedDate);
-		 
-		  Thread.sleep(2000);
-			
-			while(!DateMonths.getText().contains("SEP 2021"))
-			{
-				js.executeScript("arguments[0].click()", DateNavButton);
-				//staleElementClick(5, DateNavButton, 60);
-			}
 
-			int total_nodes = allDates.size();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", lastUpdatedDate);
 
-			for (int i = 0; i < total_nodes; i++) {
-				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("24")) {
-					allDates.get(i).click();
-					break;
-				}
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("SEP 2021")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
+			// staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("24")) {
+				allDates.get(i).click();
+				break;
 			}
-		  		
+		}
+
 		System.out.println("Last updated date updated successfully");
 		Thread.sleep(3000);
 	}
-	
-	public void editCompanyDetails()
-	{
+
+	public void editCompanyDetails() {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(companyName));
-		
+
 		companyName.clear();
 		companyName.sendKeys("testEdit");
-		
+
 		companyDomainName.clear();
 		companyDomainName.sendKeys("https://www.testEdit.com");
-		
+
 		companyPhoneNumber.clear();
 		companyPhoneNumber.sendKeys("9876543210");
-		
+
 		companyStreet.clear();
 		companyStreet.sendKeys("testEdit");
-		
+
 		companyCountry.clear();
 		companyCountry.sendKeys("testEdit");
-		
+
 		companyState.clear();
 		companyState.sendKeys("testEdit");
-		
+
 		companyCity.clear();
 		companyCity.sendKeys("testEdit");
-		
+
 		companyZip.clear();
 		companyZip.sendKeys("91436");
-		
+
 		scrollToElement(industryLabel);
 		industryLabel.clear();
 		industryLabel.sendKeys("testEdit");
-		
+
 		secIndustryLabel.clear();
 		secIndustryLabel.sendKeys("testEdit");
-		
+
 		industryCategory.clear();
 		industryCategory.sendKeys("testEdit");
-		
+
 		secIndustryCategory.clear();
 		secIndustryCategory.sendKeys("testEdit");
-		
+
 		System.out.println("Company details updated successfully");
 	}
-	
-	public void editOtherDetails()
-	{
+
+	public void editOtherDetails() {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(SIC1));
-		
+
 		SIC1.clear();
 		SIC1.sendKeys("testEdit");
-		
+
 		SIC2.clear();
 		SIC2.sendKeys("testEdit");
-		
+
 		NAICS1.clear();
 		NAICS1.sendKeys("testEdit");
-		
+
 		NAICS2.clear();
 		NAICS2.sendKeys("testEdit");
-		
+
 		attempt1.clear();
 		attempt1.sendKeys("testEdit");
-		
+
 		attempt2.clear();
 		attempt2.sendKeys("testEdit");
-		
+
 		BDE.clear();
 		BDE.sendKeys("testEdit");
-		
+
 		System.out.println("Other details updated successfully");
 	}
-		
-	public void editFUPDate() throws InterruptedException
-	{
+
+	public void editFUPDate() throws InterruptedException {
 		scrollToElement(FUPDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(FUPDate));
-		
+
 		highLightElement(driver, FUPDate);
-		
-		  JavascriptExecutor js = (JavascriptExecutor) driver;
-		  js.executeScript("arguments[0].click()", FUPDate);
-		 
-		  Thread.sleep(2000);
-			
-			while(!DateMonths.getText().contains("OCT 2021"))
-			{
-				js.executeScript("arguments[0].click()", DateNavButton);
-				//staleElementClick(5, DateNavButton, 60);
-			}
 
-			int total_nodes = allDates.size();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", FUPDate);
 
-			for (int i = 0; i < total_nodes; i++) {
-				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("15")) {
-					allDates.get(i).click();
-					break;
-				}
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("OCT 2021")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
+			// staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("15")) {
+				allDates.get(i).click();
+				break;
 			}
-		  		
+		}
+
 		System.out.println("FUP date updated successfully");
 		Thread.sleep(2000);
 	}
-	
-	public void uploadFile() throws InterruptedException, AWTException
-	{
+
+	public void uploadFile() throws InterruptedException, AWTException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(uploadFile));
 
-		
 		/*
 		 * uploadFile.click(); Thread.sleep(3000);
 		 * 
@@ -837,40 +814,39 @@ public class SalesLeadScreenPage extends TestBase {
 		 * 
 		 * Thread.sleep(5000);
 		 */
-		 
-		 		
-		
-		  uploadFile.click(); Thread.sleep(3000);
-		  
-		  chooseFile1.click(); Thread.sleep(5000);
-		 
-		  
-		  		  
-		  //put path to your image in a clipboard 
-			
-			  StringSelection ss = new
-			  StringSelection("C:\\Users\\Dipali.vaidya\\Documents\\SampleTemplate_Test.xlsx");
-			  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-			 
-		  
-		  //imitate mouse events like ENTER, CTRL+C, CTRL+V 
-		  
-			
-			  Robot robot = new Robot();
-			  
-			  robot.delay(250); robot.keyPress(KeyEvent.VK_ENTER);
-			  robot.keyRelease(KeyEvent.VK_ENTER); robot.keyPress(KeyEvent.VK_CONTROL);
-			  robot.keyPress(KeyEvent.VK_V); robot.keyRelease(KeyEvent.VK_V);
-			  robot.keyRelease(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_ENTER);
-			  robot.delay(50); robot.keyRelease(KeyEvent.VK_ENTER);
-			  
-			  Thread.sleep(5000);
-			  
-			  uploadButton.click();
-			  
-			  Thread.sleep(5000);
-			 
-		
-	    System.out.println("File uploaded successfully");
+
+		uploadFile.click();
+		Thread.sleep(3000);
+
+		chooseFile1.click();
+		Thread.sleep(5000);
+
+		// put path to your image in a clipboard
+
+		StringSelection ss = new StringSelection("C:\\Users\\Dipali.vaidya\\Documents\\SampleTemplate_Test.xlsx");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+
+		// imitate mouse events like ENTER, CTRL+C, CTRL+V
+
+		Robot robot = new Robot();
+
+		robot.delay(250);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.delay(50);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+
+		Thread.sleep(5000);
+
+		uploadButton.click();
+
+		Thread.sleep(5000);
+
+		System.out.println("File uploaded successfully");
 	}
 }

@@ -14,6 +14,8 @@
 
 <suite-file path="PRMSXML\\ProjectResourceScreenTest.xml"></suite-file>
 
+<suite-file path="PRMSXML\\ClientReviewTest.xml"></suite-file>
+
 <suite-file path="PRMSXML\\SalesLeadScreenTest.xml"></suite-file>
 
 </suite-files> 
