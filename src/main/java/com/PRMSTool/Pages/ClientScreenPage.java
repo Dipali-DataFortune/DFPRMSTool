@@ -88,8 +88,8 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' California ')]")
 	WebElement stateCalifornia;
 	
-	@FindBy(xpath = "(//mat-option/span[contains(text(),' Beijing ')])[1]")
-	WebElement stateBeijing;
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Hebei ')]")
+	WebElement stateHebei;
 
 	@FindBy(xpath = "//mat-select[@placeholder='City']")
 	WebElement cityDropdown;
@@ -485,7 +485,7 @@ public class ClientScreenPage extends TestBase {
 		//stateDropdown.click();
 		//stateCalifornia.click();
 		//stateBeijing.click();
-		js.executeScript("arguments[0].click()", stateBeijing);
+		js.executeScript("arguments[0].click()", stateHebei);
 		
 
 		scrollToElement(cityDropdown);

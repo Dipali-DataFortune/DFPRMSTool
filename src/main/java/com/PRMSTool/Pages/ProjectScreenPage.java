@@ -155,6 +155,9 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//span[contains(text(),'Yes')]")
 	WebElement yesButton;
 	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' All ')]")
+	WebElement status;
+	
 	public ProjectScreenPage(WebDriver driver)
 	{
 		this.driver=driver;
@@ -398,6 +401,8 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(5000);		
 		//WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(searchBox));
+		
+		//status.click();
 
 		highLightElement(driver, searchBox);
 		//searchBox.clear();
