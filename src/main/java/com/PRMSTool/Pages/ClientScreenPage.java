@@ -100,8 +100,8 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),'Mumbai')]")
 	WebElement cityMumbai;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Changping ')]")
-	WebElement cityChangping;
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Anguo ')]")
+	WebElement cityAnguo;
 
 	//@FindBy(xpath = "//mat-option/span[contains(text(),' San Francisco ')]")
 	@FindBy(xpath = "(//mat-option/span[contains(text(),' San Francisco ')])[1]")
@@ -452,6 +452,7 @@ public class ClientScreenPage extends TestBase {
 	}
 
 	public void editClientInformation() throws InterruptedException {
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(clientName));
 
@@ -473,9 +474,9 @@ public class ClientScreenPage extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", countryDropdown);
 		Thread.sleep(2000);
-		//js.executeScript("arguments[0].click()", CountryUSA);
+		js.executeScript("arguments[0].click()", CountryChina);
 		//countryDropdown.click();
-		CountryChina.click();
+		//CountryChina.click();
 		
 		wait.until(ExpectedConditions.visibilityOf(stateDropdown));
 
@@ -486,7 +487,7 @@ public class ClientScreenPage extends TestBase {
 		//stateCalifornia.click();
 		//stateBeijing.click();
 		js.executeScript("arguments[0].click()", stateHebei);
-		
+		//stateHebei.click();
 
 		scrollToElement(cityDropdown);
 		//js.executeScript("arguments[0].click()", cityDropdown);
@@ -494,7 +495,8 @@ public class ClientScreenPage extends TestBase {
 		//js.executeScript("arguments[0].click()", citySanFransisco);
 		cityDropdown.click();
 		//citySanFransisco.click();
-		cityChangping.click();
+		//cityAnguo.click();
+		js.executeScript("arguments[0].click()", cityAnguo);
 
 		zip.clear();
 		zip.sendKeys("411013");

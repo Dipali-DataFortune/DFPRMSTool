@@ -57,10 +57,10 @@ public class ProjectScreenPage extends TestBase{
 	WebElement endDate;
 	
 	@FindBy(xpath = "(//button[@class='mat-icon-button' and @type='button'])[3]")
-	WebElement ApproxStartDate;
+	WebElement ActualStartDate;
 	
 	@FindBy(xpath = "(//button[@class='mat-icon-button' and @type='button'])[4]")
-	WebElement ApproxEndDate;
+	WebElement ActualEndDate;
 
 	@FindBy(xpath = "//table[@class='mat-calendar-table']//td")
 	List<WebElement> allDates;
@@ -131,6 +131,9 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//div[contains(text(),'Billing')]")
 	WebElement billing;
 	
+	@FindBy(xpath = "//div[contains(text(),'Project Details')]")
+	WebElement ProjectDetails;
+	
 	@FindBy(xpath = "//mat-select[@role='listbox' and @name='ReviewCycleId']")
 	WebElement reviewCycle;
 	
@@ -157,6 +160,13 @@ public class ProjectScreenPage extends TestBase{
 	
 	@FindBy(xpath = "//mat-option//span[contains(text(),' All ')]")
 	WebElement status;
+	
+	@FindBy(xpath = "//div[@class='mat-calendar-controls']")
+	WebElement DateMonths;
+	
+	@FindBy(xpath = "//button[@class='mat-calendar-next-button mat-icon-button' and @type='button']")
+	WebElement DateNavButton;
+	
 	
 	public ProjectScreenPage(WebDriver driver)
 	{
@@ -265,11 +275,11 @@ public class ProjectScreenPage extends TestBase{
 	public void selectActualStartDate() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(ApproxStartDate));
+		wait.until(ExpectedConditions.visibilityOf(ActualStartDate));
 		//highLightElement(driver, ApproxStartDate);
 		//AStartDate.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", ApproxStartDate);
+		js.executeScript("arguments[0].click()", ActualStartDate);
 		//Thread.sleep(2000);
 			
 		int total_nodes = allDates.size();
@@ -288,11 +298,11 @@ public class ProjectScreenPage extends TestBase{
 	public void selectActualEndDate() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(ApproxEndDate));
+		wait.until(ExpectedConditions.visibilityOf(ActualEndDate));
 //		highLightElement(driver, ApproxEndDate);
 		//AEndDate.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", ApproxEndDate);
+		js.executeScript("arguments[0].click()", ActualEndDate);
 		
 		//Thread.sleep(2000);
 			
@@ -522,5 +532,131 @@ public class ProjectScreenPage extends TestBase{
 		HourlyBillingRate.sendKeys("1000");
 		
 		System.out.println("Project information updated successfully");
+	}
+	
+	public void editStartDate() throws InterruptedException {
+		ProjectDetails.click();
+		
+		scrollToElement(startDate);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(startDate));
+
+		highLightElement(driver, startDate);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", startDate);
+
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("AUG 2021")) {
+			 js.executeScript("arguments[0].click()", DateNavButton);
+			//staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("24")) {
+				allDates.get(i).click();
+				break;
+			}
+		}
+
+		System.out.println("Start date edited");
+		Thread.sleep(3000);
+	}
+	
+	public void editEndDate() throws InterruptedException {
+		scrollToElement(endDate);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(endDate));
+
+		highLightElement(driver, endDate);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", endDate);
+
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("DEC 2021")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
+			//staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("27")) {
+				allDates.get(i).click();
+				break;
+			}
+		}
+
+		System.out.println("End date edited");
+		Thread.sleep(3000);
+	}
+	
+	public void editActualStartDate() throws InterruptedException {
+		scrollToElement(ActualStartDate);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(ActualStartDate));
+
+		highLightElement(driver, ActualStartDate);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", ActualStartDate);
+
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("AUG 2021")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
+			//staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("30")) {
+				allDates.get(i).click();
+				break;
+			}
+		}
+
+		System.out.println("Actual start date edited");
+		Thread.sleep(3000);
+	}
+	
+	public void editActualEndDate() throws InterruptedException {
+		scrollToElement(ActualEndDate);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(ActualEndDate));
+
+		highLightElement(driver, ActualEndDate);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", ActualEndDate);
+
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("DEC 2021")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
+			//staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("31")) {
+				allDates.get(i).click();
+				break;
+			}
+		}
+
+		System.out.println("Actual end date edited");
+		Thread.sleep(3000);
 	}
 }

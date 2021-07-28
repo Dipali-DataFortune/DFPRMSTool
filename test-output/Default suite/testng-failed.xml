@@ -3,27 +3,41 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
+      <class name="com.PRMSTool.Tests.ClientScreenTest">
         <methods>
-          <include name="finish"/>
-          <include name="verifyclickOnAdd"/>
-          <include name="verifyclickOnUpdateButton"/>
-          <include name="verifydownloadFile"/>
-          <include name="verifyselectCalledDate"/>
-          <include name="verifysearch"/>
-          <include name="verifyeditOtherDetails"/>
+          <include name="verifydisplayActiveStatusList"/>
+          <include name="verifyaddStakeholderDetails"/>
+          <include name="verifyaddAgreementDetails"/>
           <include name="OpenBrowser"/>
-          <include name="verifyeditCompanyDetails"/>
-          <include name="verifyclickOnEditButton"/>
-          <include name="verifyuploadFile"/>
-          <include name="verifyclickOnCloudUpload"/>
-          <include name="verifyeditLastUpdatedDate"/>
-          <include name="verifyclickOnBackButton"/>
-          <include name="verifydeleteSalesLead"/>
-          <include name="verifyeditSalesLeadInformation"/>
-          <include name="verifyeditFUPDate"/>
+          <include name="verifydisplayPracticesBusinessUnit"/>
+          <include name="verifydisplayInactiveStatusList"/>
+          <include name="verifyeditStakeholder"/>
+          <include name="verifydownloadFile"/>
+          <include name="verifyclickOnAddNew"/>
+          <include name="verifyeditClientInformation"/>
+          <include name="verifyeditApproxStartDate"/>
+          <include name="verifydisplayLicenceBusinessUnit"/>
+          <include name="verifyeditAgreementSignedDate"/>
+          <include name="verifyselectApproxStartDate"/>
+          <include name="finish"/>
+          <include name="verifyclickOnAgreementDetails"/>
+          <include name="verifydeleteClient"/>
+          <include name="verifyeditAgreementDetails"/>
+          <include name="verifydisplayvResourcingBusinessUnit"/>
+          <include name="verifydisplaySafeGuardBusinessUnit"/>
+          <include name="verifyselectAgreementSignedDate"/>
+          <include name="verifydisplayROWBusinessUnit"/>
+          <include name="verifydisplayAllBusinessUnit"/>
+          <include name="verifyclickOnStakeholderDetails"/>
+          <include name="verifyclickOnUpdateClient"/>
+          <include name="verifyclickOnAdd"/>
+          <include name="verifyLogin"/>
+          <include name="verifydisplayAllStatusList"/>
+          <include name="verifyaddNewClientInformation"/>
+          <include name="verifyeditClient"/>
+          <include name="verifysearchClient"/>
         </methods>
-      </class> <!-- com.PRMSTool.Tests.SalesLeadScreenTest -->
+      </class> <!-- com.PRMSTool.Tests.ClientScreenTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
