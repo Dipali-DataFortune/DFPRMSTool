@@ -237,7 +237,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("27")) {
+			if (date.equalsIgnoreCase("13")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -262,7 +262,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("28")) {
+			if (date.equalsIgnoreCase("30")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -286,7 +286,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("29")) {
+			if (date.equalsIgnoreCase("16")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -310,7 +310,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("30")) {
+			if (date.equalsIgnoreCase("31")) {
 				allDates.get(i).click();
 				break;
 			}

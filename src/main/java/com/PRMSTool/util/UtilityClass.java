@@ -82,7 +82,7 @@ public class UtilityClass extends TestBase{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", addButton);
 		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 	}
 	
 	public void clickOnEditButton() {

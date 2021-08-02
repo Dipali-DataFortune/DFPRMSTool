@@ -221,7 +221,7 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.sendKeys("TestResource");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS440");
+		employeeID.sendKeys("DS448");
 		//Thread.sleep(5000);
 		
 		/*
@@ -380,12 +380,13 @@ public class ResourceScreenPage extends TestBase {
 	}
 	
 	public void searchResource(String name) throws InterruptedException {
-				
+		Thread.sleep(5000);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		highLightElement(driver, searchBox);
-		Thread.sleep(5000);
+		
 		searchBox.clear();
 		searchBox.sendKeys(name);
 

@@ -5,12 +5,37 @@
     <classes>
       <class name="com.PRMSTool.Tests.ClientScreenTest">
         <methods>
-          <include name="finish"/>
+          <include name="verifydisplayActiveStatusList"/>
           <include name="verifyaddStakeholderDetails"/>
           <include name="verifyaddAgreementDetails"/>
-          <include name="verifyaddNewClientInformation"/>
+          <include name="OpenBrowser"/>
+          <include name="verifydisplayPracticesBusinessUnit"/>
+          <include name="verifydisplayInactiveStatusList"/>
+          <include name="verifyeditStakeholder"/>
+          <include name="verifydownloadFile"/>
+          <include name="verifyclickOnAddNew"/>
+          <include name="verifyeditClientInformation"/>
+          <include name="verifyeditApproxStartDate"/>
+          <include name="verifydisplayLicenceBusinessUnit"/>
+          <include name="verifyeditAgreementSignedDate"/>
+          <include name="verifyselectApproxStartDate"/>
+          <include name="finish"/>
+          <include name="verifyclickOnAgreementDetails"/>
+          <include name="verifydeleteClient"/>
+          <include name="verifyeditAgreementDetails"/>
+          <include name="verifydisplayvResourcingBusinessUnit"/>
+          <include name="verifydisplaySafeGuardBusinessUnit"/>
+          <include name="verifyselectAgreementSignedDate"/>
+          <include name="verifydisplayROWBusinessUnit"/>
+          <include name="verifydisplayAllBusinessUnit"/>
           <include name="verifyclickOnStakeholderDetails"/>
-          <include name="OpenBrowserGrade"/>
+          <include name="verifyclickOnUpdateClient"/>
+          <include name="verifyclickOnAdd"/>
+          <include name="verifyLogin"/>
+          <include name="verifydisplayAllStatusList"/>
+          <include name="verifyaddNewClientInformation"/>
+          <include name="verifyeditClient"/>
+          <include name="verifysearchClient"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ClientScreenTest -->
     </classes>

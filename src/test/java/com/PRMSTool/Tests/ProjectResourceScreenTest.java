@@ -60,7 +60,7 @@ public class ProjectResourceScreenTest extends TestBase{
 	@Test(priority = 7, enabled=true)
 	public void verifysearch()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
-		prs.searchProjectResource("Test project");
+		prs.searchProjectResource("testProject");
 	}
 	
 	@Test(priority = 8, enabled=true)
@@ -84,7 +84,7 @@ public class ProjectResourceScreenTest extends TestBase{
 	@Test(priority = 11, enabled=true)
 	public void verifydelete()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
-		prs.deleteProjectResource("Test project");
+		prs.deleteProjectResource("testProject");
 	}
 	
 	@Test(priority = 12, enabled=true)

@@ -40,7 +40,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Appointlink Portal Solutions ')]")
 	WebElement client1;
 
-	@FindBy(xpath = "//mat-option/span[contains(text(),' test123 ')]")
+	@FindBy(xpath = "(//mat-option/span[contains(text(),' test ')])[1]")
 	WebElement client2;
 
 	@FindBy(xpath = "//mat-select[@placeholder='Project']")
@@ -49,7 +49,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
 	WebElement project1;
 
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Test project ')]")
+	@FindBy(xpath = "(//mat-option/span[contains(text(),' testProject ')])[1]")
 	WebElement project2;
 
 	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")
@@ -302,8 +302,15 @@ public class ProjectResourceScreenPage extends TestBase {
 	public void searchProjectResource(String name) throws InterruptedException {
 
 		Thread.sleep(5000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(searchBox));
+		
+		statusDropDown.click();
+		Thread.sleep(3000);
+		statusAll.click();
+		
+		Thread.sleep(3000);
+		
+	//	WebDriverWait wait = new WebDriverWait(driver, 60);
+	//	wait.until(ExpectedConditions.visibilityOf(searchBox));
 
 		highLightElement(driver, searchBox);
 		Thread.sleep(5000);
@@ -317,8 +324,11 @@ public class ProjectResourceScreenPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
-		Thread.sleep(5000);
+		statusDropDown.click();
+		Thread.sleep(3000);
+		statusAll.click();
 		
+		Thread.sleep(5000);
 		searchBox.clear();
 		searchBox.sendKeys(name);
 

@@ -358,6 +358,12 @@ public class ClientScreenPage extends TestBase {
 
 	@FindBy(xpath = "//span[contains(text(),'Update')]")
 	WebElement updateButton;
+	
+	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")
+	WebElement status;
+	
+	@FindBy(xpath = "//mat-option//span[contains(text(),' All ')]")
+	WebElement status1;
 
 	
 	public ClientScreenPage(WebDriver driver) {
@@ -423,6 +429,7 @@ public class ClientScreenPage extends TestBase {
 		}
 
 	public void deleteClient() throws InterruptedException {
+				
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
