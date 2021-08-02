@@ -930,8 +930,8 @@ public class ClientReviewPage extends TestBase{
 		yearMasterDropDown.click();
 		
 		wait.until(ExpectedConditions.visibilityOf(yearMasterAll));
-		//yearMasterAll.click();
-		staleElementClick(5, yearMasterAll, 60);
+		yearMasterAll.click();
+		//staleElementClick(5, yearMasterAll, 60);
 				
 		System.out.println("Displayed all the years");
 	}
