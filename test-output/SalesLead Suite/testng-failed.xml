@@ -5,33 +5,11 @@
     <classes>
       <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
         <methods>
-          <include name="verifyclickOnAdd"/>
-          <include name="verifyclickOnUpdateButton"/>
-          <include name="verifyselectLastUpdatedDate"/>
-          <include name="verifyselectCalledDate"/>
-          <include name="verifyaddCompanyDetails"/>
-          <include name="verifyselectFUPDate"/>
-          <include name="verifyeditOtherDetails"/>
-          <include name="OpenBrowser"/>
-          <include name="verifyLogin"/>
-          <include name="verifyeditCompanyDetails"/>
-          <include name="verifyclickOnEditButton"/>
-          <include name="verifyuploadFile"/>
-          <include name="verifyaddOtherDetails"/>
-          <include name="verifyeditLastUpdatedDate"/>
-          <include name="verifyclickOnBackButton"/>
-          <include name="verifyclickOnOtherDetails"/>
-          <include name="verifyaddSalesLeadInformation"/>
-          <include name="verifyclickOnSalesLead"/>
-          <include name="verifyeditFUPDate"/>
-          <include name="finish"/>
-          <include name="verifyclickOnAddNew"/>
-          <include name="verifydownloadFile"/>
-          <include name="verifysearch"/>
           <include name="verifyclickOnCloudUpload"/>
+          <include name="finish"/>
+          <include name="verifydownloadFile"/>
           <include name="verifydeleteSalesLead"/>
-          <include name="verifyeditSalesLeadInformation"/>
-          <include name="verifyclickOnCompanyDetails"/>
+          <include name="OpenBrowser"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.SalesLeadScreenTest -->
     </classes>

@@ -221,7 +221,7 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.sendKeys("TestResource");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS444");
+		employeeID.sendKeys("DS447");
 		//Thread.sleep(5000);
 		
 		/*

@@ -219,7 +219,7 @@ public class ProjectScreenPage extends TestBase{
 		//Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOf(projectName));
 		projectName.clear();
-		projectName.sendKeys("testProject");		
+		projectName.sendKeys("test Project");		
 	}
 	
 	public void selectStartDate() throws InterruptedException

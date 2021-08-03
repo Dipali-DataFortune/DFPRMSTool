@@ -8,7 +8,6 @@
           <include name="finish"/>
           <include name="verifydelete"/>
           <include name="verifydisplaySafeGuardBusinessUnit"/>
-          <include name="verifyclickOnProjectResource"/>
           <include name="verifydisplayInactiveStatusList"/>
           <include name="verifydisplayPracticesBusinessUnit"/>
           <include name="verifydisplayROWBusinessUnit"/>
@@ -23,12 +22,7 @@
           <include name="verifyaddProjectResourceDetails"/>
           <include name="verifyeditResourceInformation"/>
           <include name="verifydownloadFile"/>
-          <include name="verifyselectEndDate"/>
-          <include name="verifyclickOnAdd"/>
-          <include name="verifyLogin"/>
           <include name="verifyclickOnUpdateButton"/>
-          <include name="verifyclickOnAddNew"/>
-          <include name="verifyselectStartDate"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ProjectResourceScreenTest -->
     </classes>

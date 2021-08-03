@@ -5,23 +5,13 @@
     <classes>
       <class name="com.PRMSTool.Tests.ResourceScreenTest">
         <methods>
+          <include name="verifydownloadFile"/>
           <include name="finish"/>
-          <include name="verifyselectJoiningDate"/>
           <include name="verifydelete"/>
-          <include name="verifydisplayInactiveStatusList"/>
-          <include name="verifyselectBirthDate"/>
+          <include name="verifysearch"/>
+          <include name="verifyclickOnEditButton"/>
           <include name="verifydisplayAllStatusList"/>
           <include name="OpenBrowser"/>
-          <include name="verifyaddResourceDetails"/>
-          <include name="verifydisplayActiveStatusList"/>
-          <include name="verifydownloadFile"/>
-          <include name="verifyclickOnResource"/>
-          <include name="verifyeditResourceInformation"/>
-          <include name="verifyLogin"/>
-          <include name="verifysearch"/>
-          <include name="verifyclickOnAddNew"/>
-          <include name="verifyclickOnEditButton"/>
-          <include name="verifyclickOnAdd"/>
           <include name="verifyclickOnUpdateButton"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ResourceScreenTest -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ClientRevirewScreen Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="ClientRevirewScreen Test(failed)">
+    <classes>
+      <class name="com.PRMSTool.Tests.ClientReviewTest">
+        <methods>
+          <include name="finish"/>
+          <include name="verifydisplayYearAll"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- com.PRMSTool.Tests.ClientReviewTest -->
+    </classes>
+  </test> <!-- ClientRevirewScreen Test(failed) -->
+</suite> <!-- Failed suite [ClientRevirewScreen Suite] -->
