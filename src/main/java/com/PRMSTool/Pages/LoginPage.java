@@ -40,6 +40,27 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath="//a[contains(text(),'Proceed to 192.168.3.50 (unsafe)')]")
 	WebElement proceedLink;
 	
+	@FindBy(xpath="//button[@class='microsoft m-12 p-0 mat-raised-button ng-tns-c32-14 ng-star-inserted']")
+	WebElement signInWithMicrosoft;
+	
+	@FindBy(xpath="//input[@class='form-control ltr_override input ext-input text-box ext-text-box']")
+	WebElement emailID;
+	
+	@FindBy(xpath="//input[@name='passwd']")
+	WebElement passwordField;
+	
+	@FindBy(xpath="//input[@value='Sign in']")
+	WebElement signIn;
+	
+	@FindBy(xpath="//input[@id='KmsiCheckboxField']")
+	WebElement dontShowAgain;
+		
+	@FindBy(xpath="//input[@value='Yes']")
+	WebElement YesButton;
+	
+	@FindBy(xpath="//input[@value='Next']")
+	WebElement nextButton;
+		
 	public LoginPage(WebDriver driver)
 	{
 		this.driver = driver;
@@ -64,5 +85,37 @@ public class LoginPage extends TestBase {
 		js.executeScript("arguments[0].click()", loginButton);
 						
 		System.out.println(driver.getTitle());
+	}
+	
+	public void login()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(signInWithMicrosoft));
+		
+		signInWithMicrosoft.click();
+	}
+	
+	public void login1() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(advancedButton));
+				
+		advancedButton.click();
+		proceedLink.click();
+				
+		wait.until(ExpectedConditions.visibilityOf(signInWithMicrosoft));
+		
+		signInWithMicrosoft.click();
+		
+		Thread.sleep(5000);
+		wait.until(ExpectedConditions.visibilityOf(emailID));
+		emailID.sendKeys("dipali.vaidya@datafortune.com");
+		nextButton.click();
+		passwordField.sendKeys("Deep@1990");
+		
+		signIn.click();
+		
+		dontShowAgain.click();
+		YesButton.click();
 	}
 }

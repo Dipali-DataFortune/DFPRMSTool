@@ -370,53 +370,7 @@ public class ClientScreenPage extends TestBase {
 		this.driver = driver;
 	}
 
-	public void searchClientName() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(searchBox));
-
-		highLightElement(driver, searchBox);
-
-		searchBox.sendKeys("Van Ran" + Keys.ENTER);
-
-		Thread.sleep(5000);
-
-		wait.until(ExpectedConditions.visibilityOf(clientNameHRow));
-
-		boolean b = clientNameHRow.isDisplayed();
-
-		Assert.assertTrue(b);
-		System.out.println(clientNameHRow.getText());
-
-		wait.until(ExpectedConditions.visibilityOf(clientNameRow));
-
-		boolean b1 = clientNameRow.isDisplayed();
-
-		Assert.assertTrue(b1);
-		System.out.println(clientNameRow.getText());
-
-		/*
-		 * softAssert.assertEquals(srNo.isDisplayed(), true);
-		 * softAssert.assertEquals(clientNameHeader.isDisplayed(), true);
-		 * softAssert.assertEquals(BUnitHeader.isDisplayed(), true);
-		 * softAssert.assertEquals(ASignedDateHeader.isDisplayed(), true);
-		 * softAssert.assertEquals(statusHeader.isDisplayed(), true);
-		 * softAssert.assertEquals(actionsHeader.isDisplayed(), true);
-		 * 
-		 * System.out.println("Client Info verified");
-		 * 
-		 * softAssert.assertEquals(srNoDataRow.isDisplayed(), true);
-		 * softAssert.assertEquals(clientNameDataRow.isDisplayed(), true);
-		 * softAssert.assertEquals(BUnitDataRow.isDisplayed(), true);
-		 * softAssert.assertEquals(ASignedDateDataRow.isDisplayed(), true);
-		 * softAssert.assertEquals(statusDataRow.isDisplayed(), true);
-		 * softAssert.assertEquals(editButton.isDisplayed(), true);
-		 * softAssert.assertEquals(deleteButton.isDisplayed(), true);
-		 */
-	}
-
 	public void searchClient(String name) throws InterruptedException {
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.visibilityOf(searchBox));
 
@@ -814,7 +768,10 @@ public class ClientScreenPage extends TestBase {
 	public void editApproxStartDate() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(appSDateButton));
-		appSDateButton.click();
+//		appSDateButton.click();
+		
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click()", appSDateButton);
 
 		Thread.sleep(2000);
 
@@ -823,7 +780,8 @@ public class ClientScreenPage extends TestBase {
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("30")) {
-				allDates.get(i).click();
+			//	allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -868,7 +826,9 @@ public class ClientScreenPage extends TestBase {
 
 	public void clickOnStakeholderDetails() {
 		scrollToElement(stakeholder);
-		stakeholder.click();
+		//stakeholder.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", stakeholder);
 	}
 
 	public void addStakeholderDetails() throws InterruptedException {

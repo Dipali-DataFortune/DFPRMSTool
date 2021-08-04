@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [ProjectResourceScreen Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ProjectResourceScreen Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PRMSTool.Tests.ProjectResourceScreenTest">
+      <class name="com.PRMSTool.Tests.LoginTest">
         <methods>
           <include name="finish"/>
-          <include name="verifydelete"/>
-          <include name="verifydisplaySafeGuardBusinessUnit"/>
-          <include name="verifydisplayInactiveStatusList"/>
-          <include name="verifydisplayPracticesBusinessUnit"/>
-          <include name="verifydisplayROWBusinessUnit"/>
-          <include name="verifydisplayAllBusinessUnit"/>
-          <include name="verifydisplayActiveStatusList"/>
           <include name="OpenBrowser"/>
-          <include name="verifydisplayvResourcingBusinessUnit"/>
-          <include name="verifydisplayAllStatusList"/>
-          <include name="verifydisplayLicenceBusinessUnit"/>
-          <include name="verifyclickOnEditButton"/>
-          <include name="verifysearch"/>
-          <include name="verifyaddProjectResourceDetails"/>
-          <include name="verifyeditResourceInformation"/>
-          <include name="verifydownloadFile"/>
-          <include name="verifyclickOnUpdateButton"/>
+          <include name="login1"/>
         </methods>
-      </class> <!-- com.PRMSTool.Tests.ProjectResourceScreenTest -->
+      </class> <!-- com.PRMSTool.Tests.LoginTest -->
     </classes>
-  </test> <!-- ProjectResourceScreen Test(failed) -->
-</suite> <!-- Failed suite [ProjectResourceScreen Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

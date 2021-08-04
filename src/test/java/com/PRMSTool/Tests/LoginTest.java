@@ -26,4 +26,9 @@ public class LoginTest extends TestBase{
 		lp.login(prop.getProperty("email1"),prop.getProperty("password"));
 	}
 	
+	@Test(priority = 1, enabled=false)
+	public void login1()throws InterruptedException {
+		LoginPage lp = PageFactory.initElements(driver,LoginPage.class);
+		lp.login1();
+	}
 }
