@@ -43,7 +43,8 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//div[contains(text(),' Edit Client ')]")
 	WebElement editClient;
 
-	//@FindBy(xpath = "//button[@class='add-client-button fuse-white mt-24 mt-md-0 mat-raised-button']")
+	// @FindBy(xpath = "//button[@class='add-client-button fuse-white mt-24 mt-md-0
+	// mat-raised-button']")
 	@FindBy(xpath = "//button[@class='add-client-button fuse-white mt-md-0 mat-raised-button']")
 	WebElement addNew;
 
@@ -74,11 +75,9 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' USA ')]")
 	WebElement CountryUSA;
 
-
 	@FindBy(xpath = "//mat-option/span[contains(text(),' China ')]")
 	WebElement CountryChina;
 
-	
 	@FindBy(xpath = "//mat-select[@placeholder='State']")
 	WebElement stateDropdown;
 
@@ -87,7 +86,7 @@ public class ClientScreenPage extends TestBase {
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),' California ')]")
 	WebElement stateCalifornia;
-	
+
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Hebei ')]")
 	WebElement stateHebei;
 
@@ -99,11 +98,11 @@ public class ClientScreenPage extends TestBase {
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),'Mumbai')]")
 	WebElement cityMumbai;
-	
+
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Anguo ')]")
 	WebElement cityAnguo;
 
-	//@FindBy(xpath = "//mat-option/span[contains(text(),' San Francisco ')]")
+	// @FindBy(xpath = "//mat-option/span[contains(text(),' San Francisco ')]")
 	@FindBy(xpath = "(//mat-option/span[contains(text(),' San Francisco ')])[1]")
 	WebElement citySanFransisco;
 
@@ -171,6 +170,8 @@ public class ClientScreenPage extends TestBase {
 	WebElement allDatesButton;
 
 	@FindBy(xpath = "//table[@class='mat-calendar-table']//td")
+	// @FindBy(xpath =
+	// "//div[@class='mat-calendar-content']//table[@class='mat-calendar-table']//td")
 	List<WebElement> allDates;
 
 	@FindBy(xpath = "(//button[@class='mat-icon-button'])[2]")
@@ -358,49 +359,50 @@ public class ClientScreenPage extends TestBase {
 
 	@FindBy(xpath = "//span[contains(text(),'Update')]")
 	WebElement updateButton;
-	
+
 	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")
 	WebElement status;
-	
+
 	@FindBy(xpath = "//mat-option//span[contains(text(),' All ')]")
 	WebElement status1;
 
-	
 	public ClientScreenPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	public void searchClient(String name) throws InterruptedException {
-			WebDriverWait wait = new WebDriverWait(driver, 60);
-			wait.until(ExpectedConditions.visibilityOf(searchBox));
-
-			highLightElement(driver, searchBox);
-			Thread.sleep(5000);
-			searchBox.clear();
-			searchBox.sendKeys(name);
-
-			Thread.sleep(5000);
-		}
-
-	public void deleteClient() throws InterruptedException {
-				
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
+		highLightElement(driver, searchBox);
+
+		searchBox.clear();
+		searchBox.sendKeys(name);
+
 		Thread.sleep(5000);
+	}
+
+	public void deleteClient() throws InterruptedException {
+
+		Thread.sleep(5000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(searchBox));
+		
 		searchBox.clear();
 		searchBox.sendKeys("testNewClient");
 
 		Thread.sleep(3000);
 		deleteButton.click();
 
-		//wait.until(ExpectedConditions.visibilityOf(yesButton));
-		//yesButton.click();
+		// wait.until(ExpectedConditions.visibilityOf(yesButton));
+		// yesButton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", yesButton);
 
 		System.out.println("Client deleted successfully");
-		
+
 		searchBox.clear();
 		Thread.sleep(5000);
 	}
@@ -423,8 +425,8 @@ public class ClientScreenPage extends TestBase {
 		companyUrl.clear();
 		companyUrl.sendKeys("https://www.testone.com");
 
-		//refClientCode.clear();
-		//refClientCode.sendKeys("DF-4043");
+		// refClientCode.clear();
+		// refClientCode.sendKeys("DF-4043");
 
 		description.clear();
 		description.sendKeys("Test");
@@ -436,27 +438,27 @@ public class ClientScreenPage extends TestBase {
 		js.executeScript("arguments[0].click()", countryDropdown);
 		Thread.sleep(2000);
 		js.executeScript("arguments[0].click()", CountryChina);
-		//countryDropdown.click();
-		//CountryChina.click();
-		
+		// countryDropdown.click();
+		// CountryChina.click();
+
 		wait.until(ExpectedConditions.visibilityOf(stateDropdown));
 
 		js.executeScript("arguments[0].click()", stateDropdown);
 		Thread.sleep(2000);
-		//js.executeScript("arguments[0].click()", stateCalifornia);
-		//stateDropdown.click();
-		//stateCalifornia.click();
-		//stateBeijing.click();
+		// js.executeScript("arguments[0].click()", stateCalifornia);
+		// stateDropdown.click();
+		// stateCalifornia.click();
+		// stateBeijing.click();
 		js.executeScript("arguments[0].click()", stateHebei);
-		//stateHebei.click();
+		// stateHebei.click();
 
 		scrollToElement(cityDropdown);
-		//js.executeScript("arguments[0].click()", cityDropdown);
-		//Thread.sleep(2000);
-		//js.executeScript("arguments[0].click()", citySanFransisco);
+		// js.executeScript("arguments[0].click()", cityDropdown);
+		// Thread.sleep(2000);
+		// js.executeScript("arguments[0].click()", citySanFransisco);
 		cityDropdown.click();
-		//citySanFransisco.click();
-		//cityAnguo.click();
+		// citySanFransisco.click();
+		// cityAnguo.click();
 		js.executeScript("arguments[0].click()", cityAnguo);
 
 		zip.clear();
@@ -741,7 +743,7 @@ public class ClientScreenPage extends TestBase {
 		System.out.println("Start date selected");
 		Thread.sleep(5000);
 	}
-	
+
 	public void editAgreementSignedDate() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(allDatesButton));
@@ -769,8 +771,8 @@ public class ClientScreenPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(appSDateButton));
 //		appSDateButton.click();
-		
-		JavascriptExecutor js=(JavascriptExecutor)driver;
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", appSDateButton);
 
 		Thread.sleep(2000);
@@ -780,7 +782,7 @@ public class ClientScreenPage extends TestBase {
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("30")) {
-			//	allDates.get(i).click();
+				// allDates.get(i).click();
 				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
@@ -826,7 +828,7 @@ public class ClientScreenPage extends TestBase {
 
 	public void clickOnStakeholderDetails() {
 		scrollToElement(stakeholder);
-		//stakeholder.click();
+		// stakeholder.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", stakeholder);
 	}
@@ -854,7 +856,7 @@ public class ClientScreenPage extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", stakeholderAdd);
 		Thread.sleep(5000);
-	}	
+	}
 
 	public void downloadFile() throws InterruptedException {
 		String downloadFilePath = "C:\\Users\\Dipali.vaidya\\Downloads";
@@ -872,5 +874,5 @@ public class ClientScreenPage extends TestBase {
 		Thread.sleep(3000);
 
 		System.out.println("Client file downloaded successfully");
-	}	
+	}
 }

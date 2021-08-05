@@ -49,7 +49,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
 	WebElement project1;
 
-	@FindBy(xpath = "(//mat-option/span[contains(text(),' testProject ')])[1]")
+	@FindBy(xpath = "(//mat-option/span[contains(text(),' test Project ')])[1]")
 	WebElement project2;
 
 	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")
@@ -302,13 +302,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	public void searchProjectResource(String name) throws InterruptedException {
 
 		Thread.sleep(5000);
-		
-		statusDropDown.click();
-		Thread.sleep(3000);
-		statusAll.click();
-		
-		Thread.sleep(3000);
-		
+			
 	//	WebDriverWait wait = new WebDriverWait(driver, 60);
 	//	wait.until(ExpectedConditions.visibilityOf(searchBox));
 

@@ -359,7 +359,7 @@ public class ResourceScreenPage extends TestBase {
 		 
 		  //Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("AUG 2021"))
+			while(!DateMonths.getText().contains("OCT 2021"))
 			{
 				//birthDateNavButton.click();			
 				js.executeScript("arguments[0].click()", DateNavButton);
@@ -369,7 +369,7 @@ public class ResourceScreenPage extends TestBase {
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("24")) {
+				if (date.equalsIgnoreCase("25")) {
 					allDates.get(i).click();
 					break;
 				}

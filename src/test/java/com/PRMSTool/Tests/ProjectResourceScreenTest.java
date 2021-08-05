@@ -56,47 +56,48 @@ public class ProjectResourceScreenTest extends TestBase{
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnAdd();
 	}
-		
+	
 	@Test(priority = 7, enabled=true)
+	public void verifydisplayAllStatusList()throws InterruptedException {
+		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
+		util.displayAllStatusList();
+	}
+		
+	@Test(priority = 8, enabled=true)
 	public void verifysearch()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
-		prs.searchProjectResource("testProject");
+		prs.searchProjectResource("test Project");
 	}
 	
-	@Test(priority = 8, enabled=true)
+	@Test(priority = 9, enabled=true)
 	public void verifyclickOnEditButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnEditButton();
 	}
 	
-	@Test(priority = 9, enabled=true)
+	@Test(priority = 10, enabled=true)
 	public void verifyeditResourceInformation()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
 		prs.editProjectResourceInformation();
 	}
 	
-	@Test(priority = 10, enabled=true)
+	@Test(priority = 11, enabled=true)
 	public void verifyclickOnUpdateButton()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
 		util.clickOnUpdateButton();
 	}
 	
-	@Test(priority = 11, enabled=true)
+	@Test(priority = 12, enabled=true)
 	public void verifydelete()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
-		prs.deleteProjectResource("testProject");
-	}
-	
-	@Test(priority = 12, enabled=true)
-	public void verifydownloadFile()throws InterruptedException {
-		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
-		util.downloadFile();
+		verifydisplayAllStatusList();
+		prs.deleteProjectResource("test Project");
 	}
 	
 	@Test(priority = 13, enabled=true)
-	public void verifydisplayAllStatusList()throws InterruptedException {
+	public void verifydownloadFile()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
-		util.displayAllStatusList();
+		util.downloadFile();
 	}
 	
 	@Test(priority = 14, enabled=true)

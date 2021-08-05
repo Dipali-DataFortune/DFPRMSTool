@@ -229,7 +229,7 @@ public class ClientReviewPage extends TestBase{
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 2021 ')]")
 	WebElement year;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 January ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 February ')]")
 	WebElement date1;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 2022 ')]")
@@ -280,7 +280,12 @@ public class ClientReviewPage extends TestBase{
 		// driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 		Thread.sleep(5000);
+		
+		yearMasterDropDown.click();
+		yearMasterAll.click();
 	
+		Thread.sleep(3000);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
@@ -528,13 +533,15 @@ public class ClientReviewPage extends TestBase{
 	{
 		Thread.sleep(3000);
 		
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
 				
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterJanuary1));
-		dateMasterJanuary1.click();
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterJanuary1));
+		//dateMasterJanuary1.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", dateMasterJanuary1);
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 January");	
 	}
@@ -543,16 +550,16 @@ public class ClientReviewPage extends TestBase{
 	{
 		Thread.sleep(3000);
 				
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterDropDown));
 		
 		dateMasterDropDown.click();
-		//Thread.sleep(3000);
-		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterJanuary2));
-		dateMasterJanuary2.click();
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].click()", dateMasterJanuary2);
+				
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterJanuary2));
+		//dateMasterJanuary2.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", dateMasterJanuary2);
+		Thread.sleep(3000);
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-30 January");		
 	}
@@ -566,9 +573,13 @@ public class ClientReviewPage extends TestBase{
 				
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterFebruary1));
-		dateMasterFebruary1.click();
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterFebruary1));
+		//dateMasterFebruary1.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", dateMasterFebruary1);
 				
+		Thread.sleep(3000);
+		
 		System.out.println("Displayed all the client reviews added in the month of 1-15 February");	
 				
 	}
@@ -583,10 +594,12 @@ public class ClientReviewPage extends TestBase{
 		dateMasterDropDown.click();
 		//Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterFebruary2));
-		dateMasterFebruary2.click();
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].click()", dateMasterFebruary2);
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterFebruary2));
+		//dateMasterFebruary2.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", dateMasterFebruary2);
+		
+		Thread.sleep(3000);
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-28 February");		
 	}
@@ -603,7 +616,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterMarch1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterMarch1));
 		dateMasterMarch1.click();		
 		
 		System.out.println("Displayed all the client reviews added in the month of 1-15 March");
@@ -618,7 +631,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterMarch2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterMarch2));
 		dateMasterMarch2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-31 March");		
@@ -636,7 +649,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterApril1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterApril1));
 		dateMasterApril1.click();
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 April");				
@@ -651,7 +664,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterApril2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterApril2));
 		dateMasterApril2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-30 April");		
@@ -669,7 +682,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterMay1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterMay1));
 		dateMasterMay1.click();
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 May");		
@@ -684,7 +697,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterMay2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterMay2));
 		dateMasterMay2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-31 May");		
@@ -702,7 +715,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterJune1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterJune1));
 		dateMasterJune1.click();
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 June");	
@@ -717,7 +730,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterJune2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterJune2));
 		dateMasterJune2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-30 June");		
@@ -735,7 +748,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterJuly1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterJuly1));
 		dateMasterJuly1.click();
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 July");		
@@ -750,7 +763,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterJuly2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterJuly2));
 		dateMasterJuly2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-31 July");		
@@ -768,7 +781,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterAugust1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterAugust1));
 		dateMasterAugust1.click();
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 August");	
@@ -784,7 +797,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterAugust2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterAugust2));
 		dateMasterAugust2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-31 August");		
@@ -802,7 +815,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterSeptember1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterSeptember1));
 		dateMasterSeptember1.click();
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 September");			
@@ -817,7 +830,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterSeptember2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterSeptember2));
 		dateMasterSeptember2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-30 September");		
@@ -835,7 +848,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterOctober1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterOctober1));
 		dateMasterOctober1.click();
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 October");		
@@ -850,7 +863,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterOctober2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterOctober2));
 		dateMasterOctober2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-31 October");		
@@ -868,7 +881,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterNovember1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterNovember1));
 		dateMasterNovember1.click();
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 November");		
@@ -883,7 +896,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterNovember2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterNovember2));
 		dateMasterNovember2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-30 November");		
@@ -901,7 +914,7 @@ public class ClientReviewPage extends TestBase{
 	
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterDecember1));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterDecember1));
 		dateMasterDecember1.click();
 				
 		System.out.println("Displayed all the client reviews added in the month of 1-15 December");		
@@ -916,7 +929,7 @@ public class ClientReviewPage extends TestBase{
 		
 		dateMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(dateMasterDecember2));
+		//wait.until(ExpectedConditions.visibilityOf(dateMasterDecember2));
 		dateMasterDecember2.click();
 		
 		System.out.println("Displayed all the client reviews added in the month of 15-31 December");		
@@ -929,7 +942,7 @@ public class ClientReviewPage extends TestBase{
 		
 		yearMasterDropDown.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(yearMasterAll));
+		//wait.until(ExpectedConditions.visibilityOf(yearMasterAll));
 		yearMasterAll.click();
 		//staleElementClick(5, yearMasterAll, 60);
 				

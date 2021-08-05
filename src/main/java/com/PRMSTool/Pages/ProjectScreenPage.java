@@ -62,7 +62,7 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "(//button[@class='mat-icon-button' and @type='button'])[4]")
 	WebElement ActualEndDate;
 
-	@FindBy(xpath = "//table[@class='mat-calendar-table']//td")
+	@FindBy(xpath = "//div[@class='mat-calendar-content']//table[@class='mat-calendar-table']//td")
 	List<WebElement> allDates;
 	
 	@FindBy(xpath = "//input[@placeholder='Number Of Resorces']")
@@ -222,42 +222,87 @@ public class ProjectScreenPage extends TestBase{
 		projectName.sendKeys("test Project");		
 	}
 	
-	public void selectStartDate() throws InterruptedException
-	{
+	public void selectStartDate() throws InterruptedException {
+		ProjectDetails.click();
+		
+		scrollToElement(startDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(startDate));
-		//highLightElement(driver, startDate);
+
+		highLightElement(driver, startDate);
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", startDate);
-		//startDate.click();
-		
-		//Thread.sleep(2000);
-			
+
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("SEP 2021")) {
+			 js.executeScript("arguments[0].click()", DateNavButton);
+			//staleElementClick(5, DateNavButton, 60);
+		}
+
 		int total_nodes = allDates.size();
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("13")) {
+			if (date.equalsIgnoreCase("17")) {
 				allDates.get(i).click();
 				break;
 			}
 		}
-		
+
 		System.out.println("Start date selected");
-		//Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 	
-	public void selectEndDate() throws InterruptedException
-	{
+	public void selectEndDate() throws InterruptedException {
+		scrollToElement(endDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(endDate));
-		//highLightElement(driver, endDate);
+
+		highLightElement(driver, endDate);
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", endDate);
-		//endDate.click();
-		
-		//Thread.sleep(2000);
-			
+
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("DEC 2021")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
+			//staleElementClick(5, DateNavButton, 60);
+		}
+
+		int total_nodes = allDates.size();
+
+		for (int i = 0; i < total_nodes; i++) {
+			String date = allDates.get(i).getText();
+			if (date.equalsIgnoreCase("24")) {
+				allDates.get(i).click();
+				break;
+			}
+		}
+
+		System.out.println("End date selected");
+		Thread.sleep(3000);
+	}
+	
+	public void selectActualStartDate() throws InterruptedException {
+		scrollToElement(ActualStartDate);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(ActualStartDate));
+
+		highLightElement(driver, ActualStartDate);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", ActualStartDate);
+
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("SEP 2021")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
+			//staleElementClick(5, DateNavButton, 60);
+		}
+
 		int total_nodes = allDates.size();
 
 		for (int i = 0; i < total_nodes; i++) {
@@ -267,56 +312,40 @@ public class ProjectScreenPage extends TestBase{
 				break;
 			}
 		}
-		
-		System.out.println("End date selected");
-		//Thread.sleep(5000);
-	}
-	
-	public void selectActualStartDate() throws InterruptedException
-	{
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(ActualStartDate));
-		//highLightElement(driver, ApproxStartDate);
-		//AStartDate.click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", ActualStartDate);
-		//Thread.sleep(2000);
-			
-		int total_nodes = allDates.size();
 
-		for (int i = 0; i < total_nodes; i++) {
-			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("16")) {
-				allDates.get(i).click();
-				break;
-			}
-		}
-		
 		System.out.println("Actual start date selected");
+		Thread.sleep(3000);
 	}
 	
-	public void selectActualEndDate() throws InterruptedException
-	{
+	public void selectActualEndDate() throws InterruptedException {
+		scrollToElement(ActualEndDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(ActualEndDate));
-//		highLightElement(driver, ApproxEndDate);
-		//AEndDate.click();
+
+		highLightElement(driver, ActualEndDate);
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", ActualEndDate);
-		
-		//Thread.sleep(2000);
-			
+
+		Thread.sleep(2000);
+
+		while (!DateMonths.getText().contains("DEC 2021")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
+			//staleElementClick(5, DateNavButton, 60);
+		}
+
 		int total_nodes = allDates.size();
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("31")) {
+			if (date.equalsIgnoreCase("29")) {
 				allDates.get(i).click();
 				break;
 			}
 		}
-		
+
 		System.out.println("Actual end date selected");
+		Thread.sleep(3000);
 	}
 	
 	public void addProjectDetails1() throws InterruptedException
@@ -333,9 +362,9 @@ public class ProjectScreenPage extends TestBase{
 		
 		scrollToElement(ProjectManager);
 		//wait.until(ExpectedConditions.elementToBeClickable(ProjectManager));
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].click()", PM);
-		ProjectManager.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", ProjectManager);
+		//ProjectManager.click();
 		ProjectManager1.click();
 		//Thread.sleep(3000);
 	
@@ -380,8 +409,9 @@ public class ProjectScreenPage extends TestBase{
 		wait.until(ExpectedConditions.elementToBeClickable(billing));
 		
 		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		
-		billing.click();
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click()", billing);
+		//billing.click();
 		
 		WebDriverWait wait1=new WebDriverWait(driver, 60);
 		wait1.until(ExpectedConditions.elementToBeClickable(reviewCycle));
@@ -421,11 +451,13 @@ public class ProjectScreenPage extends TestBase{
 	}
 	
 	public void deleteProject(String name) throws InterruptedException {
+		Thread.sleep(5000);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(searchBox));
 
 		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		Thread.sleep(5000);
+		
 		searchBox.clear();
 		searchBox.sendKeys(name);
 		
@@ -537,7 +569,6 @@ public class ProjectScreenPage extends TestBase{
 	public void editStartDate() throws InterruptedException {
 		ProjectDetails.click();
 		
-		scrollToElement(startDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(startDate));
 
@@ -548,8 +579,9 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("AUG 2021")) {
-			 js.executeScript("arguments[0].click()", DateNavButton);
+		while (!DateMonths.getText().contains("SEPT 2021")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
+			//DateNavButton.click();
 			//staleElementClick(5, DateNavButton, 60);
 		}
 
@@ -568,7 +600,7 @@ public class ProjectScreenPage extends TestBase{
 	}
 	
 	public void editEndDate() throws InterruptedException {
-		scrollToElement(endDate);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(endDate));
 
@@ -599,7 +631,7 @@ public class ProjectScreenPage extends TestBase{
 	}
 	
 	public void editActualStartDate() throws InterruptedException {
-		scrollToElement(ActualStartDate);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(ActualStartDate));
 
@@ -610,7 +642,7 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("AUG 2021")) {
+		while (!DateMonths.getText().contains("SEPT 2021")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
 		}
@@ -630,7 +662,7 @@ public class ProjectScreenPage extends TestBase{
 	}
 	
 	public void editActualEndDate() throws InterruptedException {
-		scrollToElement(ActualEndDate);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(ActualEndDate));
 
