@@ -3,36 +3,34 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PRMSTool.Tests.ClientReviewTest">
+      <class name="com.PRMSTool.Tests.ProjectResourceScreenTest">
         <methods>
-          <include name="verifydisplayDateJuly1"/>
-          <include name="verifydisplayDateDecember1"/>
-          <include name="OpenBrowser"/>
-          <include name="verifydisplayDateSeptember"/>
-          <include name="verifydisplayDateJuly"/>
-          <include name="verifydisplayDateNovember1"/>
-          <include name="verifydisplayDateMarch"/>
-          <include name="verifydisplayDateNovember"/>
-          <include name="verifydisplayYearAll"/>
-          <include name="verifydisplayDateJune1"/>
-          <include name="verifydisplayDateFebruary"/>
-          <include name="verifydisplayDateMay"/>
-          <include name="verifydisplayDateMay1"/>
           <include name="finish"/>
-          <include name="verifydisplayDateAugust1"/>
-          <include name="verifydisplayDateMarch1"/>
-          <include name="verifydisplayDateJanuary1"/>
-          <include name="verifydisplayDateDecember"/>
-          <include name="verifydisplayDateApril"/>
-          <include name="verifydisplayDateApril1"/>
-          <include name="verifydisplayDateOctober1"/>
-          <include name="verifydisplayDateFebruary1"/>
-          <include name="verifydisplayDateSeptember1"/>
-          <include name="verifydisplayDateOctober"/>
-          <include name="verifydisplayDateAugust"/>
-          <include name="verifydisplayDateJune"/>
+          <include name="verifydelete"/>
+          <include name="verifydisplaySafeGuardBusinessUnit"/>
+          <include name="verifyclickOnProjectResource"/>
+          <include name="verifydisplayInactiveStatusList"/>
+          <include name="verifydisplayPracticesBusinessUnit"/>
+          <include name="verifydisplayROWBusinessUnit"/>
+          <include name="verifydisplayAllBusinessUnit"/>
+          <include name="verifydisplayActiveStatusList"/>
+          <include name="OpenBrowser"/>
+          <include name="verifydisplayvResourcingBusinessUnit"/>
+          <include name="verifydisplayAllStatusList"/>
+          <include name="verifydisplayLicenceBusinessUnit"/>
+          <include name="verifyclickOnEditButton"/>
+          <include name="verifysearch"/>
+          <include name="verifyaddProjectResourceDetails"/>
+          <include name="verifyeditResourceInformation"/>
+          <include name="verifydownloadFile"/>
+          <include name="verifyselectEndDate"/>
+          <include name="verifyclickOnAdd"/>
+          <include name="verifyLogin"/>
+          <include name="verifyclickOnUpdateButton"/>
+          <include name="verifyclickOnAddNew"/>
+          <include name="verifyselectStartDate"/>
         </methods>
-      </class> <!-- com.PRMSTool.Tests.ClientReviewTest -->
+      </class> <!-- com.PRMSTool.Tests.ProjectResourceScreenTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

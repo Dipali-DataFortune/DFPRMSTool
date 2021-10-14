@@ -45,73 +45,73 @@ public class ClientReviewPage extends TestBase{
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 January ')]")
 	WebElement dateMasterJanuary1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 January ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-31 January ')]")
 	WebElement dateMasterJanuary2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 February ')]")
 	WebElement dateMasterFebruary1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-28 February ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-28 February ')]")
 	WebElement dateMasterFebruary2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 March ')]")
 	WebElement dateMasterMarch1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 March ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-31 March ')]")
 	WebElement dateMasterMarch2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 April ')]")
 	WebElement dateMasterApril1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 April ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-30 April ')]")
 	WebElement dateMasterApril2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 May ')]")
 	WebElement dateMasterMay1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 May ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-31 May ')]")
 	WebElement dateMasterMay2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 June ')]")
 	WebElement dateMasterJune1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 June ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-30 June ')]")
 	WebElement dateMasterJune2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 July ')]")
 	WebElement dateMasterJuly1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 July ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-31 July ')]")
 	WebElement dateMasterJuly2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 August ')]")
 	WebElement dateMasterAugust1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 August ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-31 August ')]")
 	WebElement dateMasterAugust2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 September ')]")
 	WebElement dateMasterSeptember1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 September ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-30 September ')]")
 	WebElement dateMasterSeptember2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 October ')]")
 	WebElement dateMasterOctober1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 October ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-31 October ')]")
 	WebElement dateMasterOctober2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 November ')]")
 	WebElement dateMasterNovember1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-30 November ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-30 November ')]")
 	WebElement dateMasterNovember2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 1-15 December ')]")
 	WebElement dateMasterDecember1;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 15-31 December ')]")
+	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' 16-31 December ')]")
 	WebElement dateMasterDecember2;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' All ')]")
@@ -943,8 +943,8 @@ public class ClientReviewPage extends TestBase{
 		yearMasterDropDown.click();
 		
 		//wait.until(ExpectedConditions.visibilityOf(yearMasterAll));
-		yearMasterAll.click();
-		//staleElementClick(5, yearMasterAll, 60);
+		//yearMasterAll.click();
+		staleElementClick(7, yearMasterAll, 60);
 				
 		System.out.println("Displayed all the years");
 	}

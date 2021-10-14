@@ -417,7 +417,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("AUG 2021")) {
+		while (!DateMonths.getText().contains("NOV 2021")) {
 			// js.executeScript("arguments[0].click()", DateNavButton);
 			staleElementClick(5, DateNavButton, 60);
 		}
@@ -537,7 +537,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("AUG 2021")) {
+		while (!DateMonths.getText().contains("NOV 2021")) {
 			// js.executeScript("arguments[0].click()", DateNavButton);
 			staleElementClick(5, DateNavButton, 60);
 		}
@@ -546,7 +546,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("27")) {
+			if (date.equalsIgnoreCase("26")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -568,7 +568,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("AUG 2021")) {
+		while (!DateMonths.getText().contains("NOV 2021")) {
 			// js.executeScript("arguments[0].click()", DateNavButton);
 			staleElementClick(5, DateNavButton, 60);
 		}
@@ -577,7 +577,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("27")) {
+			if (date.equalsIgnoreCase("30")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -668,7 +668,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("SEP 2021")) {
+		while (!DateMonths.getText().contains("DEC 2021")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			// staleElementClick(5, DateNavButton, 60);
 		}
@@ -677,7 +677,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("24")) {
+			if (date.equalsIgnoreCase("6")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -771,7 +771,7 @@ public class SalesLeadScreenPage extends TestBase {
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("OCT 2021")) {
+		while (!DateMonths.getText().contains("DEC 2021")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			// staleElementClick(5, DateNavButton, 60);
 		}
