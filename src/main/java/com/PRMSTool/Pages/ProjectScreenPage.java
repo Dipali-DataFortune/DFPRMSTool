@@ -246,7 +246,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("17")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -277,7 +278,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("24")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -308,7 +310,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("26")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -339,7 +342,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("29")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -590,7 +594,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("24")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -621,7 +626,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("27")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -643,8 +649,8 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("NOV 2021")) {
-			js.executeScript("arguments[0].click()", DateNavButton);
-			//staleElementClick(5, DateNavButton, 60);
+			//js.executeScript("arguments[0].click()", DateNavButton);
+			staleElementClick(5, DateNavButton, 60);
 		}
 
 		int total_nodes = allDates.size();
@@ -652,7 +658,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("30")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -683,7 +690,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("31")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}

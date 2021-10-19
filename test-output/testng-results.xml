@@ -1,141 +1,1386 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="30" passed="30" failed="0" skipped="0">
+<testng-results ignored="0" total="156" passed="147" failed="9" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-14T18:21:52 IST" name="Default suite" finished-at="2021-10-14T18:25:46 IST" duration-ms="233809">
+  <suite started-at="2021-10-19T14:25:34 IST" name="Suite" finished-at="2021-10-19T14:25:34 IST" duration-ms="0">
     <groups>
     </groups>
-    <test started-at="2021-10-14T18:21:52 IST" name="Default test" finished-at="2021-10-14T18:25:46 IST" duration-ms="233809">
+  </suite> <!-- Suite -->
+  <suite started-at="2021-10-19T14:01:09 IST" name="ProjectScreen Suite" finished-at="2021-10-19T14:07:11 IST" duration-ms="361331">
+    <groups>
+    </groups>
+    <test started-at="2021-10-19T14:01:09 IST" name="ProjectScreen Test" finished-at="2021-10-19T14:07:11 IST" duration-ms="361331">
       <class name="com.PRMSTool.Tests.ProjectScreenTest">
-        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:21:49 IST" name="OpenBrowser" finished-at="2021-10-14T18:21:52 IST" duration-ms="2955" status="PASS">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:07 IST" name="OpenBrowser" finished-at="2021-10-19T14:01:09 IST" duration-ms="2499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
-        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:21:52 IST" name="verifyLogin" finished-at="2021-10-14T18:22:01 IST" duration-ms="9383" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:09 IST" name="verifyLogin" finished-at="2021-10-19T14:01:19 IST" duration-ms="9394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifyclickOnProject()[pri:1, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:01 IST" name="verifyclickOnProject" finished-at="2021-10-14T18:22:06 IST" duration-ms="5052" status="PASS">
+        <test-method signature="verifyclickOnProject()[pri:1, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:19 IST" name="verifyclickOnProject" finished-at="2021-10-19T14:01:24 IST" duration-ms="5048" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyclickOnProject -->
-        <test-method signature="verifyclickOnAddNew()[pri:2, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:06 IST" name="verifyclickOnAddNew" finished-at="2021-10-14T18:22:12 IST" duration-ms="5184" status="PASS">
+        <test-method signature="verifyclickOnAddNew()[pri:2, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:24 IST" name="verifyclickOnAddNew" finished-at="2021-10-19T14:01:29 IST" duration-ms="5194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyclickOnAddNew -->
-        <test-method signature="verifyaddProjectDetails()[pri:3, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:12 IST" name="verifyaddProjectDetails" finished-at="2021-10-14T18:22:17 IST" duration-ms="5346" status="PASS">
+        <test-method signature="verifyaddProjectDetails()[pri:3, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:29 IST" name="verifyaddProjectDetails" finished-at="2021-10-19T14:01:34 IST" duration-ms="5325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyaddProjectDetails -->
-        <test-method signature="verifyselectStartDate()[pri:4, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:17 IST" name="verifyselectStartDate" finished-at="2021-10-14T18:22:23 IST" duration-ms="5810" status="PASS">
+        <test-method signature="verifyselectStartDate()[pri:4, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:34 IST" name="verifyselectStartDate" finished-at="2021-10-19T14:01:40 IST" duration-ms="5734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyselectStartDate -->
-        <test-method signature="verifyselectEndDate()[pri:5, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:23 IST" name="verifyselectEndDate" finished-at="2021-10-14T18:22:29 IST" duration-ms="5889" status="PASS">
+        <test-method signature="verifyselectEndDate()[pri:5, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:40 IST" name="verifyselectEndDate" finished-at="2021-10-19T14:01:46 IST" duration-ms="5839" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyselectEndDate -->
-        <test-method signature="verifyselectActualStartDate()[pri:6, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:29 IST" name="verifyselectActualStartDate" finished-at="2021-10-14T18:22:34 IST" duration-ms="5855" status="PASS">
+        <test-method signature="verifyselectActualStartDate()[pri:6, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:46 IST" name="verifyselectActualStartDate" finished-at="2021-10-19T14:01:52 IST" duration-ms="5788" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyselectActualStartDate -->
-        <test-method signature="verifyselectActualEndDate()[pri:7, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:34 IST" name="verifyselectActualEndDate" finished-at="2021-10-14T18:22:40 IST" duration-ms="5966" status="PASS">
+        <test-method signature="verifyselectActualEndDate()[pri:7, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:52 IST" name="verifyselectActualEndDate" finished-at="2021-10-19T14:01:58 IST" duration-ms="5925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyselectActualEndDate -->
-        <test-method signature="verifyaddProjectDetails1()[pri:8, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:40 IST" name="verifyaddProjectDetails1" finished-at="2021-10-14T18:22:45 IST" duration-ms="4544" status="PASS">
+        <test-method signature="verifyaddProjectDetails1()[pri:8, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:01:58 IST" name="verifyaddProjectDetails1" finished-at="2021-10-19T14:02:02 IST" duration-ms="4504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyaddProjectDetails1 -->
-        <test-method signature="verifyaddBillingDetails()[pri:9, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:45 IST" name="verifyaddBillingDetails" finished-at="2021-10-14T18:22:46 IST" duration-ms="1210" status="PASS">
+        <test-method signature="verifyaddBillingDetails()[pri:9, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:02:02 IST" name="verifyaddBillingDetails" finished-at="2021-10-19T14:02:03 IST" duration-ms="1182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyaddBillingDetails -->
-        <test-method signature="verifyclickOnAdd()[pri:10, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:46 IST" name="verifyclickOnAdd" finished-at="2021-10-14T18:22:51 IST" duration-ms="5091" status="PASS">
+        <test-method signature="verifyclickOnAdd()[pri:10, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:02:03 IST" name="verifyclickOnAdd" finished-at="2021-10-19T14:02:08 IST" duration-ms="5086" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyclickOnAdd -->
-        <test-method signature="verifydisplayAllStatusList()[pri:11, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:22:51 IST" name="verifydisplayAllStatusList" finished-at="2021-10-14T18:23:01 IST" duration-ms="10190" status="PASS">
+        <test-method signature="verifydisplayAllStatusList()[pri:11, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:02:08 IST" name="verifydisplayAllStatusList" finished-at="2021-10-19T14:02:19 IST" duration-ms="10190" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydisplayAllStatusList -->
-        <test-method signature="verifysearch()[pri:12, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:23:01 IST" name="verifysearch" finished-at="2021-10-14T18:23:09 IST" duration-ms="7250" status="PASS">
+        <test-method signature="verifysearch()[pri:12, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:02:19 IST" name="verifysearch" finished-at="2021-10-19T14:02:26 IST" duration-ms="7247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifysearch -->
-        <test-method signature="verifyclickOnEditButton()[pri:13, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:23:09 IST" name="verifyclickOnEditButton" finished-at="2021-10-14T18:23:09 IST" duration-ms="95" status="PASS">
+        <test-method signature="verifyclickOnEditButton()[pri:13, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:02:26 IST" name="verifyclickOnEditButton" finished-at="2021-10-19T14:02:26 IST" duration-ms="97" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyclickOnEditButton -->
-        <test-method signature="verifyeditProjectInformation()[pri:14, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:23:09 IST" name="verifyeditProjectInformation" finished-at="2021-10-14T18:23:17 IST" duration-ms="8214" status="PASS">
+        <test-method signature="verifyeditProjectInformation()[pri:14, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:02:26 IST" name="verifyeditProjectInformation" finished-at="2021-10-19T14:02:35 IST" duration-ms="8666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyeditProjectInformation -->
-        <test-method signature="verifyeditStartDate()[pri:15, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:23:17 IST" name="verifyeditStartDate" finished-at="2021-10-14T18:23:46 IST" duration-ms="29381" status="PASS">
+        <test-method signature="verifyeditStartDate()[pri:15, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:02:35 IST" name="verifyeditStartDate" finished-at="2021-10-19T14:03:30 IST" duration-ms="55362" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:63162}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fa26956ff4695b835f8bab26b021a86c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:63162}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fa26956ff4695b835f8bab26b021a86c
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
+at com.PRMSTool.Pages.ProjectScreenPage.editStartDate(ProjectScreenPage.java:595)
+at com.PRMSTool.Tests.ProjectScreenTest.verifyeditStartDate(ProjectScreenTest.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1213)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyeditStartDate -->
-        <test-method signature="verifyeditEndDate()[pri:16, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:23:46 IST" name="verifyeditEndDate" finished-at="2021-10-14T18:24:11 IST" duration-ms="24742" status="PASS">
+        <test-method signature="verifyeditEndDate()[pri:16, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:03:30 IST" name="verifyeditEndDate" finished-at="2021-10-19T14:04:49 IST" duration-ms="79364" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 5 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 5 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+at com.sun.proxy.$Proxy13.get(Unknown Source)
+at com.PRMSTool.Pages.ProjectScreenPage.editEndDate(ProjectScreenPage.java:627)
+at com.PRMSTool.Tests.ProjectScreenTest.verifyeditEndDate(ProjectScreenTest.java:112)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1213)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyeditEndDate -->
-        <test-method signature="verifyeditActualStartDate()[pri:17, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:24:11 IST" name="verifyeditActualStartDate" finished-at="2021-10-14T18:24:29 IST" duration-ms="17834" status="PASS">
+        <test-method signature="verifyeditActualStartDate()[pri:17, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:04:49 IST" name="verifyeditActualStartDate" finished-at="2021-10-19T14:05:55 IST" duration-ms="65170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyeditActualStartDate -->
-        <test-method signature="verifyeditActualEndDate()[pri:18, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:24:29 IST" name="verifyeditActualEndDate" finished-at="2021-10-14T18:24:36 IST" duration-ms="6849" status="PASS">
+        <test-method signature="verifyeditActualEndDate()[pri:18, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:05:55 IST" name="verifyeditActualEndDate" finished-at="2021-10-19T14:06:00 IST" duration-ms="5896" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyeditActualEndDate -->
-        <test-method signature="verifyclickOnUpdateButton()[pri:19, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:24:36 IST" name="verifyclickOnUpdateButton" finished-at="2021-10-14T18:24:36 IST" duration-ms="96" status="PASS">
+        <test-method signature="verifyclickOnUpdateButton()[pri:19, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:06:00 IST" name="verifyclickOnUpdateButton" finished-at="2021-10-19T14:06:01 IST" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyclickOnUpdateButton -->
-        <test-method signature="verifydelete()[pri:20, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:24:36 IST" name="verifydelete" finished-at="2021-10-14T18:25:00 IST" duration-ms="23657" status="PASS">
+        <test-method signature="verifydelete()[pri:20, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:06:01 IST" name="verifydelete" finished-at="2021-10-19T14:06:24 IST" duration-ms="23670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydelete -->
-        <test-method signature="verifydownloadFile()[pri:21, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:00 IST" name="verifydownloadFile" finished-at="2021-10-14T18:25:05 IST" duration-ms="5112" status="PASS">
+        <test-method signature="verifydownloadFile()[pri:21, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:06:24 IST" name="verifydownloadFile" finished-at="2021-10-19T14:06:29 IST" duration-ms="5116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydownloadFile -->
-        <test-method signature="verifydisplayInactiveStatusList()[pri:22, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:05 IST" name="verifydisplayInactiveStatusList" finished-at="2021-10-14T18:25:10 IST" duration-ms="5145" status="PASS">
+        <test-method signature="verifydisplayInactiveStatusList()[pri:22, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:06:29 IST" name="verifydisplayInactiveStatusList" finished-at="2021-10-19T14:06:35 IST" duration-ms="5169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydisplayInactiveStatusList -->
-        <test-method signature="verifydisplayActiveStatusList()[pri:23, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:10 IST" name="verifydisplayActiveStatusList" finished-at="2021-10-14T18:25:15 IST" duration-ms="5128" status="PASS">
+        <test-method signature="verifydisplayActiveStatusList()[pri:23, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:06:35 IST" name="verifydisplayActiveStatusList" finished-at="2021-10-19T14:06:40 IST" duration-ms="5209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydisplayActiveStatusList -->
-        <test-method signature="verifydisplayvResourcingBusinessUnit()[pri:24, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:15 IST" name="verifydisplayvResourcingBusinessUnit" finished-at="2021-10-14T18:25:20 IST" duration-ms="5153" status="PASS">
+        <test-method signature="verifydisplayvResourcingBusinessUnit()[pri:24, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:06:40 IST" name="verifydisplayvResourcingBusinessUnit" finished-at="2021-10-19T14:06:45 IST" duration-ms="5191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydisplayvResourcingBusinessUnit -->
-        <test-method signature="verifydisplayROWBusinessUnit()[pri:25, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:20 IST" name="verifydisplayROWBusinessUnit" finished-at="2021-10-14T18:25:25 IST" duration-ms="5119" status="PASS">
+        <test-method signature="verifydisplayROWBusinessUnit()[pri:25, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:06:45 IST" name="verifydisplayROWBusinessUnit" finished-at="2021-10-19T14:06:50 IST" duration-ms="5193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydisplayROWBusinessUnit -->
-        <test-method signature="verifydisplayLicenceBusinessUnit()[pri:26, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:25 IST" name="verifydisplayLicenceBusinessUnit" finished-at="2021-10-14T18:25:30 IST" duration-ms="5121" status="PASS">
+        <test-method signature="verifydisplayLicenceBusinessUnit()[pri:26, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:06:50 IST" name="verifydisplayLicenceBusinessUnit" finished-at="2021-10-19T14:06:55 IST" duration-ms="5170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydisplayLicenceBusinessUnit -->
-        <test-method signature="verifydisplayPracticesBusinessUnit()[pri:27, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:30 IST" name="verifydisplayPracticesBusinessUnit" finished-at="2021-10-14T18:25:35 IST" duration-ms="5116" status="PASS">
+        <test-method signature="verifydisplayPracticesBusinessUnit()[pri:27, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:06:55 IST" name="verifydisplayPracticesBusinessUnit" finished-at="2021-10-19T14:07:00 IST" duration-ms="5163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydisplayPracticesBusinessUnit -->
-        <test-method signature="verifydisplaySafeGuardBusinessUnit()[pri:28, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:35 IST" name="verifydisplaySafeGuardBusinessUnit" finished-at="2021-10-14T18:25:41 IST" duration-ms="5097" status="PASS">
+        <test-method signature="verifydisplaySafeGuardBusinessUnit()[pri:28, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:07:00 IST" name="verifydisplaySafeGuardBusinessUnit" finished-at="2021-10-19T14:07:06 IST" duration-ms="5156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydisplaySafeGuardBusinessUnit -->
-        <test-method signature="verifydisplayAllBusinessUnit()[pri:29, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:41 IST" name="verifydisplayAllBusinessUnit" finished-at="2021-10-14T18:25:46 IST" duration-ms="5124" status="PASS">
+        <test-method signature="verifydisplayAllBusinessUnit()[pri:29, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:07:06 IST" name="verifydisplayAllBusinessUnit" finished-at="2021-10-19T14:07:11 IST" duration-ms="5175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifydisplayAllBusinessUnit -->
-        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ProjectScreenTest@2accdbb5]" started-at="2021-10-14T18:25:46 IST" name="finish" finished-at="2021-10-14T18:25:46 IST" duration-ms="668" status="PASS">
+        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ProjectScreenTest@78123e82]" started-at="2021-10-19T14:07:11 IST" name="finish" finished-at="2021-10-19T14:07:11 IST" duration-ms="680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finish -->
       </class> <!-- com.PRMSTool.Tests.ProjectScreenTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- ProjectScreen Test -->
+  </suite> <!-- ProjectScreen Suite -->
+  <suite started-at="2021-10-19T13:57:07 IST" name="ClientScreen Suite" finished-at="2021-10-19T14:01:06 IST" duration-ms="239491">
+    <groups>
+    </groups>
+    <test started-at="2021-10-19T13:57:07 IST" name="ClientScreen Test" finished-at="2021-10-19T14:01:06 IST" duration-ms="239491">
+      <class name="com.PRMSTool.Tests.ClientScreenTest">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:04 IST" name="OpenBrowser" finished-at="2021-10-19T13:57:07 IST" duration-ms="3037" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:07 IST" name="verifyLogin" finished-at="2021-10-19T13:57:16 IST" duration-ms="9614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method signature="verifyclickOnAddNew()[pri:1, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:16 IST" name="verifyclickOnAddNew" finished-at="2021-10-19T13:57:25 IST" duration-ms="8916" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAddNew -->
+        <test-method signature="verifyaddNewClientInformation()[pri:2, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:25 IST" name="verifyaddNewClientInformation" finished-at="2021-10-19T13:57:32 IST" duration-ms="6548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddNewClientInformation -->
+        <test-method signature="verifyclickOnAgreementDetails()[pri:3, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:32 IST" name="verifyclickOnAgreementDetails" finished-at="2021-10-19T13:57:32 IST" duration-ms="114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAgreementDetails -->
+        <test-method signature="verifyselectAgreementSignedDate()[pri:4, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:32 IST" name="verifyselectAgreementSignedDate" finished-at="2021-10-19T13:57:40 IST" duration-ms="8285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectAgreementSignedDate -->
+        <test-method signature="verifyselectApproxStartDate()[pri:5, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:40 IST" name="verifyselectApproxStartDate" finished-at="2021-10-19T13:57:48 IST" duration-ms="7734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectApproxStartDate -->
+        <test-method signature="verifyaddAgreementDetails()[pri:6, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:48 IST" name="verifyaddAgreementDetails" finished-at="2021-10-19T13:57:49 IST" duration-ms="1009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddAgreementDetails -->
+        <test-method signature="verifyclickOnStakeholderDetails()[pri:7, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:49 IST" name="verifyclickOnStakeholderDetails" finished-at="2021-10-19T13:57:49 IST" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnStakeholderDetails -->
+        <test-method signature="verifyaddStakeholderDetails()[pri:8, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:49 IST" name="verifyaddStakeholderDetails" finished-at="2021-10-19T13:57:55 IST" duration-ms="5783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddStakeholderDetails -->
+        <test-method signature="verifyclickOnAdd()[pri:9, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:57:55 IST" name="verifyclickOnAdd" finished-at="2021-10-19T13:58:00 IST" duration-ms="5096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAdd -->
+        <test-method signature="verifydisplayAllStatusList()[pri:10, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:58:00 IST" name="verifydisplayAllStatusList" finished-at="2021-10-19T13:58:10 IST" duration-ms="10207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayAllStatusList -->
+        <test-method signature="verifysearchClient()[pri:11, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:58:10 IST" name="verifysearchClient" finished-at="2021-10-19T13:58:20 IST" duration-ms="10260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifysearchClient -->
+        <test-method signature="verifyeditClient()[pri:12, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:58:20 IST" name="verifyeditClient" finished-at="2021-10-19T13:58:21 IST" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditClient -->
+        <test-method signature="verifyeditClientInformation()[pri:13, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:58:21 IST" name="verifyeditClientInformation" finished-at="2021-10-19T13:58:34 IST" duration-ms="12985" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditClientInformation -->
+        <test-method signature="verifyeditAgreementDetails()[pri:14, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:58:34 IST" name="verifyeditAgreementDetails" finished-at="2021-10-19T13:58:40 IST" duration-ms="6179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditAgreementDetails -->
+        <test-method signature="verifyeditAgreementSignedDate()[pri:15, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:58:40 IST" name="verifyeditAgreementSignedDate" finished-at="2021-10-19T13:58:47 IST" duration-ms="7732" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditAgreementSignedDate -->
+        <test-method signature="verifyeditApproxStartDate()[pri:16, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:58:47 IST" name="verifyeditApproxStartDate" finished-at="2021-10-19T13:58:55 IST" duration-ms="7758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditApproxStartDate -->
+        <test-method signature="verifyeditStakeholder()[pri:17, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:58:55 IST" name="verifyeditStakeholder" finished-at="2021-10-19T13:59:01 IST" duration-ms="5886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditStakeholder -->
+        <test-method signature="verifyclickOnUpdateClient()[pri:18, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:59:01 IST" name="verifyclickOnUpdateClient" finished-at="2021-10-19T13:59:01 IST" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnUpdateClient -->
+        <test-method signature="verifydeleteClient()[pri:19, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T13:59:01 IST" name="verifydeleteClient" finished-at="2021-10-19T14:00:20 IST" duration-ms="78506" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//mat-icon[contains(text(),'delete')]"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:54283}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5dc244a9487ce0b3ae4c0548790372ad
+*** Element info: {Using=xpath, value=//mat-icon[contains(text(),'delete')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//mat-icon[contains(text(),'delete')]"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:54283}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5dc244a9487ce0b3ae4c0548790372ad
+*** Element info: {Using=xpath, value=//mat-icon[contains(text(),'delete')]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.click(Unknown Source)
+at com.PRMSTool.Pages.ClientScreenPage.deleteClient(ClientScreenPage.java:397)
+at com.PRMSTool.Tests.ClientScreenTest.verifydeleteClient(ClientScreenTest.java:145)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1213)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydeleteClient -->
+        <test-method signature="verifydownloadFile()[pri:20, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:00:20 IST" name="verifydownloadFile" finished-at="2021-10-19T14:00:25 IST" duration-ms="5080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydownloadFile -->
+        <test-method signature="verifydisplayInactiveStatusList()[pri:21, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:00:25 IST" name="verifydisplayInactiveStatusList" finished-at="2021-10-19T14:00:30 IST" duration-ms="5187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayInactiveStatusList -->
+        <test-method signature="verifydisplayActiveStatusList()[pri:22, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:00:30 IST" name="verifydisplayActiveStatusList" finished-at="2021-10-19T14:00:35 IST" duration-ms="5181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayActiveStatusList -->
+        <test-method signature="verifydisplayvResourcingBusinessUnit()[pri:23, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:00:35 IST" name="verifydisplayvResourcingBusinessUnit" finished-at="2021-10-19T14:00:40 IST" duration-ms="5197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayvResourcingBusinessUnit -->
+        <test-method signature="verifydisplayROWBusinessUnit()[pri:24, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:00:40 IST" name="verifydisplayROWBusinessUnit" finished-at="2021-10-19T14:00:46 IST" duration-ms="5171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayROWBusinessUnit -->
+        <test-method signature="verifydisplayLicenceBusinessUnit()[pri:25, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:00:46 IST" name="verifydisplayLicenceBusinessUnit" finished-at="2021-10-19T14:00:51 IST" duration-ms="5176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayLicenceBusinessUnit -->
+        <test-method signature="verifydisplayPracticesBusinessUnit()[pri:26, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:00:51 IST" name="verifydisplayPracticesBusinessUnit" finished-at="2021-10-19T14:00:56 IST" duration-ms="5164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayPracticesBusinessUnit -->
+        <test-method signature="verifydisplaySafeGuardBusinessUnit()[pri:27, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:00:56 IST" name="verifydisplaySafeGuardBusinessUnit" finished-at="2021-10-19T14:01:01 IST" duration-ms="5164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplaySafeGuardBusinessUnit -->
+        <test-method signature="verifydisplayAllBusinessUnit()[pri:28, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:01:01 IST" name="verifydisplayAllBusinessUnit" finished-at="2021-10-19T14:01:06 IST" duration-ms="5172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayAllBusinessUnit -->
+        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ClientScreenTest@702b8b12]" started-at="2021-10-19T14:01:06 IST" name="finish" finished-at="2021-10-19T14:01:07 IST" duration-ms="665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finish -->
+      </class> <!-- com.PRMSTool.Tests.ClientScreenTest -->
+    </test> <!-- ClientScreen Test -->
+  </suite> <!-- ClientScreen Suite -->
+  <suite started-at="2021-10-19T14:07:14 IST" name="ResourceScreen Suite" finished-at="2021-10-19T14:09:18 IST" duration-ms="123877">
+    <groups>
+    </groups>
+    <test started-at="2021-10-19T14:07:14 IST" name="ResourceScreen Test" finished-at="2021-10-19T14:09:18 IST" duration-ms="123877">
+      <class name="com.PRMSTool.Tests.ResourceScreenTest">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:07:11 IST" name="OpenBrowser" finished-at="2021-10-19T14:07:14 IST" duration-ms="2666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:07:14 IST" name="verifyLogin" finished-at="2021-10-19T14:07:24 IST" duration-ms="9437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method signature="verifyclickOnResource()[pri:1, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:07:24 IST" name="verifyclickOnResource" finished-at="2021-10-19T14:07:29 IST" duration-ms="5052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnResource -->
+        <test-method signature="verifyclickOnAddNew()[pri:2, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:07:29 IST" name="verifyclickOnAddNew" finished-at="2021-10-19T14:07:34 IST" duration-ms="5213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAddNew -->
+        <test-method signature="verifyaddResourceDetails()[pri:3, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:07:34 IST" name="verifyaddResourceDetails" finished-at="2021-10-19T14:07:43 IST" duration-ms="8825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddResourceDetails -->
+        <test-method signature="verifyselectBirthDate()[pri:4, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:07:43 IST" name="verifyselectBirthDate" finished-at="2021-10-19T14:08:06 IST" duration-ms="22872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectBirthDate -->
+        <test-method signature="verifyselectJoiningDate()[pri:5, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:08:06 IST" name="verifyselectJoiningDate" finished-at="2021-10-19T14:08:06 IST" duration-ms="694" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectJoiningDate -->
+        <test-method signature="verifyclickOnAdd()[pri:6, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:08:06 IST" name="verifyclickOnAdd" finished-at="2021-10-19T14:08:11 IST" duration-ms="5097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAdd -->
+        <test-method signature="verifydisplayAllStatusList()[pri:7, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:08:11 IST" name="verifydisplayAllStatusList" finished-at="2021-10-19T14:08:22 IST" duration-ms="10200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayAllStatusList -->
+        <test-method signature="verifysearch()[pri:8, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:08:22 IST" name="verifysearch" finished-at="2021-10-19T14:08:32 IST" duration-ms="10206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifysearch -->
+        <test-method signature="verifyclickOnEditButton()[pri:9, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:08:32 IST" name="verifyclickOnEditButton" finished-at="2021-10-19T14:08:32 IST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnEditButton -->
+        <test-method signature="verifyeditResourceInformation()[pri:10, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:08:32 IST" name="verifyeditResourceInformation" finished-at="2021-10-19T14:08:38 IST" duration-ms="6310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditResourceInformation -->
+        <test-method signature="verifyclickOnUpdateButton()[pri:11, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:08:38 IST" name="verifyclickOnUpdateButton" finished-at="2021-10-19T14:08:38 IST" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnUpdateButton -->
+        <test-method signature="verifydelete()[pri:12, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:08:38 IST" name="verifydelete" finished-at="2021-10-19T14:09:02 IST" duration-ms="23550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydelete -->
+        <test-method signature="verifydownloadFile()[pri:13, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:09:02 IST" name="verifydownloadFile" finished-at="2021-10-19T14:09:07 IST" duration-ms="5153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydownloadFile -->
+        <test-method signature="verifydisplayInactiveStatusList()[pri:14, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:09:07 IST" name="verifydisplayInactiveStatusList" finished-at="2021-10-19T14:09:13 IST" duration-ms="5874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayInactiveStatusList -->
+        <test-method signature="verifydisplayActiveStatusList()[pri:15, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:09:13 IST" name="verifydisplayActiveStatusList" finished-at="2021-10-19T14:09:18 IST" duration-ms="5171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayActiveStatusList -->
+        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ResourceScreenTest@156b88f5]" started-at="2021-10-19T14:09:18 IST" name="finish" finished-at="2021-10-19T14:09:19 IST" duration-ms="667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finish -->
+      </class> <!-- com.PRMSTool.Tests.ResourceScreenTest -->
+    </test> <!-- ResourceScreen Test -->
+  </suite> <!-- ResourceScreen Suite -->
+  <suite started-at="2021-10-19T14:21:40 IST" name="SalesLead Suite" finished-at="2021-10-19T14:25:33 IST" duration-ms="233173">
+    <groups>
+    </groups>
+    <test started-at="2021-10-19T14:21:40 IST" name="SalesLeadScreen Test" finished-at="2021-10-19T14:25:33 IST" duration-ms="233173">
+      <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:21:37 IST" name="OpenBrowser" finished-at="2021-10-19T14:21:40 IST" duration-ms="2958" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:21:40 IST" name="verifyLogin" finished-at="2021-10-19T14:21:50 IST" duration-ms="9345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method signature="verifyclickOnSalesLead()[pri:1, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:21:50 IST" name="verifyclickOnSalesLead" finished-at="2021-10-19T14:21:55 IST" duration-ms="5061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnSalesLead -->
+        <test-method signature="verifyclickOnAddNew()[pri:2, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:21:55 IST" name="verifyclickOnAddNew" finished-at="2021-10-19T14:22:01 IST" duration-ms="5849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAddNew -->
+        <test-method signature="verifyaddSalesLeadInformation()[pri:3, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:01 IST" name="verifyaddSalesLeadInformation" finished-at="2021-10-19T14:22:03 IST" duration-ms="2854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddSalesLeadInformation -->
+        <test-method signature="verifyselectLastUpdatedDate()[pri:4, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:03 IST" name="verifyselectLastUpdatedDate" finished-at="2021-10-19T14:22:09 IST" duration-ms="5825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectLastUpdatedDate -->
+        <test-method signature="verifyclickOnCompanyDetails()[pri:5, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:09 IST" name="verifyclickOnCompanyDetails" finished-at="2021-10-19T14:22:09 IST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnCompanyDetails -->
+        <test-method signature="verifyaddCompanyDetails()[pri:6, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:09 IST" name="verifyaddCompanyDetails" finished-at="2021-10-19T14:22:11 IST" duration-ms="2031" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddCompanyDetails -->
+        <test-method signature="verifyclickOnOtherDetails()[pri:7, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:11 IST" name="verifyclickOnOtherDetails" finished-at="2021-10-19T14:22:11 IST" duration-ms="108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnOtherDetails -->
+        <test-method signature="verifyaddOtherDetails()[pri:8, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:11 IST" name="verifyaddOtherDetails" finished-at="2021-10-19T14:22:13 IST" duration-ms="1434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddOtherDetails -->
+        <test-method signature="verifyselectFUPDate()[pri:9, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:13 IST" name="verifyselectFUPDate" finished-at="2021-10-19T14:22:19 IST" duration-ms="5872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectFUPDate -->
+        <test-method signature="verifyselectCalledDate()[pri:10, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:19 IST" name="verifyselectCalledDate" finished-at="2021-10-19T14:22:25 IST" duration-ms="5922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectCalledDate -->
+        <test-method signature="verifyclickOnAdd()[pri:11, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:25 IST" name="verifyclickOnAdd" finished-at="2021-10-19T14:22:30 IST" duration-ms="5096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAdd -->
+        <test-method signature="verifysearch()[pri:12, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:22:30 IST" name="verifysearch" finished-at="2021-10-19T14:24:05 IST" duration-ms="95672" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@placeholder='Search for a Sales Lead']' (tried for 60 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@placeholder='Search for a Sales Lead']' (tried for 60 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.PRMSTool.Pages.SalesLeadScreenPage.searchSalesLead(SalesLeadScreenPage.java:300)
+at com.PRMSTool.Tests.SalesLeadScreenTest.verifysearch(SalesLeadScreenTest.java:97)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1213)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Search for a Sales Lead']"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:57068}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3726de8a3cbe6a795a15f94375c58781
+*** Element info: {Using=xpath, value=//input[@placeholder='Search for a Sales Lead']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifysearch -->
+        <test-method signature="verifyclickOnEditButton()[pri:13, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:24:05 IST" name="verifyclickOnEditButton" finished-at="2021-10-19T14:24:31 IST" duration-ms="25619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnEditButton -->
+        <test-method signature="verifyeditSalesLeadInformation()[pri:14, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:24:31 IST" name="verifyeditSalesLeadInformation" finished-at="2021-10-19T14:24:34 IST" duration-ms="2670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditSalesLeadInformation -->
+        <test-method signature="verifyeditLastUpdatedDate()[pri:15, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:24:34 IST" name="verifyeditLastUpdatedDate" finished-at="2021-10-19T14:24:39 IST" duration-ms="5506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditLastUpdatedDate -->
+        <test-method signature="verifyeditCompanyDetails()[pri:16, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:24:39 IST" name="verifyeditCompanyDetails" finished-at="2021-10-19T14:24:41 IST" duration-ms="2083" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditCompanyDetails -->
+        <test-method signature="verifyeditOtherDetails()[pri:17, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:24:41 IST" name="verifyeditOtherDetails" finished-at="2021-10-19T14:24:43 IST" duration-ms="1433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditOtherDetails -->
+        <test-method signature="verifyeditFUPDate()[pri:18, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:24:43 IST" name="verifyeditFUPDate" finished-at="2021-10-19T14:24:47 IST" duration-ms="4611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditFUPDate -->
+        <test-method signature="verifyclickOnUpdateButton()[pri:19, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:24:47 IST" name="verifyclickOnUpdateButton" finished-at="2021-10-19T14:24:47 IST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnUpdateButton -->
+        <test-method signature="verifydeleteSalesLead()[pri:20, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:24:47 IST" name="verifydeleteSalesLead" finished-at="2021-10-19T14:25:06 IST" duration-ms="18752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydeleteSalesLead -->
+        <test-method signature="verifyclickOnCloudUpload()[pri:21, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:25:06 IST" name="verifyclickOnCloudUpload" finished-at="2021-10-19T14:25:06 IST" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnCloudUpload -->
+        <test-method signature="verifydownloadFile()[pri:22, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:25:06 IST" name="verifydownloadFile" finished-at="2021-10-19T14:25:14 IST" duration-ms="8087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydownloadFile -->
+        <test-method signature="verifyclickOnBackButton()[pri:23, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:25:14 IST" name="verifyclickOnBackButton" finished-at="2021-10-19T14:25:15 IST" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnBackButton -->
+        <test-method signature="verifyuploadFile()[pri:24, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:25:15 IST" name="verifyuploadFile" finished-at="2021-10-19T14:25:33 IST" duration-ms="18860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyuploadFile -->
+        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.SalesLeadScreenTest@5d0a1059]" started-at="2021-10-19T14:25:33 IST" name="finish" finished-at="2021-10-19T14:25:34 IST" duration-ms="678" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finish -->
+      </class> <!-- com.PRMSTool.Tests.SalesLeadScreenTest -->
+    </test> <!-- SalesLeadScreen Test -->
+  </suite> <!-- SalesLead Suite -->
+  <suite started-at="2021-10-19T14:18:35 IST" name="ClientRevirewScreen Suite" finished-at="2021-10-19T14:21:37 IST" duration-ms="182131">
+    <groups>
+    </groups>
+    <test started-at="2021-10-19T14:18:35 IST" name="ClientRevirewScreen Test" finished-at="2021-10-19T14:21:37 IST" duration-ms="182131">
+      <class name="com.PRMSTool.Tests.ClientReviewTest">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:18:32 IST" name="OpenBrowser" finished-at="2021-10-19T14:18:35 IST" duration-ms="2388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:18:35 IST" name="verifyLogin" finished-at="2021-10-19T14:18:44 IST" duration-ms="9390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method signature="verifyclickOnClientReview()[pri:1, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:18:44 IST" name="verifyclickOnClientReview" finished-at="2021-10-19T14:18:49 IST" duration-ms="5038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnClientReview -->
+        <test-method signature="verifyclickOnAddNew()[pri:2, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:18:49 IST" name="verifyclickOnAddNew" finished-at="2021-10-19T14:18:54 IST" duration-ms="5536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAddNew -->
+        <test-method signature="verifyaddNewClientReview()[pri:3, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:18:54 IST" name="verifyaddNewClientReview" finished-at="2021-10-19T14:19:20 IST" duration-ms="25990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddNewClientReview -->
+        <test-method signature="verifysearch()[pri:4, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:19:20 IST" name="verifysearch" finished-at="2021-10-19T14:19:34 IST" duration-ms="13373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifysearch -->
+        <test-method signature="verifyclickOnEditButton()[pri:5, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:19:34 IST" name="verifyclickOnEditButton" finished-at="2021-10-19T14:19:34 IST" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnEditButton -->
+        <test-method signature="verifyeditClientReview()[pri:6, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:19:34 IST" name="verifyeditClientReview" finished-at="2021-10-19T14:19:54 IST" duration-ms="19725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditClientReview -->
+        <test-method signature="verifyclickOnUpdateButton()[pri:7, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:19:54 IST" name="verifyclickOnUpdateButton" finished-at="2021-10-19T14:19:54 IST" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnUpdateButton -->
+        <test-method signature="verifydelete()[pri:8, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:19:54 IST" name="verifydelete" finished-at="2021-10-19T14:20:12 IST" duration-ms="18577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydelete -->
+        <test-method signature="verifydisplayDateJanuary()[pri:9, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:12 IST" name="verifydisplayDateJanuary" finished-at="2021-10-19T14:20:15 IST" duration-ms="3116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateJanuary -->
+        <test-method signature="verifydisplayDateJanuary1()[pri:10, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:15 IST" name="verifydisplayDateJanuary1" finished-at="2021-10-19T14:20:22 IST" duration-ms="6083" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateJanuary1 -->
+        <test-method signature="verifydisplayDateFebruary()[pri:11, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:22 IST" name="verifydisplayDateFebruary" finished-at="2021-10-19T14:20:28 IST" duration-ms="6119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateFebruary -->
+        <test-method signature="verifydisplayDateFebruary1()[pri:12, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:28 IST" name="verifydisplayDateFebruary1" finished-at="2021-10-19T14:20:34 IST" duration-ms="6101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateFebruary1 -->
+        <test-method signature="verifydisplayDateMarch()[pri:13, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:34 IST" name="verifydisplayDateMarch" finished-at="2021-10-19T14:20:37 IST" duration-ms="3133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateMarch -->
+        <test-method signature="verifydisplayDateMarch1()[pri:14, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:37 IST" name="verifydisplayDateMarch1" finished-at="2021-10-19T14:20:40 IST" duration-ms="3137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateMarch1 -->
+        <test-method signature="verifydisplayDateApril()[pri:15, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:40 IST" name="verifydisplayDateApril" finished-at="2021-10-19T14:20:43 IST" duration-ms="3154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateApril -->
+        <test-method signature="verifydisplayDateApril1()[pri:16, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:43 IST" name="verifydisplayDateApril1" finished-at="2021-10-19T14:20:46 IST" duration-ms="3137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateApril1 -->
+        <test-method signature="verifydisplayDateMay()[pri:17, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:46 IST" name="verifydisplayDateMay" finished-at="2021-10-19T14:20:49 IST" duration-ms="3145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateMay -->
+        <test-method signature="verifydisplayDateMay1()[pri:18, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:49 IST" name="verifydisplayDateMay1" finished-at="2021-10-19T14:20:53 IST" duration-ms="3132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateMay1 -->
+        <test-method signature="verifydisplayDateJune()[pri:19, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:53 IST" name="verifydisplayDateJune" finished-at="2021-10-19T14:20:56 IST" duration-ms="3129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateJune -->
+        <test-method signature="verifydisplayDateJune1()[pri:20, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:56 IST" name="verifydisplayDateJune1" finished-at="2021-10-19T14:20:59 IST" duration-ms="3132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateJune1 -->
+        <test-method signature="verifydisplayDateJuly()[pri:21, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:20:59 IST" name="verifydisplayDateJuly" finished-at="2021-10-19T14:21:02 IST" duration-ms="3132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateJuly -->
+        <test-method signature="verifydisplayDateJuly1()[pri:22, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:02 IST" name="verifydisplayDateJuly1" finished-at="2021-10-19T14:21:05 IST" duration-ms="3133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateJuly1 -->
+        <test-method signature="verifydisplayDateAugust()[pri:23, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:05 IST" name="verifydisplayDateAugust" finished-at="2021-10-19T14:21:08 IST" duration-ms="3138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateAugust -->
+        <test-method signature="verifydisplayDateAugust1()[pri:24, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:08 IST" name="verifydisplayDateAugust1" finished-at="2021-10-19T14:21:11 IST" duration-ms="3138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateAugust1 -->
+        <test-method signature="verifydisplayDateSeptember()[pri:25, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:11 IST" name="verifydisplayDateSeptember" finished-at="2021-10-19T14:21:15 IST" duration-ms="3134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateSeptember -->
+        <test-method signature="verifydisplayDateSeptember1()[pri:26, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:15 IST" name="verifydisplayDateSeptember1" finished-at="2021-10-19T14:21:18 IST" duration-ms="3129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateSeptember1 -->
+        <test-method signature="verifydisplayDateOctober()[pri:27, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:18 IST" name="verifydisplayDateOctober" finished-at="2021-10-19T14:21:21 IST" duration-ms="3122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateOctober -->
+        <test-method signature="verifydisplayDateOctober1()[pri:28, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:21 IST" name="verifydisplayDateOctober1" finished-at="2021-10-19T14:21:24 IST" duration-ms="3132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateOctober1 -->
+        <test-method signature="verifydisplayDateNovember()[pri:29, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:24 IST" name="verifydisplayDateNovember" finished-at="2021-10-19T14:21:27 IST" duration-ms="3133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateNovember -->
+        <test-method signature="verifydisplayDateNovember1()[pri:30, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:27 IST" name="verifydisplayDateNovember1" finished-at="2021-10-19T14:21:30 IST" duration-ms="3119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateNovember1 -->
+        <test-method signature="verifydisplayDateDecember()[pri:31, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:30 IST" name="verifydisplayDateDecember" finished-at="2021-10-19T14:21:33 IST" duration-ms="3125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateDecember -->
+        <test-method signature="verifydisplayDateDecember1()[pri:32, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:33 IST" name="verifydisplayDateDecember1" finished-at="2021-10-19T14:21:36 IST" duration-ms="3136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayDateDecember1 -->
+        <test-method signature="verifydisplayYearAll()[pri:33, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:36 IST" name="verifydisplayYearAll" finished-at="2021-10-19T14:21:37 IST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayYearAll -->
+        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ClientReviewTest@543588e6]" started-at="2021-10-19T14:21:37 IST" name="finish" finished-at="2021-10-19T14:21:37 IST" duration-ms="650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finish -->
+      </class> <!-- com.PRMSTool.Tests.ClientReviewTest -->
+    </test> <!-- ClientRevirewScreen Test -->
+  </suite> <!-- ClientRevirewScreen Suite -->
+  <suite started-at="2021-10-19T14:09:22 IST" name="ProjectResourceScreen Suite" finished-at="2021-10-19T14:18:31 IST" duration-ms="549429">
+    <groups>
+    </groups>
+    <test started-at="2021-10-19T14:09:22 IST" name="ProjectResourceScreen Test" finished-at="2021-10-19T14:18:31 IST" duration-ms="549429">
+      <class name="com.PRMSTool.Tests.ProjectResourceScreenTest">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:09:19 IST" name="OpenBrowser" finished-at="2021-10-19T14:09:22 IST" duration-ms="3233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method signature="verifyLogin()[pri:0, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:09:22 IST" name="verifyLogin" finished-at="2021-10-19T14:09:31 IST" duration-ms="9437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method signature="verifyclickOnProjectResource()[pri:1, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:09:31 IST" name="verifyclickOnProjectResource" finished-at="2021-10-19T14:09:36 IST" duration-ms="5046" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnProjectResource -->
+        <test-method signature="verifyclickOnAddNew()[pri:2, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:09:36 IST" name="verifyclickOnAddNew" finished-at="2021-10-19T14:09:42 IST" duration-ms="5561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAddNew -->
+        <test-method signature="verifyaddProjectResourceDetails()[pri:3, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:09:42 IST" name="verifyaddProjectResourceDetails" finished-at="2021-10-19T14:10:52 IST" duration-ms="70310" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//mat-option/span[contains(text(),' test Project Resource ')])[1]"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62093}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c3593c33e225459cd1bed3cf187c8c96
+*** Element info: {Using=xpath, value=(//mat-option/span[contains(text(),' test Project Resource ')])[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//mat-option/span[contains(text(),' test Project Resource ')])[1]"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62093}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c3593c33e225459cd1bed3cf187c8c96
+*** Element info: {Using=xpath, value=(//mat-option/span[contains(text(),' test Project Resource ')])[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.click(Unknown Source)
+at com.PRMSTool.Pages.ProjectResourceScreenPage.addProjectResourceDetails(ProjectResourceScreenPage.java:194)
+at com.PRMSTool.Tests.ProjectResourceScreenTest.verifyaddProjectResourceDetails(ProjectResourceScreenTest.java:39)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1213)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddProjectResourceDetails -->
+        <test-method signature="verifyselectStartDate()[pri:4, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:10:52 IST" name="verifyselectStartDate" finished-at="2021-10-19T14:10:55 IST" duration-ms="2735" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectStartDate -->
+        <test-method signature="verifyselectEndDate()[pri:5, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:10:55 IST" name="verifyselectEndDate" finished-at="2021-10-19T14:10:58 IST" duration-ms="2707" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyselectEndDate -->
+        <test-method signature="verifyclickOnAdd()[pri:6, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:10:58 IST" name="verifyclickOnAdd" finished-at="2021-10-19T14:11:03 IST" duration-ms="5082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAdd -->
+        <test-method signature="verifydisplayAllStatusList()[pri:7, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:11:03 IST" name="verifydisplayAllStatusList" finished-at="2021-10-19T14:12:58 IST" duration-ms="114817" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (c3593c33e225459cd1bed3cf187c8c96)] -> xpath: //mat-select[@role='listbox' and @placeholder='Status']] (tried for 60 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (c3593c33e225459cd1bed3cf187c8c96)] -> xpath: //mat-select[@role='listbox' and @placeholder='Status']] (tried for 60 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.PRMSTool.util.UtilityClass.displayAllStatusList(UtilityClass.java:133)
+at com.PRMSTool.Tests.ProjectResourceScreenTest.verifydisplayAllStatusList(ProjectResourceScreenTest.java:63)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1213)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//mat-select[@role='listbox' and @placeholder='Status']"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62093}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c3593c33e225459cd1bed3cf187c8c96
+*** Element info: {Using=xpath, value=//mat-select[@role='listbox' and @placeholder='Status']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayAllStatusList -->
+        <test-method signature="verifysearch()[pri:8, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:12:58 IST" name="verifysearch" finished-at="2021-10-19T14:13:13 IST" duration-ms="15232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifysearch -->
+        <test-method signature="verifyclickOnEditButton()[pri:9, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:13:13 IST" name="verifyclickOnEditButton" finished-at="2021-10-19T14:14:13 IST" duration-ms="60064" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//mat-icon[contains(text(),'edit')])[1]"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62093}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c3593c33e225459cd1bed3cf187c8c96
+*** Element info: {Using=xpath, value=(//mat-icon[contains(text(),'edit')])[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//mat-icon[contains(text(),'edit')])[1]"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62093}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c3593c33e225459cd1bed3cf187c8c96
+*** Element info: {Using=xpath, value=(//mat-icon[contains(text(),'edit')])[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.getWrappedElement(Unknown Source)
+at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
+at com.PRMSTool.util.UtilityClass.clickOnEditButton(UtilityClass.java:94)
+at com.PRMSTool.Tests.ProjectResourceScreenTest.verifyclickOnEditButton(ProjectResourceScreenTest.java:75)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1213)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnEditButton -->
+        <test-method signature="verifyeditResourceInformation()[pri:10, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:14:13 IST" name="verifyeditResourceInformation" finished-at="2021-10-19T14:16:18 IST" duration-ms="125063" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@placeholder='Role']' (tried for 60 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@placeholder='Role']' (tried for 60 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.PRMSTool.Pages.ProjectResourceScreenPage.editProjectResourceInformation(ProjectResourceScreenPage.java:369)
+at com.PRMSTool.Tests.ProjectResourceScreenTest.verifyeditResourceInformation(ProjectResourceScreenTest.java:81)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1213)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Role']"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62093}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c3593c33e225459cd1bed3cf187c8c96
+*** Element info: {Using=xpath, value=//input[@placeholder='Role']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyeditResourceInformation -->
+        <test-method signature="verifyclickOnUpdateButton()[pri:11, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:16:18 IST" name="verifyclickOnUpdateButton" finished-at="2021-10-19T14:17:18 IST" duration-ms="60031" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(),'Update')]"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62093}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c3593c33e225459cd1bed3cf187c8c96
+*** Element info: {Using=xpath, value=//span[contains(text(),'Update')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(),'Update')]"}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIPALIV-LPT', ip: '10.81.234.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\DIPALI~1.VAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62093}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c3593c33e225459cd1bed3cf187c8c96
+*** Element info: {Using=xpath, value=//span[contains(text(),'Update')]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.getWrappedElement(Unknown Source)
+at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
+at com.PRMSTool.base.TestBase.scrollToElement(TestBase.java:81)
+at com.PRMSTool.util.UtilityClass.clickOnUpdateButton(UtilityClass.java:98)
+at com.PRMSTool.Tests.ProjectResourceScreenTest.verifyclickOnUpdateButton(ProjectResourceScreenTest.java:87)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1213)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnUpdateButton -->
+        <test-method signature="verifydelete()[pri:12, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:17:18 IST" name="verifydelete" finished-at="2021-10-19T14:17:45 IST" duration-ms="26779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydelete -->
+        <test-method signature="verifydownloadFile()[pri:13, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:17:45 IST" name="verifydownloadFile" finished-at="2021-10-19T14:17:50 IST" duration-ms="5105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydownloadFile -->
+        <test-method signature="verifydisplayInactiveStatusList()[pri:14, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:17:50 IST" name="verifydisplayInactiveStatusList" finished-at="2021-10-19T14:17:55 IST" duration-ms="5184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayInactiveStatusList -->
+        <test-method signature="verifydisplayActiveStatusList()[pri:15, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:17:55 IST" name="verifydisplayActiveStatusList" finished-at="2021-10-19T14:18:00 IST" duration-ms="5169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayActiveStatusList -->
+        <test-method signature="verifydisplayvResourcingBusinessUnit()[pri:16, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:18:00 IST" name="verifydisplayvResourcingBusinessUnit" finished-at="2021-10-19T14:18:05 IST" duration-ms="5195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayvResourcingBusinessUnit -->
+        <test-method signature="verifydisplayROWBusinessUnit()[pri:17, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:18:05 IST" name="verifydisplayROWBusinessUnit" finished-at="2021-10-19T14:18:11 IST" duration-ms="5180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayROWBusinessUnit -->
+        <test-method signature="verifydisplayLicenceBusinessUnit()[pri:18, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:18:11 IST" name="verifydisplayLicenceBusinessUnit" finished-at="2021-10-19T14:18:16 IST" duration-ms="5180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayLicenceBusinessUnit -->
+        <test-method signature="verifydisplayPracticesBusinessUnit()[pri:19, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:18:16 IST" name="verifydisplayPracticesBusinessUnit" finished-at="2021-10-19T14:18:21 IST" duration-ms="5173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayPracticesBusinessUnit -->
+        <test-method signature="verifydisplaySafeGuardBusinessUnit()[pri:20, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:18:21 IST" name="verifydisplaySafeGuardBusinessUnit" finished-at="2021-10-19T14:18:26 IST" duration-ms="5169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplaySafeGuardBusinessUnit -->
+        <test-method signature="verifydisplayAllBusinessUnit()[pri:21, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:18:26 IST" name="verifydisplayAllBusinessUnit" finished-at="2021-10-19T14:18:31 IST" duration-ms="5189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydisplayAllBusinessUnit -->
+        <test-method is-config="true" signature="finish()[pri:0, instance:com.PRMSTool.Tests.ProjectResourceScreenTest@3232a28a]" started-at="2021-10-19T14:18:31 IST" name="finish" finished-at="2021-10-19T14:18:32 IST" duration-ms="786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finish -->
+      </class> <!-- com.PRMSTool.Tests.ProjectResourceScreenTest -->
+    </test> <!-- ProjectResourceScreen Test -->
+  </suite> <!-- ProjectResourceScreen Suite -->
 </testng-results>

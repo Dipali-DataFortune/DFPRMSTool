@@ -5,10 +5,8 @@
     <classes>
       <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
         <methods>
-          <include name="verifyclickOnCloudUpload"/>
           <include name="finish"/>
-          <include name="verifydownloadFile"/>
-          <include name="verifydeleteSalesLead"/>
+          <include name="verifysearch"/>
           <include name="OpenBrowser"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.SalesLeadScreenTest -->

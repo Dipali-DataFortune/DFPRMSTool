@@ -6,9 +6,8 @@
       <class name="com.PRMSTool.Tests.ClientScreenTest">
         <methods>
           <include name="finish"/>
-          <include name="verifyeditApproxStartDate"/>
+          <include name="verifydeleteClient"/>
           <include name="OpenBrowser"/>
-          <include name="verifyeditStakeholder"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ClientScreenTest -->
     </classes>

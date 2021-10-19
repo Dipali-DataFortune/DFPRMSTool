@@ -49,7 +49,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
 	WebElement project1;
 
-	@FindBy(xpath = "(//mat-option/span[contains(text(),' test Project ')])[1]")
+	@FindBy(xpath = "(//mat-option/span[contains(text(),' test Project Resource ')])[1]")
 	WebElement project2;
 
 	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")

@@ -3,34 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PRMSTool.Tests.ProjectResourceScreenTest">
+      <class name="com.PRMSTool.Tests.ClientScreenTest">
         <methods>
           <include name="finish"/>
-          <include name="verifydelete"/>
-          <include name="verifydisplaySafeGuardBusinessUnit"/>
-          <include name="verifyclickOnProjectResource"/>
-          <include name="verifydisplayInactiveStatusList"/>
-          <include name="verifydisplayPracticesBusinessUnit"/>
-          <include name="verifydisplayROWBusinessUnit"/>
-          <include name="verifydisplayAllBusinessUnit"/>
-          <include name="verifydisplayActiveStatusList"/>
+          <include name="verifydeleteClient"/>
           <include name="OpenBrowser"/>
-          <include name="verifydisplayvResourcingBusinessUnit"/>
-          <include name="verifydisplayAllStatusList"/>
-          <include name="verifydisplayLicenceBusinessUnit"/>
-          <include name="verifyclickOnEditButton"/>
-          <include name="verifysearch"/>
-          <include name="verifyaddProjectResourceDetails"/>
-          <include name="verifyeditResourceInformation"/>
-          <include name="verifydownloadFile"/>
-          <include name="verifyselectEndDate"/>
-          <include name="verifyclickOnAdd"/>
-          <include name="verifyLogin"/>
-          <include name="verifyclickOnUpdateButton"/>
-          <include name="verifyclickOnAddNew"/>
-          <include name="verifyselectStartDate"/>
         </methods>
-      </class> <!-- com.PRMSTool.Tests.ProjectResourceScreenTest -->
+      </class> <!-- com.PRMSTool.Tests.ClientScreenTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
