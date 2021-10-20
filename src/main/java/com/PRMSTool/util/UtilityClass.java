@@ -143,7 +143,7 @@ public class UtilityClass extends TestBase{
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		//js.executeScript("arguments[0].click()", status1);
 		
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		
 		System.out.println("All the active and inactive client list displayed");		
 	}

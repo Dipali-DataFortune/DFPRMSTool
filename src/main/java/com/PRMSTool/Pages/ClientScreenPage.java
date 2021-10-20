@@ -393,9 +393,11 @@ public class ClientScreenPage extends TestBase {
 		searchBox.clear();
 		searchBox.sendKeys("testNewClient");
 
-		Thread.sleep(3000);
+		
+		Thread.sleep(2000);
 		deleteButton.click();
-
+		
+		//js.executeScript("arguments[0].click()", deleteButton);
 		// wait.until(ExpectedConditions.visibilityOf(yesButton));
 		// yesButton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
