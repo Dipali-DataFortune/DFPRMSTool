@@ -759,7 +759,7 @@ public class ClientScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("29")) {
+			if (date.equalsIgnoreCase("28")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -783,9 +783,9 @@ public class ClientScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("30")) {
-				// allDates.get(i).click();
-				js.executeScript("arguments[0].click()", allDates.get(i));
+			if (date.equalsIgnoreCase("29")) {
+				 allDates.get(i).click();
+				//js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}

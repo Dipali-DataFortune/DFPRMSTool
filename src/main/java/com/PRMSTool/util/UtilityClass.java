@@ -132,7 +132,7 @@ public class UtilityClass extends TestBase{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(status));
 				
-		highLightElement(driver, status);
+		//highLightElement(driver, status);
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		//js.executeScript("arguments[0].click()", status);
 		status.click();
