@@ -5,12 +5,22 @@
     <classes>
       <class name="com.PRMSTool.Tests.ProjectResourceScreenTest">
         <methods>
-          <include name="verifydisplayAllStatusList"/>
           <include name="finish"/>
-          <include name="verifyclickOnEditButton"/>
-          <include name="verifyaddProjectResourceDetails"/>
-          <include name="verifyeditResourceInformation"/>
+          <include name="verifydelete"/>
+          <include name="verifydisplaySafeGuardBusinessUnit"/>
+          <include name="verifydisplayInactiveStatusList"/>
+          <include name="verifydisplayPracticesBusinessUnit"/>
+          <include name="verifydisplayROWBusinessUnit"/>
+          <include name="verifydisplayAllBusinessUnit"/>
+          <include name="verifydisplayActiveStatusList"/>
           <include name="OpenBrowser"/>
+          <include name="verifydisplayvResourcingBusinessUnit"/>
+          <include name="verifydisplayAllStatusList"/>
+          <include name="verifydisplayLicenceBusinessUnit"/>
+          <include name="verifyclickOnEditButton"/>
+          <include name="verifysearch"/>
+          <include name="verifyaddProjectResourceDetails"/>
+          <include name="verifydownloadFile"/>
           <include name="verifyclickOnUpdateButton"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ProjectResourceScreenTest -->

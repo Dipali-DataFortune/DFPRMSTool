@@ -66,7 +66,7 @@ public class ProjectResourceScreenTest extends TestBase{
 	@Test(priority = 8, enabled=true)
 	public void verifysearch()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
-		prs.searchProjectResource("test new Project");
+		prs.searchProjectResource("test add Project");
 	}
 	
 	@Test(priority = 9, enabled=true)
@@ -91,13 +91,13 @@ public class ProjectResourceScreenTest extends TestBase{
 	public void verifydelete()throws InterruptedException {
 		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
 		verifydisplayAllStatusList();
-		prs.deleteProjectResource("test Project");
+		prs.deleteProjectResource("test add Project");
 	}
 	
 	@Test(priority = 13, enabled=true)
 	public void verifydownloadFile()throws InterruptedException {
-		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
-		util.downloadFile();
+		ProjectResourceScreenPage prs = PageFactory.initElements(driver, ProjectResourceScreenPage.class);
+		prs.downloadFile();
 	}
 	
 	@Test(priority = 14, enabled=true)
