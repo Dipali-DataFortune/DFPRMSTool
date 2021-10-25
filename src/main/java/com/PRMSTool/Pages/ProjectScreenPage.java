@@ -584,8 +584,8 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("NOV 2021")) {
-			js.executeScript("arguments[0].click()", DateNavButton);
-			//DateNavButton.click();
+			//js.executeScript("arguments[0].click()", DateNavButton);
+			DateNavButton.click();
 			//staleElementClick(5, DateNavButton, 60);
 		}
 
@@ -594,8 +594,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("24")) {
-				allDates.get(i).click();
-				//js.executeScript("arguments[0].click()", allDates.get(i));
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -619,6 +619,7 @@ public class ProjectScreenPage extends TestBase{
 		while (!DateMonths.getText().contains("DEC 2021")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
+			//DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();
@@ -626,8 +627,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("27")) {
-				allDates.get(i).click();
-				//js.executeScript("arguments[0].click()", allDates.get(i));
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -649,8 +650,9 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("NOV 2021")) {
-			//js.executeScript("arguments[0].click()", DateNavButton);
-			staleElementClick(5, DateNavButton, 60);
+			js.executeScript("arguments[0].click()", DateNavButton);
+			//staleElementClick(5, DateNavButton, 60);
+			//DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();
@@ -681,8 +683,9 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("DEC 2021")) {
-			js.executeScript("arguments[0].click()", DateNavButton);
+			//js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
+			DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();
