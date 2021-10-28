@@ -584,8 +584,8 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("NOV 2021")) {
-			//js.executeScript("arguments[0].click()", DateNavButton);
-			DateNavButton.click();
+			js.executeScript("arguments[0].click()", DateNavButton);
+			//DateNavButton.click();
 			//staleElementClick(5, DateNavButton, 60);
 		}
 
@@ -601,7 +601,7 @@ public class ProjectScreenPage extends TestBase{
 		}
 
 		System.out.println("Start date edited");
-		Thread.sleep(3000);
+		//Thread.sleep(2000);
 	}
 	
 	public void editEndDate() throws InterruptedException {
@@ -634,7 +634,7 @@ public class ProjectScreenPage extends TestBase{
 		}
 
 		System.out.println("End date edited");
-		Thread.sleep(3000);
+		//Thread.sleep(2000);
 	}
 	
 	public void editActualStartDate() throws InterruptedException {
@@ -650,9 +650,9 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("NOV 2021")) {
-			js.executeScript("arguments[0].click()", DateNavButton);
+		//	js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
-			//DateNavButton.click();
+			DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();
@@ -667,7 +667,7 @@ public class ProjectScreenPage extends TestBase{
 		}
 
 		System.out.println("Actual start date edited");
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 	}
 	
 	public void editActualEndDate() throws InterruptedException {
@@ -683,9 +683,9 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("DEC 2021")) {
-			//js.executeScript("arguments[0].click()", DateNavButton);
+			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
-			DateNavButton.click();
+			//DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();

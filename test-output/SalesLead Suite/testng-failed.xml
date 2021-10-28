@@ -5,7 +5,6 @@
     <classes>
       <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
         <methods>
-          <include name="verifyuploadFile"/>
           <include name="verifyclickOnCloudUpload"/>
           <include name="finish"/>
           <include name="verifyclickOnUpdateButton"/>

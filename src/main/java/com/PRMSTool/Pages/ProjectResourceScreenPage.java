@@ -49,7 +49,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
 	WebElement project1;
 
-	@FindBy(xpath = "(//mat-option/span[contains(text(),' test add Project ')])[1]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' test Project Resource ')]")
 	WebElement project2;
 
 	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")
@@ -419,11 +419,11 @@ public class ProjectResourceScreenPage extends TestBase {
 
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", chromePref);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(downloadFile));
-		downloadFile.click();
 		Thread.sleep(5000);
+		downloadFile.click();		
 		System.out.println("File downloaded successfully");
 	}
 

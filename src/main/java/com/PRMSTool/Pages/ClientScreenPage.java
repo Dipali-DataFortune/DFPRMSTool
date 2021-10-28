@@ -387,8 +387,8 @@ public class ClientScreenPage extends TestBase {
 
 		Thread.sleep(5000);
 		
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(searchBox));
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(searchBox));
 		
 		searchBox.clear();
 		searchBox.sendKeys("testNewClient");
@@ -421,8 +421,8 @@ public class ClientScreenPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(clientName));
 
-		clientName.clear();
-		clientName.sendKeys("testEdit");
+		//clientName.clear();
+		//clientName.sendKeys("testEdit");
 
 		companyUrl.clear();
 		companyUrl.sendKeys("https://www.testone.com");

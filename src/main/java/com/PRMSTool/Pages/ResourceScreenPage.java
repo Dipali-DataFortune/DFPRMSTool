@@ -357,7 +357,7 @@ public class ResourceScreenPage extends TestBase {
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("arguments[0].click()", joiningDate);
 		 
-		  //Thread.sleep(2000);
+		  Thread.sleep(2000);
 			
 			while(!DateMonths.getText().contains("OCT 2021"))
 			{
