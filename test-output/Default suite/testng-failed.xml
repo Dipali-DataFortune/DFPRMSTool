@@ -3,13 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PRMSTool.Tests.ProjectScreenTest">
+      <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
         <methods>
+          <include name="verifyclickOnCloudUpload"/>
           <include name="finish"/>
+          <include name="verifyclickOnUpdateButton"/>
+          <include name="verifydownloadFile"/>
+          <include name="verifysearch"/>
+          <include name="verifydeleteSalesLead"/>
           <include name="OpenBrowser"/>
-          <include name="verifyeditActualStartDate"/>
+          <include name="verifyeditSalesLeadInformation"/>
+          <include name="verifyclickOnEditButton"/>
         </methods>
-      </class> <!-- com.PRMSTool.Tests.ProjectScreenTest -->
+      </class> <!-- com.PRMSTool.Tests.SalesLeadScreenTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

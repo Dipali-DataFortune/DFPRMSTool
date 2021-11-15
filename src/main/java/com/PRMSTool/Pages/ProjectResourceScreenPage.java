@@ -422,6 +422,7 @@ public class ProjectResourceScreenPage extends TestBase {
 		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(downloadFile));
+		
 		Thread.sleep(5000);
 		downloadFile.click();		
 		System.out.println("File downloaded successfully");
