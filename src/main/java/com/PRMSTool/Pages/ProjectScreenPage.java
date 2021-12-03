@@ -245,7 +245,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("17")) {
+			if (date.equalsIgnoreCase("23")) {
 				allDates.get(i).click();
 				//js.executeScript("arguments[0].click()", allDates.get(i));
 				break;

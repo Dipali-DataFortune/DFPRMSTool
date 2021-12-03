@@ -20,13 +20,13 @@ public class LoginTest extends TestBase{
 		super();
 	}
 	
-	@Test(priority = 0, enabled=true)
+	@Test(priority = 0, enabled=false)
 	public void verifyLogin()throws InterruptedException {
 		LoginPage lp = PageFactory.initElements(driver,LoginPage.class);
 		lp.login(prop.getProperty("email1"),prop.getProperty("password"));
 	}
 	
-	@Test(priority = 1, enabled=false)
+	@Test(priority = 1, enabled=true)
 	public void login1()throws InterruptedException {
 		LoginPage lp = PageFactory.initElements(driver,LoginPage.class);
 		lp.login1();

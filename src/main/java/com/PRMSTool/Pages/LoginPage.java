@@ -3,6 +3,8 @@
  */
 package com.PRMSTool.Pages;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -43,7 +45,8 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath="//button[@class='microsoft m-12 p-0 mat-raised-button ng-tns-c32-14 ng-star-inserted']")
 	WebElement signInWithMicrosoft;
 	
-	@FindBy(xpath="//input[@class='form-control ltr_override input ext-input text-box ext-text-box']")
+	//@FindBy(xpath="//input[@class='form-control ltr_override input ext-input text-box ext-text-box']")
+	@FindBy(xpath="//input[@name='loginfmt']")	
 	WebElement emailID;
 	
 	@FindBy(xpath="//input[@name='passwd']")
@@ -61,6 +64,16 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath="//input[@value='Next']")
 	WebElement nextButton;
 		
+	@FindBy(xpath="//span[@class='username mr-12 ng-star-inserted']")
+	WebElement userName;
+	
+	@FindBy(xpath="//button[@class='user-button mat-button'] //mat-icon[@role='img']")
+	WebElement userID;
+	
+	@FindBy(xpath="(//button[@class='mat-menu-item'])[2]")
+	WebElement LogOut;
+		
+	
 	public LoginPage(WebDriver driver)
 	{
 		this.driver = driver;
@@ -108,14 +121,38 @@ public class LoginPage extends TestBase {
 		signInWithMicrosoft.click();
 		
 		Thread.sleep(5000);
+		
+		Set<String> windows = driver.getWindowHandles();
+		Iterator<String> it = windows.iterator();
+		String parentWindowId=it.next();
+		String childWindowId=it.next();
+		
+		driver.switchTo().window(childWindowId);
+		
 		wait.until(ExpectedConditions.visibilityOf(emailID));
 		emailID.sendKeys("dipali.vaidya@datafortune.com");
 		nextButton.click();
-		passwordField.sendKeys("");
+		passwordField.sendKeys("DV@08051990");
 		
 		signIn.click();
 		
+		wait.until(ExpectedConditions.elementToBeClickable(dontShowAgain));
 		dontShowAgain.click();
+		
 		YesButton.click();
+		
+		driver.switchTo().window(parentWindowId);
+		Thread.sleep(5000);
+		
+		/*
+		 * System.out.println(driver.getCurrentUrl());
+		 * wait.until(ExpectedConditions.visibilityOf(userName));
+		 * System.out.println(userName.getText());
+		 * 
+		 * wait.until(ExpectedConditions.visibilityOf(userID)); userID.click();
+		 * 
+		 * wait.until(ExpectedConditions.visibilityOf(LogOut)); LogOut.click();
+		 */	
+		
 	}
 }
