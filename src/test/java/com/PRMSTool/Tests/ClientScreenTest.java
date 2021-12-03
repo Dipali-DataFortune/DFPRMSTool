@@ -22,7 +22,7 @@ public class ClientScreenTest extends TestBase{
 		super();
 	}
 	
-	@Test(priority = 0, enabled=false)
+	@Test(priority = 0, enabled=true)
 	public void verifyLogin()throws InterruptedException {
 		LoginPage lp = PageFactory.initElements(driver,LoginPage.class);
 		lp.login(prop.getProperty("email"),prop.getProperty("password"));
