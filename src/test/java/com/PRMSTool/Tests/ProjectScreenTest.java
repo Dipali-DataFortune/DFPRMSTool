@@ -13,7 +13,7 @@ public class ProjectScreenTest extends TestBase{
 	@Test(priority = 0, enabled=true)
 	public void verifyLogin()throws InterruptedException {
 		LoginPage lp = PageFactory.initElements(driver,LoginPage.class);
-		lp.login(prop.getProperty("email1"),prop.getProperty("password1"));
+		lp.login(prop.getProperty("email"),prop.getProperty("password"));
 	}
 	
 	@Test(priority = 1, enabled=true)
