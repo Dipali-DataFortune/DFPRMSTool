@@ -31,8 +31,8 @@ public class ClientScreenTest extends TestBase{
 	@Test(priority = 0, enabled=true)
 	public void Login()throws InterruptedException {
 		LoginPage lp = PageFactory.initElements(driver,LoginPage.class);
-		lp.login1();
-		//lp.login(prop.getProperty("email1"),prop.getProperty("password1"));
+		//lp.login1();
+		lp.login(prop.getProperty("email1"),prop.getProperty("password1"));
 	}
 		
 	@Test(priority = 1, enabled=true)
