@@ -578,25 +578,24 @@ public class ClientScreenPage extends TestBase {
 		updateButton.click();
 	}
 
-	public void checkSorting() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(sortingArrowClient));
-
-		highLightElement(driver, sortingArrowClient);
-		sortingArrowClient.click();
-		System.out.println("Sorting is done in ascending order");
-
-		Thread.sleep(5000);
-
-		sortingArrowClient.click();
-		System.out.println("Sorting is done in descending order");
-
-		wait.until(ExpectedConditions.visibilityOf(sortingArrowBUnit));
-
-		highLightElement(driver, sortingArrowBUnit);
-		sortingArrowBUnit.click();
-		Thread.sleep(5000);
-	}
+	/*
+	 * public void checkSorting() throws InterruptedException { WebDriverWait wait =
+	 * new WebDriverWait(driver, 60);
+	 * wait.until(ExpectedConditions.visibilityOf(sortingArrowClient));
+	 * 
+	 * highLightElement(driver, sortingArrowClient); sortingArrowClient.click();
+	 * System.out.println("Sorting is done in ascending order");
+	 * 
+	 * Thread.sleep(5000);
+	 * 
+	 * sortingArrowClient.click();
+	 * System.out.println("Sorting is done in descending order");
+	 * 
+	 * wait.until(ExpectedConditions.visibilityOf(sortingArrowBUnit));
+	 * 
+	 * highLightElement(driver, sortingArrowBUnit); sortingArrowBUnit.click();
+	 * Thread.sleep(5000); }
+	 */
 
 	public void clickOnAddNew() throws InterruptedException {
 		scrollToElement(addNew);

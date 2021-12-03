@@ -132,7 +132,7 @@ public class LoginPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(emailID));
 		emailID.sendKeys("dipali.vaidya@datafortune.com");
 		nextButton.click();
-		passwordField.sendKeys("DV@08051990");
+		passwordField.sendKeys("test");
 		
 		signIn.click();
 		
