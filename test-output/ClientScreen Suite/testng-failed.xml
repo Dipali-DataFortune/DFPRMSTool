@@ -6,8 +6,22 @@
       <class name="com.PRMSTool.Tests.ClientScreenTest">
         <methods>
           <include name="finish"/>
-          <include name="verifydeleteClient"/>
+          <include name="verifyeditAgreementDetails"/>
+          <include name="verifydisplaySafeGuardBusinessUnit"/>
+          <include name="verifyaddAgreementDetails"/>
           <include name="OpenBrowser"/>
+          <include name="verifydisplayPracticesBusinessUnit"/>
+          <include name="verifydisplayROWBusinessUnit"/>
+          <include name="verifydisplayAllBusinessUnit"/>
+          <include name="verifyclickOnUpdateClient"/>
+          <include name="verifyeditStakeholder"/>
+          <include name="verifyeditClientInformation"/>
+          <include name="verifyeditApproxStartDate"/>
+          <include name="verifydisplayAllStatusList"/>
+          <include name="verifydisplayLicenceBusinessUnit"/>
+          <include name="verifyeditAgreementSignedDate"/>
+          <include name="verifyselectApproxStartDate"/>
+          <include name="verifysearchClient"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ClientScreenTest -->
     </classes>

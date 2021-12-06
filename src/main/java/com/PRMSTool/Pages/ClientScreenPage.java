@@ -735,7 +735,7 @@ public class ClientScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("27")) {
+			if (date.equalsIgnoreCase("28")) {
 				allDates.get(i).click();
 				break;
 			}

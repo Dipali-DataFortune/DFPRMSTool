@@ -5,15 +5,22 @@
     <classes>
       <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
         <methods>
-          <include name="verifyclickOnCloudUpload"/>
           <include name="finish"/>
           <include name="verifyclickOnUpdateButton"/>
           <include name="verifydownloadFile"/>
+          <include name="verifyselectLastUpdatedDate"/>
+          <include name="verifyselectCalledDate"/>
+          <include name="verifyaddCompanyDetails"/>
           <include name="verifysearch"/>
-          <include name="verifydeleteSalesLead"/>
+          <include name="verifyselectFUPDate"/>
           <include name="OpenBrowser"/>
-          <include name="verifyeditSalesLeadInformation"/>
           <include name="verifyclickOnEditButton"/>
+          <include name="verifyclickOnCloudUpload"/>
+          <include name="verifyaddOtherDetails"/>
+          <include name="verifyeditLastUpdatedDate"/>
+          <include name="verifyclickOnOtherDetails"/>
+          <include name="verifydeleteSalesLead"/>
+          <include name="verifyclickOnCompanyDetails"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.SalesLeadScreenTest -->
     </classes>

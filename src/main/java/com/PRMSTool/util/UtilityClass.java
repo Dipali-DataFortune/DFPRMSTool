@@ -133,9 +133,9 @@ public class UtilityClass extends TestBase{
 		//wait.until(ExpectedConditions.visibilityOf(status));
 				
 		//highLightElement(driver, status);
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].click()", status);
-		status.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", status);
+		//status.click();
 		
 		wait.until(ExpectedConditions.visibilityOf(status1));
 			
