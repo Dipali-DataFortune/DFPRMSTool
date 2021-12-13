@@ -290,7 +290,8 @@ public class ProjectResourceScreenPage extends TestBase {
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("27")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}

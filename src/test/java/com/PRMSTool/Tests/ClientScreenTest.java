@@ -177,9 +177,9 @@ public class ClientScreenTest extends TestBase{
 	}
 	
 	@Test(priority = 24, enabled=true)
-	public void verifydisplayROWBusinessUnit()throws InterruptedException {
+	public void verifydisplayIPBusinessUnit()throws InterruptedException {
 		UtilityClass util = PageFactory.initElements(driver, UtilityClass.class);
-		util.displayROWBusinessUnit();
+		util.displayIndianProjectsBusinessUnit();
 	}
 	
 	@Test(priority = 25, enabled=true)

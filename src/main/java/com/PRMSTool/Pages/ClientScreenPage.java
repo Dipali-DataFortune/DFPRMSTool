@@ -246,8 +246,8 @@ public class ClientScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' vResourcing ')]")
 	WebElement businessUnitVRes;
 
-	@FindBy(xpath = "//mat-option/span[contains(text(),' ROW ')]")
-	WebElement businessUnitRow;
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Indian Projects ')]")
+	WebElement businessUnitIP;
 
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Java ')]")
 	WebElement practiceJava;
@@ -495,7 +495,7 @@ public class ClientScreenPage extends TestBase {
 		yearsInBusiness.sendKeys("11");
 
 		js.executeScript("arguments[0].click()", bUnitDropdown);
-		js.executeScript("arguments[0].click()", businessUnitRow);
+		js.executeScript("arguments[0].click()", businessUnitIP);
 
 		js.executeScript("arguments[0].click()", practiceDropdown);
 		js.executeScript("arguments[0].click()", practiceMicrosoft);
@@ -714,7 +714,7 @@ public class ClientScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("26")) {
+			if (date.equalsIgnoreCase("27")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -758,7 +758,7 @@ public class ClientScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("28")) {
+			if (date.equalsIgnoreCase("30")) {
 				allDates.get(i).click();
 				break;
 			}
@@ -782,7 +782,7 @@ public class ClientScreenPage extends TestBase {
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("29")) {
+			if (date.equalsIgnoreCase("31")) {
 				 allDates.get(i).click();
 				//js.executeScript("arguments[0].click()", allDates.get(i));
 				break;

@@ -37,7 +37,7 @@ public class ProjectScreenPage extends TestBase{
 	@FindBy(xpath = "//input[@alt='Export']")
 	WebElement projectFile;
 	
-	@FindBy(xpath = "//mat-select[@placeholder='Client']")
+	@FindBy(xpath = "//mat-select[@placeholder='Select Client']")
 	WebElement clientDropdown;
 	
 	//@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
@@ -204,13 +204,16 @@ public class ProjectScreenPage extends TestBase{
 	
 	public void addProjectDetails() throws InterruptedException
 	{	
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(clientDropdown));
-		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
-				
+		//wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
+		
+		clientDropdown.click();
+		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", clientDropdown);
+		//js.executeScript("arguments[0].click()", clientDropdown);
+		
 		Thread.sleep(2000);
 		//wait.until(ExpectedConditions.elementToBeClickable(client1));
 		js.executeScript("arguments[0].click()", client1);
@@ -236,7 +239,7 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("NOV 2021")) {
+		while (!DateMonths.getText().contains("JAN 2022")) {
 			 js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
 		}
@@ -245,7 +248,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("23")) {
+			if (date.equalsIgnoreCase("24")) {
 				allDates.get(i).click();
 				//js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
@@ -268,7 +271,7 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("DEC 2021")) {
+		while (!DateMonths.getText().contains("FEB 2022")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
 		}
@@ -277,7 +280,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("24")) {
+			if (date.equalsIgnoreCase("25")) {
 				allDates.get(i).click();
 				//js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
@@ -300,7 +303,7 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("NOV 2021")) {
+		while (!DateMonths.getText().contains("JAN 2022")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
 		}
@@ -332,7 +335,7 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("DEC 2021")) {
+		while (!DateMonths.getText().contains("FEB 2022")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
 		}
@@ -341,7 +344,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("29")) {
+			if (date.equalsIgnoreCase("28")) {
 				allDates.get(i).click();
 				//js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
@@ -499,9 +502,9 @@ public class ProjectScreenPage extends TestBase{
 		wait.until(ExpectedConditions.elementToBeClickable(client2));
 		js.executeScript("arguments[0].click()", client2);
 		
-		wait.until(ExpectedConditions.visibilityOf(projectName));
-		projectName.clear();
-		projectName.sendKeys("Test project");
+		//wait.until(ExpectedConditions.visibilityOf(projectName));
+		//projectName.clear();
+		//projectName.sendKeys("Test project");
 		
 		resources.clear();
 		resources.sendKeys("6");
@@ -583,7 +586,7 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("NOV 2021")) {
+		while (!DateMonths.getText().contains("JAN 2022")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//DateNavButton.click();
 			//staleElementClick(5, DateNavButton, 60);
@@ -594,8 +597,8 @@ public class ProjectScreenPage extends TestBase{
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("24")) {
-				//allDates.get(i).click();
-				js.executeScript("arguments[0].click()", allDates.get(i));
+				allDates.get(i).click();
+				//js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -616,7 +619,7 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("DEC 2021")) {
+		while (!DateMonths.getText().contains("FEB 2022")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
 			//DateNavButton.click();
@@ -626,7 +629,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("27")) {
+			if (date.equalsIgnoreCase("22")) {
 				//allDates.get(i).click();
 				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
@@ -649,17 +652,17 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("NOV 2021")) {
-		//	js.executeScript("arguments[0].click()", DateNavButton);
+		while (!DateMonths.getText().contains("JAN 2022")) {
+			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
-			DateNavButton.click();
+			//DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("30")) {
+			if (date.equalsIgnoreCase("25")) {
 				//allDates.get(i).click();
 				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
@@ -682,7 +685,7 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("DEC 2021")) {
+		while (!DateMonths.getText().contains("FEB 2022")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
 			//DateNavButton.click();
@@ -692,7 +695,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("31")) {
+			if (date.equalsIgnoreCase("23")) {
 				//allDates.get(i).click();
 				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;

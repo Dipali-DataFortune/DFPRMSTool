@@ -58,7 +58,7 @@ public class UtilityClass extends TestBase{
 	@FindBy(xpath = "//mat-option//span[contains(text(),' vResourcing ')]")
 	WebElement businessUnit2;
 	
-	@FindBy(xpath = "//mat-option//span[contains(text(),' ROW ')]")
+	@FindBy(xpath = "//mat-option//span[contains(text(),' Indian Projects ')]")
 	WebElement businessUnit3;
 	
 	@FindBy(xpath = "//mat-option//span[contains(text(),' Licence ')]")
@@ -129,19 +129,20 @@ public class UtilityClass extends TestBase{
 	{
 		Thread.sleep(5000);
 		
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		
 		//wait.until(ExpectedConditions.visibilityOf(status));
 				
 		//highLightElement(driver, status);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", status);
-		//status.click();
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+		status.click();
 		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(status1));
 			
-		status1.click();
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].click()", status1);
+		//status1.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", status1);
 		
 		Thread.sleep(3000);
 		
@@ -209,6 +210,26 @@ public class UtilityClass extends TestBase{
 		System.out.println("vResourcing business unit list displayed");		
 	}
 	
+	public void displayIndianProjectsBusinessUnit() throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(businessUnit));
+				
+		highLightElement(driver, businessUnit);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status);
+	
+		businessUnit.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(businessUnit3));
+		businessUnit3.click();
+		//js.executeScript("arguments[0].click()", status3);
+		
+		Thread.sleep(5000);
+		
+		System.out.println("vResourcing business unit list displayed");		
+	}
+	
 	public void displayROWBusinessUnit() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -226,7 +247,7 @@ public class UtilityClass extends TestBase{
 		
 		Thread.sleep(5000);
 		
-		System.out.println("ROW business unit list displayed");		
+		System.out.println("Indian Projects business unit list displayed");		
 	}
 	
 	public void displayLicenceBusinessUnit() throws InterruptedException

@@ -221,7 +221,7 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.sendKeys("TestResource");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS448");
+		employeeID.sendKeys("DS450");
 		//Thread.sleep(5000);
 		
 		/*
@@ -359,7 +359,7 @@ public class ResourceScreenPage extends TestBase {
 		 
 		  Thread.sleep(2000);
 			
-			while(!DateMonths.getText().contains("OCT 2021"))
+			while(!DateMonths.getText().contains("JAN 2022"))
 			{
 				//birthDateNavButton.click();			
 				js.executeScript("arguments[0].click()", DateNavButton);
@@ -369,7 +369,7 @@ public class ResourceScreenPage extends TestBase {
 
 			for (int i = 0; i < total_nodes; i++) {
 				String date = allDates.get(i).getText();
-				if (date.equalsIgnoreCase("25")) {
+				if (date.equalsIgnoreCase("10")) {
 					allDates.get(i).click();
 					break;
 				}
@@ -421,7 +421,7 @@ public class ResourceScreenPage extends TestBase {
 		Thread.sleep(5000);
 	}
 	
-	public void editResourceInformation()
+	public void editResourceInformation() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(resourceName));
@@ -433,17 +433,20 @@ public class ResourceScreenPage extends TestBase {
 		//employeeID.sendKeys("DS8");
 				
 		address.clear();
-		address.sendKeys("Pune");
+		address.sendKeys("USA");
 		
 		scrollToElement(country);
 		wait.until(ExpectedConditions.elementToBeClickable(country));
 		country.click();
+		Thread.sleep(2000);
 		country2.click();		
 				
 		wait.until(ExpectedConditions.elementToBeClickable(state));
 		state.click();
-		state2.click();
-				
+		Thread.sleep(2000);
+		//state2.click();
+		staleElementClick(5, state2, 60);	
+		
 		wait.until(ExpectedConditions.elementToBeClickable(city));
 		city.click();
 		city2.click();
