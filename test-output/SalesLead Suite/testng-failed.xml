@@ -6,6 +6,7 @@
       <class name="com.PRMSTool.Tests.SalesLeadScreenTest">
         <methods>
           <include name="finish"/>
+          <include name="verifyclickOnAdd"/>
           <include name="verifyclickOnUpdateButton"/>
           <include name="verifydownloadFile"/>
           <include name="verifyselectLastUpdatedDate"/>
@@ -13,14 +14,21 @@
           <include name="verifyaddCompanyDetails"/>
           <include name="verifysearch"/>
           <include name="verifyselectFUPDate"/>
+          <include name="verifyeditOtherDetails"/>
           <include name="OpenBrowser"/>
+          <include name="verifyeditCompanyDetails"/>
           <include name="verifyclickOnEditButton"/>
+          <include name="verifyuploadFile"/>
           <include name="verifyclickOnCloudUpload"/>
           <include name="verifyaddOtherDetails"/>
           <include name="verifyeditLastUpdatedDate"/>
+          <include name="verifyclickOnBackButton"/>
           <include name="verifyclickOnOtherDetails"/>
+          <include name="verifyaddSalesLeadInformation"/>
           <include name="verifydeleteSalesLead"/>
+          <include name="verifyeditSalesLeadInformation"/>
           <include name="verifyclickOnCompanyDetails"/>
+          <include name="verifyeditFUPDate"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.SalesLeadScreenTest -->
     </classes>

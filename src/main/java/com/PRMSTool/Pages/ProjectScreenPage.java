@@ -207,7 +207,7 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(clientDropdown));
-		//wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
+		wait.until(ExpectedConditions.elementToBeClickable(clientDropdown));
 		
 		clientDropdown.click();
 		
@@ -576,6 +576,7 @@ public class ProjectScreenPage extends TestBase{
 	public void editStartDate() throws InterruptedException {
 		ProjectDetails.click();
 		
+		scrollToElement(startDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(startDate));
 
@@ -587,8 +588,7 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("JAN 2022")) {
-			js.executeScript("arguments[0].click()", DateNavButton);
-			//DateNavButton.click();
+			 js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
 		}
 
@@ -596,7 +596,7 @@ public class ProjectScreenPage extends TestBase{
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("24")) {
+			if (date.equalsIgnoreCase("27")) {
 				allDates.get(i).click();
 				//js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
@@ -604,11 +604,11 @@ public class ProjectScreenPage extends TestBase{
 		}
 
 		System.out.println("Start date edited");
-		//Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 	
 	public void editEndDate() throws InterruptedException {
-		
+		scrollToElement(endDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(endDate));
 
@@ -619,17 +619,16 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("FEB 2022")) {
+		while (!DateMonths.getText().contains("MAR 2022")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
-			//DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("22")) {
+			if (date.equalsIgnoreCase("3")) {
 				//allDates.get(i).click();
 				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
@@ -637,11 +636,11 @@ public class ProjectScreenPage extends TestBase{
 		}
 
 		System.out.println("End date edited");
-		//Thread.sleep(2000);
+		//Thread.sleep(3000);
 	}
 	
 	public void editActualStartDate() throws InterruptedException {
-		
+		scrollToElement(ActualStartDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(ActualStartDate));
 
@@ -653,18 +652,18 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("JAN 2022")) {
-			js.executeScript("arguments[0].click()", DateNavButton);
+			//js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
-			//DateNavButton.click();
+			DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("25")) {
-				//allDates.get(i).click();
-				js.executeScript("arguments[0].click()", allDates.get(i));
+			if (date.equalsIgnoreCase("28")) {
+				allDates.get(i).click();
+				//js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
 			}
 		}
@@ -674,7 +673,7 @@ public class ProjectScreenPage extends TestBase{
 	}
 	
 	public void editActualEndDate() throws InterruptedException {
-		
+		scrollToElement(ActualEndDate);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(ActualEndDate));
 
@@ -685,17 +684,16 @@ public class ProjectScreenPage extends TestBase{
 
 		Thread.sleep(2000);
 
-		while (!DateMonths.getText().contains("FEB 2022")) {
+		while (!DateMonths.getText().contains("MAR 2022")) {
 			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
-			//DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();
 
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
-			if (date.equalsIgnoreCase("23")) {
+			if (date.equalsIgnoreCase("4")) {
 				//allDates.get(i).click();
 				js.executeScript("arguments[0].click()", allDates.get(i));
 				break;
@@ -706,3 +704,125 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(3000);
 	}
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*
+ * public void editStartDate() throws InterruptedException {
+ * ProjectDetails.click();
+ * 
+ * WebDriverWait wait = new WebDriverWait(driver, 60);
+ * wait.until(ExpectedConditions.visibilityOf(startDate));
+ * 
+ * highLightElement(driver, startDate);
+ * 
+ * JavascriptExecutor js = (JavascriptExecutor) driver;
+ * //js.executeScript("arguments[0].click()", startDate);
+ * 
+ * startDate.click();
+ * 
+ * Thread.sleep(2000);
+ * 
+ * while (!DateMonths.getText().contains("JAN 2022")) {
+ * //js.executeScript("arguments[0].click()", DateNavButton);
+ * DateNavButton.click(); //staleElementClick(5, DateNavButton, 60); }
+ * 
+ * int total_nodes = allDates.size();
+ * 
+ * for (int i = 0; i < total_nodes; i++) { String date =
+ * allDates.get(i).getText(); if (date.equalsIgnoreCase("24")) {
+ * //allDates.get(i).click(); js.executeScript("arguments[0].click()",
+ * allDates.get(i)); break; } }
+ * 
+ * System.out.println("Start date edited"); Thread.sleep(2000); }
+ * 
+ * public void editEndDate() throws InterruptedException {
+ * 
+ * WebDriverWait wait = new WebDriverWait(driver, 60);
+ * wait.until(ExpectedConditions.visibilityOf(endDate));
+ * 
+ * highLightElement(driver, endDate);
+ * 
+ * JavascriptExecutor js = (JavascriptExecutor) driver;
+ * js.executeScript("arguments[0].click()", endDate);
+ * 
+ * //endDate.click();
+ * 
+ * Thread.sleep(2000);
+ * 
+ * while (!DateMonths.getText().contains("FEB 2022")) {
+ * js.executeScript("arguments[0].click()", DateNavButton);
+ * //staleElementClick(5, DateNavButton, 60); //DateNavButton.click(); }
+ * 
+ * int total_nodes = allDates.size();
+ * 
+ * for (int i = 0; i < total_nodes; i++) { String date =
+ * allDates.get(i).getText(); if (date.equalsIgnoreCase("22")) {
+ * allDates.get(i).click(); //js.executeScript("arguments[0].click()",
+ * allDates.get(i)); break; } }
+ * 
+ * System.out.println("End date edited"); Thread.sleep(2000); }
+ * 
+ * public void editActualStartDate() throws InterruptedException {
+ * 
+ * WebDriverWait wait = new WebDriverWait(driver, 60);
+ * wait.until(ExpectedConditions.visibilityOf(ActualStartDate));
+ * 
+ * highLightElement(driver, ActualStartDate);
+ * 
+ * JavascriptExecutor js = (JavascriptExecutor) driver;
+ * js.executeScript("arguments[0].click()", ActualStartDate);
+ * //ActualStartDate.click();
+ * 
+ * Thread.sleep(2000);
+ * 
+ * while (!DateMonths.getText().contains("JAN 2022")) {
+ * //js.executeScript("arguments[0].click()", DateNavButton);
+ * //staleElementClick(5, DateNavButton, 60); DateNavButton.click(); }
+ * 
+ * int total_nodes = allDates.size();
+ * 
+ * for (int i = 0; i < total_nodes; i++) { String date =
+ * allDates.get(i).getText(); if (date.equalsIgnoreCase("25")) {
+ * //allDates.get(i).click(); js.executeScript("arguments[0].click()",
+ * allDates.get(i)); break; } }
+ * 
+ * System.out.println("Actual start date edited"); Thread.sleep(2000); }
+ * 
+ * public void editActualEndDate() throws InterruptedException {
+ * 
+ * WebDriverWait wait = new WebDriverWait(driver, 60);
+ * wait.until(ExpectedConditions.visibilityOf(ActualEndDate));
+ * 
+ * highLightElement(driver, ActualEndDate);
+ * 
+ * JavascriptExecutor js = (JavascriptExecutor) driver;
+ * //js.executeScript("arguments[0].click()", ActualEndDate);
+ * 
+ * Thread.sleep(2000);
+ * 
+ * while (!DateMonths.getText().contains("FEB 2022")) {
+ * js.executeScript("arguments[0].click()", DateNavButton);
+ * //staleElementClick(5, DateNavButton, 60); //DateNavButton.click(); }
+ * 
+ * int total_nodes = allDates.size();
+ * 
+ * for (int i = 0; i < total_nodes; i++) { String date =
+ * allDates.get(i).getText(); if (date.equalsIgnoreCase("23")) {
+ * allDates.get(i).click(); //js.executeScript("arguments[0].click()",
+ * allDates.get(i)); break; } }
+ * 
+ * System.out.println("Actual end date edited"); Thread.sleep(2000); } 
+ */

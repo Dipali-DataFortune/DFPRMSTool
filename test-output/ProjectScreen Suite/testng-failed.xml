@@ -6,10 +6,15 @@
       <class name="com.PRMSTool.Tests.ProjectScreenTest">
         <methods>
           <include name="finish"/>
-          <include name="verifyclickOnUpdateButton"/>
+          <include name="verifyaddProjectDetails1"/>
+          <include name="verifyeditProjectInformation"/>
+          <include name="verifydisplayAllBusinessUnit"/>
+          <include name="verifyaddBillingDetails"/>
           <include name="OpenBrowser"/>
+          <include name="verifyeditEndDate"/>
           <include name="verifyeditActualStartDate"/>
           <include name="verifyeditActualEndDate"/>
+          <include name="verifyeditStartDate"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ProjectScreenTest -->
     </classes>
