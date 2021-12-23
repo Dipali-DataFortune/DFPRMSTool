@@ -678,7 +678,8 @@ public class SalesLeadScreenPage extends TestBase {
 		for (int i = 0; i < total_nodes; i++) {
 			String date = allDates.get(i).getText();
 			if (date.equalsIgnoreCase("31")) {
-				allDates.get(i).click();
+				//allDates.get(i).click();
+				staleElementClick(5, allDates.get(i), 60);
 				break;
 			}
 		}

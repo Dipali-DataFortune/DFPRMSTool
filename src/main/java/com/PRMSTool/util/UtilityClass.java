@@ -1,5 +1,7 @@
 package com.PRMSTool.util;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import com.PRMSTool.base.TestBase;
@@ -105,7 +108,9 @@ public class UtilityClass extends TestBase{
 	}
 	
 	public void downloadFile() throws InterruptedException {
-		String downloadFilePath = "C:\\Users\\Dipali.vaidya\\Downloads";
+		String downloadFilePath = System.getProperty("user.dir");
+		System.out.println(downloadFilePath);
+		//String downloadFilePath="/DFInternalTool";
 		HashMap<String, Object> chromePref = new HashMap<String, Object>();
 		chromePref.put("profile.default_content_settings.popups", 0);
 		chromePref.put("download.default_directory", downloadFilePath);
@@ -120,9 +125,22 @@ public class UtilityClass extends TestBase{
 		//downloadFile.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", downloadFile);
-		//Thread.sleep(3000);
-
-		System.out.println("File downloaded successfully");
+		
+		Thread.sleep(3000);
+		//System.out.println("File downloaded successfully");
+		
+		File f=new File(downloadFilePath+"\"Client.xlsx");
+		
+		/*
+		 * if(f.exists()) { Assert.assertTrue(f.exists()); if(f.delete())
+		 * System.out.println("File deleted"); }
+		 */
+		
+		/*
+		 * File path = new File("Path of Folder"); File[] files = path.listFiles(); for
+		 * (File file : files) { System.out.println("Deleted filename :"+
+		 * file.getName()); file.delete(); }
+		 */
 	}
 	
 	public void displayAllStatusList() throws InterruptedException 
