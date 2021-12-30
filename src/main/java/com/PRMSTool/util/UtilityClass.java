@@ -121,26 +121,29 @@ public class UtilityClass extends TestBase{
 		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(downloadFile));
-		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
 		//downloadFile.click();
+		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", downloadFile);
 		
 		Thread.sleep(3000);
-		//System.out.println("File downloaded successfully");
-		
-		File f=new File(downloadFilePath+"\"Client.xlsx");
-		
-		/*
-		 * if(f.exists()) { Assert.assertTrue(f.exists()); if(f.delete())
-		 * System.out.println("File deleted"); }
-		 */
-		
-		/*
-		 * File path = new File("Path of Folder"); File[] files = path.listFiles(); for
-		 * (File file : files) { System.out.println("Deleted filename :"+
-		 * file.getName()); file.delete(); }
-		 */
+				
+		File f=new File(downloadFilePath+"/Client.xlsx");
+				
+		  if(f.exists()) 
+		  { 
+			  Assert.assertTrue(f.exists()); 
+			  if(f.delete())
+			System.out.println("File deleted"); 
+		  }
+		 
+			/*
+			 * File path = new File("Path of Folder"); File[] files = path.listFiles();
+			 * for(File file : files) {
+			 * System.out.println("Deleted filename :"+file.getName()); file.delete(); }
+			 */
+		 
 	}
 	
 	public void displayAllStatusList() throws InterruptedException 

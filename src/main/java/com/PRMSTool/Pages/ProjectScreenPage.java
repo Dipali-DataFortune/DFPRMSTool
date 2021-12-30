@@ -41,7 +41,7 @@ public class ProjectScreenPage extends TestBase{
 	WebElement clientDropdown;
 	
 	//@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
-	@FindBy(xpath = "(//mat-option/span[contains(text(),' test ')])[1]")
+	@FindBy(xpath = "(//mat-option/span[contains(text(),' testNewClient ')])[1]")
 	WebElement client1;
 	
 	@FindBy(xpath = "//mat-option//span[contains(text(),' Van Ran Communications Services Inc. ')]")
@@ -652,9 +652,9 @@ public class ProjectScreenPage extends TestBase{
 		Thread.sleep(2000);
 
 		while (!DateMonths.getText().contains("JAN 2022")) {
-			//js.executeScript("arguments[0].click()", DateNavButton);
+			js.executeScript("arguments[0].click()", DateNavButton);
 			//staleElementClick(5, DateNavButton, 60);
-			DateNavButton.click();
+			//DateNavButton.click();
 		}
 
 		int total_nodes = allDates.size();

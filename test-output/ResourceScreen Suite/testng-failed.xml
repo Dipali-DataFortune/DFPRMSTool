@@ -7,15 +7,9 @@
         <methods>
           <include name="verifydownloadFile"/>
           <include name="finish"/>
-          <include name="verifyselectJoiningDate"/>
           <include name="verifydelete"/>
           <include name="verifydisplayInactiveStatusList"/>
-          <include name="verifysearch"/>
-          <include name="verifyselectBirthDate"/>
-          <include name="verifyclickOnEditButton"/>
-          <include name="verifydisplayAllStatusList"/>
           <include name="OpenBrowser"/>
-          <include name="verifyclickOnUpdateButton"/>
           <include name="verifydisplayActiveStatusList"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ResourceScreenTest -->

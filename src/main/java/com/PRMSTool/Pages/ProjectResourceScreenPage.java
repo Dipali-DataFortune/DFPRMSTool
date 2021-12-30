@@ -40,7 +40,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Appointlink Portal Solutions ')]")
 	WebElement client1;
 
-	@FindBy(xpath = "(//mat-option/span[contains(text(),' test ')])[1]")
+	@FindBy(xpath = "(//mat-option/span[contains(text(),' testNewClient ')])[1]")
 	WebElement client2;
 
 	@FindBy(xpath = "//mat-select[@placeholder='Project']")
@@ -49,7 +49,7 @@ public class ProjectResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' test ')]")
 	WebElement project1;
 
-	@FindBy(xpath = "//mat-option/span[contains(text(),' test Project Resource ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' test add Project ')]")
 	WebElement project2;
 
 	@FindBy(xpath = "//mat-select[@role='listbox' and @placeholder='Status']")

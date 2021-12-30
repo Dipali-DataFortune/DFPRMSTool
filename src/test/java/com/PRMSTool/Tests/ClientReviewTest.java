@@ -46,7 +46,7 @@ public class ClientReviewTest extends TestBase{
 	@Test(priority = 4, enabled=true)
 	public void verifysearch()throws InterruptedException {
 		ClientReviewPage cr = PageFactory.initElements(driver, ClientReviewPage.class);
-		cr.searchClientReview("testClientReview");
+		cr.searchClientReview("testNewClient");
 	}
 	
 	@Test(priority = 5, enabled=true)
@@ -70,7 +70,7 @@ public class ClientReviewTest extends TestBase{
 	@Test(priority = 8, enabled=true)
 	public void verifydelete()throws InterruptedException {
 		ClientReviewPage cr = PageFactory.initElements(driver, ClientReviewPage.class);
-		cr.deleteClientReview("testClientReview");
+		cr.deleteClientReview("testNewClient");
 	}
 	
 	@Test(priority = 9, enabled=true)

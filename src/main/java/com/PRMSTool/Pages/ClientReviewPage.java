@@ -208,13 +208,13 @@ public class ClientReviewPage extends TestBase{
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' test ')]")
 	WebElement clientTest;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' testClientReview ')]")
+	@FindBy(xpath = "(//mat-option[@role='option']/span[contains(text(),' testNewClient ')])[1]")
 	WebElement clientTestClientReview;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' testProject ')]")
 	WebElement projectTestProject;
 	
-	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' clientReviewProject ')]")
+	@FindBy(xpath = "(//mat-option[@role='option']/span[contains(text(),' test add Project ')])[1]")
 	WebElement projectclientReviewProject;
 	
 	@FindBy(xpath = "//mat-option[@role='option']/span[contains(text(),' abc ')]")

@@ -5,9 +5,14 @@
     <classes>
       <class name="com.PRMSTool.Tests.ClientReviewTest">
         <methods>
+          <include name="verifydelete"/>
           <include name="finish"/>
-          <include name="verifyeditClientReview"/>
+          <include name="verifyaddNewClientReview"/>
+          <include name="verifyclickOnUpdateButton"/>
+          <include name="verifyclickOnEditButton"/>
           <include name="OpenBrowser"/>
+          <include name="verifydisplayDateJanuary"/>
+          <include name="verifysearch"/>
         </methods>
       </class> <!-- com.PRMSTool.Tests.ClientReviewTest -->
     </classes>
