@@ -133,7 +133,7 @@ public class ResourceScreenPage extends TestBase {
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Dipali Vaidya (DS1167) ')]")
 	WebElement Reporting;
 	
-	@FindBy(xpath = "//mat-option/span[contains(text(),' Senior Automation Tester Engineer ')]")
+	@FindBy(xpath = "//mat-option/span[contains(text(),' Software Test Engineer ')]")
 	WebElement Desig;
 	
 	@FindBy(xpath = "//mat-option/span[contains(text(),' Active ')]")
@@ -221,7 +221,7 @@ public class ResourceScreenPage extends TestBase {
 		resourceName.sendKeys("TestResource");
 		
 		employeeID.clear();
-		employeeID.sendKeys("DS450");
+		employeeID.sendKeys("DS453");
 		//Thread.sleep(5000);
 		
 		/*

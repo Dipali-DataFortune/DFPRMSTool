@@ -151,6 +151,7 @@ public class UtilityClass extends TestBase{
 		Thread.sleep(5000);
 		
 		
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
 		//wait.until(ExpectedConditions.visibilityOf(status));
 				
 		//highLightElement(driver, status);
@@ -158,12 +159,12 @@ public class UtilityClass extends TestBase{
 		//js.executeScript("arguments[0].click()", status);
 		status.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(status1));
+		//WebDriverWait wait = new WebDriverWait(driver, 60);
+		//wait.until(ExpectedConditions.visibilityOf(status1));
 			
-		//status1.click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", status1);
+		status1.click();
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click()", status1);
 		
 		Thread.sleep(3000);
 		
